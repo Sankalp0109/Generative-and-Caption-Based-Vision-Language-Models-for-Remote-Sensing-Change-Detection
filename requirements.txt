@@ -1,0 +1,10 @@
+torch
+torchvision
+pillow
+numpy
+matplotlib
+nltk
+scikit-learn
+pandas
+sentence-transformers
+transformers

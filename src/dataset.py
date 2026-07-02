@@ -1,0 +1,323 @@
+"""Unified LEVIR-CC dataset loading for the RSICC ablation study."""
+
+from __future__ import annotations
+
+import json
+import pickle
+from collections import Counter
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+
+from PIL import Image
+
+import torch
+from torch.utils.data import DataLoader, Dataset
+
+import torchvision.transforms as transforms
+
+
+
+SPECIAL_TOKENS = ("<PAD>", "<START>", "<END>", "<UNK>")
+
+
+class Vocabulary:
+    """Shared vocabulary for caption tokenization across all model variants."""
+
+    def __init__(self, min_freq: int = 2):
+        self.word2idx: Dict[str, int] = {
+            "<PAD>": 0,
+            "<START>": 1,
+            "<END>": 2,
+            "<UNK>": 3,
+        }
+        self.idx2word: Dict[int, str] = {idx: word for word, idx in self.word2idx.items()}
+        self.word_freq = Counter()
+        self.min_freq = min_freq
+        self.next_idx = 4
+
+    @property
+    def pad_idx(self) -> int:
+        return self.word2idx["<PAD>"]
+
+    @property
+    def start_idx(self) -> int:
+        return self.word2idx["<START>"]
+
+    @property
+    def end_idx(self) -> int:
+        return self.word2idx["<END>"]
+
+    @property
+    def unk_idx(self) -> int:
+        return self.word2idx["<UNK>"]
+
+    def build_vocab(self, captions_list: List[str]) -> None:
+        """Build vocabulary from a list of caption strings."""
+        for caption in captions_list:
+            for token in caption.lower().split():
+                self.word_freq[token] += 1
+
+        for word, freq in self.word_freq.items():
+            if freq >= self.min_freq and word not in self.word2idx:
+                self.word2idx[word] = self.next_idx
+                self.idx2word[self.next_idx] = word
+                self.next_idx += 1
+
+    def encode(self, caption: str):
+        """Convert caption string to token indices with START/END tokens."""
+        tokens = [self.start_idx]
+        tokens.extend(self.word2idx.get(word, self.unk_idx) for word in caption.lower().split())
+        tokens.append(self.end_idx)
+        return torch.tensor(tokens, dtype=torch.long)
+
+    def decode(self, indices, skip_special: bool = True) -> str:
+        """Convert token indices back to a caption string."""
+        if isinstance(indices, torch.Tensor):
+            indices = indices.tolist()
+
+        words = []
+        for idx in indices:
+            word = self.idx2word.get(int(idx), "<UNK>")
+            if skip_special and word in SPECIAL_TOKENS:
+                continue
+            words.append(word)
+        return " ".join(words)
+
+    def save(self, path: Path) -> None:
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with open(path, "wb") as f:
+            pickle.dump(
+                {
+                    "word2idx": self.word2idx,
+                    "idx2word": self.idx2word,
+                    "word_freq": dict(self.word_freq),
+                    "min_freq": self.min_freq,
+                    "next_idx": self.next_idx,
+                },
+                f,
+            )
+
+    @classmethod
+    def load(cls, path: Path) -> "Vocabulary":
+        with open(path, "rb") as f:
+            payload = pickle.load(f)
+
+        vocab = cls(min_freq=payload["min_freq"])
+        vocab.word2idx = payload["word2idx"]
+        vocab.idx2word = {int(k): v for k, v in payload["idx2word"].items()}
+        vocab.word_freq = Counter(payload["word_freq"])
+        vocab.next_idx = payload["next_idx"]
+        return vocab
+
+
+def load_levircc_annotations(caption_json: Path) -> Dict:
+    """Load LEVIR-CC annotation JSON."""
+    with open(caption_json, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def split_samples_by_split(annotations: Dict) -> Tuple[List[Dict], List[Dict], List[Dict]]:
+    """Split annotation records into train/val/test lists."""
+    images = annotations["images"]
+    train_samples = [item for item in images if item["split"] == "train"]
+    val_samples = [item for item in images if item["split"] == "val"]
+    test_samples = [item for item in images if item["split"] == "test"]
+    return train_samples, val_samples, test_samples
+
+
+def build_vocabulary_from_annotations(
+    annotations: Dict,
+    min_freq: int = 2,
+    splits: Tuple[str, ...] = ("train", "val", "test"),
+) -> Vocabulary:
+    """Build a shared vocabulary from selected dataset splits."""
+    captions = []
+    for sample in annotations["images"]:
+        if sample["split"] in splits:
+            captions.extend(sent["raw"].strip() for sent in sample["sentences"])
+
+    vocab = Vocabulary(min_freq=min_freq)
+    vocab.build_vocab(captions)
+    return vocab
+
+
+def build_image_transforms(
+    img_size: Tuple[int, int] = (256, 256),
+    mean: Tuple[float, float, float] = (0.485, 0.456, 0.406),
+    std: Tuple[float, float, float] = (0.229, 0.224, 0.225),
+):
+    """Shared image preprocessing used by every researcher."""
+    return transforms.Compose(
+        [
+            transforms.Resize(img_size),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=mean, std=std),
+        ]
+    )
+
+
+class LEVIRCCDataset(Dataset):
+    """PyTorch dataset for before/after image pairs and captions."""
+
+    def __init__(
+        self,
+        samples: List[Dict],
+        image_root: Path,
+        caption_index: int = 0,
+        transforms_fn=None,
+    ):
+        self.samples = samples
+        self.image_root = Path(image_root)
+        self.caption_index = caption_index
+        self.transforms = transforms_fn
+
+    def __len__(self) -> int:
+        return len(self.samples)
+
+    def __getitem__(self, idx: int) -> Dict:
+        sample = self.samples[idx]
+        before_path = self.image_root / sample["filepath"] / "A" / sample["filename"]
+        after_path = self.image_root / sample["filepath"] / "B" / sample["filename"]
+
+        before_img = Image.open(before_path).convert("RGB")
+        after_img = Image.open(after_path).convert("RGB")
+
+        if self.transforms:
+            before_img = self.transforms(before_img)
+            after_img = self.transforms(after_img)
+
+        caption = sample["sentences"][self.caption_index]["raw"].strip()
+        return {
+            "before_image": before_img,
+            "after_image": after_img,
+            "caption": caption,
+            "changeflag": sample["changeflag"],
+            "filename": sample["filename"],
+        }
+
+
+class CaptionCollate:
+    """
+    Collate function that produces a standardized batch dictionary.
+
+    Every model variant receives the same batch keys:
+        - before_images: (B, 3, H, W)
+        - after_images:  (B, 3, H, W)
+        - images:        (B, 2, 3, H, W)  stacked pair for encoder input
+        - caption_tokens:(B, L) padded token ids
+        - captions:      list[str] raw reference captions
+        - changeflags:   (B,)
+        - filenames:     list[str]
+    """
+
+    def __init__(self, vocab: Vocabulary, device: str = "cpu"):
+        self.vocab = vocab
+        self.device = device
+
+    def __call__(self, batch: List[Dict]) -> Dict:
+        before_images = torch.stack([item["before_image"] for item in batch])
+        after_images = torch.stack([item["after_image"] for item in batch])
+        images = torch.stack([before_images, after_images], dim=1)
+        captions = [item["caption"] for item in batch]
+        changeflags = torch.tensor([item["changeflag"] for item in batch], dtype=torch.long)
+        filenames = [item["filename"] for item in batch]
+
+        caption_tokens = [self.vocab.encode(caption) for caption in captions]
+        max_len = max(len(tokens) for tokens in caption_tokens)
+        padded_captions = torch.full(
+            (len(batch), max_len),
+            self.vocab.pad_idx,
+            dtype=torch.long,
+        )
+        for i, tokens in enumerate(caption_tokens):
+            padded_captions[i, : len(tokens)] = tokens
+
+        return {
+        "before_images": before_images,
+        "after_images": after_images,
+        "images": images,
+        "caption_tokens": padded_captions,
+        "captions": captions,
+        "changeflags": changeflags,
+        "filenames": filenames,
+        }
+
+
+def get_levircc_loaders(
+    caption_json: Path,
+    image_root: Path,
+    vocab: Optional[Vocabulary] = None,
+    batch_size: int = 8,
+    val_batch_size: Optional[int] = None,
+    device: str = "cpu",
+    img_size: Tuple[int, int] = (256, 256),
+    min_word_freq: int = 2,
+    caption_index: int = 0,
+    num_workers: int = 0,
+    vocab_path: Optional[Path] = None,
+):
+    """
+    Load LEVIR-CC train/val/test DataLoaders with a shared vocabulary.
+
+    Returns:
+        train_loader, val_loader, test_loader, vocab
+    """
+    annotations = load_levircc_annotations(caption_json)
+    train_samples, val_samples, test_samples = split_samples_by_split(annotations)
+
+    if vocab_path and Path(vocab_path).exists():
+        vocab = Vocabulary.load(vocab_path)
+    elif vocab is None:
+        vocab = build_vocabulary_from_annotations(annotations, min_freq=min_word_freq)
+        if vocab_path:
+            vocab.save(vocab_path)
+
+    image_transforms = build_image_transforms(img_size=img_size)
+    collate_fn = CaptionCollate(vocab, device=device)
+    val_batch_size = val_batch_size or batch_size * 2
+
+    train_ds = LEVIRCCDataset(
+        train_samples,
+        image_root,
+        caption_index=caption_index,
+        transforms_fn=image_transforms,
+    )
+    val_ds = LEVIRCCDataset(
+        val_samples,
+        image_root,
+        caption_index=caption_index,
+        transforms_fn=image_transforms,
+    )
+    test_ds = LEVIRCCDataset(
+        test_samples,
+        image_root,
+        caption_index=caption_index,
+        transforms_fn=image_transforms,
+    )
+
+    loader_kwargs = {"num_workers": num_workers, "pin_memory": device != "cpu"}
+
+    train_loader = DataLoader(
+        train_ds,
+        batch_size=batch_size,
+        shuffle=True,
+        collate_fn=collate_fn,
+        **loader_kwargs,
+    )
+    val_loader = DataLoader(
+        val_ds,
+        batch_size=val_batch_size,
+        shuffle=False,
+        collate_fn=collate_fn,
+        **loader_kwargs,
+    )
+    test_loader = DataLoader(
+        test_ds,
+        batch_size=val_batch_size,
+        shuffle=False,
+        collate_fn=collate_fn,
+        **loader_kwargs,
+    )
+
+    return train_loader, val_loader, test_loader, vocab
