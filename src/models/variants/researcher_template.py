@@ -5,8 +5,8 @@ Copy this file and modify it for your own architecture, e.g.:
     src/models/variants/researcher2_remoteclip_encoder.py
 """
 
-from src.models.baseline import RSICCformerBaseline
-from src.models.encoder import SimpleEncoder
+from src.models.baseline.baseline import RSICCformerBaseline
+from src.models.baseline.encoder import SimpleEncoder
 from src.models.interface import ChangeCaptioningModel
 
 
@@ -48,7 +48,7 @@ class FullyCustomModel(ChangeCaptioningModel):
     def __init__(self, vocab_size, encoder_dim=512, embed_dim=256, **kwargs):
         super().__init__()
         self.encoder = SimpleEncoder(out_dim=encoder_dim)
-        from src.models.decoder import SimpleDecoder
+        from src.models.baseline.decoder import SimpleDecoder
 
         self.decoder = SimpleDecoder(
             vocab_size=vocab_size,

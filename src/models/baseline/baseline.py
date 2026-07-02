@@ -2,7 +2,7 @@
 
 from .decoder import SimpleDecoder
 from .encoder import SimpleEncoder
-from .interface import ChangeCaptioningModel
+from ..interface import ChangeCaptioningModel
 
 
 class RSICCformerBaseline(ChangeCaptioningModel):

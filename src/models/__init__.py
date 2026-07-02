@@ -1,8 +1,8 @@
 """Model package for RSICC ablation study."""
 
-from .baseline import RSICCformerBaseline
-from .decoder import SimpleDecoder
-from .encoder import SimpleEncoder
+from .baseline.baseline import RSICCformerBaseline
+from .baseline.decoder import SimpleDecoder
+from .baseline.encoder import SimpleEncoder
 from .interface import ChangeCaptioningModel
 
 __all__ = [
