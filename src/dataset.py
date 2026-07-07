@@ -157,6 +157,33 @@ def build_image_transforms(
     )
 
 
+def build_remoteclip_transforms(
+    img_size: Tuple[int, int] = (224, 224),
+    mean: Tuple[float, float, float] = (
+        0.48145466,
+        0.4578275,
+        0.40821073,
+    ),
+    std: Tuple[float, float, float] = (
+        0.26862954,
+        0.26130258,
+        0.27577711,
+    ),
+):
+    """Preprocess images using the OpenCLIP evaluation convention."""
+    return transforms.Compose(
+        [
+            transforms.Resize(
+                img_size,
+                interpolation=transforms.InterpolationMode.BICUBIC,
+                antialias=True,
+            ),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=mean, std=std),
+        ]
+    )
+
+
 class LEVIRCCDataset(Dataset):
     """PyTorch dataset for before/after image pairs and captions."""
 
@@ -256,6 +283,7 @@ def get_levircc_loaders(
     caption_index: int = 0,
     num_workers: int = 0,
     vocab_path: Optional[Path] = None,
+    transforms_fn=None,
 ):
     """
     Load LEVIR-CC train/val/test DataLoaders with a shared vocabulary.
@@ -273,7 +301,7 @@ def get_levircc_loaders(
         if vocab_path:
             vocab.save(vocab_path)
 
-    image_transforms = build_image_transforms(img_size=img_size)
+    image_transforms = transforms_fn or build_image_transforms(img_size=img_size)
     collate_fn = CaptionCollate(vocab, device=device)
     val_batch_size = val_batch_size or batch_size * 2
 

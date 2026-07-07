@@ -49,6 +49,35 @@ class ModelConfig:
 
 
 @dataclass
+class RemoteCLIPConfig:
+    """Phase 2 RemoteCLIP encoder settings."""
+
+    model_name: str = "ViT-B-32"
+    checkpoint_path: Path = Path("checkpoints/RemoteCLIP-ViT-B-32.pt")
+    hf_repo_id: str = "chendelong/RemoteCLIP"
+    encoder_dim: int = 512
+    freeze_backbone: bool = True
+    download_if_missing: bool = False
+    fusion_dropout: float = 0.1
+
+    # OpenCLIP's default preprocessing for RemoteCLIP ViT-B-32.
+    image_size: Tuple[int, int] = (224, 224)
+    image_mean: Tuple[float, float, float] = (
+        0.48145466,
+        0.4578275,
+        0.40821073,
+    )
+    image_std: Tuple[float, float, float] = (
+        0.26862954,
+        0.26130258,
+        0.27577711,
+    )
+
+    def __post_init__(self):
+        self.checkpoint_path = Path(self.checkpoint_path)
+
+
+@dataclass
 class TrainConfig:
     """Default training settings."""
 

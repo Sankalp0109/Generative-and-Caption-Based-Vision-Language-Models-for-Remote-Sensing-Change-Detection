@@ -16,6 +16,7 @@ all model variants.
 
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from math import exp
@@ -292,15 +293,24 @@ class SentenceEmbeddingScorer:
 
     def score(self, references: Sequence[Sequence[str] | str], hypotheses: Sequence[str]) -> float:
         """Return mean cosine similarity between predictions and references."""
+        return float(np.mean(self.score_pairs(references, hypotheses))) if hypotheses else 0.0
+
+    def score_pairs(
+        self,
+        references: Sequence[Sequence[str] | str],
+        hypotheses: Sequence[str],
+    ) -> List[float]:
+        """Return cosine similarity for each reference/prediction pair."""
         refs = normalize_references(references)
         hyps = normalize_hypotheses(hypotheses)
-        self._load_backend()
+        if not hyps:
+            return []
 
+        self._load_backend()
         ref_texts = [ref_list[0] for ref_list in refs]
         hyp_emb = self._model.encode(hyps, convert_to_numpy=True, normalize_embeddings=True)
         ref_emb = self._model.encode(ref_texts, convert_to_numpy=True, normalize_embeddings=True)
-        sims = np.sum(hyp_emb * ref_emb, axis=1)
-        return float(np.mean(sims)) if len(sims) else 0.0
+        return np.sum(hyp_emb * ref_emb, axis=1).astype(float).tolist()
 
 
 def evaluate_caption_metrics(
@@ -418,3 +428,130 @@ def evaluate_model_on_loader(
     )
     metrics["num_samples"] = len(predictions)
     return metrics, details
+
+
+def evaluate_single_pair_metrics(reference: str, prediction: str) -> Dict[str, float]:
+    """Compute caption metrics for one reference/prediction pair."""
+    bleu = compute_bleu_scores([reference], [prediction])
+    meteor = compute_meteor_scores([reference], [prediction])
+    rouge = compute_rouge_l_scores([reference], [prediction])
+    cider = compute_cider_scores([reference], [prediction])
+    return {
+        **bleu,
+        "METEOR": meteor,
+        "ROUGE-L": rouge["ROUGE-L"],
+        "CIDEr": cider,
+    }
+
+
+def attach_per_sample_metrics(
+    details: List[Dict],
+    references: Sequence[Sequence[str]],
+    predictions: Sequence[str],
+    semantic_model: Optional[SentenceEmbeddingScorer] = None,
+) -> List[Dict]:
+    """Attach per-sample metrics to prediction detail records."""
+    semantic_scores: Optional[List[float]] = None
+    if semantic_model is not None:
+        semantic_scores = semantic_model.score_pairs(references, predictions)
+
+    enriched: List[Dict] = []
+    for idx, (detail, ref_list, prediction) in enumerate(zip(details, references, predictions)):
+        metrics = evaluate_single_pair_metrics(ref_list[0], prediction)
+        if semantic_scores is not None:
+            metrics["Semantic-Similarity"] = semantic_scores[idx]
+        enriched.append({**detail, "metrics": metrics})
+    return enriched
+
+
+def evaluate_full_test_with_per_sample_metrics(
+    model,
+    data_loader,
+    vocab,
+    device,
+    semantic_model: Optional[SentenceEmbeddingScorer] = None,
+    max_samples: Optional[int] = None,
+) -> Tuple[Dict[str, float], List[Dict]]:
+    """Run inference on a loader and return aggregate + per-sample metrics."""
+    references, predictions, details = collect_references_and_predictions(
+        model=model,
+        data_loader=data_loader,
+        vocab=vocab,
+        device=device,
+        max_samples=max_samples,
+    )
+    aggregate_metrics = evaluate_caption_metrics(
+        references=references,
+        hypotheses=predictions,
+        semantic_model=semantic_model,
+    )
+    aggregate_metrics["num_samples"] = len(predictions)
+
+    samples = attach_per_sample_metrics(
+        details=details,
+        references=references,
+        predictions=predictions,
+        semantic_model=semantic_model,
+    )
+    return aggregate_metrics, samples
+
+
+def build_phase1_results_payload(
+    aggregate_metrics: Dict[str, float],
+    samples: List[Dict],
+    metadata: Optional[Dict] = None,
+    preview_count: int = 40,
+) -> Dict:
+    """Build a JSON-serializable Phase 1 results object."""
+    payload: Dict = {
+        "metadata": metadata or {},
+        "full_test_metrics": aggregate_metrics,
+        "full_test_count": len(samples),
+        "full_test_samples": samples,
+    }
+
+    if preview_count > 0 and samples:
+        preview = samples[:preview_count]
+        preview_refs = [[item["reference"]] for item in preview]
+        preview_preds = [item["prediction"] for item in preview]
+        payload["sample_40_metrics"] = evaluate_caption_metrics(
+            references=preview_refs,
+            hypotheses=preview_preds,
+        )
+        payload["sample_40_metrics"]["num_samples"] = len(preview)
+        payload["sample_40_details"] = [
+            {
+                "filename": item["filename"],
+                "changeflag": item["changeflag"],
+                "reference": item["reference"],
+                "prediction": item["prediction"],
+            }
+            for item in preview
+        ]
+    return payload
+
+
+def save_phase1_results(
+    output_path: Path,
+    aggregate_metrics: Dict[str, float],
+    samples: List[Dict],
+    metadata: Optional[Dict] = None,
+    preview_count: int = 40,
+) -> Path:
+    """Save Phase 1 evaluation output with per-sample metrics to JSON."""
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    payload = build_phase1_results_payload(
+        aggregate_metrics=aggregate_metrics,
+        samples=samples,
+        metadata=metadata,
+        preview_count=preview_count,
+    )
+    with output_path.open("w", encoding="utf-8") as file:
+        json.dump(payload, file, indent=4, ensure_ascii=False)
+        file.write("\n")
+
+    print(f"Saved Phase 1 results to {output_path.resolve()}")
+    print(f"  Full test samples: {len(samples)}")
+    return output_path

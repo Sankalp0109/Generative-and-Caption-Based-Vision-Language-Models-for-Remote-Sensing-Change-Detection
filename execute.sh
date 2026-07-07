@@ -1,39 +1,75 @@
 #!/usr/bin/env bash
-
-# HPC batch script for running the RSICC notebook non-interactively.
-# Submit with: sbatch execute.sh
-
-# ---- SLURM settings ----
-# Adjust these if your cluster uses SLURM and you want to override defaults.
-#SBATCH --job-name=rsicc_train
-#SBATCH --output=logs/%x_%j.out
-#SBATCH --error=logs/%x_%j.err
-#SBATCH --time=6:00:00
+#SBATCH --job-name=rsicc_phase1
+#SBATCH --output=logs/phase1.out
+#SBATCH --error=logs/phase1.err
+#SBATCH --time=12:00:00
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --gres=gpu:1
 
-# ---- Environment setup ----
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$PROJECT_ROOT"
+echo "=========================================="
+echo "Job started : $(date)"
+echo "Host        : $(hostname)"
+echo "Working dir : $(pwd)"
+echo "=========================================="
 
+# Go to project
 cd /home2/sankalp0109/src_IS
+
+# Activate environment
 source venv/bin/activate
 
-# Tell NLTK where to store/find its data
-export NLTK_DATA=$HOME/nltk_data
+# Flush Python output immediately
+export PYTHONUNBUFFERED=1
 
-# Download required NLTK resources (safe to run every time)
-python - <<'EOF'
-import nltk
-nltk.download("wordnet", download_dir="/home2/sankalp0109/nltk_data")
-nltk.download("omw-1.4", download_dir="/home2/sankalp0109/nltk_data")
-EOF
+# NLTK
+export NLTK_DATA="$HOME/nltk_data"
+export REMOTECLIP_DOWNLOAD_IF_MISSING=1
 
-# Execute notebook
-jupyter nbconvert \
+echo "========== Python =========="
+which python
+python --version
+
+echo "========== GPU =========="
+nvidia-smi || true
+
+python -u <<'PY'
+import sys
+import torch
+
+sys.stdout.reconfigure(line_buffering=True)
+
+print("=" * 50, flush=True)
+print("Torch Version:", torch.__version__, flush=True)
+print("CUDA Runtime:", torch.version.cuda, flush=True)
+print("CUDA Available:", torch.cuda.is_available(), flush=True)
+
+if torch.cuda.is_available():
+    print("GPU:", torch.cuda.get_device_name(0), flush=True)
+    print("Capability:", torch.cuda.get_device_capability(0), flush=True)
+    print("Supported Architectures:", torch.cuda.get_arch_list(), flush=True)
+else:
+    print("Running on CPU", flush=True)
+
+print("=" * 50, flush=True)
+PY
+
+echo "========== Executing Notebook =========="
+date
+
+python -u -m jupyter nbconvert \
     --to notebook \
-    --execute phase2_modular_pipeline.ipynb \
-    --output phase2.ipynb \
-    --ExecutePreprocessor.timeout=-1
+    --execute phase1.ipynb \
+    --output phase1_output.ipynb \
+    --ExecutePreprocessor.kernel_name=python3 \
+    --ExecutePreprocessor.timeout=-1 \
+    --debug
 
+STATUS=$?
+
+echo "=========================================="
+echo "Notebook finished with exit code: $STATUS"
+echo "Finished at: $(date)"
+echo "=========================================="
+
+exit $STATUS

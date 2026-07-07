@@ -61,9 +61,10 @@ def train_epoch(
     num_batches = 0
 
     for batch_idx, batch in enumerate(train_loader):
-        images = batch["images"]
+        images = batch["images"].to(device, non_blocking=True)
+        caption_tokens = batch["caption_tokens"].to(device, non_blocking=True)
         input_tokens, target_tokens = prepare_teacher_forcing_inputs(
-            batch["caption_tokens"],
+            caption_tokens,
             pad_idx=pad_idx,
         )
 
@@ -104,9 +105,10 @@ def validate(
 
     with torch.no_grad():
         for batch in data_loader:
-            images = batch["images"]
+            images = batch["images"].to(device, non_blocking=True)
+            caption_tokens = batch["caption_tokens"].to(device, non_blocking=True)
             input_tokens, target_tokens = prepare_teacher_forcing_inputs(
-                batch["caption_tokens"],
+                caption_tokens,
                 pad_idx=pad_idx,
             )
 
@@ -218,49 +220,106 @@ def visualize_predictions(
     data_loader,
     vocab,
     device,
-    num_samples: int = 3,
+    num_samples: int = None,
+    output_pdf: str = "predictions.pdf",
     mean=(0.485, 0.456, 0.406),
     std=(0.229, 0.224, 0.225),
 ):
-    """Plot before/after images with reference and predicted captions."""
+    """
+    Save before/after images with reference and predicted captions to a PDF.
+
+    Args:
+        model: Trained captioning model.
+        data_loader: DataLoader.
+        vocab: Vocabulary object.
+        device: torch device.
+        num_samples: Number of samples to save. If None, saves the entire dataset.
+        output_pdf: Output PDF filename.
+        mean: ImageNet mean.
+        std: ImageNet std.
+    """
+    import math
     import matplotlib.pyplot as plt
+    from matplotlib.backends.backend_pdf import PdfPages
 
     from src.utils import denormalize_image
 
     model.eval()
-    batch = next(iter(data_loader))
-    num_samples = min(num_samples, batch["before_images"].shape[0])
 
-    fig, axes = plt.subplots(num_samples, 3, figsize=(15, 4 * num_samples))
-    if num_samples == 1:
-        axes = [axes]
+    dataset_size = len(data_loader.dataset)
+    if num_samples is None:
+        num_samples = dataset_size
+    else:
+        num_samples = min(num_samples, dataset_size)
 
-    for idx in range(num_samples):
-        before_img = batch["before_images"][idx]
-        after_img = batch["after_images"][idx]
-        ref_caption = batch["captions"][idx]
-        pred_caption = generate_caption(model, before_img, after_img, vocab, device)
+    sample_count = 0
 
-        axes[idx][0].imshow(denormalize_image(before_img, mean=mean, std=std))
-        axes[idx][0].set_title("Before")
-        axes[idx][0].axis("off")
+    with PdfPages(output_pdf) as pdf:
+        with torch.no_grad():
+            for batch in data_loader:
+                batch_size = batch["before_images"].shape[0]
 
-        axes[idx][1].imshow(denormalize_image(after_img, mean=mean, std=std))
-        axes[idx][1].set_title("After")
-        axes[idx][1].axis("off")
+                for idx in range(batch_size):
+                    if sample_count >= num_samples:
+                        break
 
-        axes[idx][2].axis("off")
-        axes[idx][2].text(
-            0,
-            0.5,
-            f"Reference:\n{ref_caption}\n\nPrediction:\n{pred_caption}",
-            fontsize=10,
-            wrap=True,
-            verticalalignment="center",
-        )
+                    before_img = batch["before_images"][idx]
+                    after_img = batch["after_images"][idx]
+                    ref_caption = batch["captions"][idx]
 
-    plt.tight_layout()
-    plt.show()
+                    pred_caption = generate_caption(
+                        model,
+                        before_img,
+                        after_img,
+                        vocab,
+                        device,
+                    )
+
+                    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+                    axes[0].imshow(
+                        denormalize_image(
+                            before_img,
+                            mean=mean,
+                            std=std,
+                        )
+                    )
+                    axes[0].set_title("Before")
+                    axes[0].axis("off")
+
+                    axes[1].imshow(
+                        denormalize_image(
+                            after_img,
+                            mean=mean,
+                            std=std,
+                        )
+                    )
+                    axes[1].set_title("After")
+                    axes[1].axis("off")
+
+                    axes[2].axis("off")
+                    axes[2].text(
+                        0,
+                        1,
+                        f"Sample: {sample_count + 1}\n\n"
+                        f"Reference:\n{ref_caption}\n\n"
+                        f"Prediction:\n{pred_caption}",
+                        fontsize=10,
+                        wrap=True,
+                        verticalalignment="top",
+                    )
+
+                    plt.tight_layout()
+
+                    pdf.savefig(fig, bbox_inches="tight")
+                    plt.close(fig)
+
+                    sample_count += 1
+
+                if sample_count >= num_samples:
+                    break
+
+    print(f"Saved {sample_count} predictions to '{output_pdf}'.")
 
 
 def build_optimizer_and_scheduler(model, train_config):

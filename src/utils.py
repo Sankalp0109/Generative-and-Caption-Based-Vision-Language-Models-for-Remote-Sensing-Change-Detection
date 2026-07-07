@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import random
+import os
+import warnings
 from pathlib import Path
 from typing import Tuple
 
@@ -30,9 +32,39 @@ def set_seed(seed: int = 42) -> None:
         torch.cuda.manual_seed_all(seed)
 
 
+def cuda_device_is_compatible() -> bool:
+    """Return whether this PyTorch build can execute kernels on the GPU.
+
+    ``torch.cuda.is_available()`` only confirms that CUDA can initialize. It
+    does not guarantee that the wheel contains kernels for the allocated GPU's
+    compute capability.
+    """
+    if not torch.cuda.is_available():
+        return False
+
+    try:
+        # Exercise the same kernel family that previously failed inside the
+        # image encoder, then synchronize so asynchronous errors surface here.
+        image = torch.zeros((1, 1, 4, 4), device="cuda")
+        kernel = torch.ones((1, 1, 1, 1), device="cuda")
+        torch.nn.functional.conv2d(image, kernel)
+        torch.cuda.synchronize()
+        return True
+    except RuntimeError as exc:
+        warnings.warn(
+            "CUDA initialized but cannot execute kernels on this GPU; "
+            f"falling back to CPU. Original error: {exc}",
+            RuntimeWarning,
+        )
+        return False
+
+
 def get_device(prefer_cuda: bool = True):
-    """Return the best available torch device."""
-    if prefer_cuda and torch.cuda.is_available():
+    """Return CUDA only when the installed wheel supports the allocated GPU."""
+    force_cpu = os.environ.get("RSICC_FORCE_CPU", "0").strip().lower()
+    if force_cpu in {"1", "true", "yes"}:
+        return torch.device("cpu")
+    if prefer_cuda and cuda_device_is_compatible():
         return torch.device("cuda")
     return torch.device("cpu")
 

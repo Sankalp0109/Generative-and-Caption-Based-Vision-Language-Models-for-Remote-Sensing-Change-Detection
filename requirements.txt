@@ -1,10 +1,17 @@
-torch
-torchvision
-pillow
-numpy
-matplotlib
-nltk
-scikit-learn
-pandas
-sentence-transformers
-transformers
+numpy==2.2.6
+pillow==11.2.1
+matplotlib==3.10.3
+pandas==2.3.0
+scikit-learn==1.7.0
+
+nltk==3.9.1
+
+transformers==4.53.0
+sentence-transformers==5.0.0
+huggingface-hub==0.33.0
+
+open-clip-torch==2.32.0
+
+# Notebook execution used by execute.sh
+nbconvert==7.16.6
+ipykernel==6.29.5
