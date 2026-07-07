@@ -20,10 +20,15 @@ from .dataset import (
 from .models import (
     ChangeCaptioningModel,
     RSICCformerBaseline,
+    Phase5RemoteCLIPModel,
+    RemoteCLIPCrossAttentionModel,
     SimpleDecoder,
     SimpleEncoder,
+    captioning_loss,
+    contrastive_caption_loss,
 )
 from .models.variants import RemoteCLIPDifferenceModel, RemoteCLIPEncoder
+from .models.final_model import phase5_total_loss
 from .training import (
     build_criterion,
     build_optimizer_and_scheduler,
@@ -77,6 +82,11 @@ __all__ = [
     "SimpleEncoder",
     "SimpleDecoder",
     "RSICCformerBaseline",
+    "RemoteCLIPCrossAttentionModel",
+    "Phase5RemoteCLIPModel",
+    "captioning_loss",
+    "contrastive_caption_loss",
+    "phase5_total_loss",
     "RemoteCLIPEncoder",
     "RemoteCLIPDifferenceModel",
     "train_epoch",

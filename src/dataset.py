@@ -142,6 +142,23 @@ def build_vocabulary_from_annotations(
     return vocab
 
 
+def build_vocabulary_from_multiple_annotations(
+    annotations_list: List[Dict],
+    min_freq: int = 2,
+    splits: Tuple[str, ...] = ("train", "val", "test"),
+) -> Vocabulary:
+    """Build a single shared vocabulary from multiple annotation sources."""
+    captions = []
+    for annotations in annotations_list:
+        for sample in annotations["images"]:
+            if sample["split"] in splits:
+                captions.extend(sent["raw"].strip() for sent in sample["sentences"])
+
+    vocab = Vocabulary(min_freq=min_freq)
+    vocab.build_vocab(captions)
+    return vocab
+
+
 def build_image_transforms(
     img_size: Tuple[int, int] = (256, 256),
     mean: Tuple[float, float, float] = (0.485, 0.456, 0.406),
@@ -224,6 +241,18 @@ class LEVIRCCDataset(Dataset):
         }
 
 
+class SecondCCDataset(LEVIRCCDataset):
+    """PyTorch dataset wrapper for the SECOND-CC-AUG annotation schema.
+
+    The SECOND-CC archive is expected to follow the same sample layout as
+    LEVIR-CC: each record contains a relative filepath, filename, split,
+    changeflag, and a list of caption sentences. The only difference is the
+    dataset root and annotation file path provided to the loader.
+    """
+
+    pass
+
+
 class CaptionCollate:
     """
     Collate function that produces a standardized batch dictionary.
@@ -294,9 +323,12 @@ def get_levircc_loaders(
     annotations = load_levircc_annotations(caption_json)
     train_samples, val_samples, test_samples = split_samples_by_split(annotations)
 
-    if vocab_path and Path(vocab_path).exists():
+    if vocab is not None:
+        if vocab_path and not Path(vocab_path).exists():
+            vocab.save(vocab_path)
+    elif vocab_path and Path(vocab_path).exists():
         vocab = Vocabulary.load(vocab_path)
-    elif vocab is None:
+    else:
         vocab = build_vocabulary_from_annotations(annotations, min_freq=min_word_freq)
         if vocab_path:
             vocab.save(vocab_path)
@@ -318,6 +350,90 @@ def get_levircc_loaders(
         transforms_fn=image_transforms,
     )
     test_ds = LEVIRCCDataset(
+        test_samples,
+        image_root,
+        caption_index=caption_index,
+        transforms_fn=image_transforms,
+    )
+
+    loader_kwargs = {"num_workers": num_workers, "pin_memory": device != "cpu"}
+
+    train_loader = DataLoader(
+        train_ds,
+        batch_size=batch_size,
+        shuffle=True,
+        collate_fn=collate_fn,
+        **loader_kwargs,
+    )
+    val_loader = DataLoader(
+        val_ds,
+        batch_size=val_batch_size,
+        shuffle=False,
+        collate_fn=collate_fn,
+        **loader_kwargs,
+    )
+    test_loader = DataLoader(
+        test_ds,
+        batch_size=val_batch_size,
+        shuffle=False,
+        collate_fn=collate_fn,
+        **loader_kwargs,
+    )
+
+    return train_loader, val_loader, test_loader, vocab
+
+
+def get_secondcc_loaders(
+    caption_json: Path,
+    image_root: Path,
+    vocab: Optional[Vocabulary] = None,
+    batch_size: int = 8,
+    val_batch_size: Optional[int] = None,
+    device: str = "cpu",
+    img_size: Tuple[int, int] = (256, 256),
+    min_word_freq: int = 2,
+    caption_index: int = 0,
+    num_workers: int = 0,
+    vocab_path: Optional[Path] = None,
+    transforms_fn=None,
+):
+    """
+    Load SECOND-CC train/val/test DataLoaders with a shared vocabulary.
+
+    This mirrors get_levircc_loaders so the final-phase notebook can train on
+    LEVIR-CC first and then continue fine-tuning on SECOND-CC without changing
+    the model interface.
+    """
+    annotations = load_levircc_annotations(caption_json)
+    train_samples, val_samples, test_samples = split_samples_by_split(annotations)
+
+    if vocab is not None:
+        if vocab_path and not Path(vocab_path).exists():
+            vocab.save(vocab_path)
+    elif vocab_path and Path(vocab_path).exists():
+        vocab = Vocabulary.load(vocab_path)
+    else:
+        vocab = build_vocabulary_from_annotations(annotations, min_freq=min_word_freq)
+        if vocab_path:
+            vocab.save(vocab_path)
+
+    image_transforms = transforms_fn or build_image_transforms(img_size=img_size)
+    collate_fn = CaptionCollate(vocab, device=device)
+    val_batch_size = val_batch_size or batch_size * 2
+
+    train_ds = SecondCCDataset(
+        train_samples,
+        image_root,
+        caption_index=caption_index,
+        transforms_fn=image_transforms,
+    )
+    val_ds = SecondCCDataset(
+        val_samples,
+        image_root,
+        caption_index=caption_index,
+        transforms_fn=image_transforms,
+    )
+    test_ds = SecondCCDataset(
         test_samples,
         image_root,
         caption_index=caption_index,

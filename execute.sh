@@ -59,8 +59,8 @@ date
 
 python -u -m jupyter nbconvert \
     --to notebook \
-    --execute phase1.ipynb \
-    --output phase1_output.ipynb \
+    --execute phase_final.ipynb \
+    --output phase_final_output.ipynb \
     --ExecutePreprocessor.kernel_name=python3 \
     --ExecutePreprocessor.timeout=-1 \
     --debug

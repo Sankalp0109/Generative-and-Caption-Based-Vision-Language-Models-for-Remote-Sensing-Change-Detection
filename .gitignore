@@ -2,7 +2,9 @@ checkpoints/
 Levir-CC-dataset/
 .venv/
 .vscode/
+venv/
 SETUP.md
 .DS_Store
 Detailed Implementation Flow of the Proposed Framework.pdf
 Independent_Study_project.pdf
+SECOND-CC-AUG/

@@ -57,7 +57,7 @@ class RemoteCLIPConfig:
     hf_repo_id: str = "chendelong/RemoteCLIP"
     encoder_dim: int = 512
     freeze_backbone: bool = True
-    download_if_missing: bool = False
+    download_if_missing: bool = True
     fusion_dropout: float = 0.1
 
     # OpenCLIP's default preprocessing for RemoteCLIP ViT-B-32.
@@ -83,7 +83,7 @@ class TrainConfig:
 
     learning_rate: float = 1e-4
     weight_decay: float = 1e-5
-    num_epochs: int = 10
+    num_epochs: int = 15
     grad_clip: float = 1.0
     scheduler_t_max: int = 10
     log_every: int = 10
