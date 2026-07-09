@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=rsicc_phase1
-#SBATCH --output=logs/phase1.out
-#SBATCH --error=logs/phase1.err
+#SBATCH --output=logs/phase_final.out
+#SBATCH --error=logs/phase_final.err
 #SBATCH --time=12:00:00
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
@@ -33,26 +33,6 @@ python --version
 echo "========== GPU =========="
 nvidia-smi || true
 
-python -u <<'PY'
-import sys
-import torch
-
-sys.stdout.reconfigure(line_buffering=True)
-
-print("=" * 50, flush=True)
-print("Torch Version:", torch.__version__, flush=True)
-print("CUDA Runtime:", torch.version.cuda, flush=True)
-print("CUDA Available:", torch.cuda.is_available(), flush=True)
-
-if torch.cuda.is_available():
-    print("GPU:", torch.cuda.get_device_name(0), flush=True)
-    print("Capability:", torch.cuda.get_device_capability(0), flush=True)
-    print("Supported Architectures:", torch.cuda.get_arch_list(), flush=True)
-else:
-    print("Running on CPU", flush=True)
-
-print("=" * 50, flush=True)
-PY
 
 echo "========== Executing Notebook =========="
 date

@@ -241,7 +241,7 @@ class LEVIRCCDataset(Dataset):
         }
 
 
-class SecondCCDataset(LEVIRCCDataset):
+class SecondCCDataset(Dataset):
     """PyTorch dataset wrapper for the SECOND-CC-AUG annotation schema.
 
     The SECOND-CC archive is expected to follow the same sample layout as
@@ -249,8 +249,41 @@ class SecondCCDataset(LEVIRCCDataset):
     changeflag, and a list of caption sentences. The only difference is the
     dataset root and annotation file path provided to the loader.
     """
+    def __init__(
+        self,
+        samples: List[Dict],
+        image_root: Path,
+        caption_index: int = 0,
+        transforms_fn=None,
+    ):
+        self.samples = samples
+        self.image_root = Path(image_root)
+        self.caption_index = caption_index
+        self.transforms = transforms_fn
 
-    pass
+    def __len__(self) -> int:
+        return len(self.samples)
+
+    def __getitem__(self, idx: int) -> Dict:
+        sample = self.samples[idx]
+        before_path = self.image_root / sample["filepath"] / "rgb" / "A" / sample["filename"]
+        after_path = self.image_root / sample["filepath"] /  "rgb" / "B" / sample["filename"]
+
+        before_img = Image.open(before_path).convert("RGB")
+        after_img = Image.open(after_path).convert("RGB")
+
+        if self.transforms:
+            before_img = self.transforms(before_img)
+            after_img = self.transforms(after_img)
+
+        caption = sample["sentences"][self.caption_index]["raw"].strip()
+        return {
+            "before_image": before_img,
+            "after_image": after_img,
+            "caption": caption,
+            "changeflag": sample["changeflag"],
+            "filename": sample["filename"],
+        }
 
 
 class CaptionCollate:
