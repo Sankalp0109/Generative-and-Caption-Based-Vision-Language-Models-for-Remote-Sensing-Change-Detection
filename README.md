@@ -1,6 +1,6 @@
 # RSICC Modularized Pipeline for Collaborative Ablation Study
 
-This directory contains a **modularized** implementation of the Remote Sensing Image Change Captioning (RSICC) baseline for collaborative ablation study on the LEVIR-CC dataset.
+This directory contains a **modularized** implementation of the Remote Sensing Image Change Captioning (RSICC) baseline for collaborative ablation study on the LEVIR-CC Dataset.
 
 ## 📦 Project Structure
 
