@@ -11,6 +11,11 @@ from src.models.final_model import (
     contrastive_caption_loss,
     phase5_total_loss,
 )
+from src.models.phase6 import (
+    Phase6Config,
+    TileBasedChangeCaptioningModel,
+    phase6_total_loss,
+)
 
 __all__ = [
     "ChangeCaptioningModel",
@@ -22,4 +27,8 @@ __all__ = [
     "captioning_loss",
     "contrastive_caption_loss",
     "phase5_total_loss",
+    "Phase6Config",
+    "TileBasedChangeCaptioningModel",
+    "phase6_total_loss",
 ]
+
