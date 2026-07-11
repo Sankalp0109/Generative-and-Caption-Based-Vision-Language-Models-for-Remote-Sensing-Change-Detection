@@ -201,7 +201,14 @@ def generate_caption(
     model.eval()
 
     images = torch.stack([before_image, after_image], dim=0).unsqueeze(0).to(device)
-    encoder_features = model.encoder(images)
+    if hasattr(model, "encode_images"):
+        encoder_features = model.encode_images(images)[0]
+    elif hasattr(model, "encoder"):
+        encoder_features = model.encoder(images)
+    else:
+        raise AttributeError(
+            f"'{type(model).__name__}' object has no attribute 'encoder' or 'encode_images'"
+        )
 
     caption_tokens = [vocab.start_idx]
     for _ in range(max_len):
