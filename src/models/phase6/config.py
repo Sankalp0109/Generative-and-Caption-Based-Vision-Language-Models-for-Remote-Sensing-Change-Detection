@@ -34,7 +34,7 @@ class Phase6Config:
     """Dimension of per-tile difference embeddings (must equal RemoteCLIP output dim)."""
 
     fusion_heads: int = 4
-    """Number of attention heads in the per-tile bidirectional cross-attention."""
+    """Number of attention heads in the per-tile forward cross-attention."""
 
     diff_mlp_dropout: float = 0.1
     """Dropout rate inside the per-tile difference MLP."""

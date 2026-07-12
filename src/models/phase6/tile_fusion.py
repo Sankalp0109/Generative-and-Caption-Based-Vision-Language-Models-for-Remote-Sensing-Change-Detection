@@ -34,7 +34,7 @@ class TileFusionTransformer(nn.Module):
     """Fuse per-tile difference embeddings into a single global representation.
 
     Args:
-        fusion_dim: Dimensionality of each tile embedding (from TileBidirectionalDifference).
+        fusion_dim: Dimensionality of each tile embedding (from TileDifference).
         num_tiles: Number of tiles per image (N = grid_size^2).
         global_dim: Output dimension of the projected global representation.
         num_layers: Number of Transformer encoder layers.

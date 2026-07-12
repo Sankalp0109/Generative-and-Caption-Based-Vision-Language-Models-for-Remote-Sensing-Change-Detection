@@ -26,7 +26,7 @@ from ..final_model.remoteclip_cross_attention import (
 
 from .tile_extractor import TileExtractor
 from .tile_encoder import TileEncoder
-from .tile_difference import TileBidirectionalDifference
+from .tile_difference import TileDifference
 from .tile_fusion import TileFusionTransformer
 from .config import Phase6Config
 
@@ -35,8 +35,8 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
     """Phase 6 Model: Hierarchical Tile-Based Change Captioning.
 
     This architecture extracts tile grids, encodes them with a shared RemoteCLIP
-    backbone, computes bidirectional per-tile difference embeddings, fuses them
-    via a Transformer with a CLS token, and generates captions with a standard
+    backbone, computes per-tile difference embeddings using forward cross-attention,
+    fuses them via a Transformer with a CLS token, and generates captions with a standard
     decoder.
     """
 
@@ -68,8 +68,8 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
             backbone=backbone,
         )
 
-        # ── 3. Bidirectional Difference Module ────────────────────────────
-        self.tile_diff = TileBidirectionalDifference(
+        # ── 3. Difference Module ──────────────────────────────────────────
+        self.tile_diff = TileDifference(
             backbone_dim=self.tile_encoder.backbone_dim,
             fusion_dim=self.cfg.fusion_dim,
             num_heads=self.cfg.fusion_heads,
@@ -142,7 +142,7 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         # Stage 2: Encode tiles
         before_feats, after_feats = self.tile_encoder(tiles)  # (B, N, D)
 
-        # Stage 3: Bidirectional difference
+        # Stage 3: Forward difference
         diff_embeddings = self.tile_diff(before_feats, after_feats)  # (B, N, fusion_dim)
 
         # Stage 4: Fusion Transformer
