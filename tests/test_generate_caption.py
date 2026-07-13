@@ -7,9 +7,7 @@ import torch.nn as nn
 
 from src.dataset import Vocabulary
 from src.training import generate_caption
-from src.models.baseline import RSICCformerBaseline
-from src.models.final_model import RemoteCLIPCrossAttentionModel
-from src.models.phase6 import TileBasedChangeCaptioningModel, Phase6Config
+from src.models.phase7 import TileBasedChangeCaptioningModel, Phase7Config
 
 
 class FakeRemoteCLIP(nn.Module):
@@ -46,57 +44,8 @@ class GenerateCaptionTests(unittest.TestCase):
         self.before_image = torch.randn(3, 32, 32)
         self.after_image = torch.randn(3, 32, 32)
 
-    def test_generate_caption_with_baseline_model(self):
-        model = RSICCformerBaseline(
-            vocab_size=len(self.vocab.word2idx),
-            encoder_dim=8,
-            embed_dim=8,
-            num_heads=2,
-            num_decoder_layers=1,
-            max_caption_len=10,
-            encoder_hidden_dim=4,
-            pad_idx=self.vocab.pad_idx,
-        ).to(self.device)
-
-        caption = generate_caption(
-            model=model,
-            before_image=self.before_image,
-            after_image=self.after_image,
-            vocab=self.vocab,
-            device=self.device,
-            max_len=5,
-        )
-        self.assertIsInstance(caption, str)
-
-    def test_generate_caption_with_phase5_model(self):
-        model = RemoteCLIPCrossAttentionModel(
-            vocab_size=len(self.vocab.word2idx),
-            encoder_dim=8,
-            embed_dim=8,
-            num_heads=2,
-            num_decoder_layers=1,
-            max_caption_len=10,
-            dropout=0.0,
-            pad_idx=self.vocab.pad_idx,
-            backbone=FakeRemoteCLIP(output_dim=8),
-            backbone_dim=8,
-            fusion_heads=2,
-            token_count=2,
-            contrastive_dim=8,
-        ).to(self.device)
-
-        caption = generate_caption(
-            model=model,
-            before_image=self.before_image,
-            after_image=self.after_image,
-            vocab=self.vocab,
-            device=self.device,
-            max_len=5,
-        )
-        self.assertIsInstance(caption, str)
-
-    def test_generate_caption_with_phase6_model(self):
-        config = Phase6Config()
+    def test_generate_caption_with_phase7_model(self):
+        config = Phase7Config()
         config.remoteclip_model_name = "ViT-B-32"
         config.fusion_dim = 8
         config.global_dim = 8

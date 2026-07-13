@@ -1,12 +1,12 @@
-"""Stage 6: Tile-Based Change Captioning Model.
+"""Stage 7: Tile-Based Change Captioning Model.
 
 Integrates:
   1. TileExtractor
   2. TileEncoder (shared RemoteCLIP backbone)
   3. TileBidirectionalDifference
   4. TileFusionTransformer
-  5. SimpleDecoder
-  6. CaptionContrastiveEncoder (for alignment)
+  5. SimpleDecoder (defined locally)
+  6. CaptionContrastiveEncoder (defined locally)
 """
 
 from __future__ import annotations
@@ -17,22 +17,111 @@ from typing import Optional
 import torch
 import torch.nn as nn
 
-from ..baseline.decoder import SimpleDecoder
 from ..interface import ChangeCaptioningModel
-from ..final_model.remoteclip_cross_attention import (
-    CaptionContrastiveEncoder,
-    REMOTECLIP_REPO_ID,
-)
 
 from .tile_extractor import TileExtractor
-from .tile_encoder import TileEncoder
+from .tile_encoder import TileEncoder, REMOTECLIP_REPO_ID
 from .tile_difference import TileDifference
 from .tile_fusion import TileFusionTransformer
-from .config import Phase6Config
+from .config import Phase7Config
+
+
+class SimpleDecoder(nn.Module):
+    """Transformer decoder for caption generation.
+
+    Input:
+        encoder_features: (batch, encoder_dim)
+        caption_tokens:   (batch, seq_len)
+    Output:
+        logits: (batch, seq_len, vocab_size)
+    """
+
+    def __init__(
+        self,
+        vocab_size: int = 1000,
+        embed_dim: int = 256,
+        num_heads: int = 4,
+        num_layers: int = 2,
+        max_len: int = 100,
+        encoder_dim: int = 512,
+        dropout: float = 0.1,
+        pad_idx: int = 0,
+    ):
+        super().__init__()
+
+        self.vocab_size = vocab_size
+        self.embed_dim = embed_dim
+        self.encoder_dim = encoder_dim
+        self.max_len = max_len
+
+        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=pad_idx)
+        self.positional_encoding = nn.Parameter(torch.randn(1, max_len, embed_dim))
+        self.encoder_projection = nn.Linear(encoder_dim, embed_dim)
+
+        decoder_layer = nn.TransformerDecoderLayer(
+            d_model=embed_dim,
+            nhead=num_heads,
+            dim_feedforward=embed_dim * 4,
+            dropout=dropout,
+            batch_first=True,
+        )
+        self.transformer_decoder = nn.TransformerDecoder(decoder_layer, num_layers=num_layers)
+        self.output_projection = nn.Linear(embed_dim, vocab_size)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, encoder_features, caption_tokens):
+        batch_size, seq_len = caption_tokens.shape
+        device = caption_tokens.device
+
+        embedded = self.dropout(self.embedding(caption_tokens))
+        embedded = embedded + self.positional_encoding[:, :seq_len, :].to(device)
+
+        encoder_memory = self.encoder_projection(encoder_features).unsqueeze(1)
+        tgt_mask = nn.Transformer.generate_square_subsequent_mask(seq_len).to(device)
+
+        decoded = self.transformer_decoder(
+            tgt=embedded,
+            memory=encoder_memory,
+            tgt_mask=tgt_mask,
+        )
+        return self.output_projection(decoded)
+
+
+class CaptionContrastiveEncoder(nn.Module):
+    """Encode caption tokens into the shared contrastive space."""
+
+    def __init__(
+        self,
+        vocab_size: int,
+        embed_dim: int,
+        projection_dim: int,
+        pad_idx: int = 0,
+        dropout: float = 0.1,
+    ):
+        super().__init__()
+        self.pad_idx = pad_idx
+        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=pad_idx)
+        self.projection = nn.Sequential(
+            nn.Linear(embed_dim, projection_dim),
+            nn.LayerNorm(projection_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(projection_dim, projection_dim),
+        )
+
+    def forward(self, caption_tokens: torch.Tensor) -> torch.Tensor:
+        if caption_tokens.ndim != 2:
+            raise ValueError("CaptionContrastiveEncoder expects caption tokens shaped (batch, seq_len).")
+
+        embedded = self.embedding(caption_tokens)
+        mask = (caption_tokens != self.pad_idx).unsqueeze(-1).float()
+        lengths = mask.sum(dim=1).clamp(min=1.0)
+        pooled = (embedded * mask).sum(dim=1) / lengths
+        return self.projection(pooled)
 
 
 class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
-    """Phase 6 Model: Hierarchical Tile-Based Change Captioning.
+    """Phase 7 Model: Hierarchical Tile-Based Change Captioning.
 
     This architecture extracts tile grids, encodes them with a shared RemoteCLIP
     backbone, computes per-tile difference embeddings using forward cross-attention,
@@ -43,13 +132,13 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
     def __init__(
         self,
         vocab_size: int,
-        config: Optional[Phase6Config] = None,
+        config: Optional[Phase7Config] = None,
         # Or individual overrides:
         pad_idx: int = 0,
         backbone: Optional[nn.Module] = None,
     ):
         super().__init__()
-        self.cfg = config or Phase6Config()
+        self.cfg = config or Phase7Config()
         self.pad_idx = pad_idx
 
         # ── 1. Tile Extraction ────────────────────────────────────────────

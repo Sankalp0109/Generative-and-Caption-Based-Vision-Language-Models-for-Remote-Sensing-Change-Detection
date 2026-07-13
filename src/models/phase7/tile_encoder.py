@@ -8,14 +8,6 @@ Input:  tiles  (B, N, 2, 3, tile_h, tile_w)   from TileExtractor
 Output:
     before_features  (B, N, backbone_dim)
     after_features   (B, N, backbone_dim)
-
-Design notes
-------------
-- Backbone weights are shared across all N tiles and both temporal directions.
-- When freeze_backbone=True the backbone stays in eval() mode even while the
-  rest of the model is in train() mode; this mirrors Phase 5 behaviour.
-- The batched-tile encode path flattens (B*N) images into one forward pass,
-  which is both faster and avoids Python loop overhead.
 """
 
 from __future__ import annotations
@@ -27,14 +19,53 @@ from typing import Optional, Tuple
 import torch
 import torch.nn as nn
 
-from ..variants.remoteclip_difference import (
-    REMOTECLIP_REPO_ID,
-    resolve_remoteclip_checkpoint,
-)
+REMOTECLIP_REPO_ID = "chendelong/RemoteCLIP"
+SUPPORTED_MODELS = {"RN50", "ViT-B-32", "ViT-L-14"}
+
+
+def resolve_remoteclip_checkpoint(
+    checkpoint_path: Optional[Path],
+    model_name: str,
+    download_if_missing: bool = False,
+    repo_id: str = REMOTECLIP_REPO_ID,
+) -> Path:
+    """Return a local RemoteCLIP checkpoint, optionally downloading it."""
+    if model_name not in SUPPORTED_MODELS:
+        choices = ", ".join(sorted(SUPPORTED_MODELS))
+        raise ValueError(f"Unsupported RemoteCLIP model {model_name!r}. Choose one of: {choices}.")
+
+    path = Path(checkpoint_path) if checkpoint_path is not None else None
+    if path is not None and path.is_file():
+        return path
+
+    if not download_if_missing:
+        expected = path or Path("checkpoints") / f"RemoteCLIP-{model_name}.pt"
+        raise FileNotFoundError(
+            f"RemoteCLIP checkpoint not found at {expected}. "
+            "Download the official checkpoint there or set download_if_missing=True."
+        )
+
+    try:
+        from huggingface_hub import hf_hub_download
+    except ImportError as exc:
+        raise ImportError(
+            "huggingface-hub is required to download RemoteCLIP checkpoints."
+        ) from exc
+
+    target = path or Path("checkpoints") / f"RemoteCLIP-{model_name}.pt"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    downloaded = Path(
+        hf_hub_download(
+            repo_id=repo_id,
+            filename=f"RemoteCLIP-{model_name}.pt",
+            local_dir=str(target.parent),
+        )
+    )
+    return downloaded
 
 
 def _safe_torch_load(path: Path):
-    """Load a checkpoint safely across PyTorch versions."""
+    """Load tensor-only checkpoints safely across PyTorch versions."""
     try:
         return torch.load(path, map_location="cpu", weights_only=True)
     except TypeError:
@@ -75,7 +106,7 @@ class TileEncoder(nn.Module):
                 import open_clip
             except ImportError as exc:
                 raise ImportError(
-                    "open-clip-torch is required for the Phase 6 tile encoder."
+                    "open-clip-torch is required for the Phase 7 tile encoder."
                 ) from exc
 
             ckpt = resolve_remoteclip_checkpoint(
@@ -99,10 +130,6 @@ class TileEncoder(nn.Module):
             self.backbone.requires_grad_(False)
             self.backbone.eval()
 
-    # ------------------------------------------------------------------
-    # Helpers
-    # ------------------------------------------------------------------
-
     @staticmethod
     def _infer_backbone_dim(backbone: nn.Module) -> int:
         visual = getattr(backbone, "visual", None)
@@ -119,13 +146,8 @@ class TileEncoder(nn.Module):
     def train(self, mode: bool = True):
         super().train(mode)
         if self.freeze_backbone:
-            # Keep backbone in eval regardless of outer mode.
             self.backbone.eval()
         return self
-
-    # ------------------------------------------------------------------
-    # Forward
-    # ------------------------------------------------------------------
 
     def _encode_flat(self, images_flat: torch.Tensor) -> torch.Tensor:
         """Encode a flat batch of images (BN, C, H, W)."""
@@ -139,15 +161,7 @@ class TileEncoder(nn.Module):
     def forward(
         self, tiles: torch.Tensor
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        """Encode all tiles with the shared backbone.
-
-        Args:
-            tiles: (B, N, 2, 3, tile_h, tile_w)
-
-        Returns:
-            before_features: (B, N, backbone_dim)
-            after_features:  (B, N, backbone_dim)
-        """
+        """Encode all tiles with the shared backbone."""
         if tiles.ndim != 6 or tiles.size(2) != 2:
             raise ValueError(
                 "TileEncoder expects tiles shaped (B, N, 2, 3, H, W). "
@@ -156,12 +170,11 @@ class TileEncoder(nn.Module):
 
         B, N, _, C, H, W = tiles.shape
 
-        # Flatten to (B*N, C, H, W) for each temporal channel, then encode.
-        before_flat = tiles[:, :, 0].reshape(B * N, C, H, W)  # (B*N, C, H, W)
+        before_flat = tiles[:, :, 0].reshape(B * N, C, H, W)
         after_flat = tiles[:, :, 1].reshape(B * N, C, H, W)
 
-        before_enc = self._encode_flat(before_flat)   # (B*N, D)
-        after_enc = self._encode_flat(after_flat)     # (B*N, D)
+        before_enc = self._encode_flat(before_flat)
+        after_enc = self._encode_flat(after_flat)
 
         D = self.backbone_dim
         before_features = before_enc.view(B, N, D)

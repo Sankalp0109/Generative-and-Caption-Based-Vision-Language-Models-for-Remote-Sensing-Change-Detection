@@ -1,4 +1,8 @@
-"""Loss helpers for the phase 5 RemoteCLIP final model."""
+"""Loss helper functions for Phase 7 tile-based change captioning.
+
+Provides the combined objective for training: cross-entropy caption loss plus
+an optional InfoNCE contrastive caption alignment loss.
+"""
 
 from __future__ import annotations
 
@@ -6,7 +10,7 @@ import torch
 import torch.nn.functional as F
 
 
-def captioning_loss(logits, target_tokens, criterion, pad_idx: int = 0):
+def captioning_loss(logits: torch.Tensor, target_tokens: torch.Tensor, criterion: torch.nn.Module, pad_idx: int = 0) -> torch.Tensor:
     """Compute token-level caption loss with the provided criterion."""
     batch_size, seq_len, vocab_size = logits.shape
     return criterion(
@@ -19,7 +23,7 @@ def contrastive_caption_loss(
     image_embeddings: torch.Tensor,
     text_embeddings: torch.Tensor,
     temperature: float = 0.07,
-):
+) -> torch.Tensor:
     """Symmetric InfoNCE loss for image-caption alignment.
 
     The batch order defines the positive pairs: image i matches caption i.
@@ -43,10 +47,10 @@ def contrastive_caption_loss(
     return 0.5 * (loss_i2t + loss_t2i)
 
 
-def phase5_total_loss(
-    logits,
-    target_tokens,
-    criterion,
+def phase7_total_loss(
+    logits: torch.Tensor,
+    target_tokens: torch.Tensor,
+    criterion: torch.nn.Module,
     image_embeddings: torch.Tensor,
     text_embeddings: torch.Tensor,
     contrastive_weight: float = 0.1,
@@ -55,17 +59,28 @@ def phase5_total_loss(
 ):
     """Combine caption loss and contrastive alignment loss.
 
-    Returns a tuple of:
+    Returns:
         total_loss, caption_loss, contrastive_loss
     """
     if contrastive_weight < 0:
         raise ValueError("contrastive_weight must be non-negative.")
 
-    caption_loss_value = captioning_loss(logits, target_tokens, criterion, pad_idx=pad_idx)
-    contrastive_loss_value = contrastive_caption_loss(
-        image_embeddings=image_embeddings,
-        text_embeddings=text_embeddings,
-        temperature=temperature,
+    caption_loss_value = captioning_loss(
+        logits, target_tokens, criterion, pad_idx=pad_idx
     )
-    total_loss = caption_loss_value + contrastive_weight * contrastive_loss_value
+
+    if contrastive_weight > 0:
+        contrastive_loss_value = contrastive_caption_loss(
+            image_embeddings=image_embeddings,
+            text_embeddings=text_embeddings,
+            temperature=temperature,
+        )
+        total_loss = (
+            caption_loss_value + contrastive_weight * contrastive_loss_value
+        )
+    else:
+        # Avoid computing contrastive loss if weight is 0.
+        contrastive_loss_value = torch.tensor(0.0, device=logits.device)
+        total_loss = caption_loss_value
+
     return total_loss, caption_loss_value, contrastive_loss_value

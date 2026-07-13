@@ -1,8 +1,7 @@
 """
 RSICC shared module library.
 
-All three researchers should import from here so dataset format,
-vocabulary, and training utilities stay identical across ablation runs.
+All modules are unified to support the Phase 7 hierarchical tile-based architecture.
 """
 
 from .config import DataConfig, ModelConfig, RemoteCLIPConfig, TrainConfig
@@ -19,16 +18,10 @@ from .dataset import (
 )
 from .models import (
     ChangeCaptioningModel,
-    RSICCformerBaseline,
-    Phase5RemoteCLIPModel,
-    RemoteCLIPCrossAttentionModel,
-    SimpleDecoder,
-    SimpleEncoder,
-    captioning_loss,
-    contrastive_caption_loss,
+    Phase7Config,
+    TileBasedChangeCaptioningModel,
+    phase7_total_loss,
 )
-from .models.variants import RemoteCLIPDifferenceModel, RemoteCLIPEncoder
-from .models.final_model import phase5_total_loss
 from .training import (
     build_criterion,
     build_optimizer_and_scheduler,
@@ -39,7 +32,7 @@ from .training import (
     train_epoch,
     validate,
     visualize_predictions,
-    get_checkpoint_epoch
+    get_checkpoint_epoch,
 )
 from .metrics import (
     SentenceEmbeddingScorer,
@@ -79,16 +72,9 @@ __all__ = [
     "build_image_transforms",
     "build_remoteclip_transforms",
     "ChangeCaptioningModel",
-    "SimpleEncoder",
-    "SimpleDecoder",
-    "RSICCformerBaseline",
-    "RemoteCLIPCrossAttentionModel",
-    "Phase5RemoteCLIPModel",
-    "captioning_loss",
-    "contrastive_caption_loss",
-    "phase5_total_loss",
-    "RemoteCLIPEncoder",
-    "RemoteCLIPDifferenceModel",
+    "Phase7Config",
+    "TileBasedChangeCaptioningModel",
+    "phase7_total_loss",
     "train_epoch",
     "validate",
     "save_checkpoint",
@@ -116,5 +102,5 @@ __all__ = [
     "cuda_device_is_compatible",
     "stack_image_pair",
     "denormalize_image",
-    "get_checkpoint_epoch"
+    "get_checkpoint_epoch",
 ]

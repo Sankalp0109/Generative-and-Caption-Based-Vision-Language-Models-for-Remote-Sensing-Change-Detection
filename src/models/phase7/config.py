@@ -1,4 +1,4 @@
-"""Phase 6 configuration dataclass.
+"""Phase 7 configuration dataclass.
 
 All hyperparameters specific to the hierarchical tile-based model live here.
 Shared hyperparameters (data paths, base model dims) continue to be read from
@@ -13,8 +13,8 @@ from typing import Tuple
 
 
 @dataclass
-class Phase6Config:
-    """Hyperparameters for the Phase 6 tile-based change captioning model.
+class Phase7Config:
+    """Hyperparameters for the Phase 7 tile-based change captioning model.
 
     These values were chosen to work within ADA cluster constraints:
         - 1 GPU, 16 GB RAM

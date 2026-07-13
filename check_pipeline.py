@@ -29,14 +29,10 @@ from src.dataset import (
     load_levircc_annotations,
     split_samples_by_split,
 )
-from src.models.final_model import (
-    RemoteCLIPCrossAttentionModel,
-    phase5_total_loss,
-)
-from src.models.phase6 import (
-    Phase6Config,
+from src.models.phase7 import (
+    Phase7Config,
     TileBasedChangeCaptioningModel,
-    phase6_total_loss,
+    phase7_total_loss,
 )
 from src.training import (
     build_criterion,
@@ -107,7 +103,7 @@ def run_dry_run():
     model_cfg = ModelConfig()
     remoteclip_cfg = RemoteCLIPConfig()
     train_cfg = TrainConfig()
-    phase6_cfg = Phase6Config()
+    phase7_cfg = Phase7Config()
 
     print("Building vocabulary from dummy annotations...")
     shared_vocab = build_vocabulary_from_multiple_annotations(
@@ -139,27 +135,6 @@ def run_dry_run():
     )
     print(f"DataLoaders loaded. Train batches: {len(train_loader)}")
 
-    print("\n-------------------------------------------------------------")
-    print("Test 1: Phase Final (RemoteCLIP Cross-Attention Model) Check")
-    print("-------------------------------------------------------------")
-    fake_backbone = FakeRemoteCLIP(output_dim=512)
-    model_p5 = RemoteCLIPCrossAttentionModel(
-        vocab_size=len(vocab.word2idx),
-        encoder_dim=512,
-        embed_dim=128,
-        num_heads=4,
-        num_decoder_layers=1,
-        max_caption_len=15,
-        dropout=0.1,
-        pad_idx=vocab.pad_idx,
-        backbone=fake_backbone,
-        backbone_dim=512,
-        contrastive_dim=128,
-    ).to(device)
-
-    trainable_p5 = sum(p.numel() for p in model_p5.parameters() if p.requires_grad)
-    print(f"Model initialized successfully. Trainable params: {trainable_p5:,}")
-
     # Fetch one batch
     batch = next(iter(train_loader))
     images = batch["images"].to(device)
@@ -167,78 +142,53 @@ def run_dry_run():
     input_tokens = caption_tokens[:, :-1]
     target_tokens = caption_tokens[:, 1:]
 
-    print("Running forward pass...")
-    outputs = model_p5(images, input_tokens, return_aux=True)
-    print("Forward pass successful. Outputs keys:", list(outputs.keys()))
-    print("Logits shape:", outputs["logits"].shape)
-    
-    print("Computing loss...")
-    criterion = build_criterion(vocab)
-    total_loss, cap_loss, cont_loss = phase5_total_loss(
-        logits=outputs["logits"],
-        target_tokens=target_tokens,
-        criterion=criterion,
-        image_embeddings=outputs["image_embeddings"],
-        text_embeddings=outputs["text_embeddings"],
-        contrastive_weight=0.1,
-        temperature=0.07,
-        pad_idx=vocab.pad_idx,
-    )
-    print(f"Loss computed successfully: Total={total_loss.item():.4f}, Caption={cap_loss.item():.4f}, Contrastive={cont_loss.item():.4f}")
-
-    print("Running backward pass...")
-    optimizer, scheduler = build_optimizer_and_scheduler(model_p5, train_cfg)
-    optimizer.zero_grad()
-    total_loss.backward()
-    optimizer.step()
-    print("Backward pass and optimizer step completed successfully!")
-
     print("\n-------------------------------------------------------------")
-    print("Test 2: Phase 6 (Hierarchical Tile-Based Model) Check")
+    print("Test: Phase 7 (Hierarchical Tile-Based Model) Check")
     print("-------------------------------------------------------------")
-    fake_backbone_p6 = FakeRemoteCLIP(output_dim=512)
+    fake_backbone_p7 = FakeRemoteCLIP(output_dim=512)
     # Adjust Config parameters to fit our lightweight testing
-    phase6_cfg.remoteclip_model_name = "ViT-B-32"
-    phase6_cfg.fusion_dim = 128
-    phase6_cfg.global_dim = 128
-    phase6_cfg.embed_dim = 128
-    phase6_cfg.contrastive_dim = 128
-    phase6_cfg.num_fusion_layers = 1
-    phase6_cfg.num_decoder_layers = 1
+    phase7_cfg.remoteclip_model_name = "ViT-B-32"
+    phase7_cfg.fusion_dim = 128
+    phase7_cfg.global_dim = 128
+    phase7_cfg.embed_dim = 128
+    phase7_cfg.contrastive_dim = 128
+    phase7_cfg.num_fusion_layers = 1
+    phase7_cfg.num_decoder_layers = 1
 
-    model_p6 = TileBasedChangeCaptioningModel(
+    model_p7 = TileBasedChangeCaptioningModel(
         vocab_size=len(vocab.word2idx),
-        config=phase6_cfg,
+        config=phase7_cfg,
         pad_idx=vocab.pad_idx,
-        backbone=fake_backbone_p6,
+        backbone=fake_backbone_p7,
     ).to(device)
 
-    trainable_p6 = sum(p.numel() for p in model_p6.parameters() if p.requires_grad)
-    print(f"Model initialized successfully. Trainable params: {trainable_p6:,}")
+    trainable_p7 = sum(p.numel() for p in model_p7.parameters() if p.requires_grad)
+    print(f"Model initialized successfully. Trainable params: {trainable_p7:,}")
 
     print("Running forward pass...")
-    outputs_p6 = model_p6(images, input_tokens, return_aux=True)
-    print("Forward pass successful. Outputs keys:", list(outputs_p6.keys()))
-    print("Logits shape:", outputs_p6["logits"].shape)
+    outputs_p7 = model_p7(images, input_tokens, return_aux=True)
+    print("Forward pass successful. Outputs keys:", list(outputs_p7.keys()))
+    print("Logits shape:", outputs_p7["logits"].shape)
 
     print("Computing loss...")
-    total_loss_p6, cap_loss_p6, cont_loss_p6 = phase6_total_loss(
-        logits=outputs_p6["logits"],
+    criterion = build_criterion(vocab)
+    total_loss_p7, cap_loss_p7, cont_loss_p7 = phase7_total_loss(
+        logits=outputs_p7["logits"],
         target_tokens=target_tokens,
         criterion=criterion,
-        image_embeddings=outputs_p6["image_embeddings"],
-        text_embeddings=outputs_p6["text_embeddings"],
-        contrastive_weight=phase6_cfg.contrastive_weight,
-        temperature=phase6_cfg.temperature,
+        image_embeddings=outputs_p7["image_embeddings"],
+        text_embeddings=outputs_p7["text_embeddings"],
+        contrastive_weight=phase7_cfg.contrastive_weight,
+        temperature=phase7_cfg.temperature,
         pad_idx=vocab.pad_idx,
     )
-    print(f"Loss computed successfully: Total={total_loss_p6.item():.4f}, Caption={cap_loss_p6.item():.4f}, Contrastive={cont_loss_p6.item():.4f}")
+    print(f"Loss computed successfully: Total={total_loss_p7.item():.4f}, Caption={cap_loss_p7.item():.4f}, Contrastive={cont_loss_p7.item():.4f}")
 
     print("Running backward pass...")
-    optimizer_p6, scheduler_p6 = build_optimizer_and_scheduler(model_p6, train_cfg)
-    optimizer_p6.zero_grad()
-    total_loss_p6.backward()
-    optimizer_p6.step()
+    optimizer_p7, scheduler_p7 = build_optimizer_and_scheduler(model_p7, train_cfg)
+    optimizer_p7.zero_grad()
+    total_loss_p7.backward()
+    optimizer_p7.step()
     print("Backward pass and optimizer step completed successfully!")
 
     # Cleanup temporary directories and files

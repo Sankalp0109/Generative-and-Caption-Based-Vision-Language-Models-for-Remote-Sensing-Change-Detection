@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#SBATCH --job-name=rsicc_phase1
-#SBATCH --output=logs/phase_final.out
-#SBATCH --error=logs/phase_final.err
+#SBATCH --job-name=rsicc_phase7
+#SBATCH --output=logs/phase7.out
+#SBATCH --error=logs/phase7.err
 #SBATCH --time=12:00:00
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
@@ -39,8 +39,8 @@ date
 
 python -u -m jupyter nbconvert \
     --to notebook \
-    --execute phase_final.ipynb \
-    --output phase_final_output.ipynb \
+    --execute phase7.ipynb \
+    --output phase7_output.ipynb \
     --ExecutePreprocessor.kernel_name=python3 \
     --ExecutePreprocessor.timeout=-1 \
     --debug
