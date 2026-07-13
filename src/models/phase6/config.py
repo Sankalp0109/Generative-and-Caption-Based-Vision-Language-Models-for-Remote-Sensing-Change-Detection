@@ -36,7 +36,7 @@ class Phase6Config:
     fusion_heads: int = 4
     """Number of attention heads in the per-tile forward cross-attention."""
 
-    diff_mlp_dropout: float = 0.1
+    diff_mlp_dropout: float = 0.3
     """Dropout rate inside the per-tile difference MLP."""
 
     # ── Tile fusion transformer ───────────────────────────────────────────────
@@ -49,7 +49,7 @@ class Phase6Config:
     fusion_ffn_dim: int = 2048
     """Feed-forward hidden dimension inside the fusion transformer."""
 
-    fusion_dropout: float = 0.1
+    fusion_dropout: float = 0.3
     """Dropout rate in the tile fusion transformer."""
 
     # ── Global projection ─────────────────────────────────────────────────────
@@ -69,14 +69,14 @@ class Phase6Config:
     max_caption_len: int = 100
     """Maximum decoded caption length."""
 
-    decoder_dropout: float = 0.1
+    decoder_dropout: float = 0.3
     """Dropout rate inside the caption decoder."""
 
     # ── Contrastive alignment (optional) ────────────────────────────────────
     contrastive_dim: int = 256
     """Projection dim for contrastive image/caption embeddings."""
 
-    contrastive_weight: float = 0.1
+    contrastive_weight: float = 0.2
     """Weight λ of the contrastive loss term in the combined objective."""
 
     temperature: float = 0.07

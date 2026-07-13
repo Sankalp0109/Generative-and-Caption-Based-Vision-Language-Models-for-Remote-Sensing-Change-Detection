@@ -44,7 +44,7 @@ class ModelConfig:
     num_heads: int = 4
     num_decoder_layers: int = 2
     max_caption_len: int = 100
-    dropout: float = 0.1
+    dropout: float = 0.3
     encoder_hidden_dim: int = 64
 
 
@@ -82,7 +82,7 @@ class TrainConfig:
     """Default training settings."""
 
     learning_rate: float = 1e-4
-    weight_decay: float = 1e-5
+    weight_decay: float = 1e-4
     num_epochs: int = 15
     grad_clip: float = 1.0
     scheduler_t_max: int = 10

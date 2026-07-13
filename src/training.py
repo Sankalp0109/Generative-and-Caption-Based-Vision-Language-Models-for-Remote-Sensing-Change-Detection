@@ -343,6 +343,6 @@ def build_optimizer_and_scheduler(model, train_config):
     return optimizer, scheduler
 
 
-def build_criterion(vocab) -> Callable:
-    """Shared cross-entropy loss with padding ignored."""
-    return nn.CrossEntropyLoss(ignore_index=vocab.pad_idx)
+def build_criterion(vocab, label_smoothing: float = 0.0) -> Callable:
+    """Shared cross-entropy loss with padding ignored and optional label smoothing."""
+    return nn.CrossEntropyLoss(ignore_index=vocab.pad_idx, label_smoothing=label_smoothing)
