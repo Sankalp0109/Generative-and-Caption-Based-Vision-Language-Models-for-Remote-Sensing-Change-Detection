@@ -1,9 +1,0 @@
-# Exclude large binary and PDF files
-*.pdf
-
-# Exclude log and output directories which can be very large
-logs/
-outputs/
-
-# Exclude standard version control metadata
-.git/
