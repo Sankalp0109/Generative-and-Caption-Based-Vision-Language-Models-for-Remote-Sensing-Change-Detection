@@ -157,19 +157,53 @@ def save_checkpoint(
         filename = f"{name}_epoch{epoch}.pt"
 
     import io
+    import os
 
     path = checkpoint_dir / filename
     buffer = io.BytesIO()
     torch.save(payload, buffer)
-    with open(path, "wb") as f:
-        f.write(buffer.getvalue())
+    
+    # Save atomically by writing to a temporary file first and renaming it
+    tmp_path = path.with_suffix(".tmp")
+    try:
+        with open(tmp_path, "wb") as f:
+            f.write(buffer.getvalue())
+        os.replace(tmp_path, path)
+    except Exception as e:
+        if tmp_path.exists():
+            try:
+                tmp_path.unlink()
+            except Exception:
+                pass
+        raise e
+        
     print(f"Checkpoint saved: {path}", flush=True)
     return path
 
 
 def load_checkpoint(model, optimizer, checkpoint_path: Path, device):
     """Load model checkpoint and return the saved training state."""
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    checkpoint_path = Path(checkpoint_path)
+    try:
+        checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    except Exception as e:
+        print(f"\n[ERROR] Failed to load checkpoint from {checkpoint_path}!", flush=True)
+        print(f"The file may be corrupted, empty, or truncated. Details: {e}", flush=True)
+        
+        if checkpoint_path.exists():
+            corrupted_path = checkpoint_path.with_suffix(checkpoint_path.suffix + ".corrupted")
+            try:
+                checkpoint_path.rename(corrupted_path)
+                print(f"[INFO] Renamed corrupted checkpoint to {corrupted_path}", flush=True)
+            except Exception as rename_err:
+                print(f"[ERROR] Could not rename corrupted checkpoint: {rename_err}", flush=True)
+        
+        raise RuntimeError(
+            f"Checkpoint file {checkpoint_path} is corrupted. "
+            f"It has been renamed to {checkpoint_path.name}.corrupted to avoid blocking future runs. "
+            f"Please re-run the process to start fresh or fall back to the best checkpoint."
+        ) from e
+
     model.load_state_dict(checkpoint["model_state_dict"])
     if optimizer is not None and "optimizer_state_dict" in checkpoint:
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
@@ -187,7 +221,26 @@ def load_checkpoint(model, optimizer, checkpoint_path: Path, device):
 
 def get_checkpoint_epoch(checkpoint_path: Path, device):
     """Read a checkpoint file and return the saved epoch."""
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    checkpoint_path = Path(checkpoint_path)
+    try:
+        checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    except Exception as e:
+        print(f"\n[ERROR] Failed to load checkpoint from {checkpoint_path} to get epoch!", flush=True)
+        print(f"The file may be corrupted, empty, or truncated. Details: {e}", flush=True)
+        
+        if checkpoint_path.exists():
+            corrupted_path = checkpoint_path.with_suffix(checkpoint_path.suffix + ".corrupted")
+            try:
+                checkpoint_path.rename(corrupted_path)
+                print(f"[INFO] Renamed corrupted checkpoint to {corrupted_path}", flush=True)
+            except Exception as rename_err:
+                print(f"[ERROR] Could not rename corrupted checkpoint: {rename_err}", flush=True)
+        
+        raise RuntimeError(
+            f"Checkpoint file {checkpoint_path} is corrupted. "
+            f"It has been renamed to {checkpoint_path.name}.corrupted to avoid blocking future runs."
+        ) from e
+
     epoch = checkpoint.get("epoch", 0)
     print(f"Checkpoint epoch: {epoch}", flush=True)
     return epoch
