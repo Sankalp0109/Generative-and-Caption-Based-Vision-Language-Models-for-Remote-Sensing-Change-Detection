@@ -156,8 +156,13 @@ def save_checkpoint(
     if filename is None:
         filename = f"{name}_epoch{epoch}.pt"
 
+    import io
+
     path = checkpoint_dir / filename
-    torch.save(payload, path)
+    buffer = io.BytesIO()
+    torch.save(payload, buffer)
+    with open(path, "wb") as f:
+        f.write(buffer.getvalue())
     print(f"Checkpoint saved: {path}", flush=True)
     return path
 

@@ -27,7 +27,7 @@ from typing import Optional, Tuple
 import torch
 import torch.nn as nn
 
-from ..variants.remoteclip_difference import (
+from src.utils import (
     REMOTECLIP_REPO_ID,
     resolve_remoteclip_checkpoint,
 )

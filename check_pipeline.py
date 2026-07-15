@@ -41,6 +41,7 @@ from src.models.phase6 import (
 from src.training import (
     build_criterion,
     build_optimizer_and_scheduler,
+    save_checkpoint,
 )
 from src.utils import get_device, set_seed
 
@@ -240,6 +241,18 @@ def run_dry_run():
     total_loss_p6.backward()
     optimizer_p6.step()
     print("Backward pass and optimizer step completed successfully!")
+
+    print("Testing save_checkpoint functionality...")
+    saved_path = save_checkpoint(
+        model=model_p6,
+        optimizer=optimizer_p6,
+        epoch=1,
+        loss=total_loss_p6.item(),
+        vocab=vocab,
+        checkpoint_dir=Path(temp_dir),
+        filename="dry_run_test.pt",
+    )
+    print(f"save_checkpoint test successful! File created at: {saved_path}")
 
     # Cleanup temporary directories and files
     patcher.stop()
