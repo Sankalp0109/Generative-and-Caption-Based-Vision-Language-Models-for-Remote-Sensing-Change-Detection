@@ -201,8 +201,45 @@ def build_remoteclip_transforms(
     )
 
 
+def extract_ordered_patches_from_pil(
+    img: Image.Image,
+    patch_size: int = 256,
+    transforms_fn=None,
+) -> torch.Tensor:
+    """Extract non-overlapping patches of size patch_size x patch_size from a PIL image without resizing.
+
+    If image dimensions are not divisible by patch_size, zero-pads right/bottom borders.
+    Patches are extracted in strict row-major spatial order: patch0, patch1, ..., patchN-1.
+
+    Returns:
+        patches: Tensor of shape (N, C, patch_h, patch_w)
+    """
+    import math
+
+    w, h = img.size
+    padded_w = math.ceil(w / patch_size) * patch_size
+    padded_h = math.ceil(h / patch_size) * patch_size
+
+    if padded_w != w or padded_h != h:
+        padded_img = Image.new("RGB", (padded_w, padded_h), (0, 0, 0))
+        padded_img.paste(img, (0, 0))
+        img = padded_img
+
+    patch_tensors = []
+    for r in range(0, padded_h, patch_size):
+        for c in range(0, padded_w, patch_size):
+            patch_crop = img.crop((c, r, c + patch_size, r + patch_size))
+            if transforms_fn is not None:
+                patch_tensor = transforms_fn(patch_crop)
+            else:
+                patch_tensor = transforms.ToTensor()(patch_crop)
+            patch_tensors.append(patch_tensor)
+
+    return torch.stack(patch_tensors, dim=0)
+
+
 class LEVIRCCDataset(Dataset):
-    """PyTorch dataset for before/after image pairs and captions."""
+    """PyTorch dataset for before/after image pairs and captions with patch extraction."""
 
     def __init__(
         self,
@@ -210,11 +247,13 @@ class LEVIRCCDataset(Dataset):
         image_root: Path,
         caption_index: int = 0,
         transforms_fn=None,
+        patch_size: Optional[int] = 256,
     ):
         self.samples = samples
         self.image_root = Path(image_root)
         self.caption_index = caption_index
         self.transforms = transforms_fn
+        self.patch_size = patch_size
 
     def __len__(self) -> int:
         return len(self.samples)
@@ -227,7 +266,14 @@ class LEVIRCCDataset(Dataset):
         before_img = Image.open(before_path).convert("RGB")
         after_img = Image.open(after_path).convert("RGB")
 
-        if self.transforms:
+        if self.patch_size is not None:
+            before_img = extract_ordered_patches_from_pil(
+                before_img, patch_size=self.patch_size, transforms_fn=self.transforms
+            )
+            after_img = extract_ordered_patches_from_pil(
+                after_img, patch_size=self.patch_size, transforms_fn=self.transforms
+            )
+        elif self.transforms:
             before_img = self.transforms(before_img)
             after_img = self.transforms(after_img)
 
@@ -242,24 +288,21 @@ class LEVIRCCDataset(Dataset):
 
 
 class SecondCCDataset(Dataset):
-    """PyTorch dataset wrapper for the SECOND-CC-AUG annotation schema.
+    """PyTorch dataset wrapper for the SECOND-CC-AUG annotation schema with patch extraction."""
 
-    The SECOND-CC archive is expected to follow the same sample layout as
-    LEVIR-CC: each record contains a relative filepath, filename, split,
-    changeflag, and a list of caption sentences. The only difference is the
-    dataset root and annotation file path provided to the loader.
-    """
     def __init__(
         self,
         samples: List[Dict],
         image_root: Path,
         caption_index: int = 0,
         transforms_fn=None,
+        patch_size: Optional[int] = 256,
     ):
         self.samples = samples
         self.image_root = Path(image_root)
         self.caption_index = caption_index
         self.transforms = transforms_fn
+        self.patch_size = patch_size
 
     def __len__(self) -> int:
         return len(self.samples)
@@ -267,12 +310,19 @@ class SecondCCDataset(Dataset):
     def __getitem__(self, idx: int) -> Dict:
         sample = self.samples[idx]
         before_path = self.image_root / sample["filepath"] / "rgb" / "A" / sample["filename"]
-        after_path = self.image_root / sample["filepath"] /  "rgb" / "B" / sample["filename"]
+        after_path = self.image_root / sample["filepath"] / "rgb" / "B" / sample["filename"]
 
         before_img = Image.open(before_path).convert("RGB")
         after_img = Image.open(after_path).convert("RGB")
 
-        if self.transforms:
+        if self.patch_size is not None:
+            before_img = extract_ordered_patches_from_pil(
+                before_img, patch_size=self.patch_size, transforms_fn=self.transforms
+            )
+            after_img = extract_ordered_patches_from_pil(
+                after_img, patch_size=self.patch_size, transforms_fn=self.transforms
+            )
+        elif self.transforms:
             before_img = self.transforms(before_img)
             after_img = self.transforms(after_img)
 
@@ -286,14 +336,56 @@ class SecondCCDataset(Dataset):
         }
 
 
+class TestDataset(Dataset):
+    """PyTorch test dataset wrapper with patch extraction."""
+
+    def __init__(
+        self,
+        image_root: Path,
+        transforms_fn=None,
+        patch_size: Optional[int] = 256,
+    ):
+        self.image_root = Path(image_root)
+        self.transforms = transforms_fn
+        self.patch_size = patch_size
+        self.num_samples = len(list((self.image_root / "before").glob("*.png")))
+
+    def __len__(self) -> int:
+        return self.num_samples
+
+    def __getitem__(self, idx: int) -> Dict:
+        filename = f"Img{idx+1}.png"
+        before_path = self.image_root / "before" / filename
+        after_path = self.image_root / "after" / filename
+
+        before_img = Image.open(before_path).convert("RGB")
+        after_img = Image.open(after_path).convert("RGB")
+
+        if self.patch_size is not None:
+            before_img = extract_ordered_patches_from_pil(
+                before_img, patch_size=self.patch_size, transforms_fn=self.transforms
+            )
+            after_img = extract_ordered_patches_from_pil(
+                after_img, patch_size=self.patch_size, transforms_fn=self.transforms
+            )
+        elif self.transforms:
+            before_img = self.transforms(before_img)
+            after_img = self.transforms(after_img)
+
+        return {
+            "before_image": before_img,
+            "after_image": after_img,
+            "filename": filename,
+        }
+
+
 class CaptionCollate:
-    """
-    Collate function that produces a standardized batch dictionary.
+    """Collate function that produces a standardized batch dictionary.
 
     Every model variant receives the same batch keys:
-        - before_images: (B, 3, H, W)
-        - after_images:  (B, 3, H, W)
-        - images:        (B, 2, 3, H, W)  stacked pair for encoder input
+        - before_images: (B, N, 3, H, W) or (B, 3, H, W)
+        - after_images:  (B, N, 3, H, W) or (B, 3, H, W)
+        - images:        (B, N, 2, 3, H, W) or (B, 2, 3, H, W)
         - caption_tokens:(B, L) padded token ids
         - captions:      list[str] raw reference captions
         - changeflags:   (B,)
@@ -307,7 +399,11 @@ class CaptionCollate:
     def __call__(self, batch: List[Dict]) -> Dict:
         before_images = torch.stack([item["before_image"] for item in batch])
         after_images = torch.stack([item["after_image"] for item in batch])
-        images = torch.stack([before_images, after_images], dim=1)
+        # Stack temporal pair: if 4D (N, C, H, W) -> stack at dim 2: (B, N, 2, C, H, W)
+        # if 3D (C, H, W) -> stack at dim 1: (B, 2, C, H, W)
+        temporal_dim = 2 if before_images.ndim == 5 else 1
+        images = torch.stack([before_images, after_images], dim=temporal_dim)
+
         captions = [item["caption"] for item in batch]
         changeflags = torch.tensor([item["changeflag"] for item in batch], dtype=torch.long)
         filenames = [item["filename"] for item in batch]
@@ -323,15 +419,43 @@ class CaptionCollate:
             padded_captions[i, : len(tokens)] = tokens
 
         return {
-        "before_images": before_images,
-        "after_images": after_images,
-        "images": images,
-        "caption_tokens": padded_captions,
-        "captions": captions,
-        "changeflags": changeflags,
-        "filenames": filenames,
+            "before_images": before_images,
+            "after_images": after_images,
+            "images": images,
+            "caption_tokens": padded_captions,
+            "captions": captions,
+            "changeflags": changeflags,
+            "filenames": filenames,
         }
 
+def get_test_loaders(
+        image_root: Path,
+        device: str = "cpu",
+        img_size: Tuple[int, int] = (256, 256),
+        num_workers: int = 0,
+        transforms_fn=None,
+):
+
+    image_transforms = transforms_fn or build_image_transforms(img_size=img_size)
+
+    test_ds = TestDataset(
+        image_root,
+        transforms_fn=image_transforms,
+    )
+    val_batch_size=43
+
+    loader_kwargs = {"num_workers": num_workers, "pin_memory": device != "cpu"}
+
+    test_loader = DataLoader(
+        test_ds,
+        batch_size=val_batch_size,
+        shuffle=False,
+        **loader_kwargs,
+    )
+
+    return test_loader
+    
+    
 
 def get_levircc_loaders(
     caption_json: Path,
@@ -346,6 +470,7 @@ def get_levircc_loaders(
     num_workers: int = 0,
     vocab_path: Optional[Path] = None,
     transforms_fn=None,
+    patch_size: Optional[int] = 256,
 ):
     """
     Load LEVIR-CC train/val/test DataLoaders with a shared vocabulary.
@@ -375,18 +500,21 @@ def get_levircc_loaders(
         image_root,
         caption_index=caption_index,
         transforms_fn=image_transforms,
+        patch_size=patch_size,
     )
     val_ds = LEVIRCCDataset(
         val_samples,
         image_root,
         caption_index=caption_index,
         transforms_fn=image_transforms,
+        patch_size=patch_size,
     )
     test_ds = LEVIRCCDataset(
         test_samples,
         image_root,
         caption_index=caption_index,
         transforms_fn=image_transforms,
+        patch_size=patch_size,
     )
 
     loader_kwargs = {"num_workers": num_workers, "pin_memory": device != "cpu"}
@@ -429,6 +557,7 @@ def get_secondcc_loaders(
     num_workers: int = 0,
     vocab_path: Optional[Path] = None,
     transforms_fn=None,
+    patch_size: Optional[int] = 256,
 ):
     """
     Load SECOND-CC train/val/test DataLoaders with a shared vocabulary.
@@ -459,18 +588,21 @@ def get_secondcc_loaders(
         image_root,
         caption_index=caption_index,
         transforms_fn=image_transforms,
+        patch_size=patch_size,
     )
     val_ds = SecondCCDataset(
         val_samples,
         image_root,
         caption_index=caption_index,
         transforms_fn=image_transforms,
+        patch_size=patch_size,
     )
     test_ds = SecondCCDataset(
         test_samples,
         image_root,
         caption_index=caption_index,
         transforms_fn=image_transforms,
+        patch_size=patch_size,
     )
 
     loader_kwargs = {"num_workers": num_workers, "pin_memory": device != "cpu"}

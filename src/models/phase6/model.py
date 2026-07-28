@@ -94,7 +94,7 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
             num_heads=self.cfg.num_decoder_heads,
             num_layers=self.cfg.num_decoder_layers,
             max_len=self.cfg.max_caption_len,
-            encoder_dim=self.cfg.global_dim,
+            encoder_dim=self.cfg.fusion_dim,
             dropout=self.cfg.decoder_dropout,
             pad_idx=pad_idx,
         )
@@ -126,32 +126,35 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         return self
 
     def encode_images(self, images: torch.Tensor):
-        """Encode images into global change representations and contrastive embeddings.
+        """Encode images into global change representations and patch sequence embeddings.
 
         Args:
-            images: (B, 2, 3, H, W)
+            images: (B, N, 2, 3, ph, pw) or (B, 2, 3, H, W)
 
         Returns:
             global_features: (B, global_dim)
+            patch_output: (B, N, fusion_dim)
             image_embeddings: (B, contrastive_dim)
             diff_embeddings: (B, N, fusion_dim)
         """
         # Stage 1: Extract tiles
         tiles = self.tile_extractor(images)  # (B, N, 2, 3, th, tw)
 
-        # Stage 2: Encode tiles
+        # Stage 2: Encode tiles with RemoteCLIP backbone
         before_feats, after_feats = self.tile_encoder(tiles)  # (B, N, D)
 
-        # Stage 3: Forward difference
+        # Stage 3: Feature difference
         diff_embeddings = self.tile_diff(before_feats, after_feats)  # (B, N, fusion_dim)
 
-        # Stage 4: Fusion Transformer
-        global_features = self.tile_fusion(diff_embeddings)  # (B, global_dim)
+        # Stage 4: Spatial Transformer Encoder
+        global_features, patch_output = self.tile_fusion(
+            diff_embeddings, return_sequence=True
+        )  # (B, global_dim), (B, N, fusion_dim)
 
         # Contrastive space projection
         image_embeddings = self.image_projection(global_features)
 
-        return global_features, image_embeddings, diff_embeddings
+        return global_features, patch_output, image_embeddings, diff_embeddings
 
     def encode_captions(self, caption_tokens: torch.Tensor) -> torch.Tensor:
         """Encode caption tokens to contrastive text embeddings."""
@@ -166,12 +169,12 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         """Forward pass generating caption logits.
 
         Args:
-            images: (B, 2, 3, H, W)
+            images: (B, N, 2, 3, ph, pw) or (B, 2, 3, H, W)
             caption_tokens: (B, L)
             return_aux: If True, returns dict with auxiliary tensors for contrastive loss.
         """
-        global_features, image_embeddings, diff_embeddings = self.encode_images(images)
-        logits = self.decoder(global_features, caption_tokens)
+        global_features, patch_output, image_embeddings, diff_embeddings = self.encode_images(images)
+        logits = self.decoder(patch_output, caption_tokens)
 
         if not return_aux:
             return logits
@@ -180,7 +183,7 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         return {
             "logits": logits,
             "change_features": global_features,
-            "fused_tokens": diff_embeddings,
+            "fused_tokens": patch_output,
             "image_embeddings": image_embeddings,
             "text_embeddings": text_embeddings,
         }

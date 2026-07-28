@@ -128,7 +128,11 @@ class TileEncoder(nn.Module):
     # ------------------------------------------------------------------
 
     def _encode_flat(self, images_flat: torch.Tensor) -> torch.Tensor:
-        """Encode a flat batch of images (BN, C, H, W)."""
+        """Encode a flat batch of patches (BN, C, H, W)."""
+        if images_flat.shape[-2:] != (224, 224):
+            images_flat = nn.functional.interpolate(
+                images_flat, size=(224, 224), mode="bicubic", align_corners=False
+            )
         ctx = torch.no_grad() if self.freeze_backbone else nullcontext()
         with ctx:
             features = self.backbone.encode_image(images_flat)

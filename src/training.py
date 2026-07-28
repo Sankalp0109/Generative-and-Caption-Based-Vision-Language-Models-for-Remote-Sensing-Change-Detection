@@ -322,15 +322,14 @@ def visualize_predictions(
     with PdfPages(output_pdf) as pdf:
         with torch.no_grad():
             for batch in data_loader:
-                batch_size = batch["before_images"].shape[0]
+                batch_size = batch["before_image"].shape[0]
 
                 for idx in range(batch_size):
                     if sample_count >= num_samples:
                         break
 
-                    before_img = batch["before_images"][idx]
-                    after_img = batch["after_images"][idx]
-                    ref_caption = batch["captions"][idx]
+                    before_img = batch["before_image"][idx]
+                    after_img = batch["after_image"][idx]
 
                     pred_caption = generate_caption(
                         model,
@@ -367,7 +366,6 @@ def visualize_predictions(
                         0,
                         1,
                         f"Sample: {sample_count + 1}\n\n"
-                        f"Reference:\n{ref_caption}\n\n"
                         f"Prediction:\n{pred_caption}",
                         fontsize=10,
                         wrap=True,

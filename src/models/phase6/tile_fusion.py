@@ -100,14 +100,27 @@ class TileFusionTransformer(nn.Module):
             nn.Dropout(dropout),
         )
 
-    def forward(self, diff_embeddings: torch.Tensor) -> torch.Tensor:
-        """Fuse tile embeddings into a global change representation.
+    @staticmethod
+    def _get_dynamic_pos_embed(seq_len: int, dim: int, device: torch.device) -> torch.Tensor:
+        position = torch.arange(seq_len, dtype=torch.float, device=device).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, dim, 2, dtype=torch.float, device=device) * (-math.log(10000.0) / dim))
+        pos_embed = torch.zeros(1, seq_len, dim, device=device)
+        pos_embed[0, :, 0::2] = torch.sin(position * div_term)
+        pos_embed[0, :, 1::2] = torch.cos(position * div_term)
+        return pos_embed
+
+    def forward(
+        self, diff_embeddings: torch.Tensor, return_sequence: bool = True
+    ):
+        """Fuse per-patch difference embeddings using a Spatial Transformer.
 
         Args:
-            diff_embeddings: (B, N, fusion_dim)
+            diff_embeddings: (B, N, fusion_dim) - spatially ordered patch difference sequence.
+            return_sequence: If True, returns (global_repr, patch_output).
 
         Returns:
             global_repr: (B, global_dim) — projected CLS token output.
+            patch_output: (B, N, fusion_dim) — spatially contextualized patch representations.
         """
         if diff_embeddings.ndim != 3:
             raise ValueError(
@@ -121,13 +134,22 @@ class TileFusionTransformer(nn.Module):
         cls = self.cls_token.expand(B, -1, -1)          # (B, 1, D)
         sequence = torch.cat([cls, diff_embeddings], dim=1)  # (B, N+1, D)
 
-        # ── Add positional embeddings ──────────────────────────────────────
-        sequence = sequence + self.pos_embedding[:, : N + 1, :]
+        # ── Add spatial positional embeddings ──────────────────────────────
+        if self.pos_embedding.size(1) < N + 1:
+            pos_embed = self._get_dynamic_pos_embed(N + 1, D, device=diff_embeddings.device)
+        else:
+            pos_embed = self.pos_embedding[:, : N + 1, :].to(diff_embeddings.device)
 
-        # ── Transformer encoding ───────────────────────────────────────────
+        sequence = sequence + pos_embed
+
+        # ── Spatial Transformer encoding ───────────────────────────────────
         encoded = self.transformer(sequence)             # (B, N+1, D)
 
-        # ── Extract CLS output (position 0) and project ───────────────────
+        # ── Extract CLS and spatially contextualized patch tokens ──────────
         cls_output = encoded[:, 0, :]                   # (B, D)
+        patch_output = encoded[:, 1:, :]                # (B, N, D)
         global_repr = self.global_projection(cls_output)  # (B, global_dim)
+
+        if return_sequence:
+            return global_repr, patch_output
         return global_repr

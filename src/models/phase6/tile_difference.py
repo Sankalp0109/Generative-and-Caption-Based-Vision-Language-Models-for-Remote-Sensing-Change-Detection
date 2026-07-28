@@ -105,8 +105,8 @@ class TileDifference(nn.Module):
                 f"{tuple(after_features.shape)}."
             )
 
-        # ── Forward cross-attention: Q=before, K/V=after ─────────────────
-        # Treats N tiles as a sequence; attention is over the tile dimension.
+        # ── Compute per-patch difference matching spatial index i ─────────
+        # Ensures patch_i (before) is strictly paired with patch_i (after)
         fwd_context, _ = self.forward_attn(
             query=before_features,
             key=after_features,
@@ -114,14 +114,14 @@ class TileDifference(nn.Module):
         )
         fwd_context = self.norm_fwd(before_features + fwd_context)
 
-        # ── Absolute difference ───────────────────────────────────────────
+        # ── Element-wise absolute feature difference ──────────────────────
         abs_diff = torch.abs(after_features - before_features)
 
-        # ── Concatenate all signals and project ───────────────────────────
+        # ── Concatenate per-patch signals in spatial sequence order ──────
         combined = torch.cat(
             [before_features, after_features, fwd_context, abs_diff],
             dim=-1,
-        )  # (B, N, 4*backbone_dim)
+        )  # (B, N, 4 * backbone_dim)
 
         diff_embeddings = self.diff_mlp(combined)  # (B, N, fusion_dim)
         return diff_embeddings

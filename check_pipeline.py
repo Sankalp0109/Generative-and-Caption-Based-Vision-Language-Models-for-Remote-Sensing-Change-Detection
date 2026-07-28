@@ -124,8 +124,8 @@ def run_dry_run():
         std=remoteclip_cfg.image_std,
     )
 
-    print("Loading DataLoaders (using mock PIL.Image.open)...")
-    train_loader, val_loader, test_loader, vocab = get_levircc_loaders(
+    print("Loading DataLoaders for Phase 5 (global resize, patch_size=None)...")
+    train_loader_p5, val_loader_p5, test_loader_p5, vocab = get_levircc_loaders(
         caption_json=dummy_json_path,
         image_root=temp_dir,
         vocab=shared_vocab,
@@ -137,8 +137,26 @@ def run_dry_run():
         num_workers=0,
         vocab_path=None,
         transforms_fn=remoteclip_transform,
+        patch_size=None,
     )
-    print(f"DataLoaders loaded. Train batches: {len(train_loader)}")
+    print(f"Phase 5 DataLoaders loaded. Train batches: {len(train_loader_p5)}")
+
+    print("Loading DataLoaders for Phase 6 (patch-based, patch_size=256)...")
+    train_loader_p6, val_loader_p6, test_loader_p6, _ = get_levircc_loaders(
+        caption_json=dummy_json_path,
+        image_root=temp_dir,
+        vocab=shared_vocab,
+        batch_size=2,
+        val_batch_size=2,
+        device=str(device),
+        min_word_freq=1,
+        caption_index=0,
+        num_workers=0,
+        vocab_path=None,
+        transforms_fn=remoteclip_transform,
+        patch_size=256,
+    )
+    print(f"Phase 6 DataLoaders loaded. Train batches: {len(train_loader_p6)}")
 
     print("\n-------------------------------------------------------------")
     print("Test 1: Phase Final (RemoteCLIP Cross-Attention Model) Check")
@@ -161,23 +179,23 @@ def run_dry_run():
     trainable_p5 = sum(p.numel() for p in model_p5.parameters() if p.requires_grad)
     print(f"Model initialized successfully. Trainable params: {trainable_p5:,}")
 
-    # Fetch one batch
-    batch = next(iter(train_loader))
-    images = batch["images"].to(device)
-    caption_tokens = batch["caption_tokens"].to(device)
-    input_tokens = caption_tokens[:, :-1]
-    target_tokens = caption_tokens[:, 1:]
+    # Fetch Phase 5 batch
+    batch_p5 = next(iter(train_loader_p5))
+    images_p5 = batch_p5["images"].to(device)
+    caption_tokens_p5 = batch_p5["caption_tokens"].to(device)
+    input_tokens_p5 = caption_tokens_p5[:, :-1]
+    target_tokens_p5 = caption_tokens_p5[:, 1:]
 
     print("Running forward pass...")
-    outputs = model_p5(images, input_tokens, return_aux=True)
+    outputs = model_p5(images_p5, input_tokens_p5, return_aux=True)
     print("Forward pass successful. Outputs keys:", list(outputs.keys()))
     print("Logits shape:", outputs["logits"].shape)
-    
+
     print("Computing loss...")
     criterion = build_criterion(vocab)
     total_loss, cap_loss, cont_loss = phase5_total_loss(
         logits=outputs["logits"],
-        target_tokens=target_tokens,
+        target_tokens=target_tokens_p5,
         criterion=criterion,
         image_embeddings=outputs["image_embeddings"],
         text_embeddings=outputs["text_embeddings"],
@@ -195,10 +213,9 @@ def run_dry_run():
     print("Backward pass and optimizer step completed successfully!")
 
     print("\n-------------------------------------------------------------")
-    print("Test 2: Phase 6 (Hierarchical Tile-Based Model) Check")
+    print("Test 2: Phase 6 (Hierarchical Patch-Based Model) Check")
     print("-------------------------------------------------------------")
     fake_backbone_p6 = FakeRemoteCLIP(output_dim=512)
-    # Adjust Config parameters to fit our lightweight testing
     phase6_cfg.remoteclip_model_name = "ViT-B-32"
     phase6_cfg.fusion_dim = 128
     phase6_cfg.global_dim = 128
@@ -217,15 +234,24 @@ def run_dry_run():
     trainable_p6 = sum(p.numel() for p in model_p6.parameters() if p.requires_grad)
     print(f"Model initialized successfully. Trainable params: {trainable_p6:,}")
 
+    # Fetch Phase 6 batch (patches: B, N, 2, 3, 256, 256)
+    batch_p6 = next(iter(train_loader_p6))
+    images_p6 = batch_p6["images"].to(device)
+    caption_tokens_p6 = batch_p6["caption_tokens"].to(device)
+    input_tokens_p6 = caption_tokens_p6[:, :-1]
+    target_tokens_p6 = caption_tokens_p6[:, 1:]
+
+    print(f"Phase 6 Input images shape: {images_p6.shape}")
     print("Running forward pass...")
-    outputs_p6 = model_p6(images, input_tokens, return_aux=True)
+    outputs_p6 = model_p6(images_p6, input_tokens_p6, return_aux=True)
     print("Forward pass successful. Outputs keys:", list(outputs_p6.keys()))
     print("Logits shape:", outputs_p6["logits"].shape)
+    print("Fused tokens shape:", outputs_p6["fused_tokens"].shape)
 
     print("Computing loss...")
     total_loss_p6, cap_loss_p6, cont_loss_p6 = phase6_total_loss(
         logits=outputs_p6["logits"],
-        target_tokens=target_tokens,
+        target_tokens=target_tokens_p6,
         criterion=criterion,
         image_embeddings=outputs_p6["image_embeddings"],
         text_embeddings=outputs_p6["text_embeddings"],

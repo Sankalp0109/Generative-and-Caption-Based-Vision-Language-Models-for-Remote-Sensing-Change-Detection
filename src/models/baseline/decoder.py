@@ -55,7 +55,11 @@ class SimpleDecoder(nn.Module):
         embedded = self.dropout(self.embedding(caption_tokens))
         embedded = embedded + self.positional_encoding[:, :seq_len, :].to(device)
 
-        encoder_memory = self.encoder_projection(encoder_features).unsqueeze(1)
+        if encoder_features.ndim == 2:
+            encoder_memory = self.encoder_projection(encoder_features).unsqueeze(1)
+        else:
+            encoder_memory = self.encoder_projection(encoder_features)
+
         tgt_mask = nn.Transformer.generate_square_subsequent_mask(seq_len).to(device)
 
         decoded = self.transformer_decoder(
