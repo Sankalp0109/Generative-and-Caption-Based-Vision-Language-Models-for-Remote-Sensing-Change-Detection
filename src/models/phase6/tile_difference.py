@@ -125,3 +125,6 @@ class TileDifference(nn.Module):
 
         diff_embeddings = self.diff_mlp(combined)  # (B, N, fusion_dim)
         return diff_embeddings
+
+
+TileBidirectionalDifference = TileDifference
