@@ -11,7 +11,7 @@ import torch.nn as nn
 
 from ..baseline.decoder import SimpleDecoder
 from ..interface import ChangeCaptioningModel
-from ..variants.remoteclip_difference import REMOTECLIP_REPO_ID, resolve_remoteclip_checkpoint
+from src.utils import REMOTECLIP_REPO_ID, resolve_remoteclip_checkpoint
 
 
 def _safe_torch_load(path: Path):

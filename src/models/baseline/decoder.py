@@ -9,7 +9,7 @@ class SimpleDecoder(nn.Module):
     Transformer decoder for caption generation.
 
     Input:
-        encoder_features: (batch, encoder_dim)
+        encoder_features: (batch, encoder_dim) OR (batch, seq_len, encoder_dim)
         caption_tokens:   (batch, seq_len)
     Output:
         logits: (batch, seq_len, vocab_size)
@@ -55,7 +55,7 @@ class SimpleDecoder(nn.Module):
         embedded = self.dropout(self.embedding(caption_tokens))
         embedded = embedded + self.positional_encoding[:, :seq_len, :].to(device)
 
-        if encoder_features.dim() == 2:
+        if encoder_features.ndim == 2:
             encoder_memory = self.encoder_projection(encoder_features).unsqueeze(1)
         else:
             encoder_memory = self.encoder_projection(encoder_features)

@@ -6,10 +6,11 @@ import random
 import os
 import warnings
 from pathlib import Path
-from typing import Tuple
+from typing import Tuple, Optional
 
 import numpy as np
 import torch
+
 
 
 def setup_project_path() -> Path:
@@ -93,3 +94,49 @@ def denormalize_image(
     std_t = torch.tensor(std, dtype=image_tensor.dtype).view(3, 1, 1)
     image = (image_tensor.cpu() * std_t + mean_t).clamp(0, 1)
     return image.permute(1, 2, 0).numpy()
+
+
+REMOTECLIP_REPO_ID = "chendelong/RemoteCLIP"
+SUPPORTED_MODELS = {"RN50", "ViT-B-32", "ViT-L-14"}
+
+
+def resolve_remoteclip_checkpoint(
+    checkpoint_path: Optional[Path],
+    model_name: str,
+    download_if_missing: bool = False,
+    repo_id: str = REMOTECLIP_REPO_ID,
+) -> Path:
+    """Return a local RemoteCLIP checkpoint, optionally downloading it."""
+    if model_name not in SUPPORTED_MODELS:
+        choices = ", ".join(sorted(SUPPORTED_MODELS))
+        raise ValueError(f"Unsupported RemoteCLIP model {model_name!r}. Choose one of: {choices}.")
+
+    path = Path(checkpoint_path) if checkpoint_path is not None else None
+    if path is not None and path.is_file():
+        return path
+
+    if not download_if_missing:
+        expected = path or Path("checkpoints") / f"RemoteCLIP-{model_name}.pt"
+        raise FileNotFoundError(
+            f"RemoteCLIP checkpoint not found at {expected}. "
+            "Download the official checkpoint there or set download_if_missing=True."
+        )
+
+    try:
+        from huggingface_hub import hf_hub_download
+    except ImportError as exc:
+        raise ImportError(
+            "huggingface-hub is required to download RemoteCLIP checkpoints."
+        ) from exc
+
+    target = path or Path("checkpoints") / f"RemoteCLIP-{model_name}.pt"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    downloaded = Path(
+        hf_hub_download(
+            repo_id=repo_id,
+            filename=f"RemoteCLIP-{model_name}.pt",
+            local_dir=str(target.parent),
+        )
+    )
+    return downloaded
+

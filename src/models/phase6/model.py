@@ -1,13 +1,4 @@
-"""Stage 6: Tile-Based Change Captioning Model.
-
-Integrates:
-  1. TileExtractor
-  2. TileEncoder (shared RemoteCLIP backbone)
-  3. TileBidirectionalDifference
-  4. TileFusionTransformer
-  5. SimpleDecoder
-  6. CaptionContrastiveEncoder (for alignment)
-"""
+"""Stage 6: Tile-Based Change Captioning Model."""
 
 from __future__ import annotations
 
@@ -32,19 +23,12 @@ from .config import Phase6Config
 
 
 class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
-    """Phase 6 Model: Hierarchical Tile-Based Change Captioning.
-
-    This architecture extracts tile grids, encodes them with a shared RemoteCLIP
-    backbone, computes bidirectional per-tile difference embeddings, fuses them
-    via a Transformer with a CLS token, and generates captions with a standard
-    decoder.
-    """
+    """Phase 6 Model: Hierarchical Tile-Based Change Captioning."""
 
     def __init__(
         self,
         vocab_size: int,
         config: Optional[Phase6Config] = None,
-        # Or individual overrides:
         pad_idx: int = 0,
         backbone: Optional[nn.Module] = None,
     ):
@@ -118,7 +102,6 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
 
     def train(self, mode: bool = True):
         super().train(mode)
-        # Ensure frozen backbone stays in eval() mode.
         self.tile_encoder.train(mode)
         self.tile_extractor.train(mode)
         self.tile_diff.train(mode)
@@ -126,35 +109,14 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         return self
 
     def encode_images(self, images: torch.Tensor):
-        """Encode images into global change representations and contrastive embeddings.
-
-        Args:
-            images: (B, 2, 3, H, W)
-
-        Returns:
-            global_features: (B, global_dim)
-            image_embeddings: (B, contrastive_dim)
-            diff_embeddings: (B, N, fusion_dim)
-        """
-        # Stage 1: Extract tiles
-        tiles = self.tile_extractor(images)  # (B, N, 2, 3, th, tw)
-
-        # Stage 2: Encode tiles
-        before_feats, after_feats = self.tile_encoder(tiles)  # (B, N, D)
-
-        # Stage 3: Bidirectional difference
-        diff_embeddings = self.tile_diff(before_feats, after_feats)  # (B, N, fusion_dim)
-
-        # Stage 4: Fusion Transformer
-        global_features, fused_tokens = self.tile_fusion(diff_embeddings, return_all_tokens=True)  # (B, global_dim), (B, N+1, global_dim)
-
-        # Contrastive space projection
+        tiles = self.tile_extractor(images)
+        before_feats, after_feats = self.tile_encoder(tiles)
+        diff_embeddings = self.tile_diff(before_feats, after_feats)
+        global_features, fused_tokens = self.tile_fusion(diff_embeddings, return_all_tokens=True)
         image_embeddings = self.image_projection(global_features)
-
         return global_features, image_embeddings, fused_tokens
 
     def encode_captions(self, caption_tokens: torch.Tensor) -> torch.Tensor:
-        """Encode caption tokens to contrastive text embeddings."""
         return self.caption_encoder(caption_tokens)
 
     def forward(
@@ -163,13 +125,6 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         caption_tokens: torch.Tensor,
         return_aux: bool = False,
     ):
-        """Forward pass generating caption logits.
-
-        Args:
-            images: (B, 2, 3, H, W)
-            caption_tokens: (B, L)
-            return_aux: If True, returns dict with auxiliary tensors for contrastive loss.
-        """
         global_features, image_embeddings, fused_tokens = self.encode_images(images)
         logits = self.decoder(fused_tokens, caption_tokens)
 

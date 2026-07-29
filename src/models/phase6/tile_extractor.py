@@ -28,82 +28,63 @@ import torch.nn.functional as F
 
 
 class TileExtractor(nn.Module):
-    """Extract a regular grid of tiles from stacked before/after image pairs.
+    """Extract a regular grid of non-overlapping 256x256 patches from stacked before/after image pairs.
+
+    If image dimensions are not divisible by patch_size, right/bottom borders are padded with 0.
+    Patch indices strictly follow row-major spatial ordering.
 
     Args:
-        grid_size: Side length of the tile grid.  grid_size=2 → 2×2 = 4 tiles.
-        tile_size: (height, width) to which every extracted patch is resized.
+        patch_size: Side length of each square patch (default 256).
     """
 
     def __init__(
         self,
-        grid_size: int = 2,
-        tile_size: Tuple[int, int] = (224, 224),
+        patch_size: int = 256,
+        grid_size: Optional[int] = None,
+        tile_size: Optional[Tuple[int, int]] = None,
     ):
         super().__init__()
+        self.patch_size = patch_size
         self.grid_size = grid_size
-        self.tile_size = tile_size
-        self.num_tiles = grid_size * grid_size
+        self.tile_size = tile_size or (patch_size, patch_size)
 
     def forward(self, images: torch.Tensor) -> torch.Tensor:
-        """Extract tiles from a batch of image pairs.
+        """Extract ordered patches from a batch of image pairs.
 
         Args:
-            images: Tensor of shape (B, 2, 3, H, W).
-                    Channel 0 = before image, Channel 1 = after image.
+            images: Tensor of shape (B, N, 2, 3, ph, pw) or (B, 2, 3, H, W).
 
         Returns:
-            tiles: Tensor of shape (B, N, 2, 3, tile_h, tile_w).
-                   N = grid_size^2 tiles per image pair.
-
-        Raises:
-            ValueError: If ``images`` does not have 5 dimensions or the second
-                        dimension is not 2.
+            tiles: Tensor of shape (B, N, 2, 3, patch_size, patch_size).
         """
+        # If images are already pre-patched: (B, N, 2, 3, ph, pw)
+        if images.ndim == 6:
+            return images
+
         if images.ndim != 5 or images.size(1) != 2:
             raise ValueError(
-                "TileExtractor expects images shaped (B, 2, 3, H, W). "
+                "TileExtractor expects images shaped (B, 2, 3, H, W) or (B, N, 2, 3, ph, pw). "
                 f"Got shape {tuple(images.shape)}."
             )
 
-        B, _, C, H, W = images.shape
-        g = self.grid_size
-        th, tw = self.tile_size
+        import math
 
-        # Compute tile boundaries along H and W.
-        row_edges = self._split_edges(H, g)
-        col_edges = self._split_edges(W, g)
+        B, _, C, H, W = images.shape
+        ph, pw = self.patch_size, self.patch_size
+
+        pad_h = (ph - H % ph) % ph
+        pad_w = (pw - W % pw) % pw
+
+        if pad_h > 0 or pad_w > 0:
+            # F.pad format: (left, right, top, bottom)
+            images = F.pad(images, (0, pad_w, 0, pad_h), mode="constant", value=0)
+
+        padded_H, padded_W = images.shape[-2], images.shape[-1]
 
         tiles: list[torch.Tensor] = []
-        for r_start, r_end in row_edges:
-            for c_start, c_end in col_edges:
-                # (B, 2, C, patch_h, patch_w)
-                patch = images[:, :, :, r_start:r_end, c_start:c_end]
+        for r in range(0, padded_H, ph):
+            for c in range(0, padded_W, pw):
+                patch = images[:, :, :, r : r + ph, c : c + pw]  # (B, 2, C, ph, pw)
+                tiles.append(patch)
 
-                # Resize each temporal channel independently to tile_size.
-                # Merge B and temporal dims so we can call interpolate once.
-                B2, two, C2, ph, pw = patch.shape
-                patch_flat = patch.view(B2 * two, C2, ph, pw)
-                patch_resized = F.interpolate(
-                    patch_flat,
-                    size=self.tile_size,
-                    mode="bilinear",
-                    align_corners=False,
-                )
-                # (B, 2, C, th, tw)
-                patch_resized = patch_resized.view(B2, two, C2, th, tw)
-                tiles.append(patch_resized)
-
-        # Stack into (B, N, 2, C, th, tw)
-        return torch.stack(tiles, dim=1)
-
-    @staticmethod
-    def _split_edges(length: int, num_parts: int):
-        """Divide [0, length) into num_parts roughly equal intervals."""
-        edges = []
-        prev = 0
-        for i in range(1, num_parts + 1):
-            end = int(round(length * i / num_parts))
-            edges.append((prev, end))
-            prev = end
-        return edges
+        return torch.stack(tiles, dim=1)  # (B, N, 2, C, ph, pw)

@@ -1,15 +1,14 @@
-"""Stage 3: Per-Tile Bidirectional Cross-Attention + Difference Embedding.
+"""Stage 3: Per-Tile Forward Cross-Attention + Difference Embedding.
 
-For each spatial tile i, two cross-attention operations extract directional
+For each spatial tile i, a forward cross-attention operation extracts directional
 change information:
 
   Forward  (before→after): Q=Fi, K=Gi, V=Gi   → "what appeared"
-  Backward (after→before): Q=Gi, K=Fi, V=Fi   → "what disappeared"
 
 These are concatenated with the raw features and the absolute difference to
 form a compact change embedding via an MLP:
 
-  Di = MLP([Fi, Gi, forward_i, backward_i, |Fi - Gi|])   Di ∈ R^fusion_dim
+  Di = MLP([Fi, Gi, forward_i, |Fi - Gi|])   Di ∈ R^fusion_dim
 
 Input:
     before_features  (B, N, backbone_dim)
@@ -25,7 +24,7 @@ Design notes
 - Cross-attention is implemented as standard nn.MultiheadAttention applied
   element-wise across the tile dimension (tiles are processed as a sequence
   of length N with batch dimension B).
-- The MLP input dimension is 5 * backbone_dim (Fi, Gi, fwd, bwd, |diff|).
+- The MLP input dimension is 4 * backbone_dim (Fi, Gi, fwd, |diff|).
 """
 
 from __future__ import annotations
@@ -34,8 +33,8 @@ import torch
 import torch.nn as nn
 
 
-class TileBidirectionalDifference(nn.Module):
-    """Per-tile bidirectional cross-attention + MLP difference embedding.
+class TileDifference(nn.Module):
+    """Per-tile forward cross-attention + MLP difference embedding.
 
     Args:
         backbone_dim: Feature dimension from RemoteCLIP (e.g. 512).
@@ -62,15 +61,8 @@ class TileBidirectionalDifference(nn.Module):
         self.backbone_dim = backbone_dim
         self.fusion_dim = fusion_dim
 
-        # ── Bidirectional cross-attention ─────────────────────────────────
-        # Both directions share the same weight matrix for parameter efficiency.
+        # ── Forward cross-attention ───────────────────────────────────────
         self.forward_attn = nn.MultiheadAttention(
-            embed_dim=backbone_dim,
-            num_heads=num_heads,
-            dropout=dropout,
-            batch_first=True,
-        )
-        self.backward_attn = nn.MultiheadAttention(
             embed_dim=backbone_dim,
             num_heads=num_heads,
             dropout=dropout,
@@ -78,10 +70,9 @@ class TileBidirectionalDifference(nn.Module):
         )
 
         self.norm_fwd = nn.LayerNorm(backbone_dim)
-        self.norm_bwd = nn.LayerNorm(backbone_dim)
 
-        # ── MLP: [Fi, Gi, fwd, bwd, |diff|] → fusion_dim ────────────────
-        mlp_in = 5 * backbone_dim
+        # ── MLP: [Fi, Gi, fwd, |diff|] → fusion_dim ──────────────────────
+        mlp_in = 4 * backbone_dim
         self.diff_mlp = nn.Sequential(
             nn.Linear(mlp_in, mlp_in // 2),
             nn.LayerNorm(mlp_in // 2),
@@ -114,8 +105,8 @@ class TileBidirectionalDifference(nn.Module):
                 f"{tuple(after_features.shape)}."
             )
 
-        # ── Forward cross-attention: Q=before, K/V=after ─────────────────
-        # Treats N tiles as a sequence; attention is over the tile dimension.
+        # ── Compute per-patch difference matching spatial index i ─────────
+        # Ensures patch_i (before) is strictly paired with patch_i (after)
         fwd_context, _ = self.forward_attn(
             query=before_features,
             key=after_features,
@@ -123,22 +114,14 @@ class TileBidirectionalDifference(nn.Module):
         )
         fwd_context = self.norm_fwd(before_features + fwd_context)
 
-        # ── Backward cross-attention: Q=after, K/V=before ────────────────
-        bwd_context, _ = self.backward_attn(
-            query=after_features,
-            key=before_features,
-            value=before_features,
-        )
-        bwd_context = self.norm_bwd(after_features + bwd_context)
-
-        # ── Absolute difference ───────────────────────────────────────────
+        # ── Element-wise absolute feature difference ──────────────────────
         abs_diff = torch.abs(after_features - before_features)
 
-        # ── Concatenate all signals and project ───────────────────────────
+        # ── Concatenate per-patch signals in spatial sequence order ──────
         combined = torch.cat(
-            [before_features, after_features, fwd_context, bwd_context, abs_diff],
+            [before_features, after_features, fwd_context, abs_diff],
             dim=-1,
-        )  # (B, N, 5*backbone_dim)
+        )  # (B, N, 4 * backbone_dim)
 
         diff_embeddings = self.diff_mlp(combined)  # (B, N, fusion_dim)
         return diff_embeddings

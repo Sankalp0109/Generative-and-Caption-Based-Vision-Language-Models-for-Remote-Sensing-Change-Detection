@@ -27,7 +27,6 @@ from .models import (
     captioning_loss,
     contrastive_caption_loss,
 )
-from .models.variants import RemoteCLIPDifferenceModel, RemoteCLIPEncoder
 from .models.final_model import phase5_total_loss
 from .training import (
     build_criterion,
@@ -87,8 +86,6 @@ __all__ = [
     "captioning_loss",
     "contrastive_caption_loss",
     "phase5_total_loss",
-    "RemoteCLIPEncoder",
-    "RemoteCLIPDifferenceModel",
     "train_epoch",
     "validate",
     "save_checkpoint",

@@ -3,22 +3,6 @@
 Takes the sequence of per-tile difference embeddings and fuses them into a
 single global change representation using a standard Transformer encoder with
 a learnable CLS token.
-
-Pipeline:
-    diff_embeddings (B, N, fusion_dim)
-      → prepend CLS token → add positional embeddings
-      → Transformer encoder
-      → CLS' (updated) → project to global_dim
-      → global_representation (B, global_dim)
-
-Design notes
-------------
-- A learnable CLS token acts as a query that aggregates information from all
-  tiles, allowing the model to attend to any spatial combination.
-- Learnable positional embeddings distinguish tile spatial positions.
-- The CLS token position embedding is included at index 0.
-- After the transformer, the CLS output is extracted and projected to the
-  decoder's expected encoder_dim via a small projection head.
 """
 
 from __future__ import annotations
@@ -31,7 +15,7 @@ import torch.nn as nn
 
 
 class TileFusionTransformer(nn.Module):
-    """Fuse per-tile difference embeddings into a single global representation.
+    """Fuse per-tile difference embeddings into a global change representation.
 
     Args:
         fusion_dim: Dimensionality of each tile embedding (from TileBidirectionalDifference).
@@ -100,22 +84,22 @@ class TileFusionTransformer(nn.Module):
             nn.Dropout(dropout),
         )
 
+    @staticmethod
+    def _get_dynamic_pos_embed(seq_len: int, dim: int, device: torch.device) -> torch.Tensor:
+        position = torch.arange(seq_len, dtype=torch.float, device=device).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, dim, 2, dtype=torch.float, device=device) * (-math.log(10000.0) / dim))
+        pos_embed = torch.zeros(1, seq_len, dim, device=device)
+        pos_embed[0, :, 0::2] = torch.sin(position * div_term)
+        pos_embed[0, :, 1::2] = torch.cos(position * div_term)
+        return pos_embed
+
     def forward(
         self,
         diff_embeddings: torch.Tensor,
         return_all_tokens: bool = False,
+        return_sequence: bool = False,
     ):
-        """Fuse tile embeddings into a global change representation and spatial token sequence.
-
-        Args:
-            diff_embeddings: (B, N, fusion_dim)
-            return_all_tokens: If True, returns tuple (global_repr, fused_tokens) where
-                fused_tokens has shape (B, N+1, global_dim).
-
-        Returns:
-            global_repr: (B, global_dim) — projected CLS token output.
-            fused_tokens: (B, N+1, global_dim) — projected sequence of all spatial tokens (if return_all_tokens=True).
-        """
+        """Fuse tile embeddings into a global change representation and spatial token sequence."""
         if diff_embeddings.ndim != 3:
             raise ValueError(
                 "TileFusionTransformer expects diff_embeddings shaped "
@@ -128,17 +112,22 @@ class TileFusionTransformer(nn.Module):
         cls = self.cls_token.expand(B, -1, -1)          # (B, 1, D)
         sequence = torch.cat([cls, diff_embeddings], dim=1)  # (B, N+1, D)
 
-        # ── Add positional embeddings ──────────────────────────────────────
-        sequence = sequence + self.pos_embedding[:, : N + 1, :]
+        # ── Add spatial positional embeddings ──────────────────────────────
+        if self.pos_embedding.size(1) < N + 1:
+            pos_embed = self._get_dynamic_pos_embed(N + 1, D, device=diff_embeddings.device)
+        else:
+            pos_embed = self.pos_embedding[:, : N + 1, :].to(diff_embeddings.device)
 
-        # ── Transformer encoding ───────────────────────────────────────────
+        sequence = sequence + pos_embed
+
+        # ── Spatial Transformer encoding ───────────────────────────────────
         encoded = self.transformer(sequence)             # (B, N+1, D)
 
         # ── Extract CLS output (position 0) and project ───────────────────
         cls_output = encoded[:, 0, :]                   # (B, D)
         global_repr = self.global_projection(cls_output)  # (B, global_dim)
 
-        if return_all_tokens:
+        if return_all_tokens or return_sequence:
             fused_tokens = self.global_projection(encoded)  # (B, N+1, global_dim)
             return global_repr, fused_tokens
 
