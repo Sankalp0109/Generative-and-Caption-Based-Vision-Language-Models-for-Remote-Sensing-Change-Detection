@@ -327,7 +327,7 @@ class RemoteCLIPCrossAttentionModel(ChangeCaptioningModel):
         return_aux: bool = False,
     ):
         change_features, image_embeddings, fused_tokens = self.encode_images(images)
-        logits = self.decoder(change_features, caption_tokens)
+        logits = self.decoder(fused_tokens, caption_tokens)
 
         if not return_aux:
             return logits

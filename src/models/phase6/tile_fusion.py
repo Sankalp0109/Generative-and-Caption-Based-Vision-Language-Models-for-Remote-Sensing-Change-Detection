@@ -100,14 +100,21 @@ class TileFusionTransformer(nn.Module):
             nn.Dropout(dropout),
         )
 
-    def forward(self, diff_embeddings: torch.Tensor) -> torch.Tensor:
-        """Fuse tile embeddings into a global change representation.
+    def forward(
+        self,
+        diff_embeddings: torch.Tensor,
+        return_all_tokens: bool = False,
+    ):
+        """Fuse tile embeddings into a global change representation and spatial token sequence.
 
         Args:
             diff_embeddings: (B, N, fusion_dim)
+            return_all_tokens: If True, returns tuple (global_repr, fused_tokens) where
+                fused_tokens has shape (B, N+1, global_dim).
 
         Returns:
             global_repr: (B, global_dim) — projected CLS token output.
+            fused_tokens: (B, N+1, global_dim) — projected sequence of all spatial tokens (if return_all_tokens=True).
         """
         if diff_embeddings.ndim != 3:
             raise ValueError(
@@ -130,4 +137,9 @@ class TileFusionTransformer(nn.Module):
         # ── Extract CLS output (position 0) and project ───────────────────
         cls_output = encoded[:, 0, :]                   # (B, D)
         global_repr = self.global_projection(cls_output)  # (B, global_dim)
+
+        if return_all_tokens:
+            fused_tokens = self.global_projection(encoded)  # (B, N+1, global_dim)
+            return global_repr, fused_tokens
+
         return global_repr

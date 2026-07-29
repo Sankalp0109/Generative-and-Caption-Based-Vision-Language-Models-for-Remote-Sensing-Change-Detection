@@ -146,12 +146,12 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         diff_embeddings = self.tile_diff(before_feats, after_feats)  # (B, N, fusion_dim)
 
         # Stage 4: Fusion Transformer
-        global_features = self.tile_fusion(diff_embeddings)  # (B, global_dim)
+        global_features, fused_tokens = self.tile_fusion(diff_embeddings, return_all_tokens=True)  # (B, global_dim), (B, N+1, global_dim)
 
         # Contrastive space projection
         image_embeddings = self.image_projection(global_features)
 
-        return global_features, image_embeddings, diff_embeddings
+        return global_features, image_embeddings, fused_tokens
 
     def encode_captions(self, caption_tokens: torch.Tensor) -> torch.Tensor:
         """Encode caption tokens to contrastive text embeddings."""
@@ -170,8 +170,8 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
             caption_tokens: (B, L)
             return_aux: If True, returns dict with auxiliary tensors for contrastive loss.
         """
-        global_features, image_embeddings, diff_embeddings = self.encode_images(images)
-        logits = self.decoder(global_features, caption_tokens)
+        global_features, image_embeddings, fused_tokens = self.encode_images(images)
+        logits = self.decoder(fused_tokens, caption_tokens)
 
         if not return_aux:
             return logits
@@ -180,7 +180,7 @@ class TileBasedChangeCaptioningModel(ChangeCaptioningModel):
         return {
             "logits": logits,
             "change_features": global_features,
-            "fused_tokens": diff_embeddings,
+            "fused_tokens": fused_tokens,
             "image_embeddings": image_embeddings,
             "text_embeddings": text_embeddings,
         }
