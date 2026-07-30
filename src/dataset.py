@@ -160,14 +160,13 @@ def build_vocabulary_from_multiple_annotations(
 
 
 def build_image_transforms(
-    img_size: Tuple[int, int] = (256, 256),
+    img_size: Tuple[int, int] = (256, 256),  # Kept for compatibility, but resizing is disabled
     mean: Tuple[float, float, float] = (0.485, 0.456, 0.406),
     std: Tuple[float, float, float] = (0.229, 0.224, 0.225),
 ):
     """Shared image preprocessing used by every researcher."""
     return transforms.Compose(
         [
-            transforms.Resize(img_size),
             transforms.ToTensor(),
             transforms.Normalize(mean=mean, std=std),
         ]
