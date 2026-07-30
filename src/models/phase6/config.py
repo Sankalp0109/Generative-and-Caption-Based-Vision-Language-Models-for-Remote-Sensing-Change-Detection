@@ -27,7 +27,7 @@ class Phase6Config:
     """Side length of the tile grid. grid_size=2 → 2×2 = 4 tiles per image."""
 
     tile_size: Tuple[int, int] = (224, 224)
-    """Each extracted tile is resized to this resolution before RemoteCLIP encoding."""
+    """Expected resolution of each extracted tile before RemoteCLIP encoding."""
 
     # ── Tile difference module ────────────────────────────────────────────────
     fusion_dim: int = 512

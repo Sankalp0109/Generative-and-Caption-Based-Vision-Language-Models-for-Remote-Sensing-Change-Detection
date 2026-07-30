@@ -343,7 +343,8 @@ def evaluate_caption_metrics(
 def generate_caption_greedy(model, before_image, after_image, vocab, device, max_len: int = 100) -> str:
     """Generate a caption from a single before/after pair using greedy decoding."""
     model.eval()
-    images = torch.stack([before_image, after_image], dim=0).unsqueeze(0).to(device)
+    temporal_dim = 1 if before_image.ndim == 4 else 0
+    images = torch.stack([before_image, after_image], dim=temporal_dim).unsqueeze(0).to(device)
     caption_tokens = [vocab.start_idx]
 
     for _ in range(max_len):

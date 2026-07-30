@@ -13,8 +13,7 @@ Design notes
 - Extraction is performed *inside* the model forward pass so the dataloader
   and dataset remain entirely unchanged.
 - Tiles are extracted with `torch.nn.functional.unfold` style slicing rather
-  than requiring H and W to be perfect multiples of tile_size; each slice is
-  independently resized to tile_size using bilinear interpolation.
+  than requiring H and W to be perfect multiples of tile_size.
 - The module is stateless and contains no learnable parameters.
 """
 

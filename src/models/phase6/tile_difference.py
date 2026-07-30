@@ -107,11 +107,17 @@ class TileDifference(nn.Module):
 
         # ── Compute per-patch difference matching spatial index i ─────────
         # Ensures patch_i (before) is strictly paired with patch_i (after)
+        B, N, D = before_features.shape
+        q = before_features.view(B * N, 1, D)
+        k = after_features.view(B * N, 1, D)
+        v = after_features.view(B * N, 1, D)
+
         fwd_context, _ = self.forward_attn(
-            query=before_features,
-            key=after_features,
-            value=after_features,
+            query=q,
+            key=k,
+            value=v,
         )
+        fwd_context = fwd_context.view(B, N, D)
         fwd_context = self.norm_fwd(before_features + fwd_context)
 
         # ── Element-wise absolute feature difference ──────────────────────
