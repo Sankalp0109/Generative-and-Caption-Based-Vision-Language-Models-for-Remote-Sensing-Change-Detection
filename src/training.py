@@ -258,7 +258,8 @@ def generate_caption(
     """Greedy caption generation for one image pair."""
     model.eval()
 
-    images = torch.stack([before_image, after_image], dim=0).unsqueeze(0).to(device)
+    temporal_dim = 1 if before_image.ndim == 4 else 0
+    images = torch.stack([before_image, after_image], dim=temporal_dim).unsqueeze(0).to(device)
     if hasattr(model, "encode_images"):
         encoder_features = model.encode_images(images)[0]
     elif hasattr(model, "encoder"):
