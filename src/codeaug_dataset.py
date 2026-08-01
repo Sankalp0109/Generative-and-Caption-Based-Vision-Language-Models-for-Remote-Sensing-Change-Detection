@@ -19,7 +19,6 @@ from typing import Dict, List, Optional, Tuple, Union
 import numpy as np
 from PIL import Image
 import torch
-import torch.nn as nn
 from torch.utils.data import Dataset, WeightedRandomSampler
 import torchvision.transforms as transforms
 import torchvision.transforms.functional as TF

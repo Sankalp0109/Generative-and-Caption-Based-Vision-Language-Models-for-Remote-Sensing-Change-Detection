@@ -48,12 +48,11 @@ def caption_token_accuracy(logits, target_tokens, pad_idx: int = 0) -> float:
 def train_epoch(
     model,
     train_loader,
-    criterion,
     optimizer,
     device,
-    pad_idx: int = 0,
     grad_clip: float = 1.0,
     log_every: int = 10,
+    max_caption_len: int = 128,
 ) -> float:
     """Train one epoch and return average loss."""
     model.train()
@@ -61,20 +60,39 @@ def train_epoch(
     num_batches = 0
 
     for batch_idx, batch in enumerate(train_loader):
-        images = batch["images"].to(device, non_blocking=True)
-        caption_tokens = batch["caption_tokens"].to(device, non_blocking=True)
-        input_tokens, target_tokens = prepare_teacher_forcing_inputs(
-            caption_tokens,
-            pad_idx=pad_idx,
-        )
+        before_images = batch["before_images"].to(device, non_blocking=True)
+        after_images = batch["after_images"].to(device, non_blocking=True)
+        captions = batch["captions"]
 
-        logits = model(images, input_tokens)
-        loss = captioning_loss(logits, target_tokens, criterion, pad_idx=pad_idx)
+        # Tokenize captions with the model's BPE tokenizer
+        tokenized = model.tokenizer(
+            captions,
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+            max_length=max_caption_len,
+        )
+        input_ids = tokenized["input_ids"].to(device)
+        attention_mask = tokenized["attention_mask"].to(device)
+
+        # Labels: mask padding tokens with -100 so they are ignored in loss
+        labels = input_ids.clone()
+        labels[labels == model.tokenizer.pad_token_id] = -100
+
+        outputs = model(
+            before_image=before_images,
+            after_image=after_images,
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            labels=labels,
+        )
+        loss = outputs.loss
 
         optimizer.zero_grad()
         loss.backward()
         if grad_clip > 0:
-            torch.nn.utils.clip_grad_norm_(model.parameters(), grad_clip)
+            trainable_params = [p for p in model.parameters() if p.requires_grad]
+            torch.nn.utils.clip_grad_norm_(trainable_params, grad_clip)
         optimizer.step()
 
         total_loss += loss.item()
@@ -92,39 +110,44 @@ def train_epoch(
 def validate(
     model,
     data_loader,
-    criterion,
     device,
-    pad_idx: int = 0,
-    return_accuracy: bool = False,
-):
-    """Validate model and return average loss, optionally with token accuracy."""
+    max_caption_len: int = 128,
+) -> float:
+    """Validate model and return average loss."""
     model.eval()
     total_loss = 0.0
     num_batches = 0
-    total_accuracy = 0.0
 
     with torch.no_grad():
         for batch in data_loader:
-            images = batch["images"].to(device, non_blocking=True)
-            caption_tokens = batch["caption_tokens"].to(device, non_blocking=True)
-            input_tokens, target_tokens = prepare_teacher_forcing_inputs(
-                caption_tokens,
-                pad_idx=pad_idx,
+            before_images = batch["before_images"].to(device, non_blocking=True)
+            after_images = batch["after_images"].to(device, non_blocking=True)
+            captions = batch["captions"]
+
+            tokenized = model.tokenizer(
+                captions,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+                max_length=max_caption_len,
             )
+            input_ids = tokenized["input_ids"].to(device)
+            attention_mask = tokenized["attention_mask"].to(device)
 
-            logits = model(images, input_tokens)
-            loss = captioning_loss(logits, target_tokens, criterion, pad_idx=pad_idx)
-            accuracy = caption_token_accuracy(logits, target_tokens, pad_idx=pad_idx)
+            labels = input_ids.clone()
+            labels[labels == model.tokenizer.pad_token_id] = -100
 
-            total_loss += loss.item()
-            total_accuracy += accuracy
+            outputs = model(
+                before_image=before_images,
+                after_image=after_images,
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                labels=labels,
+            )
+            total_loss += outputs.loss.item()
             num_batches += 1
 
-    avg_loss = total_loss / max(num_batches, 1)
-    avg_accuracy = total_accuracy / max(num_batches, 1)
-    if return_accuracy:
-        return avg_loss, avg_accuracy
-    return avg_loss
+    return total_loss / max(num_batches, 1)
 
 
 def save_checkpoint(
@@ -251,39 +274,28 @@ def generate_caption(
     model,
     before_image,
     after_image,
-    vocab,
     device,
-    max_len: int = 100,
+    max_new_tokens: int = 64,
 ) -> str:
-    """Greedy caption generation for one image pair."""
+    """Generate a caption for one before/after image pair."""
     model.eval()
+    if before_image.dim() == 3:
+        before_image = before_image.unsqueeze(0)
+    if after_image.dim() == 3:
+        after_image = after_image.unsqueeze(0)
 
-    images = torch.stack([before_image, after_image], dim=0).unsqueeze(0).to(device)
-    if hasattr(model, "encode_images"):
-        encoder_features = model.encode_images(images)[0]
-    elif hasattr(model, "encoder"):
-        encoder_features = model.encoder(images)
-    else:
-        raise AttributeError(
-            f"'{type(model).__name__}' object has no attribute 'encoder' or 'encode_images'"
-        )
+    before_image = before_image.to(device)
+    after_image = after_image.to(device)
 
-    caption_tokens = [vocab.start_idx]
-    for _ in range(max_len):
-        cap_tensor = torch.tensor([caption_tokens], dtype=torch.long, device=device)
-        logits = model.decoder(encoder_features, cap_tensor)
-        next_token = logits[0, -1, :].argmax(-1).item()
-        caption_tokens.append(next_token)
-        if next_token == vocab.end_idx:
-            break
-
-    return vocab.decode(caption_tokens)
+    captions = model.generate_caption(
+        before_image, after_image, max_new_tokens=max_new_tokens
+    )
+    return captions[0]
 
 
 def visualize_predictions(
     model,
     data_loader,
-    vocab,
     device,
     num_samples: int = None,
     output_pdf: str = "predictions.pdf",
@@ -296,14 +308,12 @@ def visualize_predictions(
     Args:
         model: Trained captioning model.
         data_loader: DataLoader.
-        vocab: Vocabulary object.
         device: torch device.
         num_samples: Number of samples to save. If None, saves the entire dataset.
         output_pdf: Output PDF filename.
         mean: ImageNet mean.
         std: ImageNet std.
     """
-    import math
     import matplotlib.pyplot as plt
     from matplotlib.backends.backend_pdf import PdfPages
 
@@ -322,58 +332,55 @@ def visualize_predictions(
     with PdfPages(output_pdf) as pdf:
         with torch.no_grad():
             for batch in data_loader:
-                batch_size = batch["before_image"].shape[0]
+                before_images = batch["before_images"]
+                after_images = batch["after_images"]
+                captions = batch.get("captions", [None] * before_images.size(0))
+                batch_size = before_images.size(0)
+
+                # Generate captions for the batch
+                preds = model.generate_caption(
+                    before_images.to(device),
+                    after_images.to(device),
+                )
 
                 for idx in range(batch_size):
                     if sample_count >= num_samples:
                         break
 
-                    before_img = batch["before_image"][idx]
-                    after_img = batch["after_image"][idx]
-
-                    pred_caption = generate_caption(
-                        model,
-                        before_img,
-                        after_img,
-                        vocab,
-                        device,
-                    )
+                    before_img = before_images[idx]
+                    after_img = after_images[idx]
+                    pred_caption = preds[idx]
+                    ref_caption = captions[idx] if captions[idx] is not None else ""
 
                     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
                     axes[0].imshow(
-                        denormalize_image(
-                            before_img,
-                            mean=mean,
-                            std=std,
-                        )
+                        denormalize_image(before_img, mean=mean, std=std)
                     )
                     axes[0].set_title("Before")
                     axes[0].axis("off")
 
                     axes[1].imshow(
-                        denormalize_image(
-                            after_img,
-                            mean=mean,
-                            std=std,
-                        )
+                        denormalize_image(after_img, mean=mean, std=std)
                     )
                     axes[1].set_title("After")
                     axes[1].axis("off")
 
                     axes[2].axis("off")
+                    text_content = f"Sample: {sample_count + 1}\n\n"
+                    if ref_caption:
+                        text_content += f"Reference:\n{ref_caption}\n\n"
+                    text_content += f"Prediction:\n{pred_caption}"
                     axes[2].text(
                         0,
                         1,
-                        f"Sample: {sample_count + 1}\n\n"
-                        f"Prediction:\n{pred_caption}",
+                        text_content,
                         fontsize=10,
                         wrap=True,
                         verticalalignment="top",
                     )
 
                     plt.tight_layout()
-
                     pdf.savefig(fig, bbox_inches="tight")
                     plt.close(fig)
 

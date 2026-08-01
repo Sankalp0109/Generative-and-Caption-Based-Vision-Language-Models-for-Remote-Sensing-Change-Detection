@@ -27,7 +27,6 @@ import numpy as np
 import torch
 from nltk.translate.bleu_score import SmoothingFunction, corpus_bleu
 from nltk.translate.meteor_score import meteor_score
-from sentence_transformers import SentenceTransformer
 
 
 SPECIAL_TOKENS = {"<PAD>", "<START>", "<END>", "<UNK>"}
@@ -288,6 +287,8 @@ class SentenceEmbeddingScorer:
 
     def _load_backend(self):
         if self.backend is None:
+            from sentence_transformers import SentenceTransformer
+
             self._model = SentenceTransformer(self.model_name, device=self.device)
             self.backend = "sentence-transformers"
 
@@ -340,30 +341,32 @@ def evaluate_caption_metrics(
 
 
 @torch.no_grad()
-def generate_caption_greedy(model, before_image, after_image, vocab, device, max_len: int = 100) -> str:
-    """Generate a caption from a single before/after pair using greedy decoding."""
+def generate_caption_greedy(
+    model, before_image, after_image, device, max_new_tokens: int = 64
+) -> str:
+    """Generate a caption from a single before/after pair using the model's decoder."""
     model.eval()
-    images = torch.stack([before_image, after_image], dim=0).unsqueeze(0).to(device)
-    caption_tokens = [vocab.start_idx]
+    if before_image.dim() == 3:
+        before_image = before_image.unsqueeze(0)
+    if after_image.dim() == 3:
+        after_image = after_image.unsqueeze(0)
 
-    for _ in range(max_len):
-        cap_tensor = torch.tensor([caption_tokens], dtype=torch.long, device=device)
-        logits = model(images, cap_tensor)
-        next_token = logits[0, -1, :].argmax(-1).item()
-        caption_tokens.append(next_token)
-        if next_token == vocab.end_idx:
-            break
+    before_image = before_image.to(device)
+    after_image = after_image.to(device)
 
-    return vocab.decode(caption_tokens)
+    captions = model.generate_caption(
+        before_image, after_image, max_new_tokens=max_new_tokens
+    )
+    return captions[0]
 
 
 @torch.no_grad()
 def collect_references_and_predictions(
     model,
     data_loader,
-    vocab,
     device,
     max_samples: Optional[int] = None,
+    max_new_tokens: int = 64,
 ) -> Tuple[List[List[str]], List[str], List[Dict]]:
     """Run caption generation over a loader and collect refs/preds/details."""
     model.eval()
@@ -379,15 +382,16 @@ def collect_references_and_predictions(
         filenames = batch.get("filenames", [None] * len(captions))
         changeflags = batch.get("changeflags", [None] * len(captions))
 
-        for idx in range(before_images.size(0)):
+        # Generate captions for the batch
+        batch_preds = model.generate_caption(
+            before_images.to(device),
+            after_images.to(device),
+            max_new_tokens=max_new_tokens,
+        )
+
+        for idx in range(len(captions)):
             ref = captions[idx]
-            pred = generate_caption_greedy(
-                model,
-                before_images[idx],
-                after_images[idx],
-                vocab,
-                device,
-            )
+            pred = batch_preds[idx]
             references.append([ref])
             predictions.append(pred)
             details.append(
@@ -408,18 +412,18 @@ def collect_references_and_predictions(
 def evaluate_model_on_loader(
     model,
     data_loader,
-    vocab,
     device,
     max_samples: Optional[int] = None,
     semantic_model: Optional[SentenceEmbeddingScorer] = None,
+    max_new_tokens: int = 64,
 ) -> Dict[str, float]:
     """Collect model predictions and compute all caption metrics."""
     references, predictions, details = collect_references_and_predictions(
         model=model,
         data_loader=data_loader,
-        vocab=vocab,
         device=device,
         max_samples=max_samples,
+        max_new_tokens=max_new_tokens,
     )
     metrics = evaluate_caption_metrics(
         references=references,
@@ -467,18 +471,18 @@ def attach_per_sample_metrics(
 def evaluate_full_test_with_per_sample_metrics(
     model,
     data_loader,
-    vocab,
     device,
     semantic_model: Optional[SentenceEmbeddingScorer] = None,
     max_samples: Optional[int] = None,
+    max_new_tokens: int = 64,
 ) -> Tuple[Dict[str, float], List[Dict]]:
     """Run inference on a loader and return aggregate + per-sample metrics."""
     references, predictions, details = collect_references_and_predictions(
         model=model,
         data_loader=data_loader,
-        vocab=vocab,
         device=device,
         max_samples=max_samples,
+        max_new_tokens=max_new_tokens,
     )
     aggregate_metrics = evaluate_caption_metrics(
         references=references,
