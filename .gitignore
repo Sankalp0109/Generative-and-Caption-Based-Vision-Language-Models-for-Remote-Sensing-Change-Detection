@@ -9,5 +9,10 @@ Detailed Implementation Flow of the Proposed Framework.pdf
 Independent_Study_project.pdf
 SECOND-CC-AUG/
 *.pdf
+!CodeAug.pdf
+__pycache__/
 */__pycache__/
+*/**/__pycache__/
+*.pyc
+*_output.ipynb
 .*

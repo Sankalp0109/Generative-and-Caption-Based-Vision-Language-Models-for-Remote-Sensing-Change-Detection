@@ -90,7 +90,7 @@ source venv/bin/activate
 # OR: source ~/miniforge3/envs/mlenv/bin/activate
 
 # Install required dependencies
-pip install -r requirements_codeaug.txt
+pip install -r requirements.txt
 ```
 
 ### Step 2: Stage 1 Foundation Pre-Training (LEVIR-CC)
@@ -109,7 +109,7 @@ Fine-tune on Indian urban Google Earth pairs (~200–500 pairs) with Bi-Temporal
 ### Running on ADA Cluster via SLURM
 Submit the automated execution script:
 ```bash
-sbatch execute_codeaug.sh
+sbatch execute_phase7.sh
 ```
 
 ---

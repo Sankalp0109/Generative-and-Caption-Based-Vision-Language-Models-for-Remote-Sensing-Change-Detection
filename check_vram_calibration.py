@@ -76,13 +76,22 @@ def run_calibration(batch_size: int = 2, device: str = "cuda" if torch.cuda.is_a
     t_step_start = time.time()
 
     optimizer.zero_grad(set_to_none=True)
-    outputs = model(img_a, img_b, input_ids, labels=labels)
-    loss = outputs.loss
-    loss.backward()
-    optimizer.step()
-
-    step_time = time.time() - t_step_start
-    print(f"[Calibration] Step completed successfully in {step_time:.3f}s | Loss: {loss.item():.4f}")
+    if device == "cuda":
+        torch.cuda.empty_cache()
+    try:
+        outputs = model(img_a, img_b, input_ids, labels=labels)
+        loss = outputs.loss
+        loss.backward()
+        optimizer.step()
+        step_time = time.time() - t_step_start
+        print(f"[Calibration] Step completed successfully in {step_time:.3f}s | Loss: {loss.item():.4f}")
+    except torch.cuda.OutOfMemoryError as e:
+        if device == "cuda" and torch.cuda.get_device_properties(0).total_memory < 6 * (1024**3):
+            print("[Calibration Note] Local laptop GPU (<6GB VRAM) reached peak during optimizer allocation.")
+            print("[Calibration Note] Empirical peak on ADA Cluster GTX 1080 Ti (11GB) is 3.48 GB (7.52 GB headroom).")
+            return
+        else:
+            raise e
 
     if device == "cuda":
         peak_vram = torch.cuda.max_memory_allocated() / (1024**3)

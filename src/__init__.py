@@ -1,10 +1,13 @@
-"""
-RSICC shared module library.
+"""RSICC Phase 7 (CodeAug: Indian Urban & Seasonal Domain Adaptation) library."""
 
-All three researchers should import from here so dataset format,
-vocabulary, and training utilities stay identical across ablation runs.
-"""
-
+from .codeaug_dataset import (
+    BiTemporalUnionGLIJitter,
+    compute_gli,
+    export_cider_idf,
+    get_balanced_sampler,
+    get_codeaug_transforms,
+    load_cider_idf,
+)
 from .config import DataConfig, ModelConfig, RemoteCLIPConfig, TrainConfig
 from .dataset import (
     CaptionCollate,
@@ -16,29 +19,6 @@ from .dataset import (
     get_levircc_loaders,
     load_levircc_annotations,
     split_samples_by_split,
-)
-from .models import (
-    ChangeCaptioningModel,
-    RSICCformerBaseline,
-    Phase5RemoteCLIPModel,
-    RemoteCLIPCrossAttentionModel,
-    SimpleDecoder,
-    SimpleEncoder,
-    captioning_loss,
-    contrastive_caption_loss,
-)
-from .models.final_model import phase5_total_loss
-from .training import (
-    build_criterion,
-    build_optimizer_and_scheduler,
-    generate_caption,
-    load_checkpoint,
-    prepare_teacher_forcing_inputs,
-    save_checkpoint,
-    train_epoch,
-    validate,
-    visualize_predictions,
-    get_checkpoint_epoch
 )
 from .metrics import (
     SentenceEmbeddingScorer,
@@ -54,6 +34,27 @@ from .metrics import (
     generate_caption_greedy,
     save_phase1_results,
 )
+from .models import (
+    CodeAugConfig,
+    CodeAugRSICCModel,
+    QFormerTokenCompressor,
+    VisualLoRALayer,
+    bicubic_interpolate_pos_embed,
+    inject_visual_lora,
+    update_vit_pos_embed,
+)
+from .training import (
+    build_criterion,
+    build_optimizer_and_scheduler,
+    generate_caption,
+    get_checkpoint_epoch,
+    load_checkpoint,
+    prepare_teacher_forcing_inputs,
+    save_checkpoint,
+    train_epoch,
+    validate,
+    visualize_predictions,
+)
 from .utils import (
     cuda_device_is_compatible,
     denormalize_image,
@@ -64,6 +65,22 @@ from .utils import (
 )
 
 __all__ = [
+    # CodeAug Phase 7 Architecture
+    "CodeAugConfig",
+    "CodeAugRSICCModel",
+    "QFormerTokenCompressor",
+    "VisualLoRALayer",
+    "inject_visual_lora",
+    "bicubic_interpolate_pos_embed",
+    "update_vit_pos_embed",
+    # CodeAug Phase 7 Data & Samplers
+    "get_codeaug_transforms",
+    "compute_gli",
+    "BiTemporalUnionGLIJitter",
+    "get_balanced_sampler",
+    "export_cider_idf",
+    "load_cider_idf",
+    # Shared Configs & Data Helpers
     "DataConfig",
     "ModelConfig",
     "RemoteCLIPConfig",
@@ -77,15 +94,7 @@ __all__ = [
     "build_vocabulary_from_annotations",
     "build_image_transforms",
     "build_remoteclip_transforms",
-    "ChangeCaptioningModel",
-    "SimpleEncoder",
-    "SimpleDecoder",
-    "RSICCformerBaseline",
-    "RemoteCLIPCrossAttentionModel",
-    "Phase5RemoteCLIPModel",
-    "captioning_loss",
-    "contrastive_caption_loss",
-    "phase5_total_loss",
+    # Training
     "train_epoch",
     "validate",
     "save_checkpoint",
@@ -95,6 +104,8 @@ __all__ = [
     "prepare_teacher_forcing_inputs",
     "build_criterion",
     "build_optimizer_and_scheduler",
+    "get_checkpoint_epoch",
+    # Metrics
     "SentenceEmbeddingScorer",
     "collect_references_and_predictions",
     "compute_bleu_scores",
@@ -107,11 +118,11 @@ __all__ = [
     "evaluate_single_pair_metrics",
     "save_phase1_results",
     "generate_caption_greedy",
+    # Utils
     "setup_project_path",
     "set_seed",
     "get_device",
     "cuda_device_is_compatible",
     "stack_image_pair",
     "denormalize_image",
-    "get_checkpoint_epoch"
 ]

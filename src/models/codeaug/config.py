@@ -71,3 +71,10 @@ class CodeAugConfig:
 
     ce_gamma: float = 1.0
     """Unweighted Cross-Entropy loss scaling factor (gamma=1.0)."""
+
+    # ── Learning Rates ───────────────────────────────────────────────────────
+    lr_qformer: float = 1e-4
+    """Learning rate for Q-Former queries and cross-attention blocks."""
+
+    lr_lora: float = 5e-5
+    """Learning rate for ViT-L-14 Visual LoRA adapters."""

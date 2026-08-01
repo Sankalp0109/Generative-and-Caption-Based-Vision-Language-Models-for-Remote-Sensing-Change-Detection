@@ -1,32 +1,21 @@
-"""Model package for RSICC ablation study."""
+"""Model package for RSICC Phase 7 (CodeAug: Indian Urban & Seasonal Domain Adaptation)."""
 
-from .baseline import RSICCformerBaseline, SimpleDecoder, SimpleEncoder
-from .interface import ChangeCaptioningModel
-from .final_model import (
-    Phase5RemoteCLIPModel,
-    RemoteCLIPCrossAttentionModel,
-    captioning_loss,
-    contrastive_caption_loss,
-    phase5_total_loss,
-)
-from .phase6 import (
-    Phase6Config,
-    TileBasedChangeCaptioningModel,
-    phase6_total_loss,
+from .codeaug import (
+    CodeAugConfig,
+    CodeAugRSICCModel,
+    QFormerTokenCompressor,
+    VisualLoRALayer,
+    bicubic_interpolate_pos_embed,
+    inject_visual_lora,
+    update_vit_pos_embed,
 )
 
 __all__ = [
-    "ChangeCaptioningModel",
-    "SimpleEncoder",
-    "SimpleDecoder",
-    "RSICCformerBaseline",
-    "RemoteCLIPCrossAttentionModel",
-    "Phase5RemoteCLIPModel",
-    "captioning_loss",
-    "contrastive_caption_loss",
-    "phase5_total_loss",
-    "Phase6Config",
-    "TileBasedChangeCaptioningModel",
-    "phase6_total_loss",
+    "CodeAugConfig",
+    "CodeAugRSICCModel",
+    "QFormerTokenCompressor",
+    "VisualLoRALayer",
+    "inject_visual_lora",
+    "bicubic_interpolate_pos_embed",
+    "update_vit_pos_embed",
 ]
-

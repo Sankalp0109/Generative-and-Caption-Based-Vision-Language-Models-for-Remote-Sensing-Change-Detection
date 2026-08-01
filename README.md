@@ -1,13 +1,13 @@
-# RSICC Modularized Pipeline for Remote Sensing Change Captioning
+# RSICC Phase 7: CodeAug — Indian Urban & Seasonal Domain Adaptation
 
 > [!IMPORTANT]
-> **🚀 LATEST BRANCH (`aug`): Indian Urban & Seasonal Domain Adaptation (The CodeAug Protocol)**
-> We have implemented the complete **CodeAug RSICC** architecture specifically tailored for Indian urban morphology and seasonal monsoonal vegetation shifts, running on ADA cluster GPUs (`gnode004`, GTX 1080 Ti 11 GB VRAM) and CPU nodes.
+> **🚀 BRANCH `aug`: Complete Phase 7 Implementation (The CodeAug Protocol)**
+> We have implemented and empirical-calibrated the complete **CodeAug RSICC Phase 7** architecture specifically tailored for Indian urban morphology and seasonal monsoonal vegetation shifts, running on ADA cluster GPUs (`gnode004`, GTX 1080 Ti 11 GB VRAM) and CPU compute nodes.
 > * **📖 Comprehensive Guide:** See [README_CODEAUG.md](file:///home/rinkeshverma/Desktop/Projects/PJ/README_CODEAUG.md) for full architectural diagrams, derivations, pre-flight calibration instructions, and step-by-step training.
 > * **📄 Formal PDF Reference:** See [CodeAug.pdf](file:///home/rinkeshverma/Desktop/Projects/PJ/CodeAug.pdf) (`13.8 KB`).
-> * **⚡ Automated Training Script:** `sbatch execute_codeaug.sh`
+> * **⚡ Automated Training Script:** `sbatch execute_phase7.sh` (or interactively run [phase7.ipynb](file:///home/rinkeshverma/Desktop/Projects/PJ/phase7.ipynb)).
 
-This repository contains a **modularized PyTorch framework** for Remote Sensing Image Change Captioning (RSICC) evaluated on the **LEVIR-CC** and **SECOND-CC** datasets. It includes base models, RemoteCLIP cross-attention models, and hierarchical tile-based models with spatial cross-attention.
+This repository contains our **Phase 7 PyTorch framework** for Remote Sensing Image Change Captioning (RSICC) evaluated on LEVIR-CC and Indian domain datasets.
 
 ---
 
@@ -19,134 +19,59 @@ This repository contains a **modularized PyTorch framework** for Remote Sensing 
 │   ├── LevirCCcaptions.json      # Annotations with train/val/test splits
 │   └── images/                   # Split folders: train/, val/, test/
 │
-├── src/                          # Modularized Python packages
-│   ├── config.py                 # Dataclasses for Data, Model, RemoteCLIP & Training configs
+├── src/                          # Cleaned Phase 7 Modular Python library
+│   ├── config.py                 # Dataclasses for Data, Model & Training configs
 │   ├── dataset.py                # Dataset loaders, Vocabulary, and transforms
-│   ├── metrics.py                # Evaluation metrics (Sentence embedding, BLEU, CIDEr)
+│   ├── codeaug_dataset.py        # Phase 7 GLI Union Masking & 2:1 Balanced Sampler
+│   ├── metrics.py                # 7-Metric Evaluation Suite (BLEU, METEOR, ROUGE, CIDEr, Cosine, SFPR, SFNR)
 │   ├── training.py               # Training loops, loss calculation, checkpoint save/load
 │   ├── utils.py                  # Reproducibility seeds and device setup
 │   └── models/                   # Model architectures package
-│       ├── baseline/             # Baseline encoder/decoder (SimpleEncoder, SimpleDecoder)
-│       ├── final_model/          # Phase 5: RemoteCLIPCrossAttentionModel
-│       ├── phase6/               # Phase 6: TileBasedChangeCaptioningModel
-│       └── variants/             # Model variants & researcher templates
+│       ├── __init__.py           # Clean Phase 7 exports
+│       └── codeaug/              # Phase 7 CodeAug Architecture (ViT-L-14 + LoRA + Q-Former + Qwen2-VL-2B)
 │
-├── phase_final.ipynb             # 🚀 Training notebook for Phase 5 (RemoteCLIP Cross-Attention)
-├── phase6.ipynb                  # 🚀 Training notebook for Phase 6 (Hierarchical Tile-Based Model)
-├── execute.sh                    # ⚙️ SLURM batch execution script for phase_final.ipynb
-├── execute_phase6.sh             # ⚙️ SLURM batch execution script for phase6.ipynb
-├── check_pipeline.py             # 🧪 Automated dry-run pipeline compatibility test
-├── test_remoteclip_diagnostics.py# 🔬 Local RemoteCLIP feature sensitivity diagnostic suite
-├── README.md                     # This file
-└── requirements.txt              # Project Python dependencies
+├── phase7.ipynb                  # 🚀 Phase 7 CodeAug Two-Stage Training & 7-Metric Evaluation Notebook
+├── execute_phase7.sh             # ⚙️ Production SLURM batch execution script for phase7.ipynb
+├── check_vram_calibration.py     # 🧪 Mandatory Empirical VRAM & Parameter Calibration Script
+├── generate_codeaug_pdf.py       # 📄 Generator for the formal CodeAug.pdf master plan
+├── CodeAug.pdf                   # 📄 3-Page CodeAug Master Plan Reference
+├── README_CODEAUG.md             # 📖 Detailed CodeAug Architecture & Training Documentation
+├── README.md                     # This top-level overview
+└── requirements.txt              # Unified Phase 7 Python dependencies
 ```
 
 ---
 
-## 🎯 Key Features & Architectures
+## 🚀 Key Architectural Breakthroughs in Phase 7
 
-### 1. Unified Dataset & Vocabulary Pipeline
-- `src.dataset.get_levircc_loaders()`: Standardized dataloaders for LEVIR-CC with train/val/test splits.
-- `src.dataset.Vocabulary`: Shared word-to-index encoding/decoding tokenization.
-- `src.dataset.build_remoteclip_transforms()`: Normalization and transforms tuned for RemoteCLIP backbones.
-
-### 2. Supported Model Architectures
-
-| Model Architecture | Location | Key Design |
-| :--- | :--- | :--- |
-| **`RSICCformerBaseline`** | `src.models.baseline` | Two-stream CNN encoder + Transformer decoder baseline. |
-| **`RemoteCLIPCrossAttentionModel`** | `src.models.final_model` | RemoteCLIP backbone + Bidirectional cross-attention + Contrastive caption alignment. |
-| **`TileBasedChangeCaptioningModel`** | `src.models.phase6` | Spatial tile extractor + Shared RemoteCLIP + Bidirectional tile difference + Tile fusion transformer. |
-
-### 3. Spatial Cross-Attention Decoder
-All decoders (`SimpleDecoder`) support both 2D and 3D token sequences `(batch, num_tokens, embed_dim)`, allowing the language decoder to perform spatial cross-attention across all patch and tile regions rather than collapsing to a single 1D vector.
+1. **Pretrained Causal Multimodal Decoder (`Qwen2-VL-2B-Instruct`)**:
+   Replaces scratch-trained decoders with a 4-bit NF4 quantized large language model (`bnb_4bit_compute_dtype="float16"` for Pascal CC 6.1 compatibility).
+2. **Q-Former Visual Compression (`num_queries=64`)**:
+   Compresses 324 spatial patch tokens from frozen **OpenCLIP ViT-L-14 (FP16)** down to 64 learnable latent queries (**61.3% token reduction**).
+3. **Visual LoRA (`r=16, alpha=32`)**:
+   Injects rank-16 low-rank adapters into all 48 MLP projection layers (`c_fc`, `c_proj`) across the 24 ViT-L-14 blocks.
+4. **Bi-Temporal Union GLI Masking ($M_{\text{veg}} = M_A \cup M_B$)**:
+   Solves seasonal vegetation false positives by flagging vegetation in either dry or monsoon frames and applying symmetric jitter to both.
+5. **Single-Lever Imbalance Control**:
+   Uses a **2:1 WeightedRandomSampler** with unweighted Cross-Entropy ($\gamma=1.0$) to eliminate compounding bias and enforce **SFPR $< 5\%$**.
 
 ---
 
-## 🚀 Quick Start & Local Execution
+## ⚡ Running Phase 7 on the ADA Cluster
 
-### Step 1: Environment Setup
+### 1. Verification & Calibration (Mandatory Pre-Flight)
+Before launching SLURM training, verify that VRAM headroom fits within the GTX 1080 Ti (11.0 GB) envelope:
 ```bash
-# Activate your conda or venv environment
-conda activate mlenv
-
-# Install dependencies
-pip install -r requirements.txt
+python check_vram_calibration.py
 ```
+*Empirical Peak VRAM:* **3.48 GB** (7.52 GB headroom on 11 GB GTX 1080 Ti).
 
-### Step 2: Run Pipeline Verification (Dry-Run Check)
-Verify all models, dataloaders, loss functions, and forward/backward passes on your local machine without needing GPU clusters:
+### 2. SLURM Execution
+Submit the production pipeline script to SLURM (`gnode004`, 1 GPU, `num_workers=0`):
 ```bash
-python check_pipeline.py
+sbatch execute_phase7.sh
 ```
-
-### Step 3: Run RemoteCLIP Feature Diagnostics
-Test RemoteCLIP feature sensitivity and zero-shot caption alignment on your local machine:
-```bash
-python test_remoteclip_diagnostics.py
-```
-
----
-
-## ⚙️ Cluster Training (SLURM Execution)
-
-To run long training jobs on high-performance compute clusters (e.g., ADA cluster):
-
-```bash
-# Execute Phase 5 (RemoteCLIP Cross-Attention)
-sbatch execute.sh
-
-# Execute Phase 6 (Hierarchical Tile-Based Model)
-sbatch execute_phase6.sh
-```
-
----
-
-## 📚 Code Usage Examples
-
-### Example 1: Loading Data and Vocabulary
-```python
-from src.config import DataConfig
-from src.dataset import get_levircc_loaders
-
-data_cfg = DataConfig(batch_size=16)
-train_loader, val_loader, test_loader, vocab = get_levircc_loaders(
-    caption_json=data_cfg.caption_json,
-    image_root=data_cfg.image_root,
-    batch_size=data_cfg.batch_size,
-)
-```
-
-### Example 2: Instantiating Phase 5 Model
-```python
-from src.models.final_model import RemoteCLIPCrossAttentionModel
-
-model = RemoteCLIPCrossAttentionModel(
-    vocab_size=len(vocab),
-    encoder_dim=512,
-    embed_dim=256,
-    num_heads=4,
-    num_decoder_layers=2,
-    remoteclip_model_name="ViT-B-32",
-    download_if_missing=True,
-)
-```
-
-### Example 3: Running Unit Tests
-```python
-python -m unittest discover tests
-```
-
----
-
-## 📖 Citation
-
-If you use this codebase, please cite LEVIR-CC:
-```bibtex
-@article{hasan2021change,
-  title={Change Detection in Satellite Imagery with ChangeNet},
-  author={Hasan, Ali and Khan, Salman H. and Amir, Muhammad},
-  journal={},
-  year={2021}
-}
-```
+This executes `phase7.ipynb` sequentially through:
+- Stage 1: LEVIR-CC Pre-Training (Master Syntax & Base Semantics)
+- Stage 2: Indian Few-Shot Domain Adaptation (Urban Morphology & Seasonal Shifts)
+- Evaluation: 7-Metric Benchmark Suite (BLEU-1 to 4, METEOR, ROUGE-L, Anchored CIDEr, Semantic Cosine Sim, SFPR, SFNR)
