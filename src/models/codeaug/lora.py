@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import math
-from typing import List
+from typing import List, Tuple
 
 import torch
 import torch.nn as nn
@@ -43,6 +43,14 @@ class VisualLoRALayer(nn.Module):
         nn.init.kaiming_uniform_(self.lora_A, a=math.sqrt(5))
         nn.init.zeros_(self.lora_B)
 
+    @property
+    def weight(self):
+        return self.original_layer.weight
+
+    @property
+    def bias(self):
+        return self.original_layer.bias
+
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         base_out = self.original_layer(x)
         lora_out = (self.lora_dropout(x) @ self.lora_A.t()) @ self.lora_B.t()
@@ -54,9 +62,12 @@ def inject_visual_lora(
     r: int = 16,
     alpha: int = 32,
     dropout: float = 0.05,
-    target_modules: Tuple[str, ...] = ("c_proj", "out_proj", "in_proj", "qkv"),
+    target_modules: Tuple[str, ...] = ("c_fc", "c_proj"),
 ) -> List[str]:
-    """Inject VisualLoRALayer into attention projection layers of a ViT model.
+    """Inject VisualLoRALayer into MLP projection layers of a ViT model.
+    
+    Targets c_fc and c_proj across all transformer blocks (48 linear layers in ViT-L-14)
+    without interfering with PyTorch C++ MultiheadAttention internals.
     
     Returns:
         replaced_names: List of module names that were wrapped with LoRA.
@@ -64,10 +75,10 @@ def inject_visual_lora(
     replaced_names = []
     for name, module in vit_model.named_modules():
         if isinstance(module, nn.Linear):
-            if any(t in name for t in target_modules):
-                # Locate parent module
+            # Only match exact leaf attribute names (e.g., c_fc or c_proj)
+            leaf_name = name.rsplit(".", 1)[-1]
+            if leaf_name in target_modules:
                 parent_name = name.rsplit(".", 1)[0] if "." in name else ""
-                child_name = name.rsplit(".", 1)[1] if "." in name else name
                 parent = vit_model.get_submodule(parent_name) if parent_name else vit_model
 
                 lora_wrapper = VisualLoRALayer(
@@ -76,7 +87,7 @@ def inject_visual_lora(
                     alpha=alpha,
                     dropout=dropout,
                 )
-                setattr(parent, child_name, lora_wrapper)
+                setattr(parent, leaf_name, lora_wrapper)
                 replaced_names.append(name)
 
     print(f"[CodeAug] Injected Visual LoRA (r={r}, alpha={alpha}) into {len(replaced_names)} ViT linear layers.")
