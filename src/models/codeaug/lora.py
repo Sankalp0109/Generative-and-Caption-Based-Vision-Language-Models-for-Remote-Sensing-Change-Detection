@@ -32,9 +32,11 @@ class VisualLoRALayer(nn.Module):
 
         in_features = original_layer.in_features
         out_features = original_layer.out_features
+        layer_dtype = original_layer.weight.dtype
+        layer_device = original_layer.weight.device
 
-        self.lora_A = nn.Parameter(torch.zeros(r, in_features))
-        self.lora_B = nn.Parameter(torch.zeros(out_features, r))
+        self.lora_A = nn.Parameter(torch.zeros(r, in_features, dtype=layer_dtype, device=layer_device))
+        self.lora_B = nn.Parameter(torch.zeros(out_features, r, dtype=layer_dtype, device=layer_device))
         self.lora_dropout = nn.Dropout(p=dropout) if dropout > 0 else nn.Identity()
 
         self.reset_parameters()

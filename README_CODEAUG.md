@@ -63,10 +63,11 @@ python check_vram_calibration.py
 
 ### Verified Empirical Numbers on `gnode004` (GTX 1080 Ti 11 GB VRAM):
 * **True Post-Pruning Causal LLM Parameters:** `1.543 Billion`
-* **Total Model Parameters:** `1,848.51 Million`
-* **Trainable Parameters:** `1.95 Million (0.11%)` (Visual LoRA `r=16` + Q-Former queries)
-* **True Peak Training VRAM (Forward + Backward + `optimizer.step()`):** **`7.62 GB`**
-* **GTX 1080 Ti Headroom:** **`3.38 GB free`** (safe from out-of-memory crashes).
+* **Total Model Parameters:** `1,856.38 Million` (`~1.86B`)
+* **Trainable Parameters:** `9.81 Million (0.53%)` (Visual LoRA `r=16` across 48 layers + Q-Former queries)
+* **Static Loaded Weights VRAM:** `2.94 GB` (with FP16 ViT-L-14 + 4-bit NF4 Qwen causal text decoder)
+* **True Peak Training VRAM (Forward + Backward + `optimizer.step()`):** **`3.48 GB`**
+* **GTX 1080 Ti Headroom:** **`7.52 GB free`** (safe from out-of-memory crashes even at larger batch sizes).
 
 ---
 

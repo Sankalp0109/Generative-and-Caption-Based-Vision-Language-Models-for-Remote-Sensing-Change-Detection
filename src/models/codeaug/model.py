@@ -57,9 +57,11 @@ class CodeAugRSICCModel(nn.Module):
             )
             visual_model = self._create_fallback_vit(config.fusion_dim)
 
-        # Freeze base ViT weights
+        # Freeze base ViT weights and cast to FP16 on CUDA to halve VRAM (850 MB)
         for param in visual_model.parameters():
             param.requires_grad = False
+        if config.use_4bit_quantization and torch.cuda.is_available():
+            visual_model = visual_model.to(torch.float16)
 
         # Interpolate pos_embed from 16x16 -> 18x18 (324 patches)
         try:
@@ -75,6 +77,9 @@ class CodeAugRSICCModel(nn.Module):
                 alpha=config.lora_alpha,
                 dropout=config.lora_dropout,
             )
+
+        if hasattr(visual_model, "output_tokens"):
+            visual_model.output_tokens = True
 
         return visual_model
 
@@ -210,15 +215,22 @@ class CodeAugRSICCModel(nn.Module):
         Returns:
             visual_prefix: (B, num_queries, llm_hidden_size) e.g. (B, 64, 1536)
         """
-        feat_a = self.vision_encoder(before_image)  # (B, 325, 1024)
-        feat_b = self.vision_encoder(after_image)   # (B, 325, 1024)
+        # Ensure input images match vision encoder dtype (FP16/FP32)
+        vit_dtype = next(self.vision_encoder.parameters()).dtype
+        before_image = before_image.to(dtype=vit_dtype)
+        after_image = after_image.to(dtype=vit_dtype)
+
+        res_a = self.vision_encoder(before_image)
+        res_b = self.vision_encoder(after_image)
+        feat_a = res_a[1] if isinstance(res_a, (tuple, list)) else res_a  # (B, 325, 1024)
+        feat_b = res_b[1] if isinstance(res_b, (tuple, list)) else res_b  # (B, 325, 1024)
 
         # Exclude CLS token -> (B, 324, 1024)
         feat_a_spatial = feat_a[:, 1:, :] if feat_a.size(1) > 1 else feat_a
         feat_b_spatial = feat_b[:, 1:, :] if feat_b.size(1) > 1 else feat_b
 
-        # Bi-temporal change feature representation
-        diff_feat = feat_b_spatial - feat_a_spatial
+        # Bi-temporal change feature representation (match Q-Former dtype)
+        diff_feat = (feat_b_spatial - feat_a_spatial).to(dtype=self.qformer.query_tokens.dtype)
 
         # Compress 324 -> 64 tokens via Q-Former
         visual_prefix = self.qformer(diff_feat)  # (B, 64, llm_hidden_size)
