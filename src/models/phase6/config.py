@@ -36,8 +36,13 @@ class Phase6Config:
     fusion_heads: int = 4
     """Number of attention heads in the per-tile forward cross-attention."""
 
-    diff_mlp_dropout: float = 0.1
-    """Dropout rate inside the per-tile difference MLP."""
+    diff_mlp_dropout: float = 0.15
+    """Dropout rate inside the per-tile difference MLP.
+
+    Smallest of the three trainable blocks (~2.6M params) and closest to the
+    frozen RemoteCLIP features, so it gets lighter regularization than the
+    fusion transformer.
+    """
 
     # ── Tile fusion transformer ───────────────────────────────────────────────
     num_fusion_layers: int = 2
@@ -49,8 +54,13 @@ class Phase6Config:
     fusion_ffn_dim: int = 2048
     """Feed-forward hidden dimension inside the fusion transformer."""
 
-    fusion_dropout: float = 0.1
-    """Dropout rate in the tile fusion transformer."""
+    fusion_dropout: float = 0.2
+    """Dropout rate in the tile fusion transformer.
+
+    This is the largest trainable block (2 layers, d_model=512, ffn=2048,
+    ~6M params) and the one most exposed to overfitting during the SECOND-CC
+    fine-tune stage, so it keeps the heavier dropout.
+    """
 
     # ── Global projection ─────────────────────────────────────────────────────
     global_dim: int = 512
@@ -69,8 +79,14 @@ class Phase6Config:
     max_caption_len: int = 100
     """Maximum decoded caption length."""
 
-    decoder_dropout: float = 0.1
-    """Dropout rate inside the caption decoder."""
+    decoder_dropout: float = 0.15
+    """Dropout rate inside the caption decoder.
+
+    Kept below the fusion transformer's rate -- over-regularizing the output
+    layer tends to produce more generic/degenerate captions, which greedy
+    decoding's repetition penalty (see src/training.py) is already guarding
+    against separately.
+    """
 
     # ── Contrastive alignment (optional) ────────────────────────────────────
     contrastive_dim: int = 256

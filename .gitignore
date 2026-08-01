@@ -11,3 +11,4 @@ SECOND-CC-AUG/
 *.pdf
 */__pycache__/
 .*
+.claude/*

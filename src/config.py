@@ -79,12 +79,47 @@ class RemoteCLIPConfig:
 
 @dataclass
 class TrainConfig:
-    """Default training settings."""
+    """Stage-1 (LEVIR-CC) pretraining settings.
+
+    This config trains the full trainable stack (tile diff MLP, fusion
+    transformer, decoder) from scratch on top of the frozen RemoteCLIP
+    backbone. num_epochs and scheduler_t_max are kept equal so the cosine
+    schedule decays monotonically across the whole run instead of climbing
+    back up after T_max epochs.
+
+    num_epochs=8: with the current (simplified, attention-free) tile-diff
+    block, a run observed the val objective peaking around epoch 7-8 and
+    overfitting setting in by epoch 9 -- the earlier 15-epoch figure came
+    from the older cross-attention tile-diff variant and no longer applies
+    now that the block has less capacity and converges faster.
+    """
 
     learning_rate: float = 1e-4
     weight_decay: float = 1e-5
-    num_epochs: int = 15
+    num_epochs: int = 8
     grad_clip: float = 1.0
-    scheduler_t_max: int = 10
+    scheduler_t_max: int = 8
+    log_every: int = 10
+    seed: int = 42
+
+
+@dataclass
+class FinetuneConfig:
+    """Stage-2 (SECOND-CC) continued fine-tuning settings.
+
+    Fine-tuning the stage-1 checkpoint at the full pretrain learning rate
+    overwrites the LEVIR-CC-specific weights (observed: LEVIR CIDEr dropped
+    5.39 -> 2.77 after a SECOND-CC fine-tune stage that reused TrainConfig's
+    lr/epochs). A lower LR and shorter schedule limit how far the weights can
+    drift. num_epochs=6 matches where a comparable fine-tune run's val_loss
+    bottomed out before climbing back up from overfitting (epoch 6: 1.522 ->
+    epoch 14: 1.551 while train_loss kept falling).
+    """
+
+    learning_rate: float = 2e-5
+    weight_decay: float = 1e-4
+    num_epochs: int = 6
+    grad_clip: float = 1.0
+    scheduler_t_max: int = 6
     log_every: int = 10
     seed: int = 42

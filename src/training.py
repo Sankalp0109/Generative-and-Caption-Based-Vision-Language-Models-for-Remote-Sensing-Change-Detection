@@ -254,6 +254,7 @@ def generate_caption(
     vocab,
     device,
     max_len: int = 100,
+    repetition_penalty: float = 1.2,
 ) -> str:
     """Greedy caption generation for one image pair."""
     model.eval()
@@ -273,7 +274,16 @@ def generate_caption(
     for _ in range(max_len):
         cap_tensor = torch.tensor([caption_tokens], dtype=torch.long, device=device)
         logits = model.decoder(encoder_features, cap_tensor)
-        next_token = logits[0, -1, :].argmax(-1).item()
+        next_token_logits = logits[0, -1, :]
+        
+        # Apply repetition penalty
+        for token_idx in set(caption_tokens):
+            if next_token_logits[token_idx] < 0:
+                next_token_logits[token_idx] *= repetition_penalty
+            else:
+                next_token_logits[token_idx] /= repetition_penalty
+                
+        next_token = next_token_logits.argmax(-1).item()
         caption_tokens.append(next_token)
         if next_token == vocab.end_idx:
             break

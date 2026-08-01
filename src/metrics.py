@@ -340,7 +340,7 @@ def evaluate_caption_metrics(
 
 
 @torch.no_grad()
-def generate_caption_greedy(model, before_image, after_image, vocab, device, max_len: int = 100) -> str:
+def generate_caption_greedy(model, before_image, after_image, vocab, device, max_len: int = 100, repetition_penalty: float = 1.2) -> str:
     """Generate a caption from a single before/after pair using greedy decoding."""
     model.eval()
     temporal_dim = 1 if before_image.ndim == 4 else 0
@@ -350,7 +350,16 @@ def generate_caption_greedy(model, before_image, after_image, vocab, device, max
     for _ in range(max_len):
         cap_tensor = torch.tensor([caption_tokens], dtype=torch.long, device=device)
         logits = model(images, cap_tensor)
-        next_token = logits[0, -1, :].argmax(-1).item()
+        next_token_logits = logits[0, -1, :]
+        
+        # Apply repetition penalty
+        for token_idx in set(caption_tokens):
+            if next_token_logits[token_idx] < 0:
+                next_token_logits[token_idx] *= repetition_penalty
+            else:
+                next_token_logits[token_idx] /= repetition_penalty
+                
+        next_token = next_token_logits.argmax(-1).item()
         caption_tokens.append(next_token)
         if next_token == vocab.end_idx:
             break

@@ -1,14 +1,15 @@
-"""Stage 3: Per-Tile Forward Cross-Attention + Difference Embedding.
+"""Stage 3: Per-Tile Difference Embedding.
 
-For each spatial tile i, a forward cross-attention operation extracts directional
-change information:
+For each spatial tile i, directional change information is extracted simply
+by taking the difference between before (A) and after (B) features:
 
-  Forward  (before→after): Q=Fi, K=Gi, V=Gi   → "what appeared"
+  diff_ab = A - B
+  diff_ba = B - A
 
-These are concatenated with the raw features and the absolute difference to
+These are concatenated with the raw features to
 form a compact change embedding via an MLP:
 
-  Di = MLP([Fi, Gi, forward_i, |Fi - Gi|])   Di ∈ R^fusion_dim
+  Di = MLP([A, B, A-B, B-A])   Di ∈ R^fusion_dim
 
 Input:
     before_features  (B, N, backbone_dim)
@@ -19,12 +20,9 @@ Output:
 
 Design notes
 ------------
-- All N tiles share the same cross-attention and MLP weights (parameter
+- All N tiles share the same MLP weights (parameter
   efficient, consistent with the spec's "shared encoder" intent).
-- Cross-attention is implemented as standard nn.MultiheadAttention applied
-  element-wise across the tile dimension (tiles are processed as a sequence
-  of length N with batch dimension B).
-- The MLP input dimension is 4 * backbone_dim (Fi, Gi, fwd, |diff|).
+- The MLP input dimension is 4 * backbone_dim (A, B, A-B, B-A).
 """
 
 from __future__ import annotations
@@ -34,13 +32,13 @@ import torch.nn as nn
 
 
 class TileDifference(nn.Module):
-    """Per-tile forward cross-attention + MLP difference embedding.
+    """Per-tile MLP difference embedding.
 
     Args:
         backbone_dim: Feature dimension from RemoteCLIP (e.g. 512).
         fusion_dim: Output dimension of each per-tile difference embedding.
-        num_heads: Number of attention heads.  Must divide backbone_dim.
-        dropout: Dropout applied inside attention and the MLP.
+        num_heads: Number of attention heads (unused, kept for compatibility).
+        dropout: Dropout applied inside the MLP.
     """
 
     def __init__(
@@ -61,17 +59,7 @@ class TileDifference(nn.Module):
         self.backbone_dim = backbone_dim
         self.fusion_dim = fusion_dim
 
-        # ── Forward cross-attention ───────────────────────────────────────
-        self.forward_attn = nn.MultiheadAttention(
-            embed_dim=backbone_dim,
-            num_heads=num_heads,
-            dropout=dropout,
-            batch_first=True,
-        )
-
-        self.norm_fwd = nn.LayerNorm(backbone_dim)
-
-        # ── MLP: [Fi, Gi, fwd, |diff|] → fusion_dim ──────────────────────
+        # ── MLP: [A, B, A-B, B-A] → fusion_dim ──────────────────────
         mlp_in = 4 * backbone_dim
         self.diff_mlp = nn.Sequential(
             nn.Linear(mlp_in, mlp_in // 2),
@@ -105,27 +93,13 @@ class TileDifference(nn.Module):
                 f"{tuple(after_features.shape)}."
             )
 
-        # ── Compute per-patch difference matching spatial index i ─────────
-        # Ensures patch_i (before) is strictly paired with patch_i (after)
-        B, N, D = before_features.shape
-        q = before_features.view(B * N, 1, D)
-        k = after_features.view(B * N, 1, D)
-        v = after_features.view(B * N, 1, D)
-
-        fwd_context, _ = self.forward_attn(
-            query=q,
-            key=k,
-            value=v,
-        )
-        fwd_context = fwd_context.view(B, N, D)
-        fwd_context = self.norm_fwd(before_features + fwd_context)
-
-        # ── Element-wise absolute feature difference ──────────────────────
-        abs_diff = torch.abs(after_features - before_features)
+        # ── Compute directional differences ───────────────────────────────
+        diff_ab = before_features - after_features
+        diff_ba = after_features - before_features
 
         # ── Concatenate per-patch signals in spatial sequence order ──────
         combined = torch.cat(
-            [before_features, after_features, fwd_context, abs_diff],
+            [before_features, after_features, diff_ab, diff_ba],
             dim=-1,
         )  # (B, N, 4 * backbone_dim)
 
