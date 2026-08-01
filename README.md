@@ -1,5 +1,12 @@
 # RSICC Modularized Pipeline for Remote Sensing Change Captioning
 
+> [!IMPORTANT]
+> **🚀 LATEST BRANCH (`aug`): Indian Urban & Seasonal Domain Adaptation (The CodeAug Protocol)**
+> We have implemented the complete **CodeAug RSICC** architecture specifically tailored for Indian urban morphology and seasonal monsoonal vegetation shifts, running on ADA cluster GPUs (`gnode004`, GTX 1080 Ti 11 GB VRAM) and CPU nodes.
+> * **📖 Comprehensive Guide:** See [README_CODEAUG.md](file:///home/rinkeshverma/Desktop/Projects/PJ/README_CODEAUG.md) for full architectural diagrams, derivations, pre-flight calibration instructions, and step-by-step training.
+> * **📄 Formal PDF Reference:** See [CodeAug.pdf](file:///home/rinkeshverma/Desktop/Projects/PJ/CodeAug.pdf) (`13.8 KB`).
+> * **⚡ Automated Training Script:** `sbatch execute_codeaug.sh`
+
 This repository contains a **modularized PyTorch framework** for Remote Sensing Image Change Captioning (RSICC) evaluated on the **LEVIR-CC** and **SECOND-CC** datasets. It includes base models, RemoteCLIP cross-attention models, and hierarchical tile-based models with spatial cross-attention.
 
 ---
