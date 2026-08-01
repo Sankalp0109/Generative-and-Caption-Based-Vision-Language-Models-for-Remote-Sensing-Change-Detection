@@ -90,6 +90,13 @@ def denormalize_image(
     std: Tuple[float, float, float] = (0.229, 0.224, 0.225),
 ):
     """Convert a normalized CHW tensor back to HWC numpy for plotting."""
+    if image_tensor.ndim == 4:
+        import math
+        from torchvision.utils import make_grid
+        N = image_tensor.shape[0]
+        nrow = math.ceil(math.sqrt(N))
+        image_tensor = make_grid(image_tensor, nrow=nrow, padding=0)
+        
     mean_t = torch.tensor(mean, dtype=image_tensor.dtype).view(3, 1, 1)
     std_t = torch.tensor(std, dtype=image_tensor.dtype).view(3, 1, 1)
     image = (image_tensor.cpu() * std_t + mean_t).clamp(0, 1)

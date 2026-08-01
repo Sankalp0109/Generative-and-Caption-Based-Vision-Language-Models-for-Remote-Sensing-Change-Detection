@@ -433,6 +433,7 @@ def get_test_loaders(
         img_size: Tuple[int, int] = (256, 256),
         num_workers: int = 0,
         transforms_fn=None,
+        patch_size: Optional[int] = 256,
 ):
 
     image_transforms = transforms_fn or build_image_transforms(img_size=img_size)
@@ -440,6 +441,7 @@ def get_test_loaders(
     test_ds = TestDataset(
         image_root,
         transforms_fn=image_transforms,
+        patch_size=patch_size,
     )
     val_batch_size=43
 
