@@ -1,27 +1,35 @@
-# Phase 7: CodeAug RSICC Dependencies for ADA Cluster (GTX 1080 Ti & CPU Nodes)
+# Phase 7-8: CodeAug RSICC Dependencies for ADA Cluster (GTX 1080 Ti & CPU Nodes)
+
 # Core Deep Learning & Vision
-torch>=2.0.0
-torchvision>=0.15.0
-open-clip-torch>=2.20.0
-transformers>=4.38.0
-bitsandbytes>=0.41.0
-accelerate>=0.27.0
-sentence-transformers>=2.3.0
+torch==2.1.0
+torchvision==0.16.0
+transformers==4.53.0
+sentence-transformers==5.0.0
+open-clip-torch==2.32.0
+bitsandbytes==0.43.0
+accelerate==0.30.0
+
+# Hugging Face Hub & Model Management
+huggingface-hub==0.33.0
 
 # NLP & Evaluation Metrics
-nltk>=3.8.1
+nltk==3.9.1
 
 # Data Processing & Utilities
-numpy>=1.24.0
-Pillow>=9.5.0
-tqdm>=4.65.0
-matplotlib>=3.10.0
-pandas>=2.3.0
-scikit-learn>=1.7.0
+numpy==1.26.4
+Pillow==11.2.1
+pandas==2.3.0
+scikit-learn==1.7.0
+matplotlib==3.10.3
+tqdm==4.66.6
 
-# PDF Master Plan & Report Generation
-reportlab>=4.0.0
+# PDF Report Generation
+reportlab==4.1.5
 
-# SLURM Notebook Execution (execute_phase7.sh)
-nbconvert>=7.16.0
-ipykernel>=6.29.0
+# Notebook Execution (execute_phase7.sh & SLURM)
+nbconvert==7.16.6
+ipykernel==6.29.5
+
+# Optional: Utility packages for better development
+python-dotenv==1.0.1
+pyyaml==6.0.2
