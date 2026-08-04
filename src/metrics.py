@@ -279,7 +279,7 @@ class SentenceEmbeddingScorer:
 
     def __init__(self, model_name: str = "all-MiniLM-L6-v2", device: Optional[str] = None):
         self.model_name = model_name
-        self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = device
         self.backend = None
         self._model = None
         self._tokenizer = None
@@ -289,7 +289,17 @@ class SentenceEmbeddingScorer:
         if self.backend is None:
             from sentence_transformers import SentenceTransformer
 
-            self._model = SentenceTransformer(self.model_name, device=self.device)
+            device = self.device or ("cuda" if torch.cuda.is_available() else "cpu")
+            try:
+                self._model = SentenceTransformer(self.model_name, device=device)
+                self.device = device
+            except RuntimeError as e:
+                if "CUDA" in str(e) or "cuda" in str(e):
+                    print(f"[Fallback] CUDA error: {e}. Falling back to CPU.")
+                    self._model = SentenceTransformer(self.model_name, device="cpu")
+                    self.device = "cpu"
+                else:
+                    raise
             self.backend = "sentence-transformers"
 
     def score(self, references: Sequence[Sequence[str] | str], hypotheses: Sequence[str]) -> float:

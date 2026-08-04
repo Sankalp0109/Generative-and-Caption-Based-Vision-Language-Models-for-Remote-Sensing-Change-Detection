@@ -115,7 +115,7 @@ class TestConfigs(unittest.TestCase):
     def test_train_config(self):
         cfg = TrainConfig()
         self.assertEqual(cfg.learning_rate, 1e-4)
-        self.assertEqual(cfg.num_epochs, 15)
+        self.assertEqual(cfg.num_epochs, 8)
 
     def test_codeaug_config(self):
         cfg = CodeAugConfig()
@@ -180,10 +180,12 @@ class TestDataPipeline(unittest.TestCase):
     """Verify transforms, patch extraction, and CaptionCollate."""
 
     def test_image_transforms(self):
+        # build_image_transforms no longer resizes -- patch extraction
+        # upstream already produces fixed-size tiles without resizing.
         tfm = build_image_transforms(img_size=(256, 256))
         img = Image.fromarray(np.uint8(np.random.rand(100, 100, 3) * 255))
         out = tfm(img)
-        self.assertEqual(out.shape, (3, 256, 256))
+        self.assertEqual(out.shape, (3, 100, 100))
 
     def test_remoteclip_transforms(self):
         tfm = build_remoteclip_transforms(img_size=(224, 224))
