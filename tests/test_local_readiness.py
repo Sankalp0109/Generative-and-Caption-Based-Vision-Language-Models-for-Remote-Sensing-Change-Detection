@@ -571,22 +571,25 @@ class TestCheckpoints(unittest.TestCase):
         vocab.build_vocab(["test caption"])
 
         with tempfile.TemporaryDirectory() as tmpdir:
-            path = save_checkpoint(
+            current_path, best_path = save_checkpoint(
                 model, optimizer, epoch=5, loss=0.123,
                 vocab=vocab, checkpoint_dir=Path(tmpdir),
-                name="test_model",
+                name="test_model", is_best=True,
             )
-            self.assertTrue(path.exists())
+            self.assertTrue(current_path.exists())
+            self.assertTrue(best_path.exists())
 
             model2 = CodeAugRSICCModel(config=config)
             opt2 = torch.optim.AdamW(
                 [p for p in model2.parameters() if p.requires_grad], lr=1e-4,
             )
-            model2, opt2, epoch, loaded_vocab, loss = load_checkpoint(
-                model2, opt2, path, device,
+            model2, opt2, epoch, loaded_vocab, loss, best_epoch, best_loss = load_checkpoint(
+                model2, opt2, current_path, device,
             )
             self.assertEqual(epoch, 5)
             self.assertAlmostEqual(loss, 0.123, places=3)
+            self.assertEqual(best_epoch, 5)
+            self.assertAlmostEqual(best_loss, 0.123, places=3)
 
 
 class TestMetrics(unittest.TestCase):
@@ -728,11 +731,12 @@ class TestEndToEndIntegration(unittest.TestCase):
 
         # 7. Save checkpoint
         with tempfile.TemporaryDirectory() as tmpdir:
-            path = save_checkpoint(
+            current_path, best_path = save_checkpoint(
                 model, optimizer, epoch=1, loss=train_loss,
-                vocab=None, checkpoint_dir=Path(tmpdir), name="integration_test",
+                vocab=None, checkpoint_dir=Path(tmpdir), name="integration_test", is_best=True,
             )
-            self.assertTrue(path.exists())
+            self.assertTrue(current_path.exists())
+            self.assertTrue(best_path.exists())
 
         print(f"\\n✅ Integration test passed: train_loss={train_loss:.4f}, val_loss={val_loss:.4f}, caption='{caption}'")
 

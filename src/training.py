@@ -54,10 +54,11 @@ def train_epoch(
     log_every: int = 10,
     max_caption_len: int = 128,
 ) -> float:
-    """Train one epoch and return average loss."""
+    """Train one epoch and return average loss. Uses GradScaler for float16 stability."""
     model.train()
     total_loss = 0.0
     num_batches = 0
+    scaler = torch.cuda.amp.GradScaler() if device.type == "cuda" else None
 
     for batch_idx, batch in enumerate(train_loader):
         before_images = batch["before_images"].to(device, non_blocking=True)
@@ -79,21 +80,41 @@ def train_epoch(
         labels = input_ids.clone()
         labels[labels == model.tokenizer.pad_token_id] = -100
 
-        outputs = model(
-            before_image=before_images,
-            after_image=after_images,
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            labels=labels,
-        )
-        loss = outputs.loss
-
         optimizer.zero_grad()
-        loss.backward()
-        if grad_clip > 0:
-            trainable_params = [p for p in model.parameters() if p.requires_grad]
-            torch.nn.utils.clip_grad_norm_(trainable_params, grad_clip)
-        optimizer.step()
+
+        # Use autocast for mixed precision if on CUDA
+        if scaler is not None:
+            with torch.cuda.amp.autocast():
+                outputs = model(
+                    before_image=before_images,
+                    after_image=after_images,
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    labels=labels,
+                )
+                loss = outputs.loss
+
+            scaler.scale(loss).backward()
+            if grad_clip > 0:
+                trainable_params = [p for p in model.parameters() if p.requires_grad]
+                scaler.unscale_(optimizer)
+                torch.nn.utils.clip_grad_norm_(trainable_params, grad_clip)
+            scaler.step(optimizer)
+            scaler.update()
+        else:
+            outputs = model(
+                before_image=before_images,
+                after_image=after_images,
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                labels=labels,
+            )
+            loss = outputs.loss
+            loss.backward()
+            if grad_clip > 0:
+                trainable_params = [p for p in model.parameters() if p.requires_grad]
+                torch.nn.utils.clip_grad_norm_(trainable_params, grad_clip)
+            optimizer.step()
 
         total_loss += loss.item()
         num_batches += 1
@@ -137,13 +158,24 @@ def validate(
             labels = input_ids.clone()
             labels[labels == model.tokenizer.pad_token_id] = -100
 
-            outputs = model(
-                before_image=before_images,
-                after_image=after_images,
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                labels=labels,
-            )
+            # Use autocast for float16 consistency (no gradients needed, no scaler)
+            if device.type == "cuda":
+                with torch.cuda.amp.autocast():
+                    outputs = model(
+                        before_image=before_images,
+                        after_image=after_images,
+                        input_ids=input_ids,
+                        attention_mask=attention_mask,
+                        labels=labels,
+                    )
+            else:
+                outputs = model(
+                    before_image=before_images,
+                    after_image=after_images,
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    labels=labels,
+                )
             total_loss += outputs.loss.item()
             num_batches += 1
 
@@ -160,59 +192,124 @@ def save_checkpoint(
     name: str = "model",
     filename: Optional[str] = None,
     extra: Optional[Dict] = None,
-) -> Path:
-    """Save model checkpoint with vocabulary for reproducible inference."""
+    best_epoch: Optional[int] = None,
+    best_loss: Optional[float] = None,
+    is_best: bool = False,
+    save_best: bool = True,
+    save_current: bool = True,
+) -> tuple:
+    """Save model checkpoint(s) with vocabulary for reproducible inference.
+
+    Saves up to two checkpoint files:
+    - current: Current epoch model + optimizer (always updated)
+    - best: Best model weights + metrics (only when is_best=True)
+
+    Args:
+        is_best: If True, also save as best checkpoint.
+        save_best: Whether to save best checkpoint.
+        save_current: Whether to save current checkpoint.
+
+    Returns:
+        tuple: (current_checkpoint_path, best_checkpoint_path or None)
+    """
     checkpoint_dir = Path(checkpoint_dir)
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
-
-    payload = {
-        "epoch": epoch,
-        "model_state_dict": model.state_dict(),
-        "optimizer_state_dict": optimizer.state_dict(),
-        "loss": loss,
-        "vocab": vocab,
-        "model_name": getattr(model, "model_name", model.__class__.__name__),
-    }
-    if extra:
-        payload["extra"] = extra
-
-    if filename is None:
-        filename = f"{name}_epoch{epoch}.pt"
 
     import io
     import os
 
-    path = checkpoint_dir / filename
-    buffer = io.BytesIO()
-    torch.save(payload, buffer)
-    
-    # Save atomically by writing to a temporary file first and renaming it
-    tmp_path = path.with_suffix(".tmp")
-    try:
-        with open(tmp_path, "wb") as f:
-            f.write(buffer.getvalue())
-        os.replace(tmp_path, path)
-    except Exception as e:
-        if tmp_path.exists():
-            try:
-                tmp_path.unlink()
-            except Exception:
-                pass
-        raise e
-        
-    print(f"Checkpoint saved: {path}", flush=True)
-    return path
+    if filename is None:
+        filename = f"{name}_epoch{epoch}.pt"
+
+    current_path = None
+    best_path = None
+
+    # SAVE CURRENT CHECKPOINT: Always save current epoch's state
+    if save_current:
+        current_payload = {
+            "epoch": epoch,
+            "model_state_dict": model.state_dict(),
+            "optimizer_state_dict": optimizer.state_dict(),
+            "loss": loss,
+            "vocab": vocab,
+            "model_name": getattr(model, "model_name", model.__class__.__name__),
+            "best_epoch": best_epoch if best_epoch is not None else epoch,
+            "best_loss": best_loss if best_loss is not None else loss,
+        }
+        if extra:
+            current_payload["extra"] = extra
+
+        current_path = checkpoint_dir / f"{name}_current.pt"
+        buffer = io.BytesIO()
+        torch.save(current_payload, buffer)
+
+        tmp_path = current_path.with_suffix(".tmp")
+        try:
+            with open(tmp_path, "wb") as f:
+                f.write(buffer.getvalue())
+            os.replace(tmp_path, current_path)
+        except Exception as e:
+            if tmp_path.exists():
+                try:
+                    tmp_path.unlink()
+                except Exception:
+                    pass
+            raise e
+
+        print(f"  Current checkpoint: {current_path}", flush=True)
+
+    # SAVE BEST CHECKPOINT: Only update when is_best=True
+    if save_best and is_best:
+        best_payload = {
+            "epoch": best_epoch if best_epoch is not None else epoch,
+            "model_state_dict": model.state_dict(),
+            "optimizer_state_dict": optimizer.state_dict(),
+            "loss": best_loss if best_loss is not None else loss,
+            "vocab": vocab,
+            "model_name": getattr(model, "model_name", model.__class__.__name__),
+            "best_epoch": best_epoch if best_epoch is not None else epoch,
+            "best_loss": best_loss if best_loss is not None else loss,
+        }
+        if extra:
+            best_payload["extra"] = extra
+
+        best_path = checkpoint_dir / f"{name}_best.pt"
+        buffer = io.BytesIO()
+        torch.save(best_payload, buffer)
+
+        tmp_path = best_path.with_suffix(".tmp")
+        try:
+            with open(tmp_path, "wb") as f:
+                f.write(buffer.getvalue())
+            os.replace(tmp_path, best_path)
+        except Exception as e:
+            if tmp_path.exists():
+                try:
+                    tmp_path.unlink()
+                except Exception:
+                    pass
+            raise e
+
+        print(f"  Best checkpoint: {best_path}", flush=True)
+
+    return current_path, best_path
 
 
 def load_checkpoint(model, optimizer, checkpoint_path: Path, device):
-    """Load model checkpoint and return the saved training state."""
+    """Load model checkpoint and return the saved training state.
+
+    Returns: (model, optimizer, epoch, vocab, loss, best_epoch, best_loss)
+    """
+    from src.dataset import Vocabulary
+    torch.serialization.add_safe_globals([Vocabulary])
+
     checkpoint_path = Path(checkpoint_path)
     try:
         checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     except Exception as e:
         print(f"\n[ERROR] Failed to load checkpoint from {checkpoint_path}!", flush=True)
         print(f"The file may be corrupted, empty, or truncated. Details: {e}", flush=True)
-        
+
         if checkpoint_path.exists():
             corrupted_path = checkpoint_path.with_suffix(checkpoint_path.suffix + ".corrupted")
             try:
@@ -220,7 +317,7 @@ def load_checkpoint(model, optimizer, checkpoint_path: Path, device):
                 print(f"[INFO] Renamed corrupted checkpoint to {corrupted_path}", flush=True)
             except Exception as rename_err:
                 print(f"[ERROR] Could not rename corrupted checkpoint: {rename_err}", flush=True)
-        
+
         raise RuntimeError(
             f"Checkpoint file {checkpoint_path} is corrupted. "
             f"It has been renamed to {checkpoint_path.name}.corrupted to avoid blocking future runs. "
@@ -234,16 +331,90 @@ def load_checkpoint(model, optimizer, checkpoint_path: Path, device):
     vocab = checkpoint.get("vocab")
     epoch = checkpoint.get("epoch", 0)
     loss = checkpoint.get("loss")
+    best_epoch = checkpoint.get("best_epoch", epoch)
+    best_loss = checkpoint.get("best_loss", loss)
     print(f"Checkpoint loaded from {checkpoint_path}", flush=True)
+    print(f"  Current Epoch: {epoch}, Best Epoch: {best_epoch}", flush=True)
     if loss is not None:
-        print(f"  Epoch: {epoch}, Loss: {loss:.4f}", flush=True)
-    else:
-        print(f"  Epoch: {epoch}", flush=True)
-    return model, optimizer, epoch, vocab, loss
+        print(f"  Current Loss: {loss:.4f}, Best Loss: {best_loss:.4f}", flush=True)
+    return model, optimizer, epoch, vocab, loss, best_epoch, best_loss
+
+
+def load_best_metrics(checkpoint_dir: Path, checkpoint_name: str, device):
+    """Load only the best metrics from best checkpoint without loading model.
+
+    Args:
+        checkpoint_dir: Directory containing checkpoints.
+        checkpoint_name: Base name of checkpoint (e.g., "phase8_stage1a").
+        device: Device to load to.
+
+    Returns:
+        tuple: (best_epoch, best_loss) or (None, None) if checkpoint not found.
+    """
+    from src.dataset import Vocabulary
+    torch.serialization.add_safe_globals([Vocabulary])
+
+    best_path = Path(checkpoint_dir) / f"{checkpoint_name}_best.pt"
+    if not best_path.exists():
+        return None, None
+
+    try:
+        checkpoint = torch.load(best_path, map_location=device, weights_only=False)
+        best_epoch = checkpoint.get("best_epoch", 0)
+        best_loss = checkpoint.get("best_loss", float("inf"))
+        print(f"Best metrics loaded: epoch {best_epoch}, loss {best_loss:.4f}", flush=True)
+        return best_epoch, best_loss
+    except Exception as e:
+        print(f"[WARNING] Could not load best metrics: {e}", flush=True)
+        return None, None
+
+
+def load_best_model(model, checkpoint_dir: Path, checkpoint_name: str, device):
+    """Load the best model for evaluation/inference (no optimizer needed).
+
+    Args:
+        model: Model to load weights into.
+        checkpoint_dir: Directory containing checkpoints.
+        checkpoint_name: Base name of checkpoint (e.g., "phase8_stage1a").
+        device: Device to load to.
+
+    Returns:
+        tuple: (model, best_epoch, best_loss, vocab) or (model, None, None, None) if checkpoint not found.
+    """
+    from src.dataset import Vocabulary
+    torch.serialization.add_safe_globals([Vocabulary])
+
+    best_path = Path(checkpoint_dir) / f"{checkpoint_name}_best.pt"
+    if not best_path.exists():
+        print(f"[WARNING] Best checkpoint not found: {best_path}", flush=True)
+        return model, None, None, None
+
+    try:
+        checkpoint = torch.load(best_path, map_location=device, weights_only=False)
+        model.load_state_dict(checkpoint["model_state_dict"])
+        model = model.to(device)
+        model.eval()
+
+        best_epoch = checkpoint.get("best_epoch", 0)
+        best_loss = checkpoint.get("best_loss", float("inf"))
+        vocab = checkpoint.get("vocab")
+
+        print(f"Best model loaded for evaluation", flush=True)
+        print(f"  Best Epoch: {best_epoch}, Best Loss: {best_loss:.4f}", flush=True)
+        return model, best_epoch, best_loss, vocab
+    except Exception as e:
+        print(f"[ERROR] Failed to load best model: {e}", flush=True)
+        raise RuntimeError(
+            f"Could not load best checkpoint from {best_path}. "
+            f"Training may not have completed successfully."
+        ) from e
 
 
 def get_checkpoint_epoch(checkpoint_path: Path, device):
     """Read a checkpoint file and return the saved epoch."""
+    from src.dataset import Vocabulary
+    torch.serialization.add_safe_globals([Vocabulary])
+
     checkpoint_path = Path(checkpoint_path)
     try:
         checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)

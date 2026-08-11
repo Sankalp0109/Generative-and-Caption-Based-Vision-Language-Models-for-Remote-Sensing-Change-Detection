@@ -16,6 +16,8 @@ from src.training import (
     build_criterion,
     captioning_loss,
     caption_token_accuracy,
+    load_best_model,
+    load_best_metrics,
     load_checkpoint,
     prepare_teacher_forcing_inputs,
     save_checkpoint,
@@ -100,11 +102,17 @@ def train_stage1a(
     RemoteCLIPEncoder is frozen by construction (see RemoteCLIPEncoder),
     so the optimizer only ever sees diff-module and decoder parameters.
 
-    Checkpointing only happens when val_loss improves on the best value seen
-    so far (a single `{checkpoint_name}_best.pt`, no unconditional per-epoch
-    save). If that file already exists in `checkpoint_dir` when this is
-    called, training resumes from it: model/optimizer state and epoch are
-    restored and the epoch loop continues from there instead of restarting.
+    Two checkpoints are saved:
+    - {checkpoint_name}_current.pt: Latest epoch (for resume)
+    - {checkpoint_name}_best.pt: Best model (for evaluation)
+
+    On resume, loads current checkpoint to continue from latest epoch with
+    best metrics restored.
+
+    After training, use load_best_model() to load the best model for evaluation:
+        model, best_epoch, best_loss, vocab = load_best_model(
+            model, checkpoint_dir, checkpoint_name, device
+        )
     """
     model.to(device)
     criterion = build_criterion(vocab)
@@ -114,18 +122,34 @@ def train_stage1a(
 
     start_epoch = 0
     best_val_loss = float("inf")
-    best_ckpt_path = Path(checkpoint_dir) / f"{checkpoint_name}_best.pt" if checkpoint_dir else None
-    if best_ckpt_path is not None and best_ckpt_path.is_file():
-        _, optimizer, start_epoch, _, loaded_loss = load_checkpoint(
-            model, optimizer, best_ckpt_path, device
+    best_epoch = 0
+    checkpoint_dir_path = Path(checkpoint_dir) if checkpoint_dir else None
+
+    # Load current checkpoint (resume from current epoch with current weights)
+    current_ckpt_path = checkpoint_dir_path / f"{checkpoint_name}_current.pt" if checkpoint_dir_path else None
+    if current_ckpt_path is not None and current_ckpt_path.is_file():
+        _, optimizer, start_epoch, _, loaded_loss, loaded_best_epoch, loaded_best_loss = load_checkpoint(
+            model, optimizer, current_ckpt_path, device
         )
-        if loaded_loss is not None:
-            best_val_loss = loaded_loss
+        if loaded_best_epoch is not None:
+            best_epoch = loaded_best_epoch
+        if loaded_best_loss is not None:
+            best_val_loss = loaded_best_loss
         print(
-            f"[Phase8 Stage1a] Resuming from checkpoint at epoch {start_epoch} "
-            f"(best_val_loss={best_val_loss:.4f})",
+            f"[Phase8 Stage1a] Resuming from epoch {start_epoch} "
+            f"(best_epoch={best_epoch}, best_val_loss={best_val_loss:.4f})",
             flush=True,
         )
+    else:
+        # If no current checkpoint, try loading best metrics
+        if checkpoint_dir_path:
+            loaded_best_epoch, loaded_best_loss = load_best_metrics(
+                checkpoint_dir_path, checkpoint_name, device
+            )
+            if loaded_best_epoch is not None:
+                best_epoch = loaded_best_epoch
+            if loaded_best_loss is not None:
+                best_val_loss = loaded_best_loss
 
     history = []
     if start_epoch >= epochs:
@@ -155,12 +179,136 @@ def train_stage1a(
              "val_loss": val_loss, "val_acc": val_acc}
         )
 
-        if checkpoint_dir is not None and val_loss < best_val_loss:
-            best_val_loss = val_loss
+        if checkpoint_dir is not None:
+            is_best = val_loss < best_val_loss
+            if is_best:
+                best_val_loss = val_loss
+                best_epoch = epoch
             save_checkpoint(
                 model, optimizer, epoch, val_loss, vocab,
                 checkpoint_dir, name=checkpoint_name,
-                filename=f"{checkpoint_name}_best.pt",
+                best_epoch=best_epoch,
+                best_loss=best_val_loss,
+                is_best=is_best,
+                save_current=True,
+                save_best=True,
+            )
+
+    return history
+
+
+def train_stage1b(
+    model,
+    train_loader,
+    val_loader,
+    vocab,
+    device,
+    epochs: int = 15,
+    lr: float = 1e-4,
+    weight_decay: float = 1e-5,
+    grad_clip: float = 1.0,
+    log_every: int = 10,
+    checkpoint_dir: Optional[Path] = None,
+    checkpoint_name: str = "phase8_stage1b",
+    approach: str = "A/B",
+):
+    """Fine-tune stage 1a model with frozen LLM.
+
+    Two approaches:
+    - A/B: DifferenceModule + Adaptive Bridge → Frozen Qwen
+    - C: Q-Former → Frozen Qwen
+
+    Two checkpoints are saved:
+    - {checkpoint_name}_current.pt: Latest epoch (for resume)
+    - {checkpoint_name}_best.pt: Best model (for evaluation)
+
+    On resume, loads current checkpoint to continue from latest epoch with
+    best metrics restored.
+
+    After training, use load_best_model() to load the best model for evaluation:
+        model, best_epoch, best_loss, vocab = load_best_model(
+            model, checkpoint_dir, checkpoint_name, device
+        )
+    """
+    model.to(device)
+    criterion = build_criterion(vocab)
+    optimizer = torch.optim.Adam(
+        _trainable_parameters(model), lr=lr, weight_decay=weight_decay
+    )
+
+    start_epoch = 0
+    best_val_loss = float("inf")
+    best_epoch = 0
+    checkpoint_dir_path = Path(checkpoint_dir) if checkpoint_dir else None
+
+    # Load current checkpoint (resume from current epoch with current weights)
+    current_ckpt_path = checkpoint_dir_path / f"{checkpoint_name}_current.pt" if checkpoint_dir_path else None
+    if current_ckpt_path is not None and current_ckpt_path.is_file():
+        _, optimizer, start_epoch, _, loaded_loss, loaded_best_epoch, loaded_best_loss = load_checkpoint(
+            model, optimizer, current_ckpt_path, device
+        )
+        if loaded_best_epoch is not None:
+            best_epoch = loaded_best_epoch
+        if loaded_best_loss is not None:
+            best_val_loss = loaded_best_loss
+        print(
+            f"[Phase8 Stage1b] Resuming from epoch {start_epoch} "
+            f"(best_epoch={best_epoch}, best_val_loss={best_val_loss:.4f})",
+            flush=True,
+        )
+    else:
+        # If no current checkpoint, try loading best metrics
+        if checkpoint_dir_path:
+            loaded_best_epoch, loaded_best_loss = load_best_metrics(
+                checkpoint_dir_path, checkpoint_name, device
+            )
+            if loaded_best_epoch is not None:
+                best_epoch = loaded_best_epoch
+            if loaded_best_loss is not None:
+                best_val_loss = loaded_best_loss
+
+    history = []
+    if start_epoch >= epochs:
+        print(
+            f"[Phase8 Stage1b] Checkpoint epoch {start_epoch} already reached "
+            f"target epochs={epochs}; nothing to train.",
+            flush=True,
+        )
+        return history
+
+    for epoch in range(start_epoch + 1, epochs + 1):
+        train_loss, train_acc = run_epoch(
+            model, train_loader, vocab, device, criterion,
+            optimizer=optimizer, grad_clip=grad_clip, log_every=log_every,
+        )
+        val_loss, val_acc = run_epoch(
+            model, val_loader, vocab, device, criterion, optimizer=None,
+        )
+        print(
+            f"Epoch {epoch}/{epochs}: "
+            f"train_loss={train_loss:.4f} train_acc={train_acc:.4f} "
+            f"val_loss={val_loss:.4f} val_acc={val_acc:.4f} "
+            f"[{approach}]",
+            flush=True,
+        )
+        history.append(
+            {"epoch": epoch, "train_loss": train_loss, "train_acc": train_acc,
+             "val_loss": val_loss, "val_acc": val_acc}
+        )
+
+        if checkpoint_dir is not None:
+            is_best = val_loss < best_val_loss
+            if is_best:
+                best_val_loss = val_loss
+                best_epoch = epoch
+            save_checkpoint(
+                model, optimizer, epoch, val_loss, vocab,
+                checkpoint_dir, name=checkpoint_name,
+                best_epoch=best_epoch,
+                best_loss=best_val_loss,
+                is_best=is_best,
+                save_current=True,
+                save_best=True,
             )
 
     return history
