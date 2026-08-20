@@ -3,6 +3,17 @@
 
 ---
 
+## Branch `8.1`: Stage-1b NaN fix
+
+The Aug 14, 2026 cluster run of Phase 8 Stage 1b (`phase8_finetune.ipynb`) diverged to NaN loss and separately crashed with a `NameError` before Approach A/B vs. C could be compared. Root cause and fix for each, applied on branch `8.1`:
+
+- **NaN loss (Approach A/B):** `Phase8HybridModelAB`'s Adaptive Bridge (`self.diff_to_llm`) had no normalization after its final `Linear` layer, so it could hand the frozen Qwen2-0.5B decoder an unbounded-magnitude vector. Propagated through ~24 transformer layers running entirely in `float16` (max value ≈65,504), this overflowed to `inf`, which cascades to `NaN` in the loss. Fix: added `nn.LayerNorm(self.llm.config.hidden_size, dtype=torch.float16)` after the bridge's final `Linear`, bounding the vector before it enters the frozen LLM. (Verified separately that `transformers==4.39.3`'s `Qwen2ForCausalLM.forward` already upcasts logits to float32 before computing loss, so the overflow was happening earlier, inside the frozen forward pass — not in the loss math.)
+- **`NameError: name 'metrics_c_levir' is not defined`:** in the "Evaluate Approach C on LEVIR-CC" cell, `metrics_c_levir` was only pre-set to `None` on the checkpoint-missing/Approach-C-skipped paths, not when a checkpoint was found — so the later `if metrics_c_levir is None:` check in the final comparison cell threw when a checkpoint existed. Fix: pre-initialize `metrics_c_levir, samples_c_levir = None, None` at the top of that cell, before the checkpoint-found/not-found branching.
+
+No other cells, models, or configs were changed.
+
+---
+
 ## 1. Why We Created the `aug` Branch
 Standard Remote Sensing Image Change Captioning (RSICC) models trained on Western/Chinese suburban datasets (e.g., **LEVIR-CC**) experience severe performance degradation when deployed on **Indian urban Google Earth imagery** due to two primary domain-shift bottlenecks:
 
