@@ -1,0 +1,20 @@
+# Dataset images (925MB) -- regenerate via data_collection/collect_dataset.py,
+# don't commit. manifest.csv and progress.jsonl ARE kept (small, document
+# exactly what was collected and let anyone resume/reproduce the run).
+data_collection/india_dataset/dataset/
+data_collection/india_dataset/raw/
+
+# Future run outputs that shouldn't be committed either
+data_collection/*_run.log
+captioning/*.out
+captions.jsonl
+ada_preflight/*.out
+models_cache/
+
+# Python
+__pycache__/
+*.pyc
+
+# Local scratch/benchmark artifacts
+_concurrency_test/
+_naming_test/
