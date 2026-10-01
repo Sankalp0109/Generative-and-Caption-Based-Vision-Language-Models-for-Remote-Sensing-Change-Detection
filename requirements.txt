@@ -1,43 +1,55 @@
-# Phase 7-8: CodeAug RSICC Dependencies for ADA Cluster (GTX 1080 Ti & CPU Nodes)
+# Phase 7-8: CodeAug RSICC Dependencies for ADA Cluster (GTX 1080 Ti sm_61 & CPU Nodes)
 #
-# CUDA Version: 12.8 (cu128)
-# Installation: pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu128
+# CRITICAL PINS (must not change):
+# - PyTorch 2.0.1 (for GTX 1080 Ti sm_61 support)
+# - numpy < 2 (PyTorch 2.0.1 compiled with NumPy 1.x)
 #
-# Version: Tested and working with accelerate 1.14.0, PyTorch 2.11.0+cu128
-# If you encounter import issues, see ACCELERATE_FIX_GUIDE.md
+# Other versions: Loosened to resolve dependencies while maintaining compatibility
+# Last verified: 2026-08-13
 
-# Core Deep Learning & Vision (CUDA 12.8 compiled, PyTorch 2.11.0)
-torch==2.11.0
-torchvision==0.26.0
-torchaudio==2.11.0
-transformers==4.53.0
-sentence-transformers==5.0.0
-open-clip-torch==2.32.0
-bitsandbytes==0.43.0
-accelerate==1.14.0
+# ========== PYTORCH (LOCKED FOR sm_61 COMPATIBILITY) ==========
+# PyTorch 2.0.1 is the LATEST version supporting GTX 1080 Ti (sm_61)
+# DO NOT UPGRADE - 2.1+ dropped sm_61 support
+torch==2.0.1
+torchvision==0.15.2
+torchaudio==2.0.2
 
-# Hugging Face Hub & Model Management
-huggingface-hub==0.33.0
+# ========== NUMPY (LOCKED FOR PYTORCH 2.0.1) ==========
+# PyTorch 2.0.1 was compiled with NumPy 1.x
+# NumPy 2.x is incompatible - will cause crash
+numpy<2
+
+# ========== CORE DEPENDENCIES ==========
+# Loosened versions to resolve dependency conflicts
+transformers>=4.30,<4.40
+sentence-transformers>=2.2,<3.0
+open-clip-torch>=2.5,<3.0
+bitsandbytes>=0.40
+accelerate>=0.20
+
+# Hugging Face Hub (let pip choose compatible version)
+huggingface-hub>=0.15
 
 # NLP & Evaluation Metrics
-nltk==3.9.1
+nltk>=3.8
 
-# Data Processing & Utilities
-numpy==1.26.4
-Pillow==11.2.1
-pandas==2.2.0
-scikit-learn==1.7.0
-matplotlib==3.9.0
-tqdm==4.66.6
+# ========== DATA & UTILITIES ==========
+Pillow>=10.0
+pandas>=2.0
+scikit-learn>=1.3
+matplotlib>=3.7
+tqdm>=4.60
+
+# ========== NOTEBOOK EXECUTION (JUPYTER) ==========
+jupyter>=1.0
+nbconvert>=7.10
+ipykernel>=6.20
+ipython>=8.10
+ipywidgets>=8.0
 
 # PDF Report Generation
-reportlab==4.0.9
+reportlab>=4.0
 
-# Notebook Execution (execute_phase7.sh & SLURM)
-jupyter==1.0.0
-nbconvert==7.16.6
-ipykernel==6.29.5
-
-# Optional: Utility packages for better development
-python-dotenv==1.0.1
-pyyaml==6.0.2
+# ========== DEVELOPMENT ==========
+python-dotenv>=1.0
+pyyaml>=6.0

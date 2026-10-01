@@ -14,6 +14,9 @@ from __future__ import annotations
 import warnings
 from typing import Dict, List, Optional, Tuple, Union
 
+# Suppress spurious generation flag warnings from transformers
+warnings.filterwarnings('ignore', message='.*generation flags are not valid.*')
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -57,17 +60,19 @@ class CodeAugRSICCModel(nn.Module):
             )
             visual_model = self._create_fallback_vit(config.fusion_dim)
 
-        # Freeze base ViT weights and cast to FP16 on CUDA to halve VRAM (850 MB)
+        # Freeze base ViT weights
         for param in visual_model.parameters():
             param.requires_grad = False
-        if config.use_4bit_quantization and torch.cuda.is_available():
-            visual_model = visual_model.to(torch.float16)
 
-        # Interpolate pos_embed from 16x16 -> 18x18 (324 patches)
+        # Interpolate pos_embed from 16x16 -> 18x18 (324 patches) BEFORE float16 conversion
         try:
             update_vit_pos_embed(visual_model, new_grid_size=config.grid_size)
         except Exception as e:
             warnings.warn(f"[CodeAug] Positional embedding update skipped/failed: {e}")
+
+        # Cast to FP16 on CUDA AFTER interpolation to halve VRAM (850 MB)
+        if config.use_4bit_quantization and torch.cuda.is_available():
+            visual_model = visual_model.to(torch.float16)
 
         # Inject Visual LoRA (r=16, alpha=32)
         if config.lora_r > 0:
@@ -208,14 +213,21 @@ class CodeAugRSICCModel(nn.Module):
         self, before_image: torch.Tensor, after_image: torch.Tensor
     ) -> torch.Tensor:
         """Extract bi-temporal change features and compress to 64 query tokens.
-        
+
         Args:
-            before_image: (B, 3, 252, 252)
-            after_image: (B, 3, 252, 252)
+            before_image: (B, 3, 252, 252) or (B, 1, 3, 252, 252)
+            after_image: (B, 3, 252, 252) or (B, 1, 3, 252, 252)
         Returns:
             visual_prefix: (B, num_queries, llm_hidden_size) e.g. (B, 64, 1536)
         """
+        # Handle extra dimension if data has shape [B, 1, C, H, W] instead of [B, C, H, W]
+        if before_image.dim() == 5:
+            before_image = before_image.squeeze(1)
+        if after_image.dim() == 5:
+            after_image = after_image.squeeze(1)
+
         # Ensure input images match vision encoder dtype (FP16/FP32)
+        # but convert back to float32 after ViT to avoid dtype propagation issues
         vit_dtype = next(self.vision_encoder.parameters()).dtype
         before_image = before_image.to(dtype=vit_dtype)
         after_image = after_image.to(dtype=vit_dtype)
@@ -224,6 +236,10 @@ class CodeAugRSICCModel(nn.Module):
         res_b = self.vision_encoder(after_image)
         feat_a = res_a[1] if isinstance(res_a, (tuple, list)) else res_a  # (B, 325, 1024)
         feat_b = res_b[1] if isinstance(res_b, (tuple, list)) else res_b  # (B, 325, 1024)
+
+        # Convert back to float32 to avoid dtype mismatches in downstream layers
+        feat_a = feat_a.to(dtype=torch.float32)
+        feat_b = feat_b.to(dtype=torch.float32)
 
         # Exclude CLS token -> (B, 324, 1024)
         feat_a_spatial = feat_a[:, 1:, :] if feat_a.size(1) > 1 else feat_a
@@ -261,6 +277,10 @@ class CodeAugRSICCModel(nn.Module):
 
         # 3. Concatenate visual prefix + text sequence
         total_embeds = torch.cat([visual_prefix, text_embeds], dim=1)  # (B, 64 + L, D)
+
+        # Ensure embeddings match LLM's expected dtype (float16 for 4-bit quantization)
+        llm_dtype = next(self.llm.parameters()).dtype
+        total_embeds = total_embeds.to(dtype=llm_dtype)
 
         # 4. Construct attention mask and labels
         prefix_mask = torch.ones(
@@ -316,16 +336,27 @@ class CodeAugRSICCModel(nn.Module):
         start_embeds = embed_fn(start_ids)
 
         total_embeds = torch.cat([visual_prefix, start_embeds], dim=1)
+        
+        # Ensure embeddings match LLM's expected dtype
+        llm_dtype = next(self.llm.parameters()).dtype
+        total_embeds = total_embeds.to(dtype=llm_dtype)
+        
         total_mask = torch.ones(total_embeds.shape[:2], dtype=torch.long, device=device)
 
         if hasattr(self.llm, "generate"):
             try:
+                # Remove conflicting sampling parameters before generation
+                self.llm.generation_config.temperature = None
+                self.llm.generation_config.top_p = None
+                self.llm.generation_config.top_k = None
+                
                 gen_ids = self.llm.generate(
                     inputs_embeds=total_embeds,
                     attention_mask=total_mask,
                     max_new_tokens=max_new_tokens,
                     pad_token_id=self.tokenizer.pad_token_id,
                     eos_token_id=self.tokenizer.eos_token_id,
+                    do_sample=False,
                 )
                 captions = [
                     self.tokenizer.decode(ids, skip_special_tokens=True).strip()

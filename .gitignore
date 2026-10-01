@@ -14,6 +14,7 @@ __pycache__/
 */__pycache__/
 */**/__pycache__/
 *.pyc
+api.txt
 *_output.ipynb
 .*
 .claude/*

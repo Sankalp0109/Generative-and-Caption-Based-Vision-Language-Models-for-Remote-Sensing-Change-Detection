@@ -94,6 +94,15 @@ def train_epoch(
                 )
                 loss = outputs.loss
 
+            # Guard against non-finite loss (NaN/Inf)
+            if not torch.isfinite(loss):
+                print(
+                    f"  [WARNING] Batch {batch_idx + 1}/{len(train_loader)}: "
+                    f"non-finite loss ({loss.item()}) - skipping this batch",
+                    flush=True,
+                )
+                continue
+
             scaler.scale(loss).backward()
             if grad_clip > 0:
                 trainable_params = [p for p in model.parameters() if p.requires_grad]
@@ -110,6 +119,16 @@ def train_epoch(
                 labels=labels,
             )
             loss = outputs.loss
+
+            # Guard against non-finite loss
+            if not torch.isfinite(loss):
+                print(
+                    f"  [WARNING] Batch {batch_idx + 1}/{len(train_loader)}: "
+                    f"non-finite loss ({loss.item()}) - skipping this batch",
+                    flush=True,
+                )
+                continue
+
             loss.backward()
             if grad_clip > 0:
                 trainable_params = [p for p in model.parameters() if p.requires_grad]
@@ -301,7 +320,6 @@ def load_checkpoint(model, optimizer, checkpoint_path: Path, device):
     Returns: (model, optimizer, epoch, vocab, loss, best_epoch, best_loss)
     """
     from src.dataset import Vocabulary
-    torch.serialization.add_safe_globals([Vocabulary])
 
     checkpoint_path = Path(checkpoint_path)
     try:
@@ -352,7 +370,6 @@ def load_best_metrics(checkpoint_dir: Path, checkpoint_name: str, device):
         tuple: (best_epoch, best_loss) or (None, None) if checkpoint not found.
     """
     from src.dataset import Vocabulary
-    torch.serialization.add_safe_globals([Vocabulary])
 
     best_path = Path(checkpoint_dir) / f"{checkpoint_name}_best.pt"
     if not best_path.exists():
@@ -382,7 +399,6 @@ def load_best_model(model, checkpoint_dir: Path, checkpoint_name: str, device):
         tuple: (model, best_epoch, best_loss, vocab) or (model, None, None, None) if checkpoint not found.
     """
     from src.dataset import Vocabulary
-    torch.serialization.add_safe_globals([Vocabulary])
 
     best_path = Path(checkpoint_dir) / f"{checkpoint_name}_best.pt"
     if not best_path.exists():
@@ -413,7 +429,6 @@ def load_best_model(model, checkpoint_dir: Path, checkpoint_name: str, device):
 def get_checkpoint_epoch(checkpoint_path: Path, device):
     """Read a checkpoint file and return the saved epoch."""
     from src.dataset import Vocabulary
-    torch.serialization.add_safe_globals([Vocabulary])
 
     checkpoint_path = Path(checkpoint_path)
     try:
