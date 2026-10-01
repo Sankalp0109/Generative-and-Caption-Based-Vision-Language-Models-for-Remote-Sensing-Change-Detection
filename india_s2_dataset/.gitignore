@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+data/
+locations/layers/
+labeler/images/
+labeler/pairs*.js*
+labeler/labels.json
+validation_1k/check/images/
+validation_1k/check/pairs.js
+validation_1k/check/check_labels.json
+validation_1k/review2/pairs.js
+validation_1k/review2/human_labels.json
+validation_1k/*.jsonl
+kaggle/*/*.zip
+kaggle/*/*.csv
+changemap_test/maps/

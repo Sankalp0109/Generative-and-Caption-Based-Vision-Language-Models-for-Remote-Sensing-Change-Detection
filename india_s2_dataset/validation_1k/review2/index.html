@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human Review</title>
+<style>
+  :root { --bg:#111; --panel:#1c1c1c; --fg:#eee; --muted:#999; --accent:#4a9eff; --ok:#3fb950; --warn:#d29922; --bad:#f85149; --grey:#8b949e; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px system-ui, sans-serif; }
+  header { display:flex; gap:12px; align-items:center; flex-wrap:wrap; padding:10px 16px; background:var(--panel); }
+  .muted { color:var(--muted); }
+  main { padding:12px 16px; max-width:1400px; margin:auto; }
+  .imgs { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  figure { margin:0; text-align:center; }
+  figure img { width:560px; max-width:calc(100vw - 32px); aspect-ratio:1; display:block; background:#000; }
+  figcaption { margin-top:4px; color:var(--muted); }
+  .row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:12px 0 6px; align-items:center; }
+  button { font:inherit; padding:11px 20px; border-radius:6px; border:1px solid #444; background:#2a2a2a; color:var(--fg); cursor:pointer; }
+  button:hover { border-color:#777; }
+  button[data-c=change] { border-color:var(--bad); } button[data-c=no_change] { border-color:var(--ok); }
+  button[data-c=seasonal] { border-color:var(--warn); } button[data-c=cant_tell] { border-color:var(--grey); }
+  button.sel[data-c=change] { background:var(--bad); } button.sel[data-c=no_change] { background:var(--ok); color:#000; }
+  button.sel[data-c=seasonal] { background:var(--warn); color:#000; } button.sel[data-c=cant_tell] { background:var(--grey); color:#000; }
+  #save { background:var(--accent); border-color:var(--accent); }
+  #step2 { max-width:900px; margin:6px auto; padding:12px 14px; border:1px solid #333; border-radius:8px; background:#181818; }
+  #step2[hidden] { display:none; }
+  #ai { margin-bottom:8px; }
+  .agree { color:var(--ok); font-weight:600; } .differ { color:var(--warn); font-weight:600; }
+  textarea { display:block; width:100%; min-height:64px; background:#000; color:var(--fg); border:1px solid #444; border-radius:6px; padding:8px; font:inherit; }
+  textarea[hidden] { display:none; }
+  #status { text-align:center; min-height:1.4em; }
+  .nav { display:flex; flex-wrap:wrap; gap:3px; justify-content:center; margin-top:12px; }
+  .nav a { width:30px; padding:3px 0; text-align:center; border-radius:3px; background:#2a2a2a; color:var(--fg); text-decoration:none; font-size:11px; }
+  .nav a.done { background:#264d33; } .nav a.cur { outline:2px solid var(--accent); }
+  .help { text-align:center; font-size:13px; }
+</style>
+</head>
+<body>
+<header>
+  <strong>Human Review</strong>
+  <button id="blink" type="button">Blink (B)</button>
+  <span id="progress" class="muted"></span>
+</header>
+<main>
+  <div id="info" class="muted" style="text-align:center;margin-bottom:8px"></div>
+  <div class="imgs">
+    <figure><img id="imgB" alt="before"><figcaption id="capB"></figcaption></figure>
+    <figure><img id="imgA" alt="after"><figcaption id="capA"></figcaption></figure>
+  </div>
+  <div class="row">
+    <span class="muted">Step 1 — your answer:</span>
+    <button data-c="change">Change (1)</button>
+    <button data-c="no_change">No change (2)</button>
+    <button data-c="seasonal">Seasonal (3)</button>
+    <button data-c="cant_tell">Can't tell (4)</button>
+  </div>
+  <div id="step2" hidden>
+    <div id="ai"></div>
+    <textarea id="caption" placeholder="Describe the change: what changed and where."></textarea>
+    <div class="row">
+      <button id="save" type="button">Save &amp; next (Enter)</button>
+    </div>
+  </div>
+  <div class="row">
+    <button id="prev" type="button">← Prev</button>
+    <button id="next" type="button">Next →</button>
+  </div>
+  <div id="status"></div>
+  <p class="help muted">Step 1: choose first (keys 1–4); the AI suggestion is shown only after you choose. Step 2: for Change and Seasonal, accept the AI description or edit it, then Enter saves and moves on. Your answer is always the one saved; you may still change it after seeing the AI suggestion (your first choice is recorded too).</p>
+  <div class="nav" id="nav"></div>
+</main>
+<script src="pairs.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const NAME = { change: "Change", no_change: "No change", seasonal: "Seasonal", cant_tell: "Can't tell" };
+let pairs = PAIRS, labels = {}, i = 0, cat = null, first = null, firstSource = "this_page", blinking = null;
+const done = p => labels[p.patch_id];
+
+function stopBlink() {
+  if (blinking) { clearInterval(blinking); blinking = null; }
+  const p = pairs[i]; if (p) { $("imgA").src = `img/${p.patch_id}/after.png`; $("capA").textContent = "After · " + p.after_date; }
+}
+
+function showStep2() {
+  const p = pairs[i];
+  document.querySelectorAll("button[data-c]").forEach(b => b.classList.toggle("sel", b.dataset.c === cat));
+  if (!cat) { $("step2").hidden = true; return; }
+  $("step2").hidden = false;
+  const same = first === p.ai_label;
+  $("ai").innerHTML = `AI suggestion: <b>${NAME[p.ai_label]}</b> — ` +
+    (same ? `<span class="agree">agrees with you</span>` : `<span class="differ">differs from you</span>`);
+  const needCap = cat === "change" || cat === "seasonal";
+  $("caption").hidden = !needCap;
+  if (needCap) {
+    const saved = done(p);
+    const aiCap = p.ai_label === cat ? p.ai_caption : "";
+    $("caption").value = saved && saved.category === cat && saved.caption ? saved.caption : aiCap;
+    $("caption").placeholder = aiCap ? "" : "No AI description for this answer — write what changed and where.";
+  }
+  $("save").focus();
+}
+
+function render() {
+  stopBlink();
+  const p = pairs[i]; if (!p) return;
+  $("imgB").src = `img/${p.patch_id}/before.png`; $("imgA").src = `img/${p.patch_id}/after.png`;
+  $("capB").textContent = "Before · " + p.before_date; $("capA").textContent = "After · " + p.after_date;
+  $("info").textContent = `#${i + 1} of ${pairs.length}`;
+  const s = done(p);
+  if (s) { cat = s.category; first = s.first_pick; firstSource = s.first_pick_source; }
+  else if (p.earlier_pick) { cat = first = p.earlier_pick; firstSource = "blind_check"; }
+  else { cat = first = null; firstSource = "this_page"; }
+  showStep2();
+  $("status").textContent = s ? "Saved earlier — you can change and save again." :
+    p.earlier_pick ? "Your earlier blind answer is filled in — check the description and save." : "";
+  const n = pairs.filter(done).length;
+  $("progress").textContent = `${n}/${pairs.length} saved`;
+  $("nav").innerHTML = pairs.map((q, k) =>
+    `<a href="#" data-k="${k}" class="${done(q) ? "done" : ""} ${k === i ? "cur" : ""}">${k + 1}</a>`).join("");
+  [pairs[i + 1]].forEach(q => { if (q) { new Image().src = `img/${q.patch_id}/before.png`; new Image().src = `img/${q.patch_id}/after.png`; } });
+}
+
+function go(k) { i = Math.max(0, Math.min(pairs.length - 1, k)); render(); }
+
+function pick(c) {
+  if (first === null) first = c;            // the first answer, given before seeing the AI suggestion
+  cat = c;
+  showStep2();
+  if (c === "change" || c === "seasonal") $("caption").focus();
+}
+
+async function save() {
+  const p = pairs[i];
+  if (!cat) { $("status").textContent = "Choose an answer first."; return; }
+  const caption = $("caption").hidden ? "" : $("caption").value.trim();
+  if ((cat === "change" || cat === "seasonal") && !caption) { $("status").textContent = "Write a description first."; $("caption").focus(); return; }
+  $("status").textContent = "Saving…";
+  try {
+    const r = await fetch("/save", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ patch_id: p.patch_id, category: cat, first_pick: first, first_pick_source: firstSource,
+                             ai_label: p.ai_label, caption, ai_caption: p.ai_label === cat ? p.ai_caption : "" }) });
+    const body = await r.json();
+    if (!r.ok) throw new Error(body.error);
+    labels[p.patch_id] = { category: cat, first_pick: first, first_pick_source: firstSource, caption };
+    const next = pairs.findIndex((q, k) => k > i && !done(q));
+    go(next >= 0 ? next : Math.min(i + 1, pairs.length - 1));
+    $("status").textContent = pairs.every(done) ? "All done ✓" : "Saved ✓";
+  } catch (e) {
+    $("status").textContent = "Save failed: " + e.message + " (is  python3 validation_1k/review2/server.py  running?)";
+  }
+}
+
+document.querySelectorAll("button[data-c]").forEach(b => b.onclick = () => pick(b.dataset.c));
+$("save").onclick = save;
+$("prev").onclick = () => go(i - 1);
+$("next").onclick = () => go(i + 1);
+$("nav").onclick = e => { if (e.target.dataset.k) { e.preventDefault(); go(+e.target.dataset.k); } };
+$("blink").onclick = () => {
+  if (blinking) return stopBlink();
+  const p = pairs[i]; let showBefore = false;
+  blinking = setInterval(() => {
+    showBefore = !showBefore;
+    $("imgA").src = `img/${p.patch_id}/${showBefore ? "before" : "after"}.png`;
+    $("capA").textContent = (showBefore ? "BEFORE · " + p.before_date : "AFTER · " + p.after_date) + " (blinking)";
+  }, 600);
+};
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); return save(); }
+  if (document.activeElement.tagName === "TEXTAREA") return;
+  const keys = { "1": "change", "2": "no_change", "3": "seasonal", "4": "cant_tell" };
+  if (keys[e.key]) pick(keys[e.key]);
+  else if (e.key === "b" || e.key === "B") $("blink").click();
+  else if (e.key === "ArrowLeft") go(i - 1);
+  else if (e.key === "ArrowRight") go(i + 1);
+  else return;
+  e.preventDefault();
+});
+
+fetch("/labels").then(r => r.json()).then(l => { labels = l; })
+  .catch(() => { $("status").textContent = "Server not running: start  python3 validation_1k/review2/server.py  and open http://localhost:8002"; })
+  .finally(() => { const k = pairs.findIndex(q => !done(q)); go(k >= 0 ? k : 0); });
+</script>
+</body>
+</html>
