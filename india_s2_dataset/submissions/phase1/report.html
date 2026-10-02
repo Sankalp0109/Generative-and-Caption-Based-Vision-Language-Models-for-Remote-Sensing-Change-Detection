@@ -1,0 +1,198 @@
+<!doctype html><html><head><meta charset='utf-8'><title>RSICC Phase 1</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+body { font-family: "Georgia", "Times New Roman", serif; font-size: 10.5pt; line-height: 1.45; color: #111; max-width: 180mm; margin: auto; }
+h1 { font-size: 20pt; margin: 0 0 4pt; } h2 { font-size: 13.5pt; margin-top: 18pt; border-bottom: 1px solid #ccc; padding-bottom: 2pt; }
+h3 { font-size: 11.5pt; margin-top: 12pt; }
+table { border-collapse: collapse; margin: 8pt 0; font-size: 9.5pt; } th, td { border: 1px solid #bbb; padding: 3pt 7pt; text-align: left; }
+th { background: #f1f1f1; } img { max-width: 100%; max-height: 205mm; display: block; margin: 8pt auto 2pt; }
+p.caption { text-align: center; font-size: 9pt; color: #444; margin-top: 0; }
+hr { border: 0; border-top: 1px solid #ccc; } h2, h3 { page-break-after: avoid; } img, table { page-break-inside: avoid; }
+</style></head><body><h1>Remote Sensing Image Change Caption Generation — Phase 1</h1>
+<p><em>Adapting LEVIR-CC-trained change captioning models toward Indian imagery</em></p>
+<p><strong>[Author names]</strong> · <strong>[Affiliation]</strong> · October 2026</p>
+<hr />
+<h2>Preface</h2>
+<p>This report covers the first phase of our work on remote sensing image change captioning (RSICC). We built a modular captioning pipeline on the LEVIR-CC benchmark and developed it through a series of architectures, with the aim of adapting it to Indian imagery. The adaptation did not succeed, which led to the construction of a dedicated Indian Sentinel-2 dataset; that work is described in a companion report.</p>
+<h2>Abstract</h2>
+<p>We developed a modular RSICC pipeline on LEVIR-CC and improved it in stages: a CNN baseline, a frozen RemoteCLIP encoder with difference fusion, a hierarchical tile-based model, and a RemoteCLIP cross-attention model with contrastive caption alignment. On the LEVIR-CC test set, BLEU-4 rose from 30.3 to 33.7 and ROUGE-L from 62.1 to 66.0, with the gains flattening after the first architectural change. Extending the models to a second dataset (SECOND-CC) by sequential fine-tuning caused severe forgetting: LEVIR-CC BLEU-4 fell to 12–15. Later designs that coupled a RemoteCLIP encoder to a large language-model decoder (Qwen2-VL family) were implemented, but training diverged and no evaluation was completed. Finally, a pilot Indian Sentinel-2 dataset was collected and off-the-shelf vision-language captioners were tried on it; their captions were unusable, ranging from empty or garbled output to a blanket "nothing changed". <strong>We conclude that models trained on LEVIR-CC do not provide a viable route to change captioning of Indian imagery, and that a purpose-built, reliably labelled Indian dataset is required.</strong></p>
+<hr />
+<h2>1. Introduction</h2>
+<p>LEVIR-CC is the standard RSICC benchmark: about 10,000 bi-temporal image pairs (256×256 px, 0.5 m resolution) of urban and suburban areas in Texas, USA, each with five reference captions. It is dominated by building and road construction and contains no Indian landscapes, monsoon-driven seasonal change, or the medium-resolution imagery freely available across India.</p>
+<p>Our goal in Phase 1 was to build a captioning model on LEVIR-CC, improve it, and then adapt it to Indian imagery. The phase had three parts:</p>
+<ol>
+<li><strong>Model development on LEVIR-CC</strong> (Section 3): four architectures in a shared, comparable pipeline.</li>
+<li><strong>Cross-dataset extension</strong> (Section 4): sequential fine-tuning on SECOND-CC, and language-model decoders aimed at domain adaptation.</li>
+<li><strong>Moving to Indian imagery</strong> (Section 5): a pilot Sentinel-2 dataset and off-the-shelf captioners.</li>
+</ol>
+<h2>2. Shared pipeline</h2>
+<p>All models were trained and evaluated in one modular codebase, so results are directly comparable:</p>
+<ul>
+<li><strong>Data:</strong> the official LEVIR-CC train/validation/test splits; images resized to 256×256 (224×224 for RemoteCLIP models) with the matching normalisation.</li>
+<li><strong>Vocabulary:</strong> one shared vocabulary built from the training captions (minimum word frequency 2).</li>
+<li><strong>Training:</strong> caption cross-entropy loss, batch size 16, gradient clipping, Adam with learning rate 1×10⁻⁴ and a cosine schedule, rolling "current" and "best" checkpoints.</li>
+<li><strong>Model interface:</strong> every model implements <code>forward(images, caption_tokens) → logits</code>, so only the model definition changes between experiments.</li>
+<li><strong>Evaluation:</strong> BLEU-1–4, METEOR, ROUGE-L and sentence-embedding similarity on all 1,929 test pairs.</li>
+</ul>
+<h2>3. Model development on LEVIR-CC</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Architecture</th>
+<th>Trainable parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Two-stream CNN encoder with difference fusion + 2-layer Transformer decoder (baseline)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Frozen RemoteCLIP ViT-B/32 encoder, absolute-difference fusion, same decoder</td>
+<td>3.4 M of 154.7 M</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Hierarchical tile-based model: tiles encoded by a shared RemoteCLIP backbone, bidirectional tile differences, tile-fusion Transformer</td>
+<td>13.8 M of 165.1 M</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>RemoteCLIP with cross-attention fusion between dates + contrastive caption–image alignment</td>
+<td>9.1 M of 160.4 M</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Results (LEVIR-CC test set, 1,929 pairs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Test loss</th>
+<th>BLEU-1</th>
+<th>BLEU-4</th>
+<th>METEOR</th>
+<th>ROUGE-L</th>
+<th>Sentence similarity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Baseline</td>
+<td>0.969</td>
+<td>47.2</td>
+<td>30.3</td>
+<td>59.7</td>
+<td>62.1</td>
+<td>64.8</td>
+</tr>
+<tr>
+<td>2 RemoteCLIP difference</td>
+<td>0.935</td>
+<td>51.7</td>
+<td>32.8</td>
+<td>63.0</td>
+<td>65.5</td>
+<td>70.6</td>
+</tr>
+<tr>
+<td>6 Tile-based</td>
+<td>0.923</td>
+<td>52.1</td>
+<td>33.6</td>
+<td>63.6</td>
+<td>66.2</td>
+<td>71.5</td>
+</tr>
+<tr>
+<td>Final Cross-attention</td>
+<td>0.898</td>
+<td>53.1</td>
+<td>33.7</td>
+<td>63.9</td>
+<td>66.0</td>
+<td>71.2</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Figure 1" src="figures/fig1_levircc_phases.png" />
+<em>Figure 1. LEVIR-CC test scores for each architecture.</em></p>
+<p><strong>Findings:</strong></p>
+<ul>
+<li>Replacing the CNN encoder with a remote-sensing-pretrained encoder (RemoteCLIP) gave the largest single improvement.</li>
+<li>Further architectural complexity (tiles, cross-attention, contrastive alignment) added little: BLEU-4 moved from 32.8 to 33.7 and ROUGE-L stayed around 66.</li>
+<li>Qualitatively, the models handle the dominant LEVIR-CC patterns well, in particular "there is no difference" for unchanged pairs and "a house / road appears" for construction. They produce generic or templated descriptions for more varied changes.</li>
+</ul>
+<h2>4. Cross-dataset extension</h2>
+<h3>4.1 Sequential fine-tuning on SECOND-CC</h3>
+<p>To move beyond LEVIR-CC, the Phase 6 and Final models were fine-tuned on SECOND-CC, a second change-captioning dataset with more varied land-cover changes, and then evaluated on both test sets.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>LEVIR-CC BLEU-4 before → after</th>
+<th>LEVIR-CC ROUGE-L before → after</th>
+<th>SECOND-CC BLEU-4</th>
+<th>SECOND-CC ROUGE-L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 6 Tile-based</td>
+<td>33.6 → 12.1</td>
+<td>66.2 → 37.4</td>
+<td>12.3</td>
+<td>41.6</td>
+</tr>
+<tr>
+<td>Final Cross-attention</td>
+<td>33.7 → 14.9</td>
+<td>66.0 → 43.7</td>
+<td>13.0</td>
+<td>43.3</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Figure 2" src="figures/fig2_secondcc_forgetting.png" />
+<em>Figure 2. LEVIR-CC test scores before and after sequential fine-tuning on SECOND-CC.</em></p>
+<p>Fine-tuning on the second dataset caused <strong>catastrophic forgetting</strong>: LEVIR-CC test loss rose from about 0.9 to 3.5–4.1 and BLEU-4 fell by more than half. Performance on SECOND-CC itself also remained low. A model adapted in this way loses what it learned on the source dataset without becoming good on the target.</p>
+<h3>4.2 Language-model decoders (Phases 7–8)</h3>
+<p>The next designs replaced the small Transformer decoder with a pretrained language model, aiming at richer captions and domain adaptation:</p>
+<ul>
+<li><strong>Phase 7 (CodeAug):</strong> RemoteCLIP ViT-L/14 with LoRA adapters, a Q-Former compressing the visual tokens, and a 4-bit-quantised Qwen2-VL-2B text decoder, plus vegetation-index masking intended to suppress seasonal false changes.</li>
+<li><strong>Phase 8:</strong> a lighter hybrid with a Qwen2-0.5B decoder and a learned bridge between visual and text features, trained in stages.</li>
+</ul>
+<p>Both designs were implemented. Training ran into numerical instability: the stage-2 loss diverged to NaN. The cause was traced to unbounded bridge outputs overflowing the half-precision language model, and a fix was applied, but no complete training and evaluation run was achieved, so <strong>no results are reported for these designs.</strong> They were also constrained by the available GPUs (11 GB Pascal/Turing cards without bfloat16 support), which forced aggressive quantisation, very small batches and strictly sequential jobs.</p>
+<h2>5. Moving to Indian imagery</h2>
+<h3>5.1 Pilot Indian Sentinel-2 dataset</h3>
+<p>A pilot dataset was collected from Sentinel-2 imagery over hand-picked Indian areas of interest in five categories (urban, deforestation, agriculture, coastal, infrastructure). Each area was tiled into 512×512 patches, and before/after pairs several years apart were kept only if their change magnitude exceeded a threshold. Of 2,126 tiles checked, <strong>1,072 pairs</strong> were kept (Figure 3).</p>
+<p><img alt="Figure 3" src="figures/india_pilot_sample.png" />
+<em>Figure 3. A sample pair from the pilot Indian Sentinel-2 collection.</em></p>
+<h3>5.2 Off-the-shelf captioners on Indian pairs</h3>
+<p>Because no Indian captions existed to fine-tune on, two pretrained captioners were run directly on a 30-pair sample:</p>
+<ul>
+<li><strong>TeoChat</strong>, a temporal remote-sensing vision-language model, answered "Nothing meaningful changed" for 27 of 30 pairs, including pairs with visible change. One answer described damage from a hurricane that did not occur.</li>
+<li><strong>Qwen2.5-VL</strong> produced empty or garbled output (non-English text or repeated tokens) for many pairs in its first run. Retries and 8-bit loading reduced but did not remove these failures. When it did answer, it tended to describe confident, generic "urban development" on scenes that were largely unchanged.</li>
+</ul>
+<p><img alt="Figure 4" src="figures/fig4_offtheshelf_example.png" />
+<em>Figure 4. One Indian pair and the two captioners' answers. One describes broad urban growth, the other reports no change; neither describes the specific change visible on the right side of the scene.</em></p>
+<p>Neither model gave captions usable as training labels or as a deployed system.</p>
+<h2>6. Limitations</h2>
+<ol>
+<li><strong>Evaluation protocol.</strong> Captions were scored against a single reference caption per image, while the LEVIR-CC literature scores against all five. Our scores are therefore comparable across our own models but not directly with published results. The pipeline's CIDEr implementation is a simplified approximation and is not reported.</li>
+<li><strong>Domain gap.</strong> LEVIR-CC covers sub-metre imagery of one US region. Its scenes, change types and resolution differ fundamentally from Indian Sentinel-2 imagery, so gains on LEVIR-CC do not indicate performance on the target domain.</li>
+<li><strong>Forgetting under sequential fine-tuning.</strong> Only plain sequential fine-tuning was tried. Methods that limit forgetting (joint training, replay, or adapters) were not evaluated.</li>
+<li><strong>Incomplete language-model designs.</strong> The Phase 7–8 designs never completed a training and evaluation run, so their potential remains unmeasured.</li>
+<li><strong>Compute.</strong> The institute cluster offered a single older GPU at a time, without bfloat16 support. This limited model size, batch size and the number of experiments, and was a major bottleneck across the phase.</li>
+<li><strong>Small Indian sample.</strong> The off-the-shelf captioners were tried on only 30 Indian pairs, without reference captions, so that check is qualitative.</li>
+</ol>
+<h2>7. Conclusion</h2>
+<p>Phase 1 established a modular, reproducible RSICC pipeline and showed that a remote-sensing-pretrained encoder is the most useful single improvement on LEVIR-CC, while further architectural complexity brought diminishing returns. Moving beyond LEVIR-CC failed at every step:</p>
+<ul>
+<li>sequential fine-tuning to a second dataset erased most of what the model had learned</li>
+<li>language-model decoders could not be trained to completion on the available hardware</li>
+<li>off-the-shelf captioners produced unusable captions for Indian imagery</li>
+</ul>
+<p>Together these results show that a model trained on LEVIR-CC is not a viable path to change captioning of Indian imagery. The missing ingredient is data: Indian bi-temporal imagery with reliable change labels. That conclusion motivated the dataset construction described in the companion report.</p></body></html>

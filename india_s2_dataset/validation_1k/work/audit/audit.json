@@ -1,0 +1,29 @@
+{
+ "note": "24 random pairs where both 32B and 235B said land_use and Claude did not; re-viewed by Claude at 300 px",
+ "verdicts": {
+  "madhya_pradesh_082_r1c1": "model_wrong",
+  "haryana_t1_003_r0c3": "claude_wrong",
+  "karnataka_t1_040_r3c1": "model_wrong",
+  "uttar_pradesh_t1_024_r2c3": "claude_wrong",
+  "maharashtra_073_r2c3": "model_wrong",
+  "west_bengal_t1_018_r1c2": "unsure",
+  "maharashtra_t1_025_r0c3": "model_wrong",
+  "maharashtra_067_r0c0": "model_wrong",
+  "assam_028_r3c1": "unsure",
+  "uttarakhand_009_r3c2": "unsure",
+  "andhra_pradesh_021_r1c3": "model_wrong",
+  "uttar_pradesh_t1_015_r1c0": "model_wrong",
+  "telangana_t1_006_r0c0": "unsure",
+  "uttar_pradesh_t1_042_r2c0": "model_wrong",
+  "west_bengal_t1_018_r0c2": "model_wrong",
+  "maharashtra_057_r3c0": "model_wrong",
+  "gujarat_t1_001_r0c1": "model_wrong",
+  "chhattisgarh_042_r2c1": "model_wrong",
+  "odisha_031_r2c1": "model_wrong",
+  "uttar_pradesh_t1_013_r0c3": "model_wrong",
+  "maharashtra_039_r0c2": "unsure",
+  "west_bengal_018_r2c3": "model_wrong",
+  "uttar_pradesh_042_r1c3": "model_wrong",
+  "telangana_t1_006_r0c3": "model_wrong"
+ }
+}

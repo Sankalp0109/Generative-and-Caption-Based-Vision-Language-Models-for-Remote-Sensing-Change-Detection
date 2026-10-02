@@ -1,0 +1,530 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Evidence Report</title><style>
+@page { size: A4; margin: 17mm 16mm; }
+body { font-family: Georgia, "Times New Roman", serif; font-size: 10.3pt; line-height: 1.42; color: #111; }
+h1 { font-size: 22pt; margin: 0 0 6pt; } h2 { font-size: 13.5pt; margin-top: 16pt; border-bottom: 1px solid #ccc; padding-bottom: 2pt; }
+h3 { font-size: 11.3pt; margin-top: 12pt; }
+table { border-collapse: collapse; margin: 7pt 0; font-size: 9pt; } th, td { border: 1px solid #bbb; padding: 3pt 6pt; text-align: left; }
+th { background: #f1f1f1; } img { max-width: 100%; max-height: 200mm; display: block; margin: 6pt auto 2pt; }
+p.caption { text-align: center; font-size: 8.8pt; color: #444; margin-top: 0; }
+hr { border: 0; border-top: 1px solid #ccc; } h2, h3 { page-break-after: avoid; } img, table { page-break-inside: avoid; }
+blockquote { margin: 8pt 0; padding: 6pt 10pt; background: #f3f6fb; border-left: 3px solid #2a78d6; font-size: 9.6pt; } blockquote p { margin: 2pt 0; }
+a { color: #1a5fb4; text-decoration: none; word-break: break-all; }
+.titlepage { page-break-after: always; text-align: center; padding-top: 55mm; }
+.titlepage h1 { font-size: 26pt; } .titlepage h2 { border: 0; font-size: 15pt; color: #333; font-weight: normal; }
+.titlepage table { margin: 22pt auto; font-size: 11.5pt; } .titlepage td, .titlepage th { border: 0; padding: 3pt 10pt; }
+.titlepage th { background: none; }
+</style></head><body><div class="titlepage">
+<h1>Remote Sensing Image Change Caption Generation</h1>
+<h2>Evidence Report — Predictions, Curves, Maps and Plots</h2>
+<p><strong>Independent Study, Monsoon 2026</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Team</strong></td>
+<td>Sankalp Chaturvedi (2025201083)</td>
+</tr>
+<tr>
+<td></td>
+<td>KSPSVLN Siddardha Kumar Kavuri (2025201061)</td>
+</tr>
+<tr>
+<td></td>
+<td>Rinkesh Verma (2025201070)</td>
+</tr>
+<tr>
+<td><strong>Mentor</strong></td>
+<td>Rama Chandra Prasad</td>
+</tr>
+</tbody>
+</table>
+<p><em>This report collects the evidence behind the observations in the Main Report. Each section names the observation it supports (Obs. 1–15).</em></p>
+</div>
+<h2>How to read this report</h2>
+<ul>
+<li><strong>Sources.</strong><ul>
+<li>Captioning results come from the notebook outputs of the <a href="https://github.com/Sankalp0109/Generative-and-Caption-Based-Vision-Language-Models-for-Remote-Sensing-Change-Detection">project repository</a>.</li>
+<li>Prediction samples come from the saved prediction sheets, published as <a href="https://www.kaggle.com/datasets/kspsvlnsiddardha/rsicc-model-run-reports">RSICC Model Run Reports</a> on Kaggle.</li>
+<li>The Indian-dataset evidence comes from the experiment logs and the labelled files, published as <a href="https://www.kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-pairs">India Sentinel-2 Change Pairs</a> and its <a href="https://www.kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-labelled">labelled subset</a>.</li>
+</ul>
+</li>
+<li><strong>Ground truth for Part C</strong> is the human label where one exists.</li>
+<li><strong>Prediction-sheet naming.</strong> The sheets named <code>predictions_phase7*</code> contain Phase 6 model outputs. They are labelled "Phase 6 run" here.</li>
+</ul>
+<hr />
+<h2>Part A — Captioning models on LEVIR-CC and SECOND-CC</h2>
+<h3>E-A1. Scores per model on LEVIR-CC test (Obs. 1, 2)</h3>
+<p><img alt="E-A1" src="figures/A1_levir_phases.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Loss</th>
+<th>BLEU-1</th>
+<th>BLEU-2</th>
+<th>BLEU-3</th>
+<th>BLEU-4</th>
+<th>METEOR</th>
+<th>ROUGE-L</th>
+<th>Cosine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1 baseline</td>
+<td>0.9690</td>
+<td>0.4720</td>
+<td>0.3855</td>
+<td>0.3393</td>
+<td>0.3027</td>
+<td>0.5966</td>
+<td>0.6214</td>
+<td>0.6477</td>
+</tr>
+<tr>
+<td>Phase 2 RemoteCLIP difference</td>
+<td>0.9345</td>
+<td>0.5168</td>
+<td>0.4237</td>
+<td>0.3712</td>
+<td>0.3284</td>
+<td>0.6304</td>
+<td>0.6545</td>
+<td>0.7061</td>
+</tr>
+<tr>
+<td>Final cross-attention</td>
+<td>0.8982</td>
+<td>0.5311</td>
+<td>0.4355</td>
+<td>0.3810</td>
+<td>0.3365</td>
+<td>0.6392</td>
+<td>0.6604</td>
+<td>0.7123</td>
+</tr>
+<tr>
+<td>Phase 6 tiles</td>
+<td>0.9225</td>
+<td>0.5214</td>
+<td>0.4297</td>
+<td>0.3777</td>
+<td>0.3358</td>
+<td>0.6357</td>
+<td>0.6624</td>
+<td>0.7149</td>
+</tr>
+<tr>
+<td>Phase 8 stage 1a (epoch 7)</td>
+<td>—</td>
+<td>0.5092</td>
+<td>0.4167</td>
+<td>0.3658</td>
+<td>0.3250</td>
+<td>0.6155</td>
+<td>0.6482</td>
+<td>0.7007</td>
+</tr>
+<tr>
+<td>Phase 8 stage 1b (Qwen bridge)</td>
+<td>—</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.0104</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Phase 1 to Phase 2</strong> (encoder only changed, 3.41 M vs 3.43 M trainable parameters):</p>
+<ul>
+<li>BLEU-1 to BLEU-4: +8.5% to +9.9% relative</li>
+<li>METEOR +5.7%, ROUGE-L +5.3%, cosine +9.0%</li>
+<li>test loss −3.6%</li>
+</ul>
+<h3>E-A2. Training and validation curves (Obs. 3, 6)</h3>
+<p><img alt="E-A2" src="figures/A2_training_curves.png" /></p>
+<p>In every run, validation loss reaches its minimum early while training loss keeps falling:</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>Best validation loss</th>
+<th>Final validation loss</th>
+<th>Final training loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 2</td>
+<td>1.045 (epoch 6)</td>
+<td>1.054 (epoch 10)</td>
+<td>0.716</td>
+</tr>
+<tr>
+<td>Phase 8, stage 1a</td>
+<td>1.017 (epoch 7)</td>
+<td>1.136 (epoch 15)</td>
+<td>0.482 (training accuracy 84.9%)</td>
+</tr>
+<tr>
+<td>Phase 8, stage 1b</td>
+<td>1.417 (epoch 4)</td>
+<td>1.598 (epoch 10)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>SECOND-CC fine-tuning</td>
+<td>1.522 (epoch 6)</td>
+<td>1.551 (epoch 14)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3>E-A3. Forgetting after SECOND-CC fine-tuning (Obs. 6)</h3>
+<p><img alt="E-A3" src="figures/A3_forgetting.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>LEVIR-CC loss</th>
+<th>BLEU-4</th>
+<th>METEOR</th>
+<th>ROUGE-L</th>
+<th>Cosine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Final, before fine-tuning</td>
+<td>0.898</td>
+<td>0.337</td>
+<td>0.639</td>
+<td>0.660</td>
+<td>0.712</td>
+</tr>
+<tr>
+<td>Final, after fine-tuning</td>
+<td>4.080</td>
+<td>0.149</td>
+<td>0.394</td>
+<td>0.437</td>
+<td>0.458</td>
+</tr>
+<tr>
+<td>Phase 6, before fine-tuning</td>
+<td>0.923</td>
+<td>0.336</td>
+<td>0.636</td>
+<td>0.662</td>
+<td>0.715</td>
+</tr>
+<tr>
+<td>Phase 6, after fine-tuning</td>
+<td>3.520</td>
+<td>0.121</td>
+<td>0.318</td>
+<td>0.374</td>
+<td>0.438</td>
+</tr>
+</tbody>
+</table>
+<h3>E-A4. Domain shift to SECOND-CC (Obs. 5)</h3>
+<p><img alt="E-A4" src="figures/A4_secondcc_domain.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Model / condition</th>
+<th>BLEU-1</th>
+<th>BLEU-4</th>
+<th>METEOR</th>
+<th>ROUGE-L</th>
+<th>Cosine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 8 stage 1a, zero-shot</td>
+<td>0.179</td>
+<td>0.081</td>
+<td>0.298</td>
+<td>0.300</td>
+<td>0.378</td>
+</tr>
+<tr>
+<td>Phase 6, fine-tuned</td>
+<td>0.354</td>
+<td>0.123</td>
+<td>0.392</td>
+<td>0.416</td>
+<td>0.530</td>
+</tr>
+<tr>
+<td>Final, fine-tuned</td>
+<td>0.363</td>
+<td>0.130</td>
+<td>0.413</td>
+<td>0.433</td>
+<td>0.550</td>
+</tr>
+</tbody>
+</table>
+<p>The zero-shot and fine-tuned rows come from different models, so this comparison is indicative.</p>
+<h3>E-A5. The same LEVIR-CC test pairs across three runs (Obs. 4, 7)</h3>
+<p><img alt="E-A5" src="figures/A5_same_samples.png" /></p>
+<p><strong>Sample 4, 17 and 19</strong> (forest or scrub replaced by a housing estate):</p>
+<ul>
+<li>The Phase 6 run gives a template ("a huge residential area is built…").</li>
+<li>The Phase 8 run partly contradicts the scene ("vegetation quantity is increased").</li>
+<li>The Final model after fine-tuning says "there is no difference".</li>
+</ul>
+<p><strong>Sample 42</strong> (one house added at the top right): all three runs miss it.</p>
+<p><strong>Sample 2</strong> (no change): the Phase 6 run reports vegetation loss.</p>
+<h3>E-A6. Prediction behaviour across 300 saved LEVIR-CC samples (Obs. 4, 7)</h3>
+<p><img alt="E-A6" src="figures/A6_prediction_behaviour.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Prediction sheet</th>
+<th>Changed pairs called "no difference"</th>
+<th>Unchanged pairs correct</th>
+<th>Distinct captions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 6 run</td>
+<td>43 / 164</td>
+<td>98 / 136</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Phase 8 run</td>
+<td>31 / 164</td>
+<td>96 / 136</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Final after SECOND-CC fine-tuning</td>
+<td><strong>164 / 164</strong></td>
+<td>136 / 136</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>References</td>
+<td>—</td>
+<td>—</td>
+<td>163</td>
+</tr>
+</tbody>
+</table>
+<p>On the SECOND-CC prediction sheets (300 samples, 255 changed), the Phase 6 and Phase 8 runs produced 97 and 82 distinct captions. They missed 16 and 19 changed pairs, and called 12 and 15 of 45 unchanged pairs changed.</p>
+<h3>E-A7. SECOND-CC test predictions (Obs. 5)</h3>
+<p><img alt="E-A7" src="figures/A7_secondcc_samples.png" /></p>
+<h3>E-A8. Whole-image vs patch-wise inference on unlabelled high-resolution pairs (Obs. 9)</h3>
+<p><img alt="E-A8" src="figures/A8_patchwise.png" /></p>
+<p>These 43 pairs have no reference captions. In the samples shown, the after images contain new farm structures and buildings.</p>
+<ul>
+<li><strong>Whole-image inference</strong> (23 distinct captions) mostly reports "vegetation quantity is decreased".</li>
+<li><strong>Patch-wise inference</strong> (9 distinct captions) gives "the green region is replaced by a huge house at the bottom right" for 75% of pairs, regardless of where the change is.</li>
+</ul>
+<hr />
+<h2>Part B — Off-the-shelf captioners on Indian imagery</h2>
+<h3>E-B1. Pilot Indian Sentinel-2 collection</h3>
+<p><img alt="E-B1" src="figures/B1_pilot_sample.png" /></p>
+<p>60 areas of interest in 5 categories, tiled into 512×512 patches and filtered by change magnitude. Of 2,126 tiles checked, 1,072 pairs were kept, in 1 h 53 min with 12 workers.</p>
+<h3>E-B2. Captioner outputs (Obs. 10)</h3>
+<p><img alt="E-B2" src="figures/B2_offtheshelf.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Captioner (30 pairs)</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TeoChat</td>
+<td>"Nothing meaningful changed" on 27/30; one invented hurricane-damage description</td>
+</tr>
+<tr>
+<td>TeoChat, 4-bit</td>
+<td>"Nothing meaningful changed" on 23/30</td>
+</tr>
+<tr>
+<td>Qwen2.5-VL, first run</td>
+<td>11 empty and 12 garbled answers (non-English text, repeated tokens)</td>
+</tr>
+<tr>
+<td>Qwen2.5-VL, retries / 8-bit</td>
+<td>Failures reduced but not removed; answers describe generic urban development</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Part C — India-wide dataset and automatic labelling</h2>
+<h3>E-C1. Site coverage</h3>
+<p><img alt="E-C1" src="figures/C1_coverage.png" /></p>
+<h3>E-C2. Screening outcome (Obs. 11)</h3>
+<p><img alt="E-C2" src="figures/C2_rejections.png" /></p>
+<h3>E-C3. Haze screen trial, 100 pairs (Obs. 11)</h3>
+<p><img alt="E-C3" src="figures/C3_haze_screen.png" /></p>
+<p>The 4-bit model was used for the full run because it was 8× faster on the cluster GPU (1.4 s per pair). The cost was a 27% wrong-reject rate on clean pairs. The reference labels for this trial were re-checked at large size using the 235B model as a second opinion, which favours the 235B row; its accuracy should be read as an upper bound.</p>
+<h3>E-C4. Label classes and human review (Obs. 12)</h3>
+<p><img alt="E-C4" src="figures/C4_classes.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Change</th>
+<th>Seasonal</th>
+<th>No change</th>
+<th>Can't tell</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Human-labelled (blind)</td>
+<td>55</td>
+<td>214</td>
+<td>226</td>
+<td>40</td>
+<td>535</td>
+</tr>
+<tr>
+<td>All labelled pairs</td>
+<td>143</td>
+<td>400</td>
+<td>383</td>
+<td>76</td>
+<td>1,002</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The human agreed with the automatic suggestion on 84% of reviewed pairs.</li>
+<li>In a random sample of 45 pairs where everything agreed, the human disagreed on 9: 4 changes everyone missed, and 5 false changes everyone accepted.</li>
+</ul>
+<h3>E-C5. Model size comparison (Obs. 13)</h3>
+<p><img alt="E-C5" src="figures/C5_model_comparison.png" /></p>
+<p>Asked plainly, the 235B dismissed real construction as "seasonal or agricultural variation" in most missed cases. The 32B over-called change.</p>
+<h3>E-C6. Effect of region hints and forcing prompts (Obs. 14)</h3>
+<p><img alt="E-C6" src="figures/C6_prompt_assistance.png" /></p>
+<p>The no-hint baseline used the 4-class prompt, while the boxed variants used a per-box prompt; the box variants are directly comparable with each other. With region boxes, the model's overall answer matched its answer for the boxes. It never reported a change outside the boxes, even when asked to.</p>
+<h3>E-C7. Example: region boxes hide a real change (Obs. 14)</h3>
+<p><img alt="E-C7" src="figures/C7_region_boxes.png" /></p>
+<h3>E-C8. Rule-based change map (Obs. 14)</h3>
+<p><img alt="E-C8" src="figures/C8_change_map.png" /></p>
+<p>On 50 pairs, the map marked a median 82% of each image as changed (maximum 98%). With the map treated as fact, the model reported change on 19/19 real-change pairs and on 27/27 no-change pairs.</p>
+<h3>E-C9. Pixel and CNN feature change gate</h3>
+<p><img alt="E-C9" src="figures/C9_change_gate.png" /></p>
+<p>At 90% recall the gate keeps about 62% of pairs, so it can only rank pairs, not label them.</p>
+<h3>E-C10. 1,000-pair validation (Obs. 15)</h3>
+<p><img alt="E-C10" src="figures/C10_recall_precision.png" /></p>
+<p><strong>Human-labelled set (n = 495), with 95% Wilson intervals:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Changes found</th>
+<th>Precision</th>
+<th>False-change rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32B</td>
+<td>89% (78–95)</td>
+<td>11% (9–15)</td>
+<td>87% (84–90)</td>
+</tr>
+<tr>
+<td>235B</td>
+<td>45% (33–58)</td>
+<td>17% (12–24)</td>
+<td>27% (23–32)</td>
+</tr>
+<tr>
+<td>Both agree</td>
+<td>42% (30–55)</td>
+<td>18% (12–25)</td>
+<td>24% (21–29)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How often each model said "change", by human label:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Human label</th>
+<th>32B says change</th>
+<th>235B says change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seasonal (n = 214)</td>
+<td>200 (93%)</td>
+<td>67 (31%)</td>
+</tr>
+<tr>
+<td>No change (n = 226)</td>
+<td>184 (81%)</td>
+<td>53 (23%)</td>
+</tr>
+<tr>
+<td>Change (n = 55)</td>
+<td>49 (89%)</td>
+<td>25 (45%)</td>
+</tr>
+</tbody>
+</table>
+<h3>E-C11. Validation examples (Obs. 13, 15)</h3>
+<p><img alt="E-C11" src="figures/C11_validation_examples.png" /></p>
+<p>The 235B's conclusions in its own words:</p>
+<ul>
+<li><strong>(a) Correct, human label Change:</strong> <em>"There has been significant, lasting development, including new buildings, roads, and land clearing."</em></li>
+<li><strong>(b) False alarm, human label Seasonal:</strong> <em>"Lasting changes have occurred, including new agricultural plots, possible expansion of settlement."</em></li>
+<li><strong>(c) Missed, human label Change:</strong> <em>"The differences are not lasting structural changes. They are consistent with seasonal or annual agricultural cycles."</em></li>
+</ul>
+<hr />
+<h2>Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code repository</td>
+<td><a href="https://github.com/Sankalp0109/Generative-and-Caption-Based-Vision-Language-Models-for-Remote-Sensing-Change-Detection">github.com/Sankalp0109/Generative-and-Caption-Based-Vision-Language-Models-for-Remote-Sensing-Change-Detection</a></td>
+</tr>
+<tr>
+<td>India Sentinel-2 Change Pairs (15,610 pairs)</td>
+<td><a href="https://www.kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-pairs">kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-pairs</a></td>
+</tr>
+<tr>
+<td>Labelled subset (1,002 pairs)</td>
+<td><a href="https://www.kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-labelled">kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-labelled</a></td>
+</tr>
+<tr>
+<td>Model run reports (prediction sheets)</td>
+<td><a href="https://www.kaggle.com/datasets/kspsvlnsiddardha/rsicc-model-run-reports">kaggle.com/datasets/kspsvlnsiddardha/rsicc-model-run-reports</a></td>
+</tr>
+<tr>
+<td>Model checkpoints</td>
+<td><a href="https://www.kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning">kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning</a> · <a href="https://huggingface.co/Kspsvln/IS">huggingface.co/Kspsvln/IS</a> · <a href="https://huggingface.co/Kspsvln/IS_phase2">huggingface.co/Kspsvln/IS_phase2</a></td>
+</tr>
+</tbody>
+</table>
+<p>Datasets, models and metrics are cited in the References of the Main Report. Contains modified Copernicus Sentinel data (2019–2026).</p></body></html>

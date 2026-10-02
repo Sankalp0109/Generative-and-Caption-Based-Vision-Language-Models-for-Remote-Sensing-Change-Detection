@@ -1,0 +1,1002 @@
+{"patch_id": "punjab_t1_005_r0c1", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "tamil_nadu_t1_025_r2c0", "label": "atmospheric", "caption": null, "source": "visibility"}
+{"patch_id": "assam_005_r1c0", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "odisha_t1_026_r2c3", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "tamil_nadu_t1_014_r0c0", "label": "atmospheric", "caption": null, "source": "visibility"}
+{"patch_id": "haryana_019_r3c2", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "chhattisgarh_033_r1c3", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "west_bengal_015_r1c3", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "andhra_pradesh_002_r2c1", "label": "land_use", "caption": "New aquaculture ponds have been dug in the centre-left, replacing agricultural fields.", "source": "visibility"}
+{"patch_id": "andaman_and_nicobar_islands_007_r2c2", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "uttar_pradesh_t1_042_r2c0", "label": "atmospheric", "caption": null, "source": "visibility"}
+{"patch_id": "gujarat_017_r1c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "rajasthan_t1_065_r0c2", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "rajasthan_097_r3c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "ladakh_023_r2c0", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "gujarat_012_r1c1", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "telangana_017_r1c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "tripura_001_r3c1", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "tamil_nadu_005_r2c0", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "jammu_and_kashmir_011_r1c0", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "gujarat_048_r1c3", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "andhra_pradesh_t1_024_r1c1", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "gujarat_t1_001_r3c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "tamil_nadu_t1_021_r0c2", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "madhya_pradesh_034_r2c3", "label": "land_use", "caption": "A new highway interchange with a new road branch and construction works has appeared at the central road junction.", "source": "visibility"}
+{"patch_id": "karnataka_041_r3c1", "label": "land_use", "caption": "A new large building complex has appeared on the middle-left edge amid plantations.", "source": "visibility"}
+{"patch_id": "assam_005_r3c1", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "kerala_t1_002_r0c0", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "gujarat_t1_009_r3c1", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "rajasthan_006_r1c2", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "karnataka_t1_004_r1c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "rajasthan_t1_045_r0c2", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "gujarat_t1_020_r2c1", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "maharashtra_061_r1c1", "label": "atmospheric", "caption": null, "source": "visibility"}
+{"patch_id": "assam_005_r2c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "telangana_t1_006_r0c3", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "madhya_pradesh_056_r3c2", "label": "land_use", "caption": "The town has expanded across the top of the image, with new built-up areas replacing farmland.", "source": "visibility"}
+{"patch_id": "assam_005_r3c0", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "ladakh_t1_036_r3c3", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "himachal_pradesh_t1_009_r3c3", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "statue_of_unity_gujarat_r0c1", "label": "land_use", "caption": "A new built-up area with buildings and roads has appeared in the west near the river.", "source": "visibility"}
+{"patch_id": "statue_of_unity_gujarat_r1c3", "label": "land_use", "caption": "New structures and paved areas have been built near the dam on the left bank.", "source": "visibility"}
+{"patch_id": "statue_of_unity_gujarat_r0c2", "label": "land_use", "caption": "New roads and development have appeared on the left near the dam.", "source": "visibility"}
+{"patch_id": "statue_of_unity_gujarat_r1c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "navi_mumbai_airport_maharashtra_r3c1", "label": "land_use", "caption": "New buildings and developed plots have appeared in the north-west and centre-left.", "source": "visibility"}
+{"patch_id": "navi_mumbai_airport_maharashtra_r0c1", "label": "land_use", "caption": "The quarry has expanded and a new road has been built across the scene.", "source": "visibility"}
+{"patch_id": "statue_of_unity_gujarat_r0c0", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "navi_mumbai_airport_maharashtra_r0c2", "label": "land_use", "caption": "The plotted land in the north-west has been built up with new buildings.", "source": "visibility"}
+{"patch_id": "navi_mumbai_airport_maharashtra_r3c0", "label": "atmospheric", "caption": null, "source": "visibility"}
+{"patch_id": "navi_mumbai_airport_maharashtra_r1c3", "label": "atmospheric", "caption": null, "source": "visibility"}
+{"patch_id": "statue_of_unity_gujarat_r2c3", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "statue_of_unity_gujarat_r1c0", "label": "none", "caption": null, "source": "visibility"}
+{"patch_id": "rajasthan_052_r3c3", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "karnataka_t1_039_r0c3", "label": "land_use", "caption": "A new cleared construction site has appeared in the north-centre among farmland.", "source": "visibility"}
+{"patch_id": "tamil_nadu_024_r3c0", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "uttar_pradesh_t1_015_r0c0", "label": "atmospheric", "caption": null, "source": "visibility"}
+{"patch_id": "gujarat_007_r3c1", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "andhra_pradesh_t1_024_r3c3", "label": "land_use", "caption": "A new cleared construction site has appeared near the river bend, with new ponds to the south-east.", "source": "visibility"}
+{"patch_id": "uttar_pradesh_t1_011_r3c3", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "rajasthan_076_r2c2", "label": "seasonal", "caption": null, "source": "visibility"}
+{"patch_id": "madhya_pradesh_082_r3c2", "label": "land_use", "caption": "A curved road that was under construction has been completed, and settlement has expanded along the right side", "source": "s0000"}
+{"patch_id": "jammu_and_kashmir_011_r0c0", "label": "seasonal", "caption": null, "source": "s0000"}
+{"patch_id": "rajasthan_t1_031_r2c0", "label": "seasonal", "caption": null, "source": "s0000"}
+{"patch_id": "gujarat_017_r2c1", "label": "seasonal", "caption": null, "source": "s0000"}
+{"patch_id": "jammu_and_kashmir_011_r2c1", "label": "seasonal", "caption": null, "source": "s0000"}
+{"patch_id": "gujarat_t1_001_r3c3", "label": "seasonal", "caption": null, "source": "s0000"}
+{"patch_id": "madhya_pradesh_t1_012_r3c0", "label": "seasonal", "caption": null, "source": "s0000"}
+{"patch_id": "mizoram_005_r1c2", "label": "none", "caption": null, "source": "s0000"}
+{"patch_id": "bihar_003_r2c0", "label": "atmospheric", "caption": null, "source": "s0000"}
+{"patch_id": "meghalaya_002_r2c0", "label": "none", "caption": null, "source": "s0000"}
+{"patch_id": "madhya_pradesh_006_r0c0", "label": "none", "caption": null, "source": "s0000"}
+{"patch_id": "assam_t1_012_r0c2", "label": "seasonal", "caption": null, "source": "s0000"}
+{"patch_id": "maharashtra_073_r2c2", "label": "seasonal", "caption": null, "source": "s0001"}
+{"patch_id": "uttar_pradesh_t1_042_r0c2", "label": "seasonal", "caption": null, "source": "s0001"}
+{"patch_id": "tamil_nadu_t1_014_r1c3", "label": "atmospheric", "caption": null, "source": "s0001"}
+{"patch_id": "arunachal_pradesh_025_r0c1", "label": "land_use", "caption": "The quarry area in the forest has expanded, with a new large bright excavation in the centre-left", "source": "s0001"}
+{"patch_id": "haryana_t1_003_r3c1", "label": "seasonal", "caption": null, "source": "s0001"}
+{"patch_id": "tamil_nadu_t1_025_r1c0", "label": "seasonal", "caption": null, "source": "s0001"}
+{"patch_id": "rajasthan_096_r1c0", "label": "seasonal", "caption": null, "source": "s0001"}
+{"patch_id": "uttar_pradesh_055_r0c3", "label": "seasonal", "caption": null, "source": "s0001"}
+{"patch_id": "tamil_nadu_005_r0c1", "label": "land_use", "caption": "The quarry and mining area in the centre has expanded, with new excavated pits and water-filled ponds", "source": "s0001"}
+{"patch_id": "maharashtra_t1_022_r2c0", "label": "seasonal", "caption": null, "source": "s0001"}
+{"patch_id": "chhattisgarh_t1_012_r1c3", "label": "none", "caption": null, "source": "s0001"}
+{"patch_id": "telangana_t1_006_r3c1", "label": "none", "caption": null, "source": "s0001"}
+{"patch_id": "jammu_and_kashmir_011_r1c2", "label": "seasonal", "caption": null, "source": "s0002"}
+{"patch_id": "madhya_pradesh_t1_055_r2c1", "label": "seasonal", "caption": null, "source": "s0002"}
+{"patch_id": "uttar_pradesh_t1_025_r2c0", "label": "seasonal", "caption": null, "source": "s0002"}
+{"patch_id": "kerala_t1_008_r2c3", "label": "none", "caption": null, "source": "s0002"}
+{"patch_id": "madhya_pradesh_062_r3c0", "label": "none", "caption": null, "source": "s0002"}
+{"patch_id": "tamil_nadu_t1_015_r0c3", "label": "seasonal", "caption": null, "source": "s0002"}
+{"patch_id": "himachal_pradesh_019_r3c1", "label": "none", "caption": null, "source": "s0002"}
+{"patch_id": "west_bengal_024_r2c0", "label": "none", "caption": null, "source": "s0002"}
+{"patch_id": "karnataka_032_r3c0", "label": "seasonal", "caption": null, "source": "s0002"}
+{"patch_id": "west_bengal_t1_018_r0c2", "label": "seasonal", "caption": null, "source": "s0002"}
+{"patch_id": "madhya_pradesh_056_r3c1", "label": "land_use", "caption": "New bright rectangular buildings have appeared among the fields south of the centre", "source": "s0002"}
+{"patch_id": "tamil_nadu_t1_025_r1c1", "label": "none", "caption": null, "source": "s0002"}
+{"patch_id": "andhra_pradesh_021_r1c3", "label": "seasonal", "caption": null, "source": "s0003"}
+{"patch_id": "uttar_pradesh_t1_025_r1c0", "label": "seasonal", "caption": null, "source": "s0003"}
+{"patch_id": "arunachal_pradesh_025_r1c2", "label": "none", "caption": null, "source": "s0003"}
+{"patch_id": "odisha_t1_012_r1c1", "label": "seasonal", "caption": null, "source": "s0003"}
+{"patch_id": "manipur_t1_003_r0c2", "label": "atmospheric", "caption": null, "source": "s0003"}
+{"patch_id": "jammu_and_kashmir_011_r3c2", "label": "seasonal", "caption": null, "source": "s0003"}
+{"patch_id": "tamil_nadu_t1_015_r2c0", "label": "seasonal", "caption": null, "source": "s0003"}
+{"patch_id": "madhya_pradesh_066_r2c1", "label": "seasonal", "caption": null, "source": "s0003"}
+{"patch_id": "karnataka_t1_002_r3c0", "label": "seasonal", "caption": null, "source": "s0003"}
+{"patch_id": "ladakh_023_r2c3", "label": "none", "caption": null, "source": "s0003"}
+{"patch_id": "ladakh_t1_021_r1c1", "label": "none", "caption": null, "source": "s0003"}
+{"patch_id": "assam_005_r2c0", "label": "none", "caption": null, "source": "s0003"}
+{"patch_id": "andhra_pradesh_023_r2c0", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "arunachal_pradesh_025_r3c3", "label": "none", "caption": null, "source": "s0004"}
+{"patch_id": "uttar_pradesh_t1_024_r0c2", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "west_bengal_t1_018_r0c0", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "assam_005_r3c2", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "odisha_010_r3c0", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "andhra_pradesh_001_r3c1", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "ladakh_t1_030_r0c1", "label": "none", "caption": null, "source": "s0004"}
+{"patch_id": "madhya_pradesh_t1_055_r1c3", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "tamil_nadu_005_r3c1", "label": "seasonal", "caption": null, "source": "s0004"}
+{"patch_id": "andaman_and_nicobar_islands_007_r3c2", "label": "none", "caption": null, "source": "s0004"}
+{"patch_id": "uttar_pradesh_067_r3c0", "label": "none", "caption": null, "source": "s0004"}
+{"patch_id": "andhra_pradesh_t1_019_r0c2", "label": "seasonal", "caption": null, "source": "s0005"}
+{"patch_id": "tamil_nadu_012_r2c0", "label": "seasonal", "caption": null, "source": "s0005"}
+{"patch_id": "karnataka_t1_040_r3c3", "label": "none", "caption": null, "source": "s0005"}
+{"patch_id": "maharashtra_061_r0c0", "label": "land_use", "caption": "Many new white-roofed sheds, likely poultry or greenhouse structures, have been built across the fields", "source": "s0005"}
+{"patch_id": "telangana_t1_007_r1c3", "label": "seasonal", "caption": null, "source": "s0005"}
+{"patch_id": "meghalaya_002_r0c3", "label": "none", "caption": null, "source": "s0005"}
+{"patch_id": "chhattisgarh_033_r3c2", "label": "none", "caption": null, "source": "s0005"}
+{"patch_id": "ladakh_t1_036_r0c1", "label": "none", "caption": null, "source": "s0005"}
+{"patch_id": "uttar_pradesh_068_r1c3", "label": "land_use", "caption": "A new highway has been built running north to south through the centre, crossing the existing expressway at a new interchange", "source": "s0005"}
+{"patch_id": "maharashtra_039_r0c1", "label": "seasonal", "caption": null, "source": "s0005"}
+{"patch_id": "maharashtra_011_r0c2", "label": "seasonal", "caption": null, "source": "s0005"}
+{"patch_id": "telangana_t1_007_r1c0", "label": "seasonal", "caption": null, "source": "s0005"}
+{"patch_id": "gujarat_t1_001_r0c3", "label": "seasonal", "caption": null, "source": "s0006"}
+{"patch_id": "gujarat_t1_009_r0c1", "label": "seasonal", "caption": null, "source": "s0006"}
+{"patch_id": "andhra_pradesh_t1_019_r2c3", "label": "seasonal", "caption": null, "source": "s0006"}
+{"patch_id": "rajasthan_006_r3c2", "label": "none", "caption": null, "source": "s0006"}
+{"patch_id": "rajasthan_015_r0c2", "label": "none", "caption": null, "source": "s0006"}
+{"patch_id": "mizoram_005_r0c0", "label": "none", "caption": null, "source": "s0006"}
+{"patch_id": "punjab_t1_007_r2c2", "label": "seasonal", "caption": null, "source": "s0006"}
+{"patch_id": "tripura_001_r0c2", "label": "none", "caption": null, "source": "s0006"}
+{"patch_id": "telangana_t1_004_r2c1", "label": "seasonal", "caption": null, "source": "s0006"}
+{"patch_id": "maharashtra_t1_053_r2c1", "label": "land_use", "caption": "New apartment blocks and a new railway line have been built in the north-west, with denser development across the town", "source": "s0006"}
+{"patch_id": "ladakh_023_r1c3", "label": "none", "caption": null, "source": "s0006"}
+{"patch_id": "gujarat_t1_001_r2c1", "label": "seasonal", "caption": null, "source": "s0006"}
+{"patch_id": "gujarat_t1_001_r1c3", "label": "seasonal", "caption": null, "source": "s0007"}
+{"patch_id": "telangana_t1_007_r1c1", "label": "none", "caption": null, "source": "s0007"}
+{"patch_id": "gujarat_017_r3c1", "label": "seasonal", "caption": null, "source": "s0007"}
+{"patch_id": "punjab_014_r2c1", "label": "none", "caption": null, "source": "s0007"}
+{"patch_id": "madhya_pradesh_056_r1c3", "label": "seasonal", "caption": null, "source": "s0007"}
+{"patch_id": "bihar_003_r3c0", "label": "seasonal", "caption": null, "source": "s0007"}
+{"patch_id": "punjab_t1_005_r0c0", "label": "seasonal", "caption": null, "source": "s0007"}
+{"patch_id": "assam_018_r0c2", "label": "seasonal", "caption": null, "source": "s0007"}
+{"patch_id": "maharashtra_061_r1c2", "label": "land_use", "caption": "Several new white-roofed sheds have appeared among the fields in the north", "source": "s0007"}
+{"patch_id": "karnataka_t1_005_r2c2", "label": "seasonal", "caption": null, "source": "s0007"}
+{"patch_id": "tamil_nadu_t1_021_r2c0", "label": "none", "caption": null, "source": "s0007"}
+{"patch_id": "tamil_nadu_t1_025_r0c0", "label": "none", "caption": null, "source": "s0007"}
+{"patch_id": "odisha_026_r0c2", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "andhra_pradesh_t1_019_r2c1", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "gujarat_017_r1c1", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "punjab_t1_005_r1c0", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "karnataka_051_r0c0", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "chhattisgarh_033_r3c3", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "mizoram_005_r0c1", "label": "none", "caption": null, "source": "s0008"}
+{"patch_id": "madhya_pradesh_006_r1c0", "label": "land_use", "caption": "The village in the centre has grown into a dense cluster of buildings across the surrounding fields", "source": "correction"}
+{"patch_id": "maharashtra_t1_041_r3c1", "label": "none", "caption": null, "source": "s0008"}
+{"patch_id": "assam_028_r2c0", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "uttarakhand_009_r3c2", "label": "none", "caption": null, "source": "s0008"}
+{"patch_id": "maharashtra_067_r2c2", "label": "seasonal", "caption": null, "source": "s0008"}
+{"patch_id": "maharashtra_067_r3c1", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "gujarat_t1_020_r3c0", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "madhya_pradesh_t1_002_r1c0", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "chhattisgarh_t1_015_r3c3", "label": "none", "caption": null, "source": "s0009"}
+{"patch_id": "mizoram_005_r3c0", "label": "none", "caption": null, "source": "s0009"}
+{"patch_id": "gujarat_t1_009_r3c2", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "madhya_pradesh_066_r2c0", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "uttar_pradesh_t1_042_r0c1", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "haryana_019_r2c2", "label": "none", "caption": null, "source": "s0009"}
+{"patch_id": "maharashtra_t1_025_r0c0", "label": "land_use", "caption": "A new road has been built running north to south through the eastern part of the image, passing the village", "source": "s0009"}
+{"patch_id": "karnataka_t1_004_r3c0", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "karnataka_041_r0c3", "label": "seasonal", "caption": null, "source": "s0009"}
+{"patch_id": "andhra_pradesh_021_r2c2", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "karnataka_041_r1c2", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "andhra_pradesh_002_r3c2", "label": "none", "caption": null, "source": "s0010"}
+{"patch_id": "manipur_002_r0c1", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "madhya_pradesh_066_r1c0", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "maharashtra_t1_032_r3c2", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "rajasthan_t1_018_r3c3", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "karnataka_014_r1c3", "label": "none", "caption": null, "source": "s0010"}
+{"patch_id": "gujarat_t1_020_r0c2", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "punjab_018_r2c0", "label": "seasonal", "caption": null, "source": "s0010"}
+{"patch_id": "karnataka_014_r3c0", "label": "none", "caption": null, "source": "s0010"}
+{"patch_id": "karnataka_041_r2c0", "label": "none", "caption": null, "source": "s0010"}
+{"patch_id": "madhya_pradesh_066_r3c1", "label": "seasonal", "caption": null, "source": "s0011"}
+{"patch_id": "uttar_pradesh_t1_028_r1c1", "label": "none", "caption": null, "source": "s0011"}
+{"patch_id": "assam_018_r0c0", "label": "none", "caption": null, "source": "s0011"}
+{"patch_id": "karnataka_t1_005_r2c3", "label": "seasonal", "caption": null, "source": "s0011"}
+{"patch_id": "odisha_t1_013_r2c2", "label": "atmospheric", "caption": null, "source": "s0011"}
+{"patch_id": "rajasthan_024_r2c3", "label": "seasonal", "caption": null, "source": "s0011"}
+{"patch_id": "telangana_017_r3c1", "label": "seasonal", "caption": null, "source": "s0011"}
+{"patch_id": "uttar_pradesh_t1_025_r3c2", "label": "atmospheric", "caption": null, "source": "s0011"}
+{"patch_id": "manipur_002_r1c0", "label": "none", "caption": null, "source": "s0011"}
+{"patch_id": "uttar_pradesh_t1_025_r2c2", "label": "atmospheric", "caption": null, "source": "s0011"}
+{"patch_id": "mizoram_005_r2c1", "label": "land_use", "caption": "A new road has been cut through the forest, winding from the north down to the south-centre", "source": "s0011"}
+{"patch_id": "andhra_pradesh_001_r3c2", "label": "none", "caption": null, "source": "s0011"}
+{"patch_id": "uttar_pradesh_068_r2c3", "label": "land_use", "caption": "The broad strip under construction in the west has become a completed highway, with new built-up patches alongside", "source": "s0012"}
+{"patch_id": "karnataka_051_r3c2", "label": "atmospheric", "caption": null, "source": "s0012"}
+{"patch_id": "jammu_and_kashmir_011_r2c3", "label": "seasonal", "caption": null, "source": "s0012"}
+{"patch_id": "andhra_pradesh_001_r1c1", "label": "seasonal", "caption": null, "source": "s0012"}
+{"patch_id": "madhya_pradesh_082_r3c0", "label": "none", "caption": null, "source": "s0012"}
+{"patch_id": "punjab_t1_007_r3c1", "label": "seasonal", "caption": null, "source": "s0012"}
+{"patch_id": "uttar_pradesh_067_r3c2", "label": "atmospheric", "caption": null, "source": "s0012"}
+{"patch_id": "karnataka_014_r3c3", "label": "none", "caption": null, "source": "s0012"}
+{"patch_id": "bihar_004_r0c0", "label": "land_use", "caption": "New large industrial sheds and buildings have appeared in the north-east and along the east side", "source": "s0012"}
+{"patch_id": "gujarat_t1_012_r2c2", "label": "none", "caption": null, "source": "s0012"}
+{"patch_id": "maharashtra_t1_025_r2c0", "label": "seasonal", "caption": null, "source": "s0012"}
+{"patch_id": "punjab_018_r3c0", "label": "seasonal", "caption": null, "source": "s0012"}
+{"patch_id": "haryana_t1_003_r0c1", "label": "seasonal", "caption": null, "source": "s0013"}
+{"patch_id": "arunachal_pradesh_008_r0c3", "label": "none", "caption": null, "source": "s0013"}
+{"patch_id": "punjab_018_r0c0", "label": "seasonal", "caption": null, "source": "s0013"}
+{"patch_id": "madhya_pradesh_034_r0c1", "label": "seasonal", "caption": null, "source": "s0013"}
+{"patch_id": "karnataka_t1_002_r2c1", "label": "seasonal", "caption": null, "source": "s0013"}
+{"patch_id": "madhya_pradesh_082_r0c0", "label": "seasonal", "caption": null, "source": "s0013"}
+{"patch_id": "ladakh_023_r0c2", "label": "none", "caption": null, "source": "s0013"}
+{"patch_id": "karnataka_041_r1c3", "label": "none", "caption": null, "source": "s0013"}
+{"patch_id": "rajasthan_t1_018_r0c0", "label": "seasonal", "caption": null, "source": "s0013"}
+{"patch_id": "uttar_pradesh_t1_024_r1c1", "label": "land_use", "caption": "A new quarry or cleared site has appeared in the north-east corner", "source": "s0013"}
+{"patch_id": "madhya_pradesh_t1_002_r3c2", "label": "seasonal", "caption": null, "source": "s0013"}
+{"patch_id": "goa_004_r2c1", "label": "none", "caption": null, "source": "s0013"}
+{"patch_id": "west_bengal_t1_018_r1c2", "label": "seasonal", "caption": null, "source": "s0014"}
+{"patch_id": "odisha_031_r0c0", "label": "none", "caption": null, "source": "s0014"}
+{"patch_id": "telangana_t1_007_r0c1", "label": "seasonal", "caption": null, "source": "s0014"}
+{"patch_id": "gujarat_t1_012_r0c1", "label": "seasonal", "caption": null, "source": "s0014"}
+{"patch_id": "kerala_005_r2c3", "label": "none", "caption": null, "source": "s0014"}
+{"patch_id": "assam_005_r0c3", "label": "none", "caption": null, "source": "s0014"}
+{"patch_id": "bihar_003_r3c3", "label": "atmospheric", "caption": null, "source": "s0014"}
+{"patch_id": "kerala_t1_008_r2c1", "label": "seasonal", "caption": null, "source": "s0014"}
+{"patch_id": "maharashtra_073_r3c2", "label": "seasonal", "caption": null, "source": "s0014"}
+{"patch_id": "bihar_003_r0c1", "label": "atmospheric", "caption": null, "source": "s0014"}
+{"patch_id": "ladakh_t1_021_r1c2", "label": "none", "caption": null, "source": "s0014"}
+{"patch_id": "goa_004_r2c2", "label": "land_use", "caption": "New construction has appeared on the hillside in the north and at the east edge, with the town becoming denser", "source": "s0014"}
+{"patch_id": "punjab_014_r1c3", "label": "none", "caption": null, "source": "s0015"}
+{"patch_id": "madhya_pradesh_t1_002_r1c3", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "karnataka_t1_002_r3c2", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "maharashtra_t1_022_r1c2", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "jammu_and_kashmir_011_r2c0", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "madhya_pradesh_062_r2c2", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "punjab_018_r0c3", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "maharashtra_057_r3c0", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "kerala_t1_008_r3c3", "label": "none", "caption": null, "source": "s0015"}
+{"patch_id": "maharashtra_039_r2c3", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "karnataka_t1_040_r0c3", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "uttar_pradesh_t1_024_r2c3", "label": "seasonal", "caption": null, "source": "s0015"}
+{"patch_id": "madhya_pradesh_066_r1c3", "label": "land_use", "caption": "New large buildings and paved compounds have appeared north of the lake in the centre", "source": "s0016"}
+{"patch_id": "karnataka_006_r0c1", "label": "land_use", "caption": "The town has become denser, with new buildings along its eastern edge", "source": "s0016"}
+{"patch_id": "madhya_pradesh_066_r2c3", "label": "seasonal", "caption": null, "source": "s0016"}
+{"patch_id": "arunachal_pradesh_008_r1c3", "label": "none", "caption": null, "source": "s0016"}
+{"patch_id": "rajasthan_096_r1c1", "label": "none", "caption": null, "source": "s0016"}
+{"patch_id": "maharashtra_063_r2c0", "label": "atmospheric", "caption": null, "source": "s0016"}
+{"patch_id": "rajasthan_006_r3c3", "label": "none", "caption": null, "source": "s0016"}
+{"patch_id": "bihar_005_r1c2", "label": "seasonal", "caption": null, "source": "s0016"}
+{"patch_id": "maharashtra_080_r0c1", "label": "land_use", "caption": "New buildings and a cleared compound have appeared on the construction site south of the river", "source": "s0016"}
+{"patch_id": "odisha_t1_026_r0c3", "label": "seasonal", "caption": null, "source": "s0016"}
+{"patch_id": "andhra_pradesh_t1_019_r1c2", "label": "seasonal", "caption": null, "source": "s0016"}
+{"patch_id": "rajasthan_t1_018_r2c0", "label": "seasonal", "caption": null, "source": "s0016"}
+{"patch_id": "meghalaya_002_r2c1", "label": "none", "caption": null, "source": "s0017"}
+{"patch_id": "uttarakhand_009_r2c0", "label": "land_use", "caption": "New industrial sheds with blue roofs have appeared along the road in the south", "source": "s0017"}
+{"patch_id": "jammu_and_kashmir_013_r0c2", "label": "atmospheric", "caption": null, "source": "s0017"}
+{"patch_id": "mizoram_006_r0c2", "label": "seasonal", "caption": null, "source": "s0017"}
+{"patch_id": "madhya_pradesh_056_r0c1", "label": "land_use", "caption": "A new industrial complex with large white sheds and a grid of new roads has been built in the centre", "source": "s0017"}
+{"patch_id": "maharashtra_t1_022_r3c0", "label": "seasonal", "caption": null, "source": "s0017"}
+{"patch_id": "andhra_pradesh_t1_019_r1c3", "label": "none", "caption": null, "source": "s0017"}
+{"patch_id": "chhattisgarh_021_r3c0", "label": "seasonal", "caption": null, "source": "s0017"}
+{"patch_id": "rajasthan_t1_031_r3c0", "label": "seasonal", "caption": null, "source": "s0017"}
+{"patch_id": "chhattisgarh_t1_012_r3c3", "label": "none", "caption": null, "source": "s0017"}
+{"patch_id": "madhya_pradesh_t1_012_r3c3", "label": "seasonal", "caption": null, "source": "s0017"}
+{"patch_id": "maharashtra_t1_025_r1c0", "label": "land_use", "caption": "A new large white-roofed building has appeared in the south-east corner near the road", "source": "s0017"}
+{"patch_id": "haryana_015_r2c2", "label": "none", "caption": null, "source": "s0018"}
+{"patch_id": "punjab_t1_007_r2c0", "label": "seasonal", "caption": null, "source": "s0018"}
+{"patch_id": "karnataka_t1_005_r3c2", "label": "seasonal", "caption": null, "source": "s0018"}
+{"patch_id": "maharashtra_039_r3c0", "label": "seasonal", "caption": null, "source": "s0018"}
+{"patch_id": "madhya_pradesh_006_r2c0", "label": "none", "caption": null, "source": "s0018"}
+{"patch_id": "chhattisgarh_042_r2c1", "label": "seasonal", "caption": null, "source": "s0018"}
+{"patch_id": "mizoram_005_r3c2", "label": "none", "caption": null, "source": "s0018"}
+{"patch_id": "meghalaya_016_r1c0", "label": "none", "caption": null, "source": "s0018"}
+{"patch_id": "uttar_pradesh_t1_025_r3c1", "label": "atmospheric", "caption": null, "source": "s0018"}
+{"patch_id": "ladakh_t1_030_r3c0", "label": "none", "caption": null, "source": "s0018"}
+{"patch_id": "maharashtra_t1_032_r2c0", "label": "seasonal", "caption": null, "source": "s0018"}
+{"patch_id": "assam_t1_012_r1c0", "label": "none", "caption": null, "source": "s0018"}
+{"patch_id": "madhya_pradesh_056_r1c0", "label": "land_use", "caption": "The industrial estate has filled in with many new factory buildings on the laid-out plots north of the road", "source": "s0019"}
+{"patch_id": "madhya_pradesh_006_r0c1", "label": "none", "caption": null, "source": "s0019"}
+{"patch_id": "meghalaya_016_r0c3", "label": "none", "caption": null, "source": "s0019"}
+{"patch_id": "ladakh_t1_036_r0c3", "label": "none", "caption": null, "source": "s0019"}
+{"patch_id": "madhya_pradesh_t1_055_r1c1", "label": "seasonal", "caption": null, "source": "s0019"}
+{"patch_id": "rajasthan_096_r0c1", "label": "seasonal", "caption": null, "source": "s0019"}
+{"patch_id": "mizoram_005_r2c3", "label": "none", "caption": null, "source": "s0019"}
+{"patch_id": "assam_t1_012_r0c3", "label": "seasonal", "caption": null, "source": "s0019"}
+{"patch_id": "uttar_pradesh_068_r3c2", "label": "none", "caption": null, "source": "s0019"}
+{"patch_id": "madhya_pradesh_t1_012_r1c0", "label": "seasonal", "caption": null, "source": "s0019"}
+{"patch_id": "maharashtra_t1_053_r2c3", "label": "land_use", "caption": "New industrial buildings with large white and blue roofs have been built across the south-east of the town", "source": "s0019"}
+{"patch_id": "telangana_t1_006_r3c0", "label": "none", "caption": null, "source": "s0019"}
+{"patch_id": "uttarakhand_010_r0c3", "label": "none", "caption": null, "source": "s0020"}
+{"patch_id": "odisha_t1_002_r0c2", "label": "seasonal", "caption": null, "source": "s0020"}
+{"patch_id": "telangana_020_r1c0", "label": "land_use", "caption": "A new paved road has been built along the south, with new construction near the town in the south-west", "source": "s0020"}
+{"patch_id": "punjab_018_r1c0", "label": "seasonal", "caption": null, "source": "s0020"}
+{"patch_id": "karnataka_t1_004_r1c1", "label": "seasonal", "caption": null, "source": "s0020"}
+{"patch_id": "haryana_t1_003_r1c0", "label": "seasonal", "caption": null, "source": "s0020"}
+{"patch_id": "arunachal_pradesh_025_r2c1", "label": "none", "caption": null, "source": "s0020"}
+{"patch_id": "maharashtra_t1_025_r3c1", "label": "none", "caption": null, "source": "s0020"}
+{"patch_id": "rajasthan_050_r0c1", "label": "none", "caption": null, "source": "s0020"}
+{"patch_id": "uttarakhand_010_r3c2", "label": "none", "caption": null, "source": "s0020"}
+{"patch_id": "rajasthan_t1_018_r1c0", "label": "seasonal", "caption": null, "source": "s0020"}
+{"patch_id": "rajasthan_024_r2c1", "label": "seasonal", "caption": null, "source": "s0020"}
+{"patch_id": "karnataka_006_r3c2", "label": "land_use", "caption": "New buildings and large white-roofed sheds have appeared across the fields, especially in the north and east", "source": "s0021"}
+{"patch_id": "maharashtra_t1_053_r1c3", "label": "land_use", "caption": "The town in the west has expanded, with new buildings and denser development", "source": "s0021"}
+{"patch_id": "maharashtra_t1_022_r3c2", "label": "seasonal", "caption": null, "source": "s0021"}
+{"patch_id": "uttar_pradesh_067_r0c0", "label": "land_use", "caption": "A new cleared construction site with bright rectangular plots has appeared in the north", "source": "s0021"}
+{"patch_id": "jammu_and_kashmir_013_r1c2", "label": "atmospheric", "caption": null, "source": "s0021"}
+{"patch_id": "uttar_pradesh_t1_028_r3c2", "label": "seasonal", "caption": null, "source": "s0021"}
+{"patch_id": "uttar_pradesh_042_r1c0", "label": "land_use", "caption": "New buildings have filled open plots in the town, with new bright structures in the centre and north-east", "source": "s0021"}
+{"patch_id": "gujarat_012_r3c3", "label": "none", "caption": null, "source": "s0021"}
+{"patch_id": "uttar_pradesh_t1_042_r1c0", "label": "seasonal", "caption": null, "source": "s0021"}
+{"patch_id": "chhattisgarh_t1_012_r3c2", "label": "none", "caption": null, "source": "s0021"}
+{"patch_id": "maharashtra_073_r2c1", "label": "seasonal", "caption": null, "source": "s0021"}
+{"patch_id": "maharashtra_t1_025_r1c1", "label": "none", "caption": null, "source": "s0021"}
+{"patch_id": "maharashtra_067_r1c0", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "haryana_015_r1c0", "label": "land_use", "caption": "A second highway has been built running south-west to north-east across the east of the image, alongside the existing road", "source": "s0022"}
+{"patch_id": "karnataka_t1_004_r2c3", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "madhya_pradesh_t1_007_r2c1", "label": "none", "caption": null, "source": "s0022"}
+{"patch_id": "punjab_t1_007_r1c1", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "tamil_nadu_005_r1c3", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "madhya_pradesh_071_r0c0", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "rajasthan_t1_039_r1c3", "label": "none", "caption": null, "source": "s0022"}
+{"patch_id": "bihar_023_r3c2", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "uttar_pradesh_067_r0c1", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "jammu_and_kashmir_011_r3c0", "label": "seasonal", "caption": null, "source": "s0022"}
+{"patch_id": "uttar_pradesh_055_r1c3", "label": "atmospheric", "caption": null, "source": "s0022"}
+{"patch_id": "telangana_t1_006_r0c0", "label": "seasonal", "caption": null, "source": "s0023"}
+{"patch_id": "andhra_pradesh_038_r1c3", "label": "land_use", "caption": "The quarries have expanded and a new row of structures has appeared along the east edge of the town", "source": "s0023"}
+{"patch_id": "bihar_005_r0c1", "label": "seasonal", "caption": null, "source": "s0023"}
+{"patch_id": "nagaland_t1_001_r0c3", "label": "atmospheric", "caption": null, "source": "s0023"}
+{"patch_id": "rajasthan_t1_058_r1c3", "label": "seasonal", "caption": null, "source": "s0023"}
+{"patch_id": "rajasthan_050_r0c0", "label": "none", "caption": null, "source": "s0023"}
+{"patch_id": "karnataka_t1_005_r0c0", "label": "seasonal", "caption": null, "source": "s0023"}
+{"patch_id": "odisha_t1_031_r1c1", "label": "land_use", "caption": "A new bridge has been built across the river in the centre", "source": "s0023"}
+{"patch_id": "telangana_020_r1c1", "label": "none", "caption": null, "source": "s0023"}
+{"patch_id": "madhya_pradesh_t1_002_r0c3", "label": "seasonal", "caption": null, "source": "s0023"}
+{"patch_id": "assam_028_r3c1", "label": "seasonal", "caption": null, "source": "s0023"}
+{"patch_id": "uttar_pradesh_t1_028_r3c0", "label": "none", "caption": null, "source": "s0023"}
+{"patch_id": "karnataka_006_r3c0", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "maharashtra_t1_022_r1c3", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "uttar_pradesh_t1_025_r0c2", "label": "atmospheric", "caption": null, "source": "s0024"}
+{"patch_id": "rajasthan_015_r1c2", "label": "none", "caption": null, "source": "s0024"}
+{"patch_id": "assam_018_r1c1", "label": "none", "caption": null, "source": "s0024"}
+{"patch_id": "rajasthan_024_r0c0", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "ladakh_023_r1c1", "label": "none", "caption": null, "source": "s0024"}
+{"patch_id": "rajasthan_t1_018_r1c1", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "rajasthan_042_r2c3", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "karnataka_014_r2c3", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "madhya_pradesh_062_r0c0", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "maharashtra_057_r2c0", "label": "seasonal", "caption": null, "source": "s0024"}
+{"patch_id": "madhya_pradesh_006_r0c3", "label": "none", "caption": null, "source": "s0025"}
+{"patch_id": "rajasthan_050_r1c2", "label": "none", "caption": null, "source": "s0025"}
+{"patch_id": "jharkhand_022_r3c3", "label": "seasonal", "caption": null, "source": "s0025"}
+{"patch_id": "bihar_004_r1c2", "label": "land_use", "caption": "New large white-roofed industrial buildings have been built in the west and north-west", "source": "s0025"}
+{"patch_id": "gujarat_t1_020_r1c3", "label": "land_use", "caption": "A new solar farm with dark panel rows has appeared in the south-east among the fields", "source": "s0025"}
+{"patch_id": "uttar_pradesh_t1_042_r1c3", "label": "seasonal", "caption": null, "source": "s0025"}
+{"patch_id": "rajasthan_t1_031_r3c3", "label": "seasonal", "caption": null, "source": "s0025"}
+{"patch_id": "punjab_t1_005_r0c3", "label": "seasonal", "caption": null, "source": "s0025"}
+{"patch_id": "karnataka_006_r2c2", "label": "seasonal", "caption": null, "source": "s0025"}
+{"patch_id": "rajasthan_t1_031_r0c3", "label": "seasonal", "caption": null, "source": "s0025"}
+{"patch_id": "punjab_t1_005_r2c0", "label": "land_use", "caption": "New dark rectangular ponds have been dug east and south of the town", "source": "s0025"}
+{"patch_id": "maharashtra_t1_053_r3c3", "label": "land_use", "caption": "New industrial buildings with blue and white roofs have appeared in the east near the railway", "source": "s0025"}
+{"patch_id": "maharashtra_039_r1c1", "label": "none", "caption": null, "source": "s0026"}
+{"patch_id": "uttar_pradesh_t1_028_r0c1", "label": "seasonal", "caption": null, "source": "s0026"}
+{"patch_id": "maharashtra_067_r2c1", "label": "seasonal", "caption": null, "source": "s0026"}
+{"patch_id": "madhya_pradesh_071_r2c2", "label": "seasonal", "caption": null, "source": "s0026"}
+{"patch_id": "maharashtra_t1_041_r2c2", "label": "none", "caption": null, "source": "s0026"}
+{"patch_id": "haryana_t1_003_r0c3", "label": "seasonal", "caption": null, "source": "s0026"}
+{"patch_id": "odisha_t1_026_r3c1", "label": "land_use", "caption": "A new road loop has been built in the south-centre near the solar panels", "source": "s0026"}
+{"patch_id": "odisha_026_r0c1", "label": "seasonal", "caption": null, "source": "s0026"}
+{"patch_id": "nagaland_013_r3c2", "label": "land_use", "caption": "A new road has been cut through the forest, winding across the north-east", "source": "s0026"}
+{"patch_id": "maharashtra_039_r3c2", "label": "seasonal", "caption": null, "source": "s0026"}
+{"patch_id": "andhra_pradesh_023_r3c1", "label": "seasonal", "caption": null, "source": "s0026"}
+{"patch_id": "ladakh_t1_021_r3c3", "label": "none", "caption": null, "source": "s0026"}
+{"patch_id": "mizoram_006_r3c1", "label": "land_use", "caption": "Patches of forest have been cleared in the centre-east", "source": "s0027"}
+{"patch_id": "madhya_pradesh_066_r0c0", "label": "seasonal", "caption": null, "source": "s0027"}
+{"patch_id": "maharashtra_t1_022_r0c1", "label": "land_use", "caption": "The road under construction across the north has been completed as a highway, with a new pond at its western end", "source": "s0027"}
+{"patch_id": "madhya_pradesh_075_r2c2", "label": "seasonal", "caption": null, "source": "s0027"}
+{"patch_id": "karnataka_t1_005_r0c2", "label": "seasonal", "caption": null, "source": "s0027"}
+{"patch_id": "uttar_pradesh_t1_025_r2c1", "label": "atmospheric", "caption": null, "source": "s0027"}
+{"patch_id": "rajasthan_096_r3c1", "label": "none", "caption": null, "source": "s0027"}
+{"patch_id": "chhattisgarh_042_r1c0", "label": "none", "caption": null, "source": "s0027"}
+{"patch_id": "madhya_pradesh_t1_055_r0c3", "label": "seasonal", "caption": null, "source": "s0027"}
+{"patch_id": "maharashtra_067_r0c1", "label": "seasonal", "caption": null, "source": "s0027"}
+{"patch_id": "karnataka_t1_004_r0c2", "label": "seasonal", "caption": null, "source": "s0027"}
+{"patch_id": "jharkhand_t1_013_r3c3", "label": "land_use", "caption": "A new white-roofed building has appeared north of the centre", "source": "s0027"}
+{"patch_id": "bihar_004_r2c2", "label": "land_use", "caption": "New large white-roofed buildings have appeared in the south, with a new road junction in the south-west", "source": "s0028"}
+{"patch_id": "maharashtra_t1_032_r0c3", "label": "land_use", "caption": "New buildings have appeared along the highway in the north", "source": "s0028"}
+{"patch_id": "meghalaya_016_r0c2", "label": "none", "caption": null, "source": "s0028"}
+{"patch_id": "andhra_pradesh_t1_019_r0c0", "label": "seasonal", "caption": null, "source": "s0028"}
+{"patch_id": "bihar_004_r1c0", "label": "seasonal", "caption": null, "source": "s0028"}
+{"patch_id": "andhra_pradesh_001_r3c3", "label": "none", "caption": null, "source": "s0028"}
+{"patch_id": "andhra_pradesh_001_r2c3", "label": "seasonal", "caption": null, "source": "s0028"}
+{"patch_id": "tripura_001_r1c2", "label": "none", "caption": null, "source": "s0028"}
+{"patch_id": "madhya_pradesh_066_r1c1", "label": "land_use", "caption": "The town has expanded with new buildings to the east and south", "source": "s0028"}
+{"patch_id": "himachal_pradesh_t1_009_r1c3", "label": "none", "caption": null, "source": "s0028"}
+{"patch_id": "rajasthan_t1_031_r0c1", "label": "seasonal", "caption": null, "source": "s0028"}
+{"patch_id": "uttar_pradesh_t1_013_r2c2", "label": "land_use", "caption": "A new road has been built running from the south-west to the north-east through the village", "source": "s0028"}
+{"patch_id": "assam_018_r3c1", "label": "seasonal", "caption": null, "source": "s0029"}
+{"patch_id": "odisha_t1_012_r3c3", "label": "seasonal", "caption": null, "source": "s0029"}
+{"patch_id": "maharashtra_073_r0c3", "label": "seasonal", "caption": null, "source": "s0029"}
+{"patch_id": "nagaland_t1_001_r2c2", "label": "none", "caption": null, "source": "s0029"}
+{"patch_id": "madhya_pradesh_062_r1c3", "label": "seasonal", "caption": null, "source": "s0029"}
+{"patch_id": "punjab_014_r0c1", "label": "seasonal", "caption": null, "source": "s0029"}
+{"patch_id": "chhattisgarh_t1_012_r2c3", "label": "none", "caption": null, "source": "s0029"}
+{"patch_id": "tamil_nadu_t1_014_r0c2", "label": "atmospheric", "caption": null, "source": "s0029"}
+{"patch_id": "gujarat_t1_012_r1c3", "label": "seasonal", "caption": null, "source": "s0029"}
+{"patch_id": "delhi_002_r2c2", "label": "land_use", "caption": "New high-rise apartment blocks and buildings have filled the open land in the centre and east of the city", "source": "s0029"}
+{"patch_id": "meghalaya_002_r3c3", "label": "none", "caption": null, "source": "s0029"}
+{"patch_id": "chhattisgarh_t1_015_r2c1", "label": "none", "caption": null, "source": "s0029"}
+{"patch_id": "telangana_020_r0c2", "label": "land_use", "caption": "The village in the west has expanded and farmland has spread into the scrubland around it", "source": "s0030"}
+{"patch_id": "west_bengal_024_r3c2", "label": "none", "caption": null, "source": "s0030"}
+{"patch_id": "maharashtra_t1_025_r0c3", "label": "none", "caption": null, "source": "s0030"}
+{"patch_id": "bihar_004_r3c3", "label": "land_use", "caption": "New large white-roofed industrial buildings have been built along the main road in the south and centre", "source": "s0030"}
+{"patch_id": "karnataka_t1_005_r0c3", "label": "seasonal", "caption": null, "source": "s0030"}
+{"patch_id": "gujarat_t1_001_r1c1", "label": "seasonal", "caption": null, "source": "s0030"}
+{"patch_id": "maharashtra_t1_037_r1c3", "label": "atmospheric", "caption": null, "source": "s0030"}
+{"patch_id": "karnataka_006_r2c1", "label": "seasonal", "caption": null, "source": "s0030"}
+{"patch_id": "punjab_014_r3c1", "label": "seasonal", "caption": null, "source": "s0030"}
+{"patch_id": "uttar_pradesh_t1_042_r1c2", "label": "seasonal", "caption": null, "source": "s0030"}
+{"patch_id": "odisha_031_r2c1", "label": "seasonal", "caption": null, "source": "s0030"}
+{"patch_id": "nagaland_t1_001_r0c2", "label": "none", "caption": null, "source": "s0030"}
+{"patch_id": "odisha_t1_002_r2c0", "label": "atmospheric", "caption": null, "source": "s0031"}
+{"patch_id": "jharkhand_t1_013_r1c1", "label": "seasonal", "caption": null, "source": "s0031"}
+{"patch_id": "kerala_t1_008_r3c1", "label": "none", "caption": null, "source": "s0031"}
+{"patch_id": "rajasthan_024_r2c2", "label": "seasonal", "caption": null, "source": "s0031"}
+{"patch_id": "maharashtra_039_r0c2", "label": "seasonal", "caption": null, "source": "s0031"}
+{"patch_id": "tamil_nadu_t1_021_r3c0", "label": "seasonal", "caption": null, "source": "s0031"}
+{"patch_id": "haryana_t1_003_r3c3", "label": "seasonal", "caption": null, "source": "s0031"}
+{"patch_id": "ladakh_t1_023_r3c2", "label": "none", "caption": null, "source": "s0031"}
+{"patch_id": "uttarakhand_010_r2c0", "label": "none", "caption": null, "source": "s0031"}
+{"patch_id": "madhya_pradesh_006_r0c2", "label": "none", "caption": null, "source": "s0031"}
+{"patch_id": "karnataka_030_r0c0", "label": "seasonal", "caption": null, "source": "s0031"}
+{"patch_id": "rajasthan_088_r1c2", "label": "land_use", "caption": "New buildings appear north of the upper basin and between the two basins", "source": "correction"}
+{"patch_id": "madhya_pradesh_006_r1c2", "label": "none", "caption": null, "source": "s0032"}
+{"patch_id": "bihar_026_r2c2", "label": "atmospheric", "caption": null, "source": "s0032"}
+{"patch_id": "rajasthan_t1_039_r3c3", "label": "seasonal", "caption": null, "source": "s0032"}
+{"patch_id": "haryana_015_r1c2", "label": "none", "caption": null, "source": "s0032"}
+{"patch_id": "karnataka_014_r2c0", "label": "seasonal", "caption": null, "source": "s0032"}
+{"patch_id": "punjab_t1_007_r1c0", "label": "seasonal", "caption": null, "source": "s0032"}
+{"patch_id": "andhra_pradesh_001_r1c0", "label": "seasonal", "caption": null, "source": "s0032"}
+{"patch_id": "gujarat_t1_001_r0c2", "label": "none", "caption": null, "source": "s0032"}
+{"patch_id": "west_bengal_024_r2c3", "label": "land_use", "caption": "New rectangular aquaculture ponds have been dug in the south-east along the river", "source": "s0032"}
+{"patch_id": "odisha_t1_012_r3c2", "label": "seasonal", "caption": null, "source": "s0032"}
+{"patch_id": "manipur_t1_003_r1c1", "label": "atmospheric", "caption": null, "source": "s0032"}
+{"patch_id": "uttar_pradesh_t1_042_r0c0", "label": "seasonal", "caption": null, "source": "s0032"}
+{"patch_id": "karnataka_t1_002_r3c1", "label": "seasonal", "caption": null, "source": "s0033"}
+{"patch_id": "punjab_018_r0c2", "label": "land_use", "caption": "New industrial buildings have been added around the factory compound in the south and north-east", "source": "s0033"}
+{"patch_id": "telangana_024_r2c1", "label": "land_use", "caption": "New industrial buildings and paved areas have appeared along the road in the north-east", "source": "s0033"}
+{"patch_id": "uttar_pradesh_t1_013_r0c3", "label": "seasonal", "caption": null, "source": "s0033"}
+{"patch_id": "odisha_031_r0c3", "label": "none", "caption": null, "source": "s0033"}
+{"patch_id": "andhra_pradesh_t1_024_r2c0", "label": "land_use", "caption": "A new railway line has been built running east to west across the centre, crossing the ravine", "source": "s0033"}
+{"patch_id": "odisha_026_r1c1", "label": "seasonal", "caption": null, "source": "s0033"}
+{"patch_id": "rajasthan_050_r3c2", "label": "none", "caption": null, "source": "s0033"}
+{"patch_id": "chhattisgarh_t1_015_r3c1", "label": "none", "caption": null, "source": "s0033"}
+{"patch_id": "chhattisgarh_042_r3c2", "label": "none", "caption": null, "source": "s0033"}
+{"patch_id": "maharashtra_073_r2c0", "label": "land_use", "caption": "The reservoir has been enlarged and new structures have appeared beside it in the north", "source": "s0033"}
+{"patch_id": "bihar_003_r0c0", "label": "atmospheric", "caption": null, "source": "s0033"}
+{"patch_id": "gujarat_t1_020_r3c3", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "uttar_pradesh_t1_013_r0c2", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "rajasthan_t1_065_r0c0", "label": "none", "caption": null, "source": "s0034"}
+{"patch_id": "uttarakhand_009_r0c3", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "uttar_pradesh_t1_013_r1c3", "label": "land_use", "caption": "The town has expanded with new built-up areas along the main road in the centre and south", "source": "s0034"}
+{"patch_id": "tamil_nadu_t1_015_r3c1", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "rajasthan_t1_018_r2c2", "label": "land_use", "caption": "New built-up plots and a small reservoir have appeared north of the town, with the town edge growing", "source": "s0034"}
+{"patch_id": "odisha_t1_026_r1c2", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "uttar_pradesh_t1_042_r3c0", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "gujarat_017_r0c2", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "odisha_t1_002_r0c3", "label": "seasonal", "caption": null, "source": "s0034"}
+{"patch_id": "kerala_t1_002_r2c3", "label": "none", "caption": null, "source": "s0034"}
+{"patch_id": "uttarakhand_009_r1c2", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "bihar_004_r3c1", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "karnataka_006_r0c3", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "chhattisgarh_t1_012_r0c1", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "rajasthan_t1_058_r2c0", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "rajasthan_t1_045_r1c1", "label": "none", "caption": null, "source": "s0035"}
+{"patch_id": "andhra_pradesh_002_r2c2", "label": "land_use", "caption": "The coastal industrial or salt-pan complex has expanded with many new white-roofed structures along the shore", "source": "s0035"}
+{"patch_id": "chhattisgarh_025_r3c3", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "odisha_026_r0c3", "label": "land_use", "caption": "The coastal plantation strip has been cleared and new aquaculture ponds have appeared north of the river", "source": "s0035"}
+{"patch_id": "gujarat_t1_001_r3c0", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "chhattisgarh_t1_012_r0c3", "label": "none", "caption": null, "source": "s0035"}
+{"patch_id": "manipur_t1_003_r2c3", "label": "seasonal", "caption": null, "source": "s0035"}
+{"patch_id": "karnataka_t1_004_r0c1", "label": "seasonal", "caption": null, "source": "s0036"}
+{"patch_id": "madhya_pradesh_062_r1c1", "label": "seasonal", "caption": null, "source": "s0036"}
+{"patch_id": "karnataka_t1_002_r1c1", "label": "land_use", "caption": "A new solar farm has appeared in the north-centre among the fields", "source": "s0036"}
+{"patch_id": "mizoram_005_r1c0", "label": "none", "caption": null, "source": "s0036"}
+{"patch_id": "rajasthan_t1_045_r2c1", "label": "none", "caption": null, "source": "s0036"}
+{"patch_id": "maharashtra_073_r2c3", "label": "seasonal", "caption": null, "source": "s0036"}
+{"patch_id": "rajasthan_096_r1c3", "label": "seasonal", "caption": null, "source": "s0036"}
+{"patch_id": "ladakh_t1_023_r1c3", "label": "none", "caption": null, "source": "s0036"}
+{"patch_id": "gujarat_t1_017_r3c0", "label": "seasonal", "caption": null, "source": "s0036"}
+{"patch_id": "uttarakhand_010_r3c1", "label": "none", "caption": null, "source": "s0036"}
+{"patch_id": "madhya_pradesh_082_r3c3", "label": "land_use", "caption": "The town has expanded east with new buildings along the road, and a new highway junction has appeared in the south", "source": "s0036"}
+{"patch_id": "uttar_pradesh_067_r1c3", "label": "atmospheric", "caption": null, "source": "s0036"}
+{"patch_id": "karnataka_t1_005_r1c3", "label": "seasonal", "caption": null, "source": "s0037"}
+{"patch_id": "madhya_pradesh_t1_002_r1c1", "label": "none", "caption": null, "source": "s0037"}
+{"patch_id": "uttar_pradesh_t1_013_r0c0", "label": "seasonal", "caption": null, "source": "s0037"}
+{"patch_id": "punjab_018_r3c3", "label": "seasonal", "caption": null, "source": "s0037"}
+{"patch_id": "uttar_pradesh_067_r1c2", "label": "atmospheric", "caption": null, "source": "s0037"}
+{"patch_id": "madhya_pradesh_t1_012_r0c3", "label": "seasonal", "caption": null, "source": "s0037"}
+{"patch_id": "madhya_pradesh_045_r1c3", "label": "seasonal", "caption": null, "source": "s0037"}
+{"patch_id": "west_bengal_t1_005_r1c0", "label": "seasonal", "caption": null, "source": "s0037"}
+{"patch_id": "telangana_024_r0c3", "label": "seasonal", "caption": null, "source": "s0037"}
+{"patch_id": "chhattisgarh_t1_012_r3c0", "label": "none", "caption": null, "source": "s0037"}
+{"patch_id": "odisha_010_r1c2", "label": "land_use", "caption": "New rows of plantation or orchard plots have been laid out across the south and east", "source": "s0037"}
+{"patch_id": "ladakh_t1_023_r3c3", "label": "none", "caption": null, "source": "s0037"}
+{"patch_id": "jharkhand_t1_013_r0c1", "label": "atmospheric", "caption": null, "source": "s0038"}
+{"patch_id": "madhya_pradesh_t1_012_r2c2", "label": "seasonal", "caption": null, "source": "s0038"}
+{"patch_id": "kerala_t1_002_r1c2", "label": "none", "caption": null, "source": "s0038"}
+{"patch_id": "ladakh_t1_021_r0c3", "label": "none", "caption": null, "source": "s0038"}
+{"patch_id": "rajasthan_t1_065_r0c1", "label": "none", "caption": null, "source": "s0038"}
+{"patch_id": "chhattisgarh_t1_028_r2c0", "label": "seasonal", "caption": null, "source": "s0038"}
+{"patch_id": "madhya_pradesh_071_r2c3", "label": "seasonal", "caption": null, "source": "s0038"}
+{"patch_id": "tripura_001_r0c3", "label": "none", "caption": null, "source": "s0038"}
+{"patch_id": "rajasthan_006_r0c0", "label": "seasonal", "caption": null, "source": "s0038"}
+{"patch_id": "andhra_pradesh_001_r3c0", "label": "none", "caption": null, "source": "s0038"}
+{"patch_id": "maharashtra_067_r3c2", "label": "seasonal", "caption": null, "source": "s0038"}
+{"patch_id": "jammu_and_kashmir_013_r2c0", "label": "atmospheric", "caption": null, "source": "s0038"}
+{"patch_id": "ladakh_t1_030_r2c2", "label": "none", "caption": null, "source": "s0039"}
+{"patch_id": "assam_028_r1c0", "label": "seasonal", "caption": null, "source": "s0039"}
+{"patch_id": "gujarat_t1_001_r1c0", "label": "land_use", "caption": "New solar panel arrays and white-roofed structures have been built across the north and east of the fields", "source": "s0039"}
+{"patch_id": "maharashtra_080_r3c0", "label": "land_use", "caption": "New buildings and cleared plots have appeared around the reservoir, especially in the north and east", "source": "s0039"}
+{"patch_id": "madhya_pradesh_062_r0c1", "label": "seasonal", "caption": null, "source": "s0039"}
+{"patch_id": "punjab_018_r2c3", "label": "seasonal", "caption": null, "source": "s0039"}
+{"patch_id": "karnataka_t1_040_r2c0", "label": "atmospheric", "caption": null, "source": "s0039"}
+{"patch_id": "telangana_017_r0c3", "label": "seasonal", "caption": null, "source": "s0039"}
+{"patch_id": "punjab_t1_007_r3c3", "label": "seasonal", "caption": null, "source": "s0039"}
+{"patch_id": "bihar_004_r0c1", "label": "land_use", "caption": "A new highway interchange has been built in the east, with new industrial buildings in the north", "source": "s0039"}
+{"patch_id": "uttar_pradesh_t1_028_r1c2", "label": "none", "caption": null, "source": "s0039"}
+{"patch_id": "uttar_pradesh_068_r2c1", "label": "seasonal", "caption": null, "source": "s0039"}
+{"patch_id": "kerala_t1_002_r0c1", "label": "none", "caption": null, "source": "s0040"}
+{"patch_id": "ladakh_023_r2c1", "label": "none", "caption": null, "source": "s0040"}
+{"patch_id": "manipur_t1_003_r2c2", "label": "atmospheric", "caption": null, "source": "s0040"}
+{"patch_id": "madhya_pradesh_t1_055_r2c0", "label": "seasonal", "caption": null, "source": "s0040"}
+{"patch_id": "tripura_008_r3c3", "label": "atmospheric", "caption": null, "source": "s0040"}
+{"patch_id": "madhya_pradesh_075_r0c3", "label": "atmospheric", "caption": null, "source": "s0040"}
+{"patch_id": "madhya_pradesh_034_r3c1", "label": "seasonal", "caption": null, "source": "s0040"}
+{"patch_id": "madhya_pradesh_082_r1c1", "label": "none", "caption": null, "source": "s0040"}
+{"patch_id": "madhya_pradesh_071_r3c0", "label": "atmospheric", "caption": null, "source": "s0040"}
+{"patch_id": "karnataka_t1_002_r3c3", "label": "seasonal", "caption": null, "source": "s0040"}
+{"patch_id": "gujarat_t1_012_r0c3", "label": "land_use", "caption": "The cleared area and buildings north of the road have been replaced by fields, while the road corridor remains", "source": "s0040"}
+{"patch_id": "himachal_pradesh_t1_009_r2c3", "label": "none", "caption": null, "source": "s0040"}
+{"patch_id": "madhya_pradesh_075_r3c3", "label": "seasonal", "caption": null, "source": "s0041"}
+{"patch_id": "andhra_pradesh_001_r1c2", "label": "none", "caption": null, "source": "s0041"}
+{"patch_id": "rajasthan_t1_065_r1c2", "label": "none", "caption": null, "source": "s0041"}
+{"patch_id": "maharashtra_t1_037_r3c2", "label": "atmospheric", "caption": null, "source": "s0041"}
+{"patch_id": "telangana_t1_006_r0c2", "label": "seasonal", "caption": null, "source": "s0041"}
+{"patch_id": "odisha_031_r1c1", "label": "seasonal", "caption": null, "source": "s0041"}
+{"patch_id": "uttar_pradesh_068_r0c1", "label": "none", "caption": null, "source": "s0041"}
+{"patch_id": "telangana_t1_006_r2c3", "label": "none", "caption": null, "source": "s0041"}
+{"patch_id": "arunachal_pradesh_025_r3c1", "label": "land_use", "caption": "New construction and cleared land have appeared along the river valley in the centre and south", "source": "s0041"}
+{"patch_id": "haryana_015_r2c0", "label": "land_use", "caption": "The canal under construction in the north has been completed and new structures have appeared along it", "source": "s0041"}
+{"patch_id": "nagaland_t1_001_r3c1", "label": "none", "caption": null, "source": "s0041"}
+{"patch_id": "bihar_004_r2c1", "label": "land_use", "caption": "New white-roofed buildings have appeared in the east and south", "source": "s0041"}
+{"patch_id": "ladakh_023_r3c3", "label": "none", "caption": null, "source": "s0042"}
+{"patch_id": "maharashtra_t1_018_r1c0", "label": "land_use", "caption": "New circular earthworks and cleared plots have appeared across the barren land in the north and centre", "source": "s0042"}
+{"patch_id": "chhattisgarh_033_r2c2", "label": "none", "caption": null, "source": "s0042"}
+{"patch_id": "madhya_pradesh_071_r3c3", "label": "land_use", "caption": "A new road has been built across the centre, running east from the quarry", "source": "s0042"}
+{"patch_id": "arunachal_pradesh_008_r1c0", "label": "none", "caption": null, "source": "s0042"}
+{"patch_id": "maharashtra_t1_022_r0c3", "label": "land_use", "caption": "The village in the centre has grown with new buildings and a new pond", "source": "s0042"}
+{"patch_id": "odisha_t1_012_r3c0", "label": "atmospheric", "caption": null, "source": "s0042"}
+{"patch_id": "goa_004_r2c3", "label": "none", "caption": null, "source": "s0042"}
+{"patch_id": "goa_004_r2c0", "label": "land_use", "caption": "The airport terminal area has been rebuilt and a new structure has appeared by the runway", "source": "s0042"}
+{"patch_id": "jharkhand_001_r1c1", "label": "atmospheric", "caption": null, "source": "s0042"}
+{"patch_id": "madhya_pradesh_066_r2c2", "label": "seasonal", "caption": null, "source": "s0042"}
+{"patch_id": "andhra_pradesh_021_r0c3", "label": "seasonal", "caption": null, "source": "s0042"}
+{"patch_id": "maharashtra_063_r1c1", "label": "land_use", "caption": "New buildings and a new road have been built across the scrubland east of the town", "source": "s0043"}
+{"patch_id": "himachal_pradesh_019_r0c0", "label": "none", "caption": null, "source": "s0043"}
+{"patch_id": "odisha_010_r1c3", "label": "seasonal", "caption": null, "source": "s0043"}
+{"patch_id": "andhra_pradesh_023_r1c0", "label": "seasonal", "caption": null, "source": "s0043"}
+{"patch_id": "maharashtra_t1_037_r3c0", "label": "atmospheric", "caption": null, "source": "s0043"}
+{"patch_id": "madhya_pradesh_082_r2c0", "label": "seasonal", "caption": null, "source": "s0043"}
+{"patch_id": "ladakh_t1_023_r2c2", "label": "none", "caption": null, "source": "s0043"}
+{"patch_id": "ladakh_t1_036_r2c3", "label": "none", "caption": null, "source": "s0043"}
+{"patch_id": "maharashtra_067_r0c3", "label": "seasonal", "caption": null, "source": "s0043"}
+{"patch_id": "gujarat_t1_017_r2c2", "label": "seasonal", "caption": null, "source": "s0043"}
+{"patch_id": "rajasthan_096_r0c0", "label": "land_use", "caption": "New farm fields and roads have been laid out in the south-east", "source": "s0043"}
+{"patch_id": "arunachal_pradesh_025_r0c3", "label": "none", "caption": null, "source": "s0043"}
+{"patch_id": "odisha_t1_026_r3c0", "label": "seasonal", "caption": null, "source": "s0044"}
+{"patch_id": "rajasthan_t1_045_r2c0", "label": "none", "caption": null, "source": "s0044"}
+{"patch_id": "uttar_pradesh_t1_015_r1c0", "label": "seasonal", "caption": null, "source": "s0044"}
+{"patch_id": "rajasthan_t1_039_r2c1", "label": "seasonal", "caption": null, "source": "s0044"}
+{"patch_id": "madhya_pradesh_t1_055_r3c1", "label": "land_use", "caption": "A new bright quarry pit has opened in the barren land south of the fields", "source": "s0044"}
+{"patch_id": "bihar_023_r3c0", "label": "none", "caption": null, "source": "s0044"}
+{"patch_id": "gujarat_048_r2c1", "label": "land_use", "caption": "A new industrial complex with large white buildings has been built in the centre-east", "source": "s0044"}
+{"patch_id": "uttarakhand_009_r0c0", "label": "land_use", "caption": "The highway has been widened and new structures have appeared along it, with the town expanding in the north-west", "source": "s0044"}
+{"patch_id": "kerala_005_r1c2", "label": "none", "caption": null, "source": "s0044"}
+{"patch_id": "madhya_pradesh_082_r2c3", "label": "land_use", "caption": "A new pond has been dug south of the town, which has grown slightly", "source": "s0044"}
+{"patch_id": "andhra_pradesh_006_r2c1", "label": "none", "caption": null, "source": "s0044"}
+{"patch_id": "punjab_014_r0c3", "label": "land_use", "caption": "A new road has been built running north-west to south-east through the centre", "source": "s0044"}
+{"patch_id": "maharashtra_t1_037_r3c3", "label": "atmospheric", "caption": null, "source": "s0045"}
+{"patch_id": "maharashtra_057_r3c3", "label": "seasonal", "caption": null, "source": "s0045"}
+{"patch_id": "madhya_pradesh_066_r0c2", "label": "land_use", "caption": "A new railway line has been built running diagonally across the image", "source": "s0045"}
+{"patch_id": "rajasthan_042_r3c1", "label": "seasonal", "caption": null, "source": "s0045"}
+{"patch_id": "madhya_pradesh_t1_055_r2c3", "label": "atmospheric", "caption": null, "source": "s0045"}
+{"patch_id": "maharashtra_t1_022_r2c2", "label": "seasonal", "caption": null, "source": "s0045"}
+{"patch_id": "ladakh_t1_036_r1c3", "label": "none", "caption": null, "source": "s0045"}
+{"patch_id": "haryana_015_r3c3", "label": "seasonal", "caption": null, "source": "s0045"}
+{"patch_id": "bihar_005_r3c2", "label": "atmospheric", "caption": null, "source": "s0045"}
+{"patch_id": "karnataka_041_r2c1", "label": "seasonal", "caption": null, "source": "s0045"}
+{"patch_id": "uttar_pradesh_t1_028_r3c3", "label": "seasonal", "caption": null, "source": "s0045"}
+{"patch_id": "rajasthan_t1_058_r2c3", "label": "seasonal", "caption": null, "source": "s0045"}
+{"patch_id": "assam_t1_012_r1c3", "label": "none", "caption": null, "source": "s0046"}
+{"patch_id": "maharashtra_t1_037_r2c0", "label": "atmospheric", "caption": null, "source": "s0046"}
+{"patch_id": "andhra_pradesh_023_r2c3", "label": "land_use", "caption": "A quarry in the east has expanded, with new bright excavation near the north-east corner", "source": "s0046"}
+{"patch_id": "delhi_002_r1c0", "label": "atmospheric", "caption": null, "source": "s0046"}
+{"patch_id": "madhya_pradesh_034_r1c3", "label": "land_use", "caption": "New structures have appeared along the highway on the west side, with new cleared plots nearby", "source": "s0046"}
+{"patch_id": "punjab_018_r2c1", "label": "land_use", "caption": "A new white-roofed building has been built in the north-east among the fields", "source": "s0046"}
+{"patch_id": "odisha_t1_026_r3c3", "label": "seasonal", "caption": null, "source": "s0046"}
+{"patch_id": "jammu_and_kashmir_011_r1c3", "label": "land_use", "caption": "The large pond in the south-east has been drained and the land cleared, with new embankment works", "source": "s0046"}
+{"patch_id": "kerala_t1_002_r0c2", "label": "atmospheric", "caption": null, "source": "s0046"}
+{"patch_id": "punjab_t1_005_r3c0", "label": "seasonal", "caption": null, "source": "s0046"}
+{"patch_id": "odisha_t1_013_r0c3", "label": "seasonal", "caption": null, "source": "s0046"}
+{"patch_id": "tamil_nadu_t1_025_r3c3", "label": "none", "caption": null, "source": "s0046"}
+{"patch_id": "tripura_008_r2c1", "label": "atmospheric", "caption": null, "source": "s0047"}
+{"patch_id": "jammu_and_kashmir_013_r1c1", "label": "atmospheric", "caption": null, "source": "s0047"}
+{"patch_id": "assam_018_r0c1", "label": "none", "caption": null, "source": "s0047"}
+{"patch_id": "madhya_pradesh_t1_002_r3c1", "label": "seasonal", "caption": null, "source": "s0047"}
+{"patch_id": "maharashtra_063_r2c3", "label": "atmospheric", "caption": null, "source": "s0047"}
+{"patch_id": "west_bengal_t1_005_r1c1", "label": "seasonal", "caption": null, "source": "s0047"}
+{"patch_id": "karnataka_014_r2c1", "label": "seasonal", "caption": null, "source": "s0047"}
+{"patch_id": "madhya_pradesh_t1_002_r2c1", "label": "land_use", "caption": "A new building complex has appeared in the centre-west among the scrubland", "source": "s0047"}
+{"patch_id": "uttar_pradesh_t1_042_r2c1", "label": "seasonal", "caption": null, "source": "s0047"}
+{"patch_id": "maharashtra_t1_025_r0c2", "label": "none", "caption": null, "source": "s0047"}
+{"patch_id": "rajasthan_024_r1c3", "label": "land_use", "caption": "A new solar installation has appeared on the west side of the fields", "source": "s0047"}
+{"patch_id": "uttarakhand_010_r0c1", "label": "atmospheric", "caption": null, "source": "s0047"}
+{"patch_id": "andhra_pradesh_006_r0c2", "label": "none", "caption": null, "source": "s0048"}
+{"patch_id": "tripura_008_r0c1", "label": "atmospheric", "caption": null, "source": "s0048"}
+{"patch_id": "west_bengal_024_r2c1", "label": "seasonal", "caption": null, "source": "s0048"}
+{"patch_id": "maharashtra_057_r3c1", "label": "land_use", "caption": "A new building complex with white roofs has appeared south of the highway", "source": "s0048"}
+{"patch_id": "rajasthan_t1_018_r1c3", "label": "seasonal", "caption": null, "source": "s0048"}
+{"patch_id": "andhra_pradesh_t1_019_r3c2", "label": "none", "caption": null, "source": "s0048"}
+{"patch_id": "karnataka_032_r2c0", "label": "seasonal", "caption": null, "source": "s0048"}
+{"patch_id": "maharashtra_067_r0c2", "label": "none", "caption": null, "source": "s0048"}
+{"patch_id": "jharkhand_022_r0c3", "label": "land_use", "caption": "A new reservoir has been built in the centre, with its embankment and water now visible", "source": "s0048"}
+{"patch_id": "madhya_pradesh_t1_012_r1c2", "label": "seasonal", "caption": null, "source": "s0048"}
+{"patch_id": "rajasthan_t1_045_r0c3", "label": "land_use", "caption": "A new road has been built running north to south through the centre of the desert", "source": "s0048"}
+{"patch_id": "jharkhand_t1_013_r2c2", "label": "seasonal", "caption": null, "source": "s0048"}
+{"patch_id": "meghalaya_016_r2c2", "label": "none", "caption": null, "source": "s0049"}
+{"patch_id": "rajasthan_006_r1c3", "label": "seasonal", "caption": null, "source": "s0049"}
+{"patch_id": "assam_028_r0c2", "label": "land_use", "caption": "The white-roofed building complex in the south has been removed and the land is now bare", "source": "s0049"}
+{"patch_id": "nagaland_t1_001_r1c3", "label": "atmospheric", "caption": null, "source": "s0049"}
+{"patch_id": "karnataka_t1_005_r3c0", "label": "seasonal", "caption": null, "source": "s0049"}
+{"patch_id": "tripura_008_r0c0", "label": "atmospheric", "caption": null, "source": "s0049"}
+{"patch_id": "uttar_pradesh_042_r1c3", "label": "seasonal", "caption": null, "source": "s0049"}
+{"patch_id": "punjab_t1_007_r3c0", "label": "atmospheric", "caption": null, "source": "s0049"}
+{"patch_id": "maharashtra_073_r3c0", "label": "seasonal", "caption": null, "source": "s0049"}
+{"patch_id": "jharkhand_028_r1c0", "label": "seasonal", "caption": null, "source": "s0049"}
+{"patch_id": "madhya_pradesh_071_r3c1", "label": "seasonal", "caption": null, "source": "s0049"}
+{"patch_id": "maharashtra_063_r3c3", "label": "atmospheric", "caption": null, "source": "s0049"}
+{"patch_id": "karnataka_t1_004_r1c0", "label": "seasonal", "caption": null, "source": "s0050"}
+{"patch_id": "karnataka_014_r1c1", "label": "none", "caption": null, "source": "s0050"}
+{"patch_id": "maharashtra_t1_032_r0c2", "label": "land_use", "caption": "The town in the north has expanded and a new road and bridge have been built across the river", "source": "s0050"}
+{"patch_id": "west_bengal_t1_005_r0c2", "label": "none", "caption": null, "source": "s0050"}
+{"patch_id": "karnataka_014_r0c2", "label": "seasonal", "caption": null, "source": "s0050"}
+{"patch_id": "ladakh_t1_023_r0c0", "label": "none", "caption": null, "source": "s0050"}
+{"patch_id": "maharashtra_067_r1c2", "label": "seasonal", "caption": null, "source": "s0050"}
+{"patch_id": "ladakh_t1_030_r2c0", "label": "none", "caption": null, "source": "s0050"}
+{"patch_id": "uttar_pradesh_t1_014_r1c0", "label": "atmospheric", "caption": null, "source": "s0050"}
+{"patch_id": "gujarat_t1_001_r0c1", "label": "seasonal", "caption": null, "source": "s0050"}
+{"patch_id": "delhi_002_r3c3", "label": "land_use", "caption": "The industrial town has expanded with many new blue and white-roofed factory buildings, and a new highway runs along the west", "source": "s0050"}
+{"patch_id": "uttar_pradesh_t1_013_r1c1", "label": "seasonal", "caption": null, "source": "s0050"}
+{"patch_id": "maharashtra_067_r0c0", "label": "seasonal", "caption": null, "source": "s0051"}
+{"patch_id": "rajasthan_t1_039_r2c0", "label": "land_use", "caption": "A new road has been built across the south, crossing the river on a new bridge", "source": "s0051"}
+{"patch_id": "karnataka_t1_004_r2c2", "label": "seasonal", "caption": null, "source": "s0051"}
+{"patch_id": "ladakh_t1_030_r0c2", "label": "none", "caption": null, "source": "s0051"}
+{"patch_id": "andaman_and_nicobar_islands_007_r3c0", "label": "none", "caption": null, "source": "s0051"}
+{"patch_id": "uttarakhand_009_r0c1", "label": "atmospheric", "caption": null, "source": "s0051"}
+{"patch_id": "haryana_019_r3c1", "label": "none", "caption": null, "source": "s0051"}
+{"patch_id": "karnataka_t1_004_r3c3", "label": "seasonal", "caption": null, "source": "s0051"}
+{"patch_id": "rajasthan_t1_018_r3c2", "label": "none", "caption": null, "source": "s0051"}
+{"patch_id": "tamil_nadu_t1_025_r3c2", "label": "atmospheric", "caption": null, "source": "s0051"}
+{"patch_id": "maharashtra_080_r0c2", "label": "land_use", "caption": "A new road has been built running south from the town, and the river has been dammed", "source": "s0051"}
+{"patch_id": "odisha_t1_031_r3c1", "label": "seasonal", "caption": null, "source": "s0051"}
+{"patch_id": "tripura_001_r3c3", "label": "none", "caption": null, "source": "s0052"}
+{"patch_id": "uttar_pradesh_068_r0c3", "label": "land_use", "caption": "A new curving highway has been built through the centre where there was previously a cleared strip", "source": "s0052"}
+{"patch_id": "meghalaya_016_r1c2", "label": "none", "caption": null, "source": "s0052"}
+{"patch_id": "maharashtra_039_r1c0", "label": "none", "caption": null, "source": "s0052"}
+{"patch_id": "karnataka_051_r2c3", "label": "atmospheric", "caption": null, "source": "s0052"}
+{"patch_id": "assam_t1_012_r1c1", "label": "seasonal", "caption": null, "source": "s0052"}
+{"patch_id": "karnataka_t1_002_r2c2", "label": "land_use", "caption": "New large white buildings and a new road junction have appeared in the centre and north", "source": "s0052"}
+{"patch_id": "karnataka_032_r1c0", "label": "none", "caption": null, "source": "s0052"}
+{"patch_id": "jharkhand_001_r1c0", "label": "atmospheric", "caption": null, "source": "s0052"}
+{"patch_id": "jharkhand_022_r2c0", "label": "atmospheric", "caption": null, "source": "s0052"}
+{"patch_id": "madhya_pradesh_t1_002_r3c0", "label": "seasonal", "caption": null, "source": "s0052"}
+{"patch_id": "maharashtra_t1_053_r2c2", "label": "land_use", "caption": "New industrial buildings have appeared on the east side of the town near the highway", "source": "s0052"}
+{"patch_id": "uttar_pradesh_t1_025_r3c3", "label": "atmospheric", "caption": null, "source": "s0053"}
+{"patch_id": "odisha_t1_013_r0c2", "label": "none", "caption": null, "source": "s0053"}
+{"patch_id": "rajasthan_015_r3c0", "label": "none", "caption": null, "source": "s0053"}
+{"patch_id": "andhra_pradesh_021_r0c1", "label": "land_use", "caption": "New rows of sheds or aquaculture structures have been built on the riverbank in the north", "source": "s0053"}
+{"patch_id": "west_bengal_015_r0c2", "label": "atmospheric", "caption": null, "source": "s0053"}
+{"patch_id": "karnataka_t1_040_r3c2", "label": "seasonal", "caption": null, "source": "s0053"}
+{"patch_id": "delhi_002_r0c2", "label": "land_use", "caption": "New apartment blocks and buildings have filled open plots across the city", "source": "s0053"}
+{"patch_id": "maharashtra_t1_018_r1c3", "label": "seasonal", "caption": null, "source": "s0053"}
+{"patch_id": "uttarakhand_009_r0c2", "label": "none", "caption": null, "source": "s0053"}
+{"patch_id": "madhya_pradesh_082_r2c1", "label": "none", "caption": null, "source": "s0053"}
+{"patch_id": "haryana_t1_003_r1c1", "label": "seasonal", "caption": null, "source": "s0053"}
+{"patch_id": "karnataka_t1_002_r1c3", "label": "seasonal", "caption": null, "source": "s0053"}
+{"patch_id": "assam_028_r0c0", "label": "seasonal", "caption": null, "source": "s0054"}
+{"patch_id": "karnataka_041_r3c2", "label": "seasonal", "caption": null, "source": "s0054"}
+{"patch_id": "gujarat_t1_012_r2c0", "label": "none", "caption": null, "source": "s0054"}
+{"patch_id": "uttar_pradesh_t1_028_r1c3", "label": "seasonal", "caption": null, "source": "s0054"}
+{"patch_id": "karnataka_t1_002_r0c2", "label": "seasonal", "caption": null, "source": "s0054"}
+{"patch_id": "tamil_nadu_012_r1c1", "label": "seasonal", "caption": null, "source": "s0054"}
+{"patch_id": "andhra_pradesh_002_r2c0", "label": "land_use", "caption": "A new reservoir or lake has been created in the north-west, beside the highway", "source": "s0054"}
+{"patch_id": "uttar_pradesh_t1_028_r0c2", "label": "none", "caption": null, "source": "s0054"}
+{"patch_id": "uttar_pradesh_t1_035_r2c1", "label": "atmospheric", "caption": null, "source": "s0054"}
+{"patch_id": "jammu_and_kashmir_011_r0c1", "label": "seasonal", "caption": null, "source": "s0054"}
+{"patch_id": "chhattisgarh_033_r2c0", "label": "none", "caption": null, "source": "s0054"}
+{"patch_id": "maharashtra_t1_032_r3c3", "label": "land_use", "caption": "A new road has been built running north to south along the east side of the fields", "source": "s0054"}
+{"patch_id": "arunachal_pradesh_025_r2c2", "label": "none", "caption": null, "source": "s0055"}
+{"patch_id": "rajasthan_t1_031_r1c0", "label": "none", "caption": null, "source": "s0055"}
+{"patch_id": "chhattisgarh_t1_028_r0c0", "label": "land_use", "caption": "A new highway has been built running diagonally from the south-west to the north-east", "source": "s0055"}
+{"patch_id": "mizoram_006_r1c3", "label": "none", "caption": null, "source": "s0055"}
+{"patch_id": "manipur_002_r2c2", "label": "none", "caption": null, "source": "s0055"}
+{"patch_id": "maharashtra_063_r2c1", "label": "atmospheric", "caption": null, "source": "s0055"}
+{"patch_id": "gujarat_t1_020_r1c1", "label": "seasonal", "caption": null, "source": "s0055"}
+{"patch_id": "uttar_pradesh_t1_028_r2c1", "label": "none", "caption": null, "source": "s0055"}
+{"patch_id": "odisha_031_r3c0", "label": "atmospheric", "caption": null, "source": "s0055"}
+{"patch_id": "himachal_pradesh_019_r2c1", "label": "none", "caption": null, "source": "s0055"}
+{"patch_id": "madhya_pradesh_034_r0c2", "label": "land_use", "caption": "New cleared plots have appeared in the north among the fields", "source": "s0055"}
+{"patch_id": "karnataka_t1_004_r0c0", "label": "seasonal", "caption": null, "source": "s0055"}
+{"patch_id": "andhra_pradesh_021_r3c3", "label": "seasonal", "caption": null, "source": "s0056"}
+{"patch_id": "chhattisgarh_042_r2c3", "label": "land_use", "caption": "Forest has been cleared in patches in the centre-north, with new bare land", "source": "s0056"}
+{"patch_id": "chhattisgarh_t1_015_r0c0", "label": "none", "caption": null, "source": "s0056"}
+{"patch_id": "rajasthan_024_r0c3", "label": "seasonal", "caption": null, "source": "s0056"}
+{"patch_id": "uttar_pradesh_t1_042_r3c3", "label": "land_use", "caption": "A new pond has been dug in the south-east", "source": "s0056"}
+{"patch_id": "bihar_003_r3c1", "label": "seasonal", "caption": null, "source": "s0056"}
+{"patch_id": "uttar_pradesh_068_r2c0", "label": "seasonal", "caption": null, "source": "s0056"}
+{"patch_id": "andhra_pradesh_023_r3c2", "label": "none", "caption": null, "source": "s0056"}
+{"patch_id": "madhya_pradesh_t1_007_r1c1", "label": "none", "caption": null, "source": "s0056"}
+{"patch_id": "uttar_pradesh_068_r3c0", "label": "seasonal", "caption": null, "source": "s0056"}
+{"patch_id": "rajasthan_096_r0c3", "label": "none", "caption": null, "source": "s0056"}
+{"patch_id": "madhya_pradesh_t1_055_r0c2", "label": "seasonal", "caption": null, "source": "s0056"}
+{"patch_id": "telangana_020_r2c0", "label": "land_use", "caption": "The forest in the centre and north has been cleared for farmland, and a new road now runs through it", "source": "s0057"}
+{"patch_id": "rajasthan_t1_039_r0c2", "label": "seasonal", "caption": null, "source": "s0057"}
+{"patch_id": "uttar_pradesh_067_r2c3", "label": "none", "caption": null, "source": "s0057"}
+{"patch_id": "jharkhand_t1_013_r1c2", "label": "atmospheric", "caption": null, "source": "s0057"}
+{"patch_id": "maharashtra_t1_025_r2c3", "label": "seasonal", "caption": null, "source": "s0057"}
+{"patch_id": "madhya_pradesh_t1_007_r1c3", "label": "none", "caption": null, "source": "s0057"}
+{"patch_id": "telangana_024_r2c0", "label": "seasonal", "caption": null, "source": "s0057"}
+{"patch_id": "tripura_008_r2c2", "label": "atmospheric", "caption": null, "source": "s0057"}
+{"patch_id": "chhattisgarh_033_r0c0", "label": "seasonal", "caption": null, "source": "s0057"}
+{"patch_id": "haryana_015_r1c1", "label": "land_use", "caption": "New buildings have appeared in the south among the fields", "source": "s0057"}
+{"patch_id": "karnataka_t1_002_r2c3", "label": "land_use", "caption": "A new road has been built running east to west across the centre of the fields", "source": "s0057"}
+{"patch_id": "chhattisgarh_021_r0c1", "label": "seasonal", "caption": null, "source": "s0057"}
+{"patch_id": "gujarat_048_r3c3", "label": "land_use", "caption": "A new industrial compound with large buildings has appeared in the south-centre of the town", "source": "s0058"}
+{"patch_id": "maharashtra_t1_037_r0c1", "label": "atmospheric", "caption": null, "source": "s0058"}
+{"patch_id": "mizoram_006_r1c2", "label": "none", "caption": null, "source": "s0058"}
+{"patch_id": "madhya_pradesh_082_r0c1", "label": "seasonal", "caption": null, "source": "s0058"}
+{"patch_id": "madhya_pradesh_045_r0c2", "label": "none", "caption": null, "source": "s0058"}
+{"patch_id": "odisha_t1_026_r1c3", "label": "seasonal", "caption": null, "source": "s0058"}
+{"patch_id": "andhra_pradesh_006_r3c1", "label": "none", "caption": null, "source": "s0058"}
+{"patch_id": "maharashtra_t1_022_r1c1", "label": "seasonal", "caption": null, "source": "s0058"}
+{"patch_id": "rajasthan_042_r0c0", "label": "seasonal", "caption": null, "source": "s0058"}
+{"patch_id": "chhattisgarh_033_r1c0", "label": "seasonal", "caption": null, "source": "s0058"}
+{"patch_id": "madhya_pradesh_t1_007_r3c3", "label": "none", "caption": null, "source": "s0058"}
+{"patch_id": "himachal_pradesh_t1_009_r3c2", "label": "none", "caption": null, "source": "s0058"}
+{"patch_id": "karnataka_t1_004_r2c1", "label": "seasonal", "caption": null, "source": "s0059"}
+{"patch_id": "gujarat_048_r3c2", "label": "land_use", "caption": "A new building complex has appeared in the centre-south among the fields", "source": "s0059"}
+{"patch_id": "kerala_005_r1c1", "label": "none", "caption": null, "source": "s0059"}
+{"patch_id": "andhra_pradesh_001_r0c3", "label": "seasonal", "caption": null, "source": "s0059"}
+{"patch_id": "gujarat_t1_020_r1c2", "label": "land_use", "caption": "New industrial buildings and ponds have appeared in the north near the railway", "source": "s0059"}
+{"patch_id": "haryana_t1_003_r1c3", "label": "seasonal", "caption": null, "source": "s0059"}
+{"patch_id": "maharashtra_t1_037_r1c2", "label": "atmospheric", "caption": null, "source": "s0059"}
+{"patch_id": "jharkhand_028_r3c2", "label": "atmospheric", "caption": null, "source": "s0059"}
+{"patch_id": "gujarat_t1_012_r3c2", "label": "seasonal", "caption": null, "source": "s0059"}
+{"patch_id": "karnataka_032_r0c2", "label": "land_use", "caption": "A large area in the centre has been cleared and burnt, with new buildings on the west side", "source": "s0059"}
+{"patch_id": "gujarat_t1_017_r0c1", "label": "land_use", "caption": "The open-cast mine has expanded, with new excavation in the north and changes to the pits in the centre", "source": "s0059"}
+{"patch_id": "haryana_t1_003_r0c0", "label": "seasonal", "caption": null, "source": "s0059"}
+{"patch_id": "karnataka_t1_004_r1c3", "label": "seasonal", "caption": null, "source": "s0060"}
+{"patch_id": "karnataka_051_r0c1", "label": "land_use", "caption": "New ponds have been dug in the north-east of the forest, beside the lake", "source": "s0060"}
+{"patch_id": "west_bengal_024_r3c0", "label": "seasonal", "caption": null, "source": "s0060"}
+{"patch_id": "madhya_pradesh_056_r0c3", "label": "none", "caption": null, "source": "s0060"}
+{"patch_id": "chhattisgarh_042_r2c2", "label": "none", "caption": null, "source": "s0060"}
+{"patch_id": "maharashtra_063_r0c0", "label": "atmospheric", "caption": null, "source": "s0060"}
+{"patch_id": "maharashtra_057_r0c3", "label": "atmospheric", "caption": null, "source": "s0060"}
+{"patch_id": "maharashtra_073_r0c0", "label": "seasonal", "caption": null, "source": "s0060"}
+{"patch_id": "jammu_and_kashmir_011_r3c3", "label": "seasonal", "caption": null, "source": "s0060"}
+{"patch_id": "maharashtra_073_r3c1", "label": "seasonal", "caption": null, "source": "s0060"}
+{"patch_id": "tripura_001_r2c3", "label": "none", "caption": null, "source": "s0060"}
+{"patch_id": "assam_t1_012_r2c1", "label": "none", "caption": null, "source": "s0060"}
+{"patch_id": "jharkhand_028_r3c1", "label": "atmospheric", "caption": null, "source": "s0061"}
+{"patch_id": "mizoram_005_r0c3", "label": "none", "caption": null, "source": "s0061"}
+{"patch_id": "karnataka_051_r1c1", "label": "atmospheric", "caption": null, "source": "s0061"}
+{"patch_id": "assam_t1_012_r2c0", "label": "none", "caption": null, "source": "s0061"}
+{"patch_id": "maharashtra_073_r1c2", "label": "seasonal", "caption": null, "source": "s0061"}
+{"patch_id": "meghalaya_002_r3c1", "label": "none", "caption": null, "source": "s0061"}
+{"patch_id": "punjab_t1_005_r2c2", "label": "land_use", "caption": "New buildings and a new road junction have appeared along the highway in the north-east", "source": "s0061"}
+{"patch_id": "jharkhand_022_r2c2", "label": "none", "caption": null, "source": "s0061"}
+{"patch_id": "rajasthan_t1_065_r0c3", "label": "none", "caption": null, "source": "s0061"}
+{"patch_id": "rajasthan_025_r1c3", "label": "land_use", "caption": "New farm fields and a large solar farm have been established on the desert in the centre and east", "source": "s0061"}
+{"patch_id": "gujarat_t1_012_r0c2", "label": "seasonal", "caption": null, "source": "s0061"}
+{"patch_id": "karnataka_030_r1c2", "label": "seasonal", "caption": null, "source": "s0061"}
+{"patch_id": "mizoram_005_r1c3", "label": "seasonal", "caption": null, "source": "s0062"}
+{"patch_id": "maharashtra_t1_032_r1c2", "label": "land_use", "caption": "New buildings have appeared along the highway in the north", "source": "s0062"}
+{"patch_id": "maharashtra_t1_037_r0c2", "label": "atmospheric", "caption": null, "source": "s0062"}
+{"patch_id": "rajasthan_015_r2c1", "label": "none", "caption": null, "source": "s0062"}
+{"patch_id": "gujarat_t1_001_r2c2", "label": "seasonal", "caption": null, "source": "s0062"}
+{"patch_id": "ladakh_t1_036_r2c2", "label": "none", "caption": null, "source": "s0062"}
+{"patch_id": "odisha_t1_002_r2c3", "label": "seasonal", "caption": null, "source": "s0062"}
+{"patch_id": "madhya_pradesh_t1_012_r2c1", "label": "seasonal", "caption": null, "source": "s0062"}
+{"patch_id": "bihar_003_r1c0", "label": "atmospheric", "caption": null, "source": "s0062"}
+{"patch_id": "andhra_pradesh_001_r0c2", "label": "seasonal", "caption": null, "source": "s0062"}
+{"patch_id": "telangana_024_r2c3", "label": "none", "caption": null, "source": "s0062"}
+{"patch_id": "rajasthan_050_r0c3", "label": "land_use", "caption": "A new pond and embankment have been built in the north near the road", "source": "s0062"}
+{"patch_id": "tamil_nadu_012_r2c1", "label": "seasonal", "caption": null, "source": "s0063"}
+{"patch_id": "punjab_t1_005_r2c3", "label": "none", "caption": null, "source": "s0063"}
+{"patch_id": "odisha_t1_031_r2c1", "label": "seasonal", "caption": null, "source": "s0063"}
+{"patch_id": "andhra_pradesh_006_r3c2", "label": "none", "caption": null, "source": "s0063"}
+{"patch_id": "delhi_002_r1c2", "label": "land_use", "caption": "New industrial buildings have been built in the north-east of the city beside the river", "source": "s0063"}
+{"patch_id": "punjab_t1_007_r2c3", "label": "seasonal", "caption": null, "source": "s0063"}
+{"patch_id": "uttar_pradesh_067_r1c0", "label": "atmospheric", "caption": null, "source": "s0063"}
+{"patch_id": "gujarat_012_r0c0", "label": "seasonal", "caption": null, "source": "s0063"}
+{"patch_id": "rajasthan_088_r0c3", "label": "seasonal", "caption": null, "source": "s0063"}
+{"patch_id": "maharashtra_061_r2c1", "label": "atmospheric", "caption": null, "source": "s0063"}
+{"patch_id": "west_bengal_t1_018_r2c3", "label": "seasonal", "caption": null, "source": "s0063"}
+{"patch_id": "punjab_014_r3c2", "label": "none", "caption": null, "source": "s0063"}
+{"patch_id": "nagaland_013_r2c3", "label": "atmospheric", "caption": null, "source": "s0064"}
+{"patch_id": "karnataka_t1_040_r3c1", "label": "seasonal", "caption": null, "source": "s0064"}
+{"patch_id": "west_bengal_024_r0c0", "label": "seasonal", "caption": null, "source": "s0064"}
+{"patch_id": "gujarat_048_r2c3", "label": "seasonal", "caption": null, "source": "s0064"}
+{"patch_id": "karnataka_014_r0c0", "label": "none", "caption": null, "source": "s0064"}
+{"patch_id": "maharashtra_t1_053_r1c1", "label": "land_use", "caption": "New large industrial buildings have been built on the west side of the town where ponds used to be", "source": "s0064"}
+{"patch_id": "bihar_026_r3c1", "label": "none", "caption": null, "source": "s0064"}
+{"patch_id": "uttar_pradesh_t1_013_r3c2", "label": "seasonal", "caption": null, "source": "s0064"}
+{"patch_id": "nagaland_013_r3c0", "label": "atmospheric", "caption": null, "source": "s0064"}
+{"patch_id": "bihar_003_r2c2", "label": "seasonal", "caption": null, "source": "s0064"}
+{"patch_id": "himachal_pradesh_019_r2c0", "label": "none", "caption": null, "source": "s0064"}
+{"patch_id": "assam_005_r1c2", "label": "none", "caption": null, "source": "s0064"}
+{"patch_id": "uttar_pradesh_t1_013_r2c3", "label": "seasonal", "caption": null, "source": "s0065"}
+{"patch_id": "odisha_t1_013_r0c1", "label": "land_use", "caption": "A new unpaved road has been built across the south of the forest", "source": "s0065"}
+{"patch_id": "maharashtra_t1_032_r2c1", "label": "seasonal", "caption": null, "source": "s0065"}
+{"patch_id": "ladakh_023_r0c1", "label": "none", "caption": null, "source": "s0065"}
+{"patch_id": "rajasthan_t1_045_r2c2", "label": "seasonal", "caption": null, "source": "s0065"}
+{"patch_id": "meghalaya_002_r1c2", "label": "none", "caption": null, "source": "s0065"}
+{"patch_id": "maharashtra_t1_032_r3c0", "label": "seasonal", "caption": null, "source": "s0065"}
+{"patch_id": "uttar_pradesh_t1_042_r1c1", "label": "atmospheric", "caption": null, "source": "s0065"}
+{"patch_id": "maharashtra_t1_018_r3c2", "label": "seasonal", "caption": null, "source": "s0065"}
+{"patch_id": "jharkhand_022_r0c2", "label": "none", "caption": null, "source": "s0065"}
+{"patch_id": "andhra_pradesh_001_r2c2", "label": "none", "caption": null, "source": "s0065"}
+{"patch_id": "chhattisgarh_t1_015_r1c2", "label": "none", "caption": null, "source": "s0065"}
+{"patch_id": "ladakh_t1_036_r1c2", "label": "none", "caption": null, "source": "v00"}
+{"patch_id": "sikkim_007_r0c1", "label": "seasonal", "caption": null, "source": "v00"}
+{"patch_id": "nagaland_013_r2c2", "label": "none", "caption": null, "source": "v00"}
+{"patch_id": "andhra_pradesh_t1_019_r0c1", "label": "seasonal", "caption": null, "source": "v00"}
+{"patch_id": "karnataka_014_r1c2", "label": "seasonal", "caption": null, "source": "v00"}
+{"patch_id": "meghalaya_002_r1c3", "label": "none", "caption": null, "source": "v00"}
+{"patch_id": "madhya_pradesh_066_r3c3", "label": "seasonal", "caption": null, "source": "v01"}
+{"patch_id": "uttar_pradesh_t1_028_r0c0", "label": "seasonal", "caption": null, "source": "v01"}
+{"patch_id": "uttar_pradesh_t1_013_r1c2", "label": "seasonal", "caption": null, "source": "v01"}
+{"patch_id": "himachal_pradesh_019_r0c2", "label": "none", "caption": null, "source": "v01"}
+{"patch_id": "haryana_t1_003_r2c2", "label": "land_use", "caption": "Large bright rectangular buildings appear on farmland in the centre", "source": "v01"}
+{"patch_id": "rajasthan_024_r2c0", "label": "seasonal", "caption": null, "source": "v01"}
+{"patch_id": "rajasthan_t1_018_r3c1", "label": "land_use", "caption": "The narrow road running north to south through the centre has been widened into a broad road", "source": "v02"}
+{"patch_id": "rajasthan_096_r3c3", "label": "seasonal", "caption": null, "source": "v02"}
+{"patch_id": "west_bengal_018_r1c2", "label": "land_use", "caption": "A wide new transport corridor has been built along the diagonal line crossing the image", "source": "v02"}
+{"patch_id": "madhya_pradesh_t1_007_r2c2", "label": "none", "caption": null, "source": "v02"}
+{"patch_id": "himachal_pradesh_t1_009_r2c2", "label": "none", "caption": null, "source": "v02"}
+{"patch_id": "gujarat_t1_020_r2c0", "label": "seasonal", "caption": null, "source": "v02"}
+{"patch_id": "west_bengal_t1_005_r1c3", "label": "seasonal", "caption": null, "source": "v03"}
+{"patch_id": "maharashtra_039_r3c1", "label": "seasonal", "caption": null, "source": "v03"}
+{"patch_id": "karnataka_006_r3c1", "label": "seasonal", "caption": null, "source": "v03"}
+{"patch_id": "madhya_pradesh_t1_012_r1c1", "label": "seasonal", "caption": null, "source": "v03"}
+{"patch_id": "punjab_t1_005_r1c2", "label": "seasonal", "caption": null, "source": "v03"}
+{"patch_id": "karnataka_t1_004_r0c3", "label": "none", "caption": null, "source": "v03"}
+{"patch_id": "odisha_t1_013_r1c2", "label": "seasonal", "caption": null, "source": "v04"}
+{"patch_id": "madhya_pradesh_056_r1c1", "label": "land_use", "caption": "New buildings appear along the roads north-east of the town centre", "source": "v04"}
+{"patch_id": "haryana_t1_003_r3c2", "label": "none", "caption": null, "source": "v04"}
+{"patch_id": "uttar_pradesh_t1_042_r0c3", "label": "seasonal", "caption": null, "source": "v04"}
+{"patch_id": "arunachal_pradesh_025_r0c0", "label": "land_use", "caption": "A bright cleared site in the centre has expanded into the surrounding vegetation", "source": "v04"}
+{"patch_id": "maharashtra_t1_041_r2c0", "label": "none", "caption": null, "source": "v04"}
+{"patch_id": "uttar_pradesh_t1_015_r0c2", "label": "seasonal", "caption": null, "source": "v05"}
+{"patch_id": "tripura_008_r1c3", "label": "atmospheric", "caption": null, "source": "v05"}
+{"patch_id": "karnataka_t1_005_r3c3", "label": "seasonal", "caption": null, "source": "v05"}
+{"patch_id": "madhya_pradesh_034_r3c3", "label": "seasonal", "caption": null, "source": "v05"}
+{"patch_id": "ladakh_023_r1c2", "label": "none", "caption": null, "source": "v05"}
+{"patch_id": "punjab_t1_005_r1c1", "label": "seasonal", "caption": null, "source": "v05"}
+{"patch_id": "rajasthan_050_r2c2", "label": "none", "caption": null, "source": "v06"}
+{"patch_id": "odisha_t1_002_r2c2", "label": "seasonal", "caption": null, "source": "v06"}
+{"patch_id": "uttar_pradesh_t1_024_r1c0", "label": "atmospheric", "caption": null, "source": "v06"}
+{"patch_id": "gujarat_t1_017_r3c1", "label": "seasonal", "caption": null, "source": "v06"}
+{"patch_id": "karnataka_030_r2c1", "label": "seasonal", "caption": null, "source": "v06"}
+{"patch_id": "rajasthan_t1_065_r1c0", "label": "none", "caption": null, "source": "v06"}
+{"patch_id": "madhya_pradesh_034_r2c1", "label": "seasonal", "caption": null, "source": "v07"}
+{"patch_id": "andhra_pradesh_002_r1c2", "label": "land_use", "caption": "New buildings with bright and blue roofs appear near the coast on the east side", "source": "v07"}
+{"patch_id": "madhya_pradesh_t1_012_r2c0", "label": "seasonal", "caption": null, "source": "v07"}
+{"patch_id": "gujarat_048_r0c3", "label": "land_use", "caption": "A new building complex appears on previously bare ground in the upper centre", "source": "v07"}
+{"patch_id": "rajasthan_t1_031_r0c0", "label": "seasonal", "caption": null, "source": "v07"}
+{"patch_id": "uttar_pradesh_t1_042_r2c3", "label": "land_use", "caption": "A new bare cleared site appears among the fields in the south-east", "source": "v07"}
+{"patch_id": "chhattisgarh_042_r3c1", "label": "none", "caption": null, "source": "v08"}
+{"patch_id": "karnataka_t1_002_r1c2", "label": "seasonal", "caption": null, "source": "v08"}
+{"patch_id": "maharashtra_057_r3c2", "label": "seasonal", "caption": null, "source": "v08"}
+{"patch_id": "odisha_031_r1c3", "label": "seasonal", "caption": null, "source": "v08"}
+{"patch_id": "maharashtra_t1_041_r3c0", "label": "none", "caption": null, "source": "v08"}
+{"patch_id": "punjab_t1_007_r3c2", "label": "seasonal", "caption": null, "source": "v08"}
+{"patch_id": "telangana_t1_004_r3c1", "label": "land_use", "caption": "A new pond appears among the fields in the centre", "source": "v09"}
+{"patch_id": "rajasthan_024_r1c2", "label": "seasonal", "caption": null, "source": "v09"}
+{"patch_id": "telangana_t1_006_r2c2", "label": "seasonal", "caption": null, "source": "v09"}
+{"patch_id": "meghalaya_016_r1c3", "label": "none", "caption": null, "source": "v09"}
+{"patch_id": "chhattisgarh_033_r2c3", "label": "seasonal", "caption": null, "source": "v09"}
+{"patch_id": "karnataka_t1_004_r3c1", "label": "seasonal", "caption": null, "source": "v09"}
+{"patch_id": "ladakh_t1_030_r3c2", "label": "none", "caption": null, "source": "v10"}
+{"patch_id": "punjab_018_r1c2", "label": "seasonal", "caption": null, "source": "v10"}
+{"patch_id": "telangana_t1_006_r0c1", "label": "land_use", "caption": "Bare construction ground along the canal has been cleared and is now covered by vegetation", "source": "v10"}
+{"patch_id": "karnataka_051_r1c2", "label": "none", "caption": null, "source": "v10"}
+{"patch_id": "odisha_t1_012_r2c0", "label": "atmospheric", "caption": null, "source": "v10"}
+{"patch_id": "manipur_t1_003_r2c1", "label": "atmospheric", "caption": null, "source": "v10"}
+{"patch_id": "rajasthan_t1_031_r3c2", "label": "land_use", "caption": "A new dark pit filled with water appears in the dry riverbed in the centre", "source": "v11"}
+{"patch_id": "manipur_002_r3c2", "label": "none", "caption": null, "source": "v11"}
+{"patch_id": "jharkhand_t1_014_r1c1", "label": "seasonal", "caption": null, "source": "v11"}
+{"patch_id": "assam_005_r1c1", "label": "seasonal", "caption": null, "source": "v11"}
+{"patch_id": "rajasthan_050_r1c0", "label": "none", "caption": null, "source": "v11"}
+{"patch_id": "karnataka_030_r2c3", "label": "seasonal", "caption": null, "source": "v11"}
+{"patch_id": "rajasthan_050_r1c3", "label": "none", "caption": null, "source": "v12"}
+{"patch_id": "punjab_t1_007_r2c1", "label": "seasonal", "caption": null, "source": "v12"}
+{"patch_id": "karnataka_t1_004_r3c2", "label": "seasonal", "caption": null, "source": "v12"}
+{"patch_id": "rajasthan_015_r0c0", "label": "seasonal", "caption": null, "source": "v12"}
+{"patch_id": "punjab_t1_005_r0c2", "label": "seasonal", "caption": null, "source": "v12"}
+{"patch_id": "jharkhand_022_r2c3", "label": "none", "caption": null, "source": "v12"}
+{"patch_id": "andhra_pradesh_038_r3c3", "label": "seasonal", "caption": null, "source": "v13"}
+{"patch_id": "chhattisgarh_042_r1c1", "label": "seasonal", "caption": null, "source": "v13"}
+{"patch_id": "gujarat_t1_012_r3c0", "label": "seasonal", "caption": null, "source": "v13"}
+{"patch_id": "rajasthan_t1_065_r1c3", "label": "none", "caption": null, "source": "v13"}
+{"patch_id": "uttar_pradesh_t1_013_r3c1", "label": "seasonal", "caption": null, "source": "v13"}
+{"patch_id": "bihar_005_r1c0", "label": "seasonal", "caption": null, "source": "v13"}
+{"patch_id": "rajasthan_042_r3c0", "label": "seasonal", "caption": null, "source": "v14"}
+{"patch_id": "himachal_pradesh_t1_009_r3c0", "label": "none", "caption": null, "source": "v14"}
+{"patch_id": "meghalaya_016_r2c1", "label": "none", "caption": null, "source": "v14"}
+{"patch_id": "assam_018_r1c0", "label": "none", "caption": null, "source": "v14"}
+{"patch_id": "uttar_pradesh_t1_035_r3c0", "label": "atmospheric", "caption": null, "source": "v14"}
+{"patch_id": "maharashtra_t1_022_r3c1", "label": "seasonal", "caption": null, "source": "v14"}
+{"patch_id": "punjab_t1_007_r0c0", "label": "seasonal", "caption": null, "source": "v15"}
+{"patch_id": "gujarat_012_r0c3", "label": "seasonal", "caption": null, "source": "v15"}
+{"patch_id": "uttar_pradesh_t1_042_r3c1", "label": "seasonal", "caption": null, "source": "v15"}
+{"patch_id": "chhattisgarh_021_r2c3", "label": "seasonal", "caption": null, "source": "v15"}
+{"patch_id": "west_bengal_018_r2c3", "label": "seasonal", "caption": null, "source": "v15"}
+{"patch_id": "gujarat_t1_017_r1c0", "label": "seasonal", "caption": null, "source": "v15"}
+{"patch_id": "karnataka_006_r3c3", "label": "seasonal", "caption": null, "source": "v16"}
+{"patch_id": "madhya_pradesh_062_r3c3", "label": "none", "caption": null, "source": "v16"}
+{"patch_id": "kerala_t1_002_r3c3", "label": "none", "caption": null, "source": "v16"}
+{"patch_id": "rajasthan_t1_031_r1c3", "label": "seasonal", "caption": null, "source": "v16"}
+{"patch_id": "karnataka_051_r1c0", "label": "seasonal", "caption": null, "source": "v16"}
+{"patch_id": "maharashtra_061_r2c0", "label": "land_use", "caption": "A cluster of new white-roofed buildings appears in the lower centre", "source": "v16"}
+{"patch_id": "himachal_pradesh_019_r3c0", "label": "none", "caption": null, "source": "v17"}
+{"patch_id": "rajasthan_t1_018_r2c1", "label": "seasonal", "caption": null, "source": "v17"}
+{"patch_id": "manipur_t1_003_r1c3", "label": "seasonal", "caption": null, "source": "v17"}
+{"patch_id": "gujarat_t1_020_r3c2", "label": "land_use", "caption": "New white buildings appear beside the highway south of the town", "source": "v17"}
+{"patch_id": "madhya_pradesh_006_r1c3", "label": "none", "caption": null, "source": "v17"}
+{"patch_id": "haryana_015_r2c1", "label": "land_use", "caption": "The wide bare construction strip crossing the north has become a finished road", "source": "v17"}
+{"patch_id": "rajasthan_096_r3c0", "label": "seasonal", "caption": null, "source": "v18"}
+{"patch_id": "gujarat_t1_001_r2c3", "label": "seasonal", "caption": null, "source": "v18"}
+{"patch_id": "uttarakhand_009_r1c0", "label": "seasonal", "caption": null, "source": "v18"}
+{"patch_id": "chhattisgarh_t1_028_r2c1", "label": "seasonal", "caption": null, "source": "v18"}
+{"patch_id": "uttar_pradesh_t1_015_r1c2", "label": "seasonal", "caption": null, "source": "v18"}
+{"patch_id": "karnataka_t1_004_r2c0", "label": "seasonal", "caption": null, "source": "v18"}
+{"patch_id": "karnataka_030_r2c2", "label": "seasonal", "caption": null, "source": "v19"}
+{"patch_id": "himachal_pradesh_019_r2c3", "label": "seasonal", "caption": null, "source": "v19"}
+{"patch_id": "rajasthan_025_r3c0", "label": "seasonal", "caption": null, "source": "v19"}
+{"patch_id": "bihar_023_r2c0", "label": "seasonal", "caption": null, "source": "v19"}
+{"patch_id": "uttar_pradesh_042_r0c3", "label": "seasonal", "caption": null, "source": "v19"}
+{"patch_id": "odisha_t1_026_r1c0", "label": "land_use", "caption": "A new airport runway with an apron and buildings has been built across the centre of the image", "source": "v19"}
+{"patch_id": "gujarat_012_r1c3", "label": "seasonal", "caption": null, "source": "v20"}
+{"patch_id": "maharashtra_t1_032_r1c3", "label": "seasonal", "caption": null, "source": "v20"}
+{"patch_id": "odisha_t1_002_r1c2", "label": "seasonal", "caption": null, "source": "v20"}
+{"patch_id": "gujarat_t1_001_r3c1", "label": "seasonal", "caption": null, "source": "v20"}
+{"patch_id": "chhattisgarh_025_r2c2", "label": "seasonal", "caption": null, "source": "v20"}
+{"patch_id": "gujarat_t1_020_r3c1", "label": "seasonal", "caption": null, "source": "v20"}
+{"patch_id": "karnataka_030_r3c0", "label": "seasonal", "caption": null, "source": "v21"}
+{"patch_id": "haryana_015_r3c2", "label": "seasonal", "caption": null, "source": "v21"}
+{"patch_id": "karnataka_014_r1c0", "label": "seasonal", "caption": null, "source": "v21"}
+{"patch_id": "bihar_023_r1c2", "label": "seasonal", "caption": null, "source": "v21"}
+{"patch_id": "arunachal_pradesh_008_r0c0", "label": "none", "caption": null, "source": "v21"}
+{"patch_id": "karnataka_014_r3c2", "label": "seasonal", "caption": null, "source": "v21"}
+{"patch_id": "west_bengal_t1_018_r1c3", "label": "seasonal", "caption": null, "source": "v22"}
+{"patch_id": "madhya_pradesh_066_r0c1", "label": "seasonal", "caption": null, "source": "v22"}
+{"patch_id": "odisha_t1_031_r1c3", "label": "seasonal", "caption": null, "source": "v22"}
+{"patch_id": "uttar_pradesh_t1_024_r1c2", "label": "land_use", "caption": "A new road runs north to south through the quarry area and the mining pits have changed shape", "source": "v22"}
+{"patch_id": "manipur_002_r0c2", "label": "atmospheric", "caption": null, "source": "v22"}
+{"patch_id": "madhya_pradesh_056_r3c0", "label": "land_use", "caption": "New buildings have spread across the developed area in the south", "source": "v22"}
+{"patch_id": "manipur_t1_003_r2c0", "label": "atmospheric", "caption": null, "source": "v23"}
+{"patch_id": "andhra_pradesh_023_r1c1", "label": "seasonal", "caption": null, "source": "v23"}
+{"patch_id": "gujarat_048_r1c0", "label": "land_use", "caption": "The road crossing the north has been widened into a broad bright highway", "source": "v23"}
+{"patch_id": "gujarat_017_r0c0", "label": "seasonal", "caption": null, "source": "v23"}
+{"patch_id": "karnataka_051_r2c0", "label": "seasonal", "caption": null, "source": "v23"}
+{"patch_id": "meghalaya_016_r1c1", "label": "none", "caption": null, "source": "v23"}
+{"patch_id": "madhya_pradesh_t1_012_r3c1", "label": "seasonal", "caption": null, "source": "v24"}
+{"patch_id": "uttar_pradesh_055_r0c1", "label": "seasonal", "caption": null, "source": "v24"}
+{"patch_id": "west_bengal_t1_005_r3c3", "label": "seasonal", "caption": null, "source": "v24"}
+{"patch_id": "madhya_pradesh_045_r0c1", "label": "seasonal", "caption": null, "source": "v24"}
+{"patch_id": "uttarakhand_010_r1c1", "label": "seasonal", "caption": null, "source": "v24"}
+{"patch_id": "haryana_019_r0c3", "label": "seasonal", "caption": null, "source": "v24"}

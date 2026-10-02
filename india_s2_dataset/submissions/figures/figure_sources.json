@@ -1,0 +1,19 @@
+{
+ "fig3": "bihar_004_r2c1",
+ "fig4": "madhya_pradesh_071_r3c3",
+ "fig5": [
+  "gujarat_048_r2c1",
+  "andhra_pradesh_001_r3c3",
+  "gujarat_012_r0c3"
+ ],
+ "fig2": {
+  "change": "andhra_pradesh_t1_024_r1c1",
+  "seasonal": "andhra_pradesh_001_r0c2",
+  "no_change": "andhra_pradesh_001_r1c2"
+ },
+ "fig5_quotes": [
+  "The differences are not just seasonal. There has been significant, lasting development \u2014 including new buildings, roads, and land clearing \u2014 over the 6-year period. This is urban or industrial expansion into previously\u2026",
+  "Yes, lasting changes have occurred \u2014 including new agricultural plots, possible expansion of settlement, and infrastructure development \u2014 over the 6-year period.",
+  "The differences are not lasting structural changes. They are consistent with seasonal or annual agricultural cycles \u2014 the same land, same layout, just different crops or stages of cultivation 6 years apart."
+ ]
+}

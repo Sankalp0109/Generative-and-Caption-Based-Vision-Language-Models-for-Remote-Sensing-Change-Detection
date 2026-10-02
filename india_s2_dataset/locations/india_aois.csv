@@ -1,0 +1,1891 @@
+key,label,state,district,category,lon,lat,size_km,season_months,max_aoi_cloud,rank
+andaman_and_nicobar_islands_001,Andaman and Nicobar Islands #1,Andaman and Nicobar Islands,,even_grid,93.90009,6.83834,10.24,"1,2,3,4",0.03,1
+andhra_pradesh_001,Andhra Pradesh #1,Andhra Pradesh,,even_grid,76.9607,14.28955,10.24,"11,12,1,2,3",,1
+arunachal_pradesh_001,Arunachal Pradesh #1,Arunachal Pradesh,,even_grid,94.64989,29.31795,10.24,"10,11,12",0.03,1
+assam_001,Assam #1,Assam,,even_grid,92.89212,26.98853,10.24,"11,12,1,2,3",0.03,1
+bihar_001,Bihar #1,Bihar,,even_grid,84.13484,27.48959,10.24,"2,3,4",,1
+chandigarh_001,Chandigarh #1,Chandigarh,,even_grid,76.7815,30.78814,10.24,"2,3,4",,1
+chhattisgarh_001,Chhattisgarh #1,Chhattisgarh,,even_grid,81.05373,22.12247,10.24,"11,12,1,2,3",,1
+dadra_and_nagar_haveli_and_daman_and_diu_001,Dadra and Nagar Haveli and Daman and Diu #1,Dadra and Nagar Haveli and Daman and Diu,,even_grid,70.88235,20.71545,10.24,"11,12,1,2,3",,1
+delhi_001,Delhi #1,Delhi,,even_grid,77.21696,28.41124,10.24,"2,3,4",,1
+goa_001,Goa #1,Goa,,even_grid,74.08677,14.90684,10.24,"11,12,1,2,3",,1
+gujarat_001,Gujarat #1,Gujarat,,even_grid,73.06032,24.47057,10.24,"11,12,1,2,3",,1
+haryana_001,Haryana #1,Haryana,,even_grid,74.49222,29.76976,10.24,"2,3,4",,1
+himachal_pradesh_001,Himachal Pradesh #1,Himachal Pradesh,,even_grid,78.36698,32.72428,10.24,"10,11,12",,1
+jammu_and_kashmir_001,Jammu and Kashmir #1,Jammu and Kashmir,,even_grid,74.10626,35.08681,10.24,"10,11,12",,1
+jharkhand_001,Jharkhand #1,Jharkhand,,even_grid,84.17848,22.41489,10.24,"11,12,1,2,3",,1
+karnataka_001,Karnataka #1,Karnataka,,even_grid,75.53173,16.9556,10.24,"11,12,1,2,3",,1
+kerala_001,Kerala #1,Kerala,,even_grid,75.791,11.21354,10.24,"12,1,2,3",0.03,1
+ladakh_001,Ladakh #1,Ladakh,,even_grid,79.97058,35.82377,10.24,"7,8,9,10",,1
+lakshadweep_001,Lakshadweep #1,Lakshadweep,,even_grid,73.03458,8.26557,10.24,"1,2,3,4",0.03,1
+madhya_pradesh_001,Madhya Pradesh #1,Madhya Pradesh,,even_grid,76.9765,22.06682,10.24,"11,12,1,2,3",,1
+maharashtra_001,Maharashtra #1,Maharashtra,,even_grid,73.00195,18.06045,10.24,"11,12,1,2,3",,1
+manipur_001,Manipur #1,Manipur,,even_grid,94.39271,24.41281,10.24,"11,12,1,2,3",0.03,1
+meghalaya_001,Meghalaya #1,Meghalaya,,even_grid,90.49993,25.85731,10.24,"11,12,1,2,3",0.03,1
+mizoram_001,Mizoram #1,Mizoram,,even_grid,92.98957,21.99914,10.24,"11,12,1,2,3",0.03,1
+nagaland_001,Nagaland #1,Nagaland,,even_grid,95.16914,26.99631,10.24,"11,12,1,2,3",0.03,1
+odisha_001,Odisha #1,Odisha,,even_grid,85.38172,19.61352,10.24,"11,12,1,2,3",,1
+puducherry_001,Puducherry #1,Puducherry,,even_grid,82.30125,16.73936,10.24,"1,2,3,4",,1
+punjab_001,Punjab #1,Punjab,,even_grid,74.69742,31.92385,10.24,"2,3,4",,1
+rajasthan_001,Rajasthan #1,Rajasthan,,even_grid,70.49233,28.0284,10.24,"11,12,1,2,3",,1
+sikkim_001,Sikkim #1,Sikkim,,even_grid,88.90172,27.27813,10.24,"10,11,12",0.03,1
+tamil_nadu_001,Tamil Nadu #1,Tamil Nadu,,even_grid,80.04686,13.53215,10.24,"1,2,3,4",,1
+telangana_001,Telangana #1,Telangana,,even_grid,78.38721,19.84232,10.24,"11,12,1,2,3",,1
+tripura_001,Tripura #1,Tripura,,even_grid,91.77547,23.03427,10.24,"11,12,1,2,3",0.03,1
+uttar_pradesh_001,Uttar Pradesh #1,Uttar Pradesh,,even_grid,78.24677,24.72286,10.24,"2,3,4",,1
+uttarakhand_001,Uttarakhand #1,Uttarakhand,,even_grid,81.00626,30.20281,10.24,"10,11,12",,1
+west_bengal_001,West Bengal #1,West Bengal,,even_grid,89.05707,21.64244,10.24,"2,3,4",,1
+andaman_and_nicobar_islands_002,Andaman and Nicobar Islands #2,Andaman and Nicobar Islands,,even_grid,92.99107,13.65911,10.24,"1,2,3,4",0.03,2
+andhra_pradesh_002,Andhra Pradesh #2,Andhra Pradesh,,even_grid,80.05741,15.13851,10.24,"11,12,1,2,3",,2
+arunachal_pradesh_002,Arunachal Pradesh #2,Arunachal Pradesh,,even_grid,96.35313,29.26543,10.24,"10,11,12",0.03,2
+assam_002,Assam #2,Assam,,even_grid,95.92385,27.93991,10.24,"11,12,1,2,3",0.03,2
+bihar_002,Bihar #2,Bihar,,even_grid,85.84219,26.4417,10.24,"2,3,4",,2
+chhattisgarh_002,Chhattisgarh #2,Chhattisgarh,,even_grid,82.70243,19.95932,10.24,"11,12,1,2,3",,2
+dadra_and_nagar_haveli_and_daman_and_diu_002,Dadra and Nagar Haveli and Daman and Diu #2,Dadra and Nagar Haveli and Daman and Diu,,even_grid,73.20218,20.07982,10.24,"11,12,1,2,3",,2
+delhi_002,Delhi #2,Delhi,,even_grid,77.08809,28.87275,10.24,"2,3,4",,2
+goa_002,Goa #2,Goa,,even_grid,73.85694,15.79714,10.24,"11,12,1,2,3",,2
+gujarat_002,Gujarat #2,Gujarat,,even_grid,68.36006,23.97711,10.24,"11,12,1,2,3",,2
+haryana_002,Haryana #2,Haryana,,even_grid,75.97384,29.71669,10.24,"2,3,4",,2
+himachal_pradesh_002,Himachal Pradesh #2,Himachal Pradesh,,even_grid,77.21171,32.23244,10.24,"10,11,12",,2
+jammu_and_kashmir_002,Jammu and Kashmir #2,Jammu and Kashmir,,even_grid,73.585,33.41535,10.24,"10,11,12",,2
+jharkhand_002,Jharkhand #2,Jharkhand,,even_grid,86.65906,24.42783,10.24,"11,12,1,2,3",,2
+karnataka_002,Karnataka #2,Karnataka,,even_grid,75.45373,14.13124,10.24,"11,12,1,2,3",,2
+kerala_002,Kerala #2,Kerala,,even_grid,77.1121,8.30815,10.24,"12,1,2,3",0.03,2
+ladakh_002,Ladakh #2,Ladakh,,even_grid,75.29822,37.01254,10.24,"7,8,9,10",,2
+madhya_pradesh_002,Madhya Pradesh #2,Madhya Pradesh,,even_grid,75.76653,24.74447,10.24,"11,12,1,2,3",,2
+maharashtra_002,Maharashtra #2,Maharashtra,,even_grid,75.32469,19.37322,10.24,"11,12,1,2,3",,2
+manipur_002,Manipur #2,Manipur,,even_grid,93.70435,24.55637,10.24,"11,12,1,2,3",0.03,2
+meghalaya_002,Meghalaya #2,Meghalaya,,even_grid,91.95613,26.01301,10.24,"11,12,1,2,3",0.03,2
+mizoram_002,Mizoram #2,Mizoram,,even_grid,93.35759,23.14075,10.24,"11,12,1,2,3",0.03,2
+nagaland_002,Nagaland #2,Nagaland,,even_grid,93.84193,25.57016,10.24,"11,12,1,2,3",0.03,2
+odisha_002,Odisha #2,Odisha,,even_grid,83.89797,18.84578,10.24,"11,12,1,2,3",,2
+puducherry_002,Puducherry #2,Puducherry,,even_grid,79.83718,10.83327,10.24,"1,2,3,4",,2
+punjab_002,Punjab #2,Punjab,,even_grid,75.91813,32.41991,10.24,"2,3,4",,2
+rajasthan_002,Rajasthan #2,Rajasthan,,even_grid,73.20864,27.07332,10.24,"11,12,1,2,3",,2
+sikkim_002,Sikkim #2,Sikkim,,even_grid,88.14472,27.95088,10.24,"10,11,12",0.03,2
+tamil_nadu_002,Tamil Nadu #2,Tamil Nadu,,even_grid,78.36047,12.33646,10.24,"1,2,3,4",,2
+telangana_002,Telangana #2,Telangana,,even_grid,78.23219,15.93478,10.24,"11,12,1,2,3",,2
+tripura_002,Tripura #2,Tripura,,even_grid,92.16736,24.5233,10.24,"11,12,1,2,3",0.03,2
+uttar_pradesh_002,Uttar Pradesh #2,Uttar Pradesh,,even_grid,80.59259,26.35417,10.24,"2,3,4",,2
+uttarakhand_002,Uttarakhand #2,Uttarakhand,,even_grid,79.48327,28.87567,10.24,"10,11,12",,2
+west_bengal_002,West Bengal #2,West Bengal,,even_grid,88.92113,23.18956,10.24,"2,3,4",,2
+andaman_and_nicobar_islands_003,Andaman and Nicobar Islands #3,Andaman and Nicobar Islands,,even_grid,92.39336,10.53434,10.24,"1,2,3,4",0.03,3
+andhra_pradesh_003,Andhra Pradesh #3,Andhra Pradesh,,even_grid,78.59114,14.43709,10.24,"11,12,1,2,3",,3
+arunachal_pradesh_003,Arunachal Pradesh #3,Arunachal Pradesh,,even_grid,97.36085,28.21995,10.24,"10,11,12",0.03,3
+assam_003,Assam #3,Assam,,even_grid,90.35084,26.87929,10.24,"11,12,1,2,3",0.03,3
+bihar_003,Bihar #3,Bihar,,even_grid,84.30042,26.07106,10.24,"2,3,4",,3
+chhattisgarh_003,Chhattisgarh #3,Chhattisgarh,,even_grid,81.63979,23.85709,10.24,"11,12,1,2,3",,3
+delhi_003,Delhi #3,Delhi,,even_grid,76.84538,28.5783,10.24,"2,3,4",,3
+goa_003,Goa #3,Goa,,even_grid,74.26791,15.41924,10.24,"11,12,1,2,3",,3
+gujarat_003,Gujarat #3,Gujarat,,even_grid,70.82937,23.14269,10.24,"11,12,1,2,3",,3
+haryana_003,Haryana #3,Haryana,,even_grid,75.56889,28.63985,10.24,"2,3,4",,3
+himachal_pradesh_003,Himachal Pradesh #3,Himachal Pradesh,,even_grid,78.73696,31.97856,10.24,"10,11,12",,3
+jammu_and_kashmir_003,Jammu and Kashmir #3,Jammu and Kashmir,,even_grid,75.6973,34.09046,10.24,"10,11,12",,3
+jharkhand_003,Jharkhand #3,Jharkhand,,even_grid,84.00853,24.63023,10.24,"11,12,1,2,3",,3
+karnataka_003,Karnataka #3,Karnataka,,even_grid,75.57383,15.66806,10.24,"11,12,1,2,3",,3
+kerala_003,Kerala #3,Kerala,,even_grid,77.26181,10.13177,10.24,"12,1,2,3",0.03,3
+ladakh_003,Ladakh #3,Ladakh,,even_grid,77.49261,35.48146,10.24,"7,8,9,10",,3
+madhya_pradesh_003,Madhya Pradesh #3,Madhya Pradesh,,even_grid,78.98739,22.31181,10.24,"11,12,1,2,3",,3
+maharashtra_003,Maharashtra #3,Maharashtra,,even_grid,74.4516,18.25293,10.24,"11,12,1,2,3",,3
+manipur_003,Manipur #3,Manipur,,even_grid,94.12528,23.84698,10.24,"11,12,1,2,3",0.03,3
+meghalaya_003,Meghalaya #3,Meghalaya,,even_grid,91.33486,25.19848,10.24,"11,12,1,2,3",0.03,3
+mizoram_003,Mizoram #3,Mizoram,,even_grid,93.30785,24.03209,10.24,"11,12,1,2,3",0.03,3
+nagaland_003,Nagaland #3,Nagaland,,even_grid,95.0106,25.89072,10.24,"11,12,1,2,3",0.03,3
+odisha_003,Odisha #3,Odisha,,even_grid,86.75094,20.33219,10.24,"11,12,1,2,3",,3
+punjab_003,Punjab #3,Punjab,,even_grid,75.4675,30.98916,10.24,"2,3,4",,3
+rajasthan_003,Rajasthan #3,Rajasthan,,even_grid,72.4201,28.78837,10.24,"11,12,1,2,3",,3
+sikkim_003,Sikkim #3,Sikkim,,even_grid,88.07682,27.18952,10.24,"10,11,12",0.03,3
+tamil_nadu_003,Tamil Nadu #3,Tamil Nadu,,even_grid,79.0642,9.20339,10.24,"1,2,3,4",,3
+telangana_003,Telangana #3,Telangana,,even_grid,79.9609,17.8169,10.24,"11,12,1,2,3",,3
+tripura_003,Tripura #3,Tripura,,even_grid,91.26542,23.94938,10.24,"11,12,1,2,3",0.03,3
+uttar_pradesh_003,Uttar Pradesh #3,Uttar Pradesh,,even_grid,81.99084,27.92041,10.24,"2,3,4",,3
+uttarakhand_003,Uttarakhand #3,Uttarakhand,,even_grid,79.2357,31.29224,10.24,"10,11,12",,3
+west_bengal_003,West Bengal #3,West Bengal,,even_grid,88.05622,22.33712,10.24,"2,3,4",,3
+andaman_and_nicobar_islands_004,Andaman and Nicobar Islands #4,Andaman and Nicobar Islands,,even_grid,93.03467,8.45737,10.24,"1,2,3,4",0.03,4
+andhra_pradesh_004,Andhra Pradesh #4,Andhra Pradesh,,even_grid,81.03154,15.91258,10.24,"11,12,1,2,3",,4
+arunachal_pradesh_004,Arunachal Pradesh #4,Arunachal Pradesh,,even_grid,93.38069,28.64287,10.24,"10,11,12",0.03,4
+assam_004,Assam #4,Assam,,even_grid,94.25165,27.61564,10.24,"11,12,1,2,3",0.03,4
+bihar_004,Bihar #4,Bihar,,even_grid,85.25275,25.5445,10.24,"2,3,4",,4
+chhattisgarh_004,Chhattisgarh #4,Chhattisgarh,,even_grid,82.69237,21.5763,10.24,"11,12,1,2,3",,4
+delhi_004,Delhi #4,Delhi,,even_grid,77.32927,28.67989,10.24,"2,3,4",,4
+goa_004,Goa #4,Goa,,even_grid,73.82502,15.37642,10.24,"11,12,1,2,3",,4
+gujarat_004,Gujarat #4,Gujarat,,even_grid,74.15906,22.34765,10.24,"11,12,1,2,3",,4
+haryana_004,Haryana #4,Haryana,,even_grid,77.19033,29.8715,10.24,"2,3,4",,4
+himachal_pradesh_004,Himachal Pradesh #4,Himachal Pradesh,,even_grid,77.38753,31.51939,10.24,"10,11,12",,4
+jammu_and_kashmir_004,Jammu and Kashmir #4,Jammu and Kashmir,,even_grid,74.8866,33.15562,10.24,"10,11,12",,4
+jharkhand_004,Jharkhand #4,Jharkhand,,even_grid,86.78587,22.24674,10.24,"11,12,1,2,3",,4
+karnataka_004,Karnataka #4,Karnataka,,even_grid,76.15879,13.16083,10.24,"11,12,1,2,3",,4
+kerala_004,Kerala #4,Kerala,,even_grid,74.88387,12.74401,10.24,"12,1,2,3",0.03,4
+ladakh_004,Ladakh #4,Ladakh,,even_grid,73.10794,36.65764,10.24,"7,8,9,10",,4
+madhya_pradesh_004,Madhya Pradesh #4,Madhya Pradesh,,even_grid,76.8936,23.59277,10.24,"11,12,1,2,3",,4
+maharashtra_004,Maharashtra #4,Maharashtra,,even_grid,76.69316,19.80272,10.24,"11,12,1,2,3",,4
+manipur_004,Manipur #4,Manipur,,even_grid,94.19014,24.96863,10.24,"11,12,1,2,3",0.03,4
+meghalaya_004,Meghalaya #4,Meghalaya,,even_grid,92.4373,25.32256,10.24,"11,12,1,2,3",0.03,4
+mizoram_004,Mizoram #4,Mizoram,,even_grid,92.58524,22.73734,10.24,"11,12,1,2,3",0.03,4
+nagaland_004,Nagaland #4,Nagaland,,even_grid,94.26533,26.53314,10.24,"11,12,1,2,3",0.03,4
+odisha_004,Odisha #4,Odisha,,even_grid,84.78294,20.89748,10.24,"11,12,1,2,3",,4
+punjab_004,Punjab #4,Punjab,,even_grid,74.3255,30.78811,10.24,"2,3,4",,4
+rajasthan_004,Rajasthan #4,Rajasthan,,even_grid,70.19058,26.21164,10.24,"11,12,1,2,3",,4
+sikkim_004,Sikkim #4,Sikkim,,even_grid,88.85332,27.91288,10.24,"10,11,12",0.03,4
+tamil_nadu_004,Tamil Nadu #4,Tamil Nadu,,even_grid,78.41685,10.9197,10.24,"1,2,3,4",,4
+telangana_004,Telangana #4,Telangana,,even_grid,77.63484,17.91508,10.24,"11,12,1,2,3",,4
+tripura_004,Tripura #4,Tripura,,even_grid,92.23985,23.71859,10.24,"11,12,1,2,3",0.03,4
+uttar_pradesh_004,Uttar Pradesh #4,Uttar Pradesh,,even_grid,78.83616,26.77762,10.24,"2,3,4",,4
+uttarakhand_004,Uttarakhand #4,Uttarakhand,,even_grid,78.8913,30.03188,10.24,"10,11,12",,4
+west_bengal_004,West Bengal #4,West Bengal,,even_grid,88.70552,24.21566,10.24,"2,3,4",,4
+andaman_and_nicobar_islands_005,Andaman and Nicobar Islands #5,Andaman and Nicobar Islands,,even_grid,92.97764,12.0414,10.24,"1,2,3,4",0.03,5
+andhra_pradesh_005,Andhra Pradesh #5,Andhra Pradesh,,even_grid,77.70143,15.03852,10.24,"11,12,1,2,3",,5
+arunachal_pradesh_005,Arunachal Pradesh #5,Arunachal Pradesh,,even_grid,97.12402,27.11732,10.24,"10,11,12",0.03,5
+assam_005,Assam #5,Assam,,even_grid,91.42205,26.8049,10.24,"11,12,1,2,3",0.03,5
+bihar_005,Bihar #5,Bihar,,even_grid,86.95084,26.51114,10.24,"2,3,4",,5
+chhattisgarh_005,Chhattisgarh #5,Chhattisgarh,,even_grid,81.12701,20.54511,10.24,"11,12,1,2,3",,5
+delhi_005,Delhi #5,Delhi,,even_grid,77.09434,28.60622,10.24,"2,3,4",,5
+goa_005,Goa #5,Goa,,even_grid,74.06134,15.20141,10.24,"11,12,1,2,3",,5
+gujarat_005,Gujarat #5,Gujarat,,even_grid,69.11237,22.06832,10.24,"11,12,1,2,3",,5
+haryana_005,Haryana #5,Haryana,,even_grid,76.18072,27.81443,10.24,"2,3,4",,5
+himachal_pradesh_005,Himachal Pradesh #5,Himachal Pradesh,,even_grid,77.55904,32.88442,10.24,"10,11,12",,5
+jammu_and_kashmir_005,Jammu and Kashmir #5,Jammu and Kashmir,,even_grid,76.65119,33.33545,10.24,"10,11,12",,5
+jharkhand_005,Jharkhand #5,Jharkhand,,even_grid,85.25632,23.59758,10.24,"11,12,1,2,3",,5
+karnataka_005,Karnataka #5,Karnataka,,even_grid,76.42292,17.60487,10.24,"11,12,1,2,3",,5
+kerala_005,Kerala #5,Kerala,,even_grid,76.40841,9.27779,10.24,"12,1,2,3",0.03,5
+ladakh_005,Ladakh #5,Ladakh,,even_grid,79.48102,34.15799,10.24,"7,8,9,10",,5
+madhya_pradesh_005,Madhya Pradesh #5,Madhya Pradesh,,even_grid,80.16091,23.31876,10.24,"11,12,1,2,3",,5
+maharashtra_005,Maharashtra #5,Maharashtra,,even_grid,73.28772,16.89843,10.24,"11,12,1,2,3",,5
+manipur_005,Manipur #5,Manipur,,even_grid,93.20282,24.81492,10.24,"11,12,1,2,3",0.03,5
+meghalaya_005,Meghalaya #5,Meghalaya,,even_grid,89.85169,25.30009,10.24,"11,12,1,2,3",0.03,5
+mizoram_005,Mizoram #5,Mizoram,,even_grid,92.86207,23.54862,10.24,"11,12,1,2,3",0.03,5
+nagaland_005,Nagaland #5,Nagaland,,even_grid,94.35564,25.92882,10.24,"11,12,1,2,3",0.03,5
+odisha_005,Odisha #5,Odisha,,even_grid,83.93254,20.02551,10.24,"11,12,1,2,3",,5
+punjab_005,Punjab #5,Punjab,,even_grid,75.98348,31.63023,10.24,"2,3,4",,5
+rajasthan_005,Rajasthan #5,Rajasthan,,even_grid,74.93784,26.6567,10.24,"11,12,1,2,3",,5
+sikkim_005,Sikkim #5,Sikkim,,even_grid,88.45466,27.55225,10.24,"10,11,12",0.03,5
+tamil_nadu_005,Tamil Nadu #5,Tamil Nadu,,even_grid,79.76572,12.18781,10.24,"1,2,3,4",,5
+telangana_005,Telangana #5,Telangana,,even_grid,79.96044,19.38112,10.24,"11,12,1,2,3",,5
+tripura_005,Tripura #5,Tripura,,even_grid,91.30056,23.38196,10.24,"11,12,1,2,3",0.03,5
+uttar_pradesh_005,Uttar Pradesh #5,Uttar Pradesh,,even_grid,82.25173,26.42444,10.24,"2,3,4",,5
+uttarakhand_005,Uttarakhand #5,Uttarakhand,,even_grid,79.90861,30.47817,10.24,"10,11,12",,5
+west_bengal_005,West Bengal #5,West Bengal,,even_grid,88.17377,26.15823,10.24,"2,3,4",,5
+andaman_and_nicobar_islands_006,Andaman and Nicobar Islands #6,Andaman and Nicobar Islands,,even_grid,92.2091,11.54901,10.24,"1,2,3,4",0.03,6
+andhra_pradesh_006,Andhra Pradesh #6,Andhra Pradesh,,even_grid,79.08832,15.25835,10.24,"11,12,1,2,3",,6
+arunachal_pradesh_006,Arunachal Pradesh #6,Arunachal Pradesh,,even_grid,91.56692,27.84904,10.24,"10,11,12",0.03,6
+assam_006,Assam #6,Assam,,even_grid,95.10514,27.75961,10.24,"11,12,1,2,3",0.03,6
+bihar_006,Bihar #6,Bihar,,even_grid,86.3514,25.57998,10.24,"2,3,4",,6
+chhattisgarh_006,Chhattisgarh #6,Chhattisgarh,,even_grid,82.00096,18.75967,10.24,"11,12,1,2,3",,6
+delhi_006,Delhi #6,Delhi,,even_grid,76.94616,28.75418,10.24,"2,3,4",,6
+goa_006,Goa #6,Goa,,even_grid,74.03257,15.57006,10.24,"11,12,1,2,3",,6
+gujarat_006,Gujarat #6,Gujarat,,even_grid,72.30041,21.93074,10.24,"11,12,1,2,3",,6
+haryana_006,Haryana #6,Haryana,,even_grid,75.21194,29.34065,10.24,"2,3,4",,6
+himachal_pradesh_006,Himachal Pradesh #6,Himachal Pradesh,,even_grid,77.97514,32.10728,10.24,"10,11,12",,6
+jammu_and_kashmir_006,Jammu and Kashmir #6,Jammu and Kashmir,,even_grid,74.4794,34.1226,10.24,"10,11,12",,6
+jharkhand_006,Jharkhand #6,Jharkhand,,even_grid,87.94034,24.95714,10.24,"11,12,1,2,3",,6
+karnataka_006,Karnataka #6,Karnataka,,even_grid,74.50666,16.62932,10.24,"11,12,1,2,3",,6
+kerala_006,Kerala #6,Kerala,,even_grid,76.16396,10.26133,10.24,"12,1,2,3",0.03,6
+ladakh_006,Ladakh #6,Ladakh,,even_grid,77.86353,34.18605,10.24,"7,8,9,10",,6
+madhya_pradesh_006,Madhya Pradesh #6,Madhya Pradesh,,even_grid,76.89184,25.64391,10.24,"11,12,1,2,3",,6
+maharashtra_006,Maharashtra #6,Maharashtra,,even_grid,74.12907,19.37437,10.24,"11,12,1,2,3",,6
+manipur_006,Manipur #6,Manipur,,even_grid,94.72383,24.99909,10.24,"11,12,1,2,3",0.03,6
+meghalaya_006,Meghalaya #6,Meghalaya,,even_grid,90.58713,25.17324,10.24,"11,12,1,2,3",0.03,6
+mizoram_006,Mizoram #6,Mizoram,,even_grid,92.78307,24.468,10.24,"11,12,1,2,3",0.03,6
+nagaland_006,Nagaland #6,Nagaland,,even_grid,94.92065,26.47185,10.24,"11,12,1,2,3",0.03,6
+odisha_006,Odisha #6,Odisha,,even_grid,85.92059,21.10163,10.24,"11,12,1,2,3",,6
+punjab_006,Punjab #6,Punjab,,even_grid,75.79594,30.36941,10.24,"2,3,4",,6
+rajasthan_006,Rajasthan #6,Rajasthan,,even_grid,71.84706,26.17537,10.24,"11,12,1,2,3",,6
+sikkim_006,Sikkim #6,Sikkim,,even_grid,88.50095,27.1339,10.24,"10,11,12",0.03,6
+tamil_nadu_006,Tamil Nadu #6,Tamil Nadu,,even_grid,78.27109,9.85986,10.24,"1,2,3,4",,6
+telangana_006,Telangana #6,Telangana,,even_grid,79.39547,16.60623,10.24,"11,12,1,2,3",,6
+tripura_006,Tripura #6,Tripura,,even_grid,91.82865,24.0822,10.24,"11,12,1,2,3",0.03,6
+uttar_pradesh_006,Uttar Pradesh #6,Uttar Pradesh,,even_grid,79.74242,25.15972,10.24,"2,3,4",,6
+uttarakhand_006,Uttarakhand #6,Uttarakhand,,even_grid,80.29901,29.49022,10.24,"10,11,12",,6
+west_bengal_006,West Bengal #6,West Bengal,,even_grid,87.57896,23.14971,10.24,"2,3,4",,6
+andaman_and_nicobar_islands_007,Andaman and Nicobar Islands #7,Andaman and Nicobar Islands,,even_grid,92.65472,12.85316,10.24,"1,2,3,4",0.03,7
+andhra_pradesh_007,Andhra Pradesh #7,Andhra Pradesh,,even_grid,77.80456,13.85623,10.24,"11,12,1,2,3",,7
+arunachal_pradesh_007,Arunachal Pradesh #7,Arunachal Pradesh,,even_grid,92.7114,27.91107,10.24,"10,11,12",0.03,7
+assam_007,Assam #7,Assam,,even_grid,92.93983,26.23992,10.24,"11,12,1,2,3",0.03,7
+bihar_007,Bihar #7,Bihar,,even_grid,84.92518,26.89378,10.24,"2,3,4",,7
+chhattisgarh_007,Chhattisgarh #7,Chhattisgarh,,even_grid,82.67624,22.9117,10.24,"11,12,1,2,3",,7
+goa_007,Goa #7,Goa,,even_grid,74.28285,15.06249,10.24,"11,12,1,2,3",,7
+gujarat_007,Gujarat #7,Gujarat,,even_grid,71.31689,24.63244,10.24,"11,12,1,2,3",,7
+haryana_007,Haryana #7,Haryana,,even_grid,76.98441,27.70228,10.24,"2,3,4",,7
+himachal_pradesh_007,Himachal Pradesh #7,Himachal Pradesh,,even_grid,76.53674,32.01527,10.24,"10,11,12",,7
+jammu_and_kashmir_007,Jammu and Kashmir #7,Jammu and Kashmir,,even_grid,73.41153,34.35428,10.24,"10,11,12",,7
+jharkhand_007,Jharkhand #7,Jharkhand,,even_grid,85.47532,22.15245,10.24,"11,12,1,2,3",,7
+karnataka_007,Karnataka #7,Karnataka,,even_grid,76.4492,16.60624,10.24,"11,12,1,2,3",,7
+kerala_007,Kerala #7,Kerala,,even_grid,76.74014,11.05178,10.24,"12,1,2,3",0.03,7
+ladakh_007,Ladakh #7,Ladakh,,even_grid,76.04065,35.89993,10.24,"7,8,9,10",,7
+madhya_pradesh_007,Madhya Pradesh #7,Madhya Pradesh,,even_grid,75.73608,22.77899,10.24,"11,12,1,2,3",,7
+maharashtra_007,Maharashtra #7,Maharashtra,,even_grid,74.91755,20.40776,10.24,"11,12,1,2,3",,7
+manipur_007,Manipur #7,Manipur,,even_grid,93.77501,24.12057,10.24,"11,12,1,2,3",0.03,7
+meghalaya_007,Meghalaya #7,Meghalaya,,even_grid,91.18979,25.83525,10.24,"11,12,1,2,3",0.03,7
+mizoram_007,Mizoram #7,Mizoram,,even_grid,93.13232,22.58656,10.24,"11,12,1,2,3",0.03,7
+nagaland_007,Nagaland #7,Nagaland,,even_grid,94.64586,25.47231,10.24,"11,12,1,2,3",0.03,7
+odisha_007,Odisha #7,Odisha,,even_grid,82.94782,18.37983,10.24,"11,12,1,2,3",,7
+punjab_007,Punjab #7,Punjab,,even_grid,73.97079,30.21251,10.24,"2,3,4",,7
+rajasthan_007,Rajasthan #7,Rajasthan,,even_grid,73.76405,25.73758,10.24,"11,12,1,2,3",,7
+sikkim_007,Sikkim #7,Sikkim,,even_grid,88.06204,27.53953,10.24,"10,11,12",0.03,7
+tamil_nadu_007,Tamil Nadu #7,Tamil Nadu,,even_grid,77.61014,11.61629,10.24,"1,2,3,4",,7
+telangana_007,Telangana #7,Telangana,,even_grid,78.85334,18.59411,10.24,"11,12,1,2,3",,7
+tripura_007,Tripura #7,Tripura,,even_grid,91.74425,23.62114,10.24,"11,12,1,2,3",0.03,7
+uttar_pradesh_007,Uttar Pradesh #7,Uttar Pradesh,,even_grid,81.47956,25.23828,10.24,"2,3,4",,7
+uttarakhand_007,Uttarakhand #7,Uttarakhand,,even_grid,78.13006,31.18146,10.24,"10,11,12",,7
+west_bengal_007,West Bengal #7,West Bengal,,even_grid,88.82558,25.37237,10.24,"2,3,4",,7
+andaman_and_nicobar_islands_008,Andaman and Nicobar Islands #8,Andaman and Nicobar Islands,,even_grid,92.78592,9.23539,10.24,"1,2,3,4",0.03,8
+andhra_pradesh_008,Andhra Pradesh #8,Andhra Pradesh,,even_grid,79.55488,14.32083,10.24,"11,12,1,2,3",,8
+arunachal_pradesh_008,Arunachal Pradesh #8,Arunachal Pradesh,,even_grid,95.47639,28.75281,10.24,"10,11,12",0.03,8
+assam_008,Assam #8,Assam,,even_grid,92.19688,26.67204,10.24,"11,12,1,2,3",0.03,8
+bihar_008,Bihar #8,Bihar,,even_grid,83.43147,25.25114,10.24,"2,3,4",,8
+chhattisgarh_008,Chhattisgarh #8,Chhattisgarh,,even_grid,81.16037,19.45446,10.24,"11,12,1,2,3",,8
+goa_008,Goa #8,Goa,,even_grid,73.73878,15.5947,10.24,"11,12,1,2,3",,8
+gujarat_008,Gujarat #8,Gujarat,,even_grid,69.84618,24.16644,10.24,"11,12,1,2,3",,8
+haryana_008,Haryana #8,Haryana,,even_grid,76.21636,29.04439,10.24,"2,3,4",,8
+himachal_pradesh_008,Himachal Pradesh #8,Himachal Pradesh,,even_grid,76.83774,32.73629,10.24,"10,11,12",,8
+jammu_and_kashmir_008,Jammu and Kashmir #8,Jammu and Kashmir,,even_grid,75.13868,34.8502,10.24,"10,11,12",,8
+jharkhand_008,Jharkhand #8,Jharkhand,,even_grid,84.0543,23.52364,10.24,"11,12,1,2,3",,8
+karnataka_008,Karnataka #8,Karnataka,,even_grid,74.52765,13.97505,10.24,"11,12,1,2,3",,8
+kerala_008,Kerala #8,Kerala,,even_grid,75.63579,12.14385,10.24,"12,1,2,3",0.03,8
+ladakh_008,Ladakh #8,Ladakh,,even_grid,78.83394,35.17128,10.24,"7,8,9,10",,8
+madhya_pradesh_008,Madhya Pradesh #8,Madhya Pradesh,,even_grid,75.73321,21.42589,10.24,"11,12,1,2,3",,8
+maharashtra_008,Maharashtra #8,Maharashtra,,even_grid,77.50979,20.51711,10.24,"11,12,1,2,3",,8
+manipur_008,Manipur #8,Manipur,,even_grid,93.28079,24.43258,10.24,"11,12,1,2,3",0.03,8
+meghalaya_008,Meghalaya #8,Meghalaya,,even_grid,91.84803,25.47323,10.24,"11,12,1,2,3",0.03,8
+mizoram_008,Mizoram #8,Mizoram,,even_grid,92.43444,23.21908,10.24,"11,12,1,2,3",0.03,8
+nagaland_008,Nagaland #8,Nagaland,,even_grid,93.33966,25.54273,10.24,"11,12,1,2,3",0.03,8
+odisha_008,Odisha #8,Odisha,,even_grid,83.09417,19.19025,10.24,"11,12,1,2,3",,8
+punjab_008,Punjab #8,Punjab,,even_grid,74.80318,31.26689,10.24,"2,3,4",,8
+rajasthan_008,Rajasthan #8,Rajasthan,,even_grid,74.19,28.07558,10.24,"11,12,1,2,3",,8
+sikkim_008,Sikkim #8,Sikkim,,even_grid,88.50584,28.03164,10.24,"10,11,12",0.03,8
+tamil_nadu_008,Tamil Nadu #8,Tamil Nadu,,even_grid,79.15922,13.01508,10.24,"1,2,3,4",,8
+telangana_008,Telangana #8,Telangana,,even_grid,81.18039,17.38269,10.24,"11,12,1,2,3",,8
+tripura_008,Tripura #8,Tripura,,even_grid,92.32053,24.12135,10.24,"11,12,1,2,3",0.03,8
+uttar_pradesh_008,Uttar Pradesh #8,Uttar Pradesh,,even_grid,80.12014,27.63461,10.24,"2,3,4",,8
+uttarakhand_008,Uttarakhand #8,Uttarakhand,,even_grid,78.07533,29.64944,10.24,"10,11,12",,8
+west_bengal_008,West Bengal #8,West Bengal,,even_grid,87.49067,21.616,10.24,"2,3,4",,8
+andaman_and_nicobar_islands_009,Andaman and Nicobar Islands #9,Andaman and Nicobar Islands,,even_grid,93.53332,7.52402,10.24,"1,2,3,4",0.03,9
+andhra_pradesh_009,Andhra Pradesh #9,Andhra Pradesh,,even_grid,80.10017,16.03913,10.24,"11,12,1,2,3",,9
+arunachal_pradesh_009,Arunachal Pradesh #9,Arunachal Pradesh,,even_grid,94.38119,28.48061,10.24,"10,11,12",0.03,9
+assam_009,Assam #9,Assam,,even_grid,93.67849,26.95913,10.24,"11,12,1,2,3",0.03,9
+bihar_009,Bihar #9,Bihar,,even_grid,84.44296,25.30195,10.24,"2,3,4",,9
+chhattisgarh_009,Chhattisgarh #9,Chhattisgarh,,even_grid,81.69496,21.3482,10.24,"11,12,1,2,3",,9
+goa_009,Goa #9,Goa,,even_grid,74.24537,15.65265,10.24,"11,12,1,2,3",,9
+gujarat_009,Gujarat #9,Gujarat,,even_grid,72.30919,23.30812,10.24,"11,12,1,2,3",,9
+haryana_009,Haryana #9,Haryana,,even_grid,77.51223,30.42484,10.24,"2,3,4",,9
+himachal_pradesh_009,Himachal Pradesh #9,Himachal Pradesh,,even_grid,77.39929,30.97325,10.24,"10,11,12",,9
+jammu_and_kashmir_009,Jammu and Kashmir #9,Jammu and Kashmir,,even_grid,75.76823,33.24787,10.24,"10,11,12",,9
+jharkhand_009,Jharkhand #9,Jharkhand,,even_grid,86.329,23.44629,10.24,"11,12,1,2,3",,9
+karnataka_009,Karnataka #9,Karnataka,,even_grid,75.89843,14.84816,10.24,"11,12,1,2,3",,9
+kerala_009,Kerala #9,Kerala,,even_grid,77.27871,9.2663,10.24,"12,1,2,3",0.03,9
+ladakh_009,Ladakh #9,Ladakh,,even_grid,74.38467,36.17797,10.24,"7,8,9,10",,9
+madhya_pradesh_009,Madhya Pradesh #9,Madhya Pradesh,,even_grid,78.0619,21.4739,10.24,"11,12,1,2,3",,9
+maharashtra_009,Maharashtra #9,Maharashtra,,even_grid,72.8557,19.10022,10.24,"11,12,1,2,3",,9
+manipur_009,Manipur #9,Manipur,,even_grid,93.79961,24.89675,10.24,"11,12,1,2,3",0.03,9
+meghalaya_009,Meghalaya #9,Meghalaya,,even_grid,89.94915,25.81533,10.24,"11,12,1,2,3",0.03,9
+mizoram_009,Mizoram #9,Mizoram,,even_grid,92.59602,22.26716,10.24,"11,12,1,2,3",0.03,9
+nagaland_009,Nagaland #9,Nagaland,,even_grid,93.59329,25.21071,10.24,"11,12,1,2,3",0.03,9
+odisha_009,Odisha #9,Odisha,,even_grid,85.88431,20.28732,10.24,"11,12,1,2,3",,9
+punjab_009,Punjab #9,Punjab,,even_grid,74.9883,30.51202,10.24,"2,3,4",,9
+rajasthan_009,Rajasthan #9,Rajasthan,,even_grid,71.85706,27.53501,10.24,"11,12,1,2,3",,9
+sikkim_009,Sikkim #9,Sikkim,,even_grid,88.7939,27.60025,10.24,"10,11,12",0.03,9
+tamil_nadu_009,Tamil Nadu #9,Tamil Nadu,,even_grid,78.13167,8.49324,10.24,"1,2,3,4",,9
+telangana_009,Telangana #9,Telangana,,even_grid,77.45224,16.78017,10.24,"11,12,1,2,3",,9
+tripura_009,Tripura #9,Tripura,,even_grid,91.39914,23.06297,10.24,"11,12,1,2,3",0.03,9
+uttar_pradesh_009,Uttar Pradesh #9,Uttar Pradesh,,even_grid,78.82546,27.92855,10.24,"2,3,4",,9
+uttarakhand_009,Uttarakhand #9,Uttarakhand,,even_grid,78.78134,29.28128,10.24,"10,11,12",,9
+west_bengal_009,West Bengal #9,West Bengal,,even_grid,88.9078,22.40197,10.24,"2,3,4",,9
+andaman_and_nicobar_islands_010,Andaman and Nicobar Islands #10,Andaman and Nicobar Islands,,even_grid,93.62655,8.48525,10.24,"1,2,3,4",0.03,10
+andhra_pradesh_010,Andhra Pradesh #10,Andhra Pradesh,,even_grid,82.97123,17.48675,10.24,"11,12,1,2,3",,10
+arunachal_pradesh_010,Arunachal Pradesh #10,Arunachal Pradesh,,even_grid,96.53899,28.4206,10.24,"10,11,12",0.03,10
+assam_010,Assam #10,Assam,,even_grid,95.88088,27.27333,10.24,"11,12,1,2,3",0.03,10
+bihar_010,Bihar #10,Bihar,,even_grid,85.11178,26.23782,10.24,"2,3,4",,10
+chhattisgarh_010,Chhattisgarh #10,Chhattisgarh,,even_grid,82.01058,22.23413,10.24,"11,12,1,2,3",,10
+goa_010,Goa #10,Goa,,even_grid,74.07868,15.38699,10.24,"11,12,1,2,3",,10
+gujarat_010,Gujarat #10,Gujarat,,even_grid,70.46815,21.90952,10.24,"11,12,1,2,3",,10
+haryana_010,Haryana #10,Haryana,,even_grid,76.55417,30.11723,10.24,"2,3,4",,10
+himachal_pradesh_010,Himachal Pradesh #10,Himachal Pradesh,,even_grid,78.26169,31.6674,10.24,"10,11,12",,10
+jammu_and_kashmir_010,Jammu and Kashmir #10,Jammu and Kashmir,,even_grid,74.13514,32.89397,10.24,"10,11,12",,10
+jharkhand_010,Jharkhand #10,Jharkhand,,even_grid,85.57859,24.58138,10.24,"11,12,1,2,3",,10
+karnataka_010,Karnataka #10,Karnataka,,even_grid,76.76092,12.59906,10.24,"11,12,1,2,3",,10
+kerala_010,Kerala #10,Kerala,,even_grid,76.37635,11.72784,10.24,"12,1,2,3",0.03,10
+ladakh_010,Ladakh #10,Ladakh,,even_grid,76.46959,34.8952,10.24,"7,8,9,10",,10
+madhya_pradesh_010,Madhya Pradesh #10,Madhya Pradesh,,even_grid,78.08442,23.13224,10.24,"11,12,1,2,3",,10
+maharashtra_010,Maharashtra #10,Maharashtra,,even_grid,75.8583,18.47343,10.24,"11,12,1,2,3",,10
+manipur_010,Manipur #10,Manipur,,even_grid,94.0938,24.62849,10.24,"11,12,1,2,3",0.03,10
+meghalaya_010,Meghalaya #10,Meghalaya,,even_grid,90.95577,25.46064,10.24,"11,12,1,2,3",0.03,10
+mizoram_010,Mizoram #10,Mizoram,,even_grid,92.79328,23.99775,10.24,"11,12,1,2,3",0.03,10
+nagaland_010,Nagaland #10,Nagaland,,even_grid,94.0136,26.17461,10.24,"11,12,1,2,3",0.03,10
+odisha_010,Odisha #10,Odisha,,even_grid,84.55763,19.39674,10.24,"11,12,1,2,3",,10
+punjab_010,Punjab #10,Punjab,,even_grid,75.39027,32.0106,10.24,"2,3,4",,10
+rajasthan_010,Rajasthan #10,Rajasthan,,even_grid,69.6242,27.18459,10.24,"11,12,1,2,3",,10
+sikkim_010,Sikkim #10,Sikkim,,even_grid,88.58207,27.77818,10.24,"10,11,12",0.03,10
+tamil_nadu_010,Tamil Nadu #10,Tamil Nadu,,even_grid,79.17644,10.1419,10.24,"1,2,3,4",,10
+telangana_010,Telangana #10,Telangana,,even_grid,78.69989,17.49878,10.24,"11,12,1,2,3",,10
+tripura_010,Tripura #10,Tripura,,even_grid,91.63246,23.31801,10.24,"11,12,1,2,3",0.03,10
+uttar_pradesh_010,Uttar Pradesh #10,Uttar Pradesh,,even_grid,82.98251,27.26546,10.24,"2,3,4",,10
+uttarakhand_010,Uttarakhand #10,Uttarakhand,,even_grid,78.72768,30.71134,10.24,"10,11,12",,10
+west_bengal_010,West Bengal #10,West Bengal,,even_grid,89.01223,26.26204,10.24,"2,3,4",,10
+andaman_and_nicobar_islands_011,Andaman and Nicobar Islands #11,Andaman and Nicobar Islands,,even_grid,92.6747,11.18629,10.24,"1,2,3,4",0.03,11
+andhra_pradesh_011,Andhra Pradesh #11,Andhra Pradesh,,even_grid,78.59947,13.6217,10.24,"11,12,1,2,3",,11
+arunachal_pradesh_011,Arunachal Pradesh #11,Arunachal Pradesh,,even_grid,93.51414,27.91949,10.24,"10,11,12",0.03,11
+assam_011,Assam #11,Assam,,even_grid,89.85968,26.42777,10.24,"11,12,1,2,3",0.03,11
+bihar_011,Bihar #11,Bihar,,even_grid,87.08423,25.85454,10.24,"2,3,4",,11
+chhattisgarh_011,Chhattisgarh #11,Chhattisgarh,,even_grid,80.70211,21.31568,10.24,"11,12,1,2,3",,11
+goa_011,Goa #11,Goa,,even_grid,74.23712,15.24547,10.24,"11,12,1,2,3",,11
+gujarat_011,Gujarat #11,Gujarat,,even_grid,73.49494,21.27822,10.24,"11,12,1,2,3",,11
+haryana_011,Haryana #11,Haryana,,even_grid,76.75829,29.41156,10.24,"2,3,4",,11
+himachal_pradesh_011,Himachal Pradesh #11,Himachal Pradesh,,even_grid,76.86637,31.64677,10.24,"10,11,12",,11
+jammu_and_kashmir_011,Jammu and Kashmir #11,Jammu and Kashmir,,even_grid,74.95413,32.51416,10.24,"10,11,12",,11
+jharkhand_011,Jharkhand #11,Jharkhand,,even_grid,87.56565,24.09081,10.24,"11,12,1,2,3",,11
+karnataka_011,Karnataka #11,Karnataka,,even_grid,75.08708,14.90578,10.24,"11,12,1,2,3",,11
+kerala_011,Kerala #11,Kerala,,even_grid,76.674,9.87154,10.24,"12,1,2,3",0.03,11
+ladakh_011,Ladakh #11,Ladakh,,even_grid,79.58394,32.77025,10.24,"7,8,9,10",,11
+madhya_pradesh_011,Madhya Pradesh #11,Madhya Pradesh,,even_grid,75.22912,23.7682,10.24,"11,12,1,2,3",,11
+maharashtra_011,Maharashtra #11,Maharashtra,,even_grid,79.40988,20.58035,10.24,"11,12,1,2,3",,11
+manipur_011,Manipur #11,Manipur,,even_grid,93.98594,25.25568,10.24,"11,12,1,2,3",0.03,11
+meghalaya_011,Meghalaya #11,Meghalaya,,even_grid,90.2679,25.48167,10.24,"11,12,1,2,3",0.03,11
+mizoram_011,Mizoram #11,Mizoram,,even_grid,93.34683,23.5852,10.24,"11,12,1,2,3",0.03,11
+nagaland_011,Nagaland #11,Nagaland,,even_grid,94.69881,26.15907,10.24,"11,12,1,2,3",0.03,11
+odisha_011,Odisha #11,Odisha,,even_grid,86.79257,21.14631,10.24,"11,12,1,2,3",,11
+punjab_011,Punjab #11,Punjab,,even_grid,76.15659,31.03987,10.24,"2,3,4",,11
+rajasthan_011,Rajasthan #11,Rajasthan,,even_grid,76.10541,26.73384,10.24,"11,12,1,2,3",,11
+sikkim_011,Sikkim #11,Sikkim,,even_grid,88.30914,27.32714,10.24,"10,11,12",0.03,11
+tamil_nadu_011,Tamil Nadu #11,Tamil Nadu,,even_grid,79.16851,11.47641,10.24,"1,2,3,4",,11
+telangana_011,Telangana #11,Telangana,,even_grid,77.82181,18.97372,10.24,"11,12,1,2,3",,11
+tripura_011,Tripura #11,Tripura,,even_grid,91.40993,23.66598,10.24,"11,12,1,2,3",0.03,11
+uttar_pradesh_011,Uttar Pradesh #11,Uttar Pradesh,,even_grid,77.64661,26.84962,10.24,"2,3,4",,11
+uttarakhand_011,Uttarakhand #11,Uttarakhand,,even_grid,79.51927,29.59204,10.24,"10,11,12",,11
+west_bengal_011,West Bengal #11,West Bengal,,even_grid,88.21642,23.60456,10.24,"2,3,4",,11
+andaman_and_nicobar_islands_012,Andaman and Nicobar Islands #12,Andaman and Nicobar Islands,,even_grid,93.32876,8.01135,10.24,"1,2,3,4",0.03,12
+andhra_pradesh_012,Andhra Pradesh #12,Andhra Pradesh,,even_grid,81.46237,16.60596,10.24,"11,12,1,2,3",,12
+arunachal_pradesh_012,Arunachal Pradesh #12,Arunachal Pradesh,,even_grid,96.70055,27.7272,10.24,"10,11,12",0.03,12
+assam_012,Assam #12,Assam,,even_grid,90.85797,26.51033,10.24,"11,12,1,2,3",0.03,12
+bihar_012,Bihar #12,Bihar,,even_grid,84.15616,26.83958,10.24,"2,3,4",,12
+chhattisgarh_012,Chhattisgarh #12,Chhattisgarh,,even_grid,83.27131,22.25259,10.24,"11,12,1,2,3",,12
+goa_012,Goa #12,Goa,,even_grid,73.93958,15.08549,10.24,"11,12,1,2,3",,12
+gujarat_012,Gujarat #12,Gujarat,,even_grid,73.61418,23.41007,10.24,"11,12,1,2,3",,12
+haryana_012,Haryana #12,Haryana,,even_grid,76.19845,28.4297,10.24,"2,3,4",,12
+himachal_pradesh_012,Himachal Pradesh #12,Himachal Pradesh,,even_grid,76.44366,32.45611,10.24,"10,11,12",,12
+jammu_and_kashmir_012,Jammu and Kashmir #12,Jammu and Kashmir,,even_grid,75.10392,33.73679,10.24,"10,11,12",,12
+jharkhand_012,Jharkhand #12,Jharkhand,,even_grid,84.94725,22.83394,10.24,"11,12,1,2,3",,12
+karnataka_012,Karnataka #12,Karnataka,,even_grid,75.39536,13.34461,10.24,"11,12,1,2,3",,12
+kerala_012,Kerala #12,Kerala,,even_grid,76.76147,8.79289,10.24,"12,1,2,3",0.03,12
+ladakh_012,Ladakh #12,Ladakh,,even_grid,73.2158,35.69059,10.24,"7,8,9,10",,12
+madhya_pradesh_012,Madhya Pradesh #12,Madhya Pradesh,,even_grid,77.10796,24.60088,10.24,"11,12,1,2,3",,12
+maharashtra_012,Maharashtra #12,Maharashtra,,even_grid,74.03106,17.45262,10.24,"11,12,1,2,3",,12
+manipur_012,Manipur #12,Manipur,,even_grid,94.51577,24.72346,10.24,"11,12,1,2,3",0.03,12
+meghalaya_012,Meghalaya #12,Meghalaya,,even_grid,92.33228,25.7226,10.24,"11,12,1,2,3",0.03,12
+mizoram_012,Mizoram #12,Mizoram,,even_grid,92.87192,23.07835,10.24,"11,12,1,2,3",0.03,12
+nagaland_012,Nagaland #12,Nagaland,,even_grid,93.72132,25.91464,10.24,"11,12,1,2,3",0.03,12
+odisha_012,Odisha #12,Odisha,,even_grid,84.41725,21.64292,10.24,"11,12,1,2,3",,12
+punjab_012,Punjab #12,Punjab,,even_grid,75.33345,31.48102,10.24,"2,3,4",,12
+rajasthan_012,Rajasthan #12,Rajasthan,,even_grid,72.66557,25.47025,10.24,"11,12,1,2,3",,12
+sikkim_012,Sikkim #12,Sikkim,,even_grid,88.62802,27.35991,10.24,"10,11,12",0.03,12
+tamil_nadu_012,Tamil Nadu #12,Tamil Nadu,,even_grid,77.59309,12.60205,10.24,"1,2,3,4",,12
+telangana_012,Telangana #12,Telangana,,even_grid,80.5757,18.55833,10.24,"11,12,1,2,3",,12
+tripura_012,Tripura #12,Tripura,,even_grid,91.57947,23.90645,10.24,"11,12,1,2,3",0.03,12
+uttar_pradesh_012,Uttar Pradesh #12,Uttar Pradesh,,even_grid,78.79836,25.7531,10.24,"2,3,4",,12
+uttarakhand_012,Uttarakhand #12,Uttarakhand,,even_grid,78.22253,30.26428,10.24,"10,11,12",,12
+west_bengal_012,West Bengal #12,West Bengal,,even_grid,88.29025,21.57408,10.24,"2,3,4",,12
+andaman_and_nicobar_islands_013,Andaman and Nicobar Islands #13,Andaman and Nicobar Islands,,even_grid,93.03109,13.1604,10.24,"1,2,3,4",0.03,13
+andhra_pradesh_013,Andhra Pradesh #13,Andhra Pradesh,,even_grid,76.77519,15.06176,10.24,"11,12,1,2,3",,13
+arunachal_pradesh_013,Arunachal Pradesh #13,Arunachal Pradesh,,even_grid,92.16557,27.50428,10.24,"10,11,12",0.03,13
+assam_013,Assam #13,Assam,,even_grid,93.49958,26.45322,10.24,"11,12,1,2,3",0.03,13
+bihar_013,Bihar #13,Bihar,,even_grid,84.9747,24.90306,10.24,"2,3,4",,13
+chhattisgarh_013,Chhattisgarh #13,Chhattisgarh,,even_grid,82.56191,23.7635,10.24,"11,12,1,2,3",,13
+goa_013,Goa #13,Goa,,even_grid,74.11835,15.05591,10.24,"11,12,1,2,3",,13
+gujarat_013,Gujarat #13,Gujarat,,even_grid,69.29151,23.16753,10.24,"11,12,1,2,3",,13
+haryana_013,Haryana #13,Haryana,,even_grid,77.52533,27.93822,10.24,"2,3,4",,13
+himachal_pradesh_013,Himachal Pradesh #13,Himachal Pradesh,,even_grid,77.88731,32.5488,10.24,"10,11,12",,13
+jammu_and_kashmir_013,Jammu and Kashmir #13,Jammu and Kashmir,,even_grid,74.30637,33.50897,10.24,"10,11,12",,13
+jharkhand_013,Jharkhand #13,Jharkhand,,even_grid,84.75998,24.24035,10.24,"11,12,1,2,3",,13
+karnataka_013,Karnataka #13,Karnataka,,even_grid,76.22144,13.94671,10.24,"11,12,1,2,3",,13
+kerala_013,Kerala #13,Kerala,,even_grid,76.75391,10.46206,10.24,"12,1,2,3",0.03,13
+ladakh_013,Ladakh #13,Ladakh,,even_grid,80.11873,34.89097,10.24,"7,8,9,10",,13
+madhya_pradesh_013,Madhya Pradesh #13,Madhya Pradesh,,even_grid,80.01896,22.05343,10.24,"11,12,1,2,3",,13
+maharashtra_013,Maharashtra #13,Maharashtra,,even_grid,75.85016,20.2182,10.24,"11,12,1,2,3",,13
+manipur_013,Manipur #13,Manipur,,even_grid,94.42411,25.21537,10.24,"11,12,1,2,3",0.03,13
+meghalaya_013,Meghalaya #13,Meghalaya,,even_grid,91.61935,25.80371,10.24,"11,12,1,2,3",0.03,13
+mizoram_013,Mizoram #13,Mizoram,,even_grid,93.18449,22.26906,10.24,"11,12,1,2,3",0.03,13
+nagaland_013,Nagaland #13,Nagaland,,even_grid,94.26102,25.55597,10.24,"11,12,1,2,3",0.03,13
+odisha_013,Odisha #13,Odisha,,even_grid,83.95552,20.79928,10.24,"11,12,1,2,3",,13
+punjab_013,Punjab #13,Punjab,,even_grid,76.28582,30.5799,10.24,"2,3,4",,13
+rajasthan_013,Rajasthan #13,Rajasthan,,even_grid,70.86069,27.04202,10.24,"11,12,1,2,3",,13
+sikkim_013,Sikkim #13,Sikkim,,even_grid,88.26105,27.72877,10.24,"10,11,12",0.03,13
+tamil_nadu_013,Tamil Nadu #13,Tamil Nadu,,even_grid,77.62361,10.83015,10.24,"1,2,3,4",,13
+telangana_013,Telangana #13,Telangana,,even_grid,80.32572,16.91896,10.24,"11,12,1,2,3",,13
+tripura_013,Tripura #13,Tripura,,even_grid,91.95285,23.81926,10.24,"11,12,1,2,3",0.03,13
+uttar_pradesh_013,Uttar Pradesh #13,Uttar Pradesh,,even_grid,80.98744,28.39826,10.24,"2,3,4",,13
+uttarakhand_013,Uttarakhand #13,Uttarakhand,,even_grid,80.37873,30.06929,10.24,"10,11,12",,13
+west_bengal_013,West Bengal #13,West Bengal,,even_grid,88.25711,22.96429,10.24,"2,3,4",,13
+andaman_and_nicobar_islands_014,Andaman and Nicobar Islands #14,Andaman and Nicobar Islands,,even_grid,92.66814,11.6786,10.24,"1,2,3,4",0.03,14
+andhra_pradesh_014,Andhra Pradesh #14,Andhra Pradesh,,even_grid,83.67306,18.08795,10.24,"11,12,1,2,3",,14
+arunachal_pradesh_014,Arunachal Pradesh #14,Arunachal Pradesh,,even_grid,95.0018,28.34818,10.24,"10,11,12",0.03,14
+assam_014,Assam #14,Assam,,even_grid,94.71753,27.31209,10.24,"11,12,1,2,3",0.03,14
+bihar_014,Bihar #14,Bihar,,even_grid,85.82669,25.17952,10.24,"2,3,4",,14
+chhattisgarh_014,Chhattisgarh #14,Chhattisgarh,,even_grid,82.07128,20.57542,10.24,"11,12,1,2,3",,14
+gujarat_014,Gujarat #14,Gujarat,,even_grid,73.1171,22.55412,10.24,"11,12,1,2,3",,14
+haryana_014,Haryana #14,Haryana,,even_grid,75.0796,29.88556,10.24,"2,3,4",,14
+himachal_pradesh_014,Himachal Pradesh #14,Himachal Pradesh,,even_grid,78.45274,32.31677,10.24,"10,11,12",,14
+jammu_and_kashmir_014,Jammu and Kashmir #14,Jammu and Kashmir,,even_grid,73.84035,33.93178,10.24,"10,11,12",,14
+jharkhand_014,Jharkhand #14,Jharkhand,,even_grid,86.09333,22.6817,10.24,"11,12,1,2,3",,14
+karnataka_014,Karnataka #14,Karnataka,,even_grid,76.34448,15.68948,10.24,"11,12,1,2,3",,14
+kerala_014,Kerala #14,Kerala,,even_grid,76.21137,10.82117,10.24,"12,1,2,3",0.03,14
+ladakh_014,Ladakh #14,Ladakh,,even_grid,78.65466,33.58262,10.24,"7,8,9,10",,14
+madhya_pradesh_014,Madhya Pradesh #14,Madhya Pradesh,,even_grid,79.12163,23.27267,10.24,"11,12,1,2,3",,14
+maharashtra_014,Maharashtra #14,Maharashtra,,even_grid,78.48104,20.70481,10.24,"11,12,1,2,3",,14
+manipur_014,Manipur #14,Manipur,,even_grid,94.13128,24.16863,10.24,"11,12,1,2,3",0.03,14
+meghalaya_014,Meghalaya #14,Meghalaya,,even_grid,92.08042,25.19419,10.24,"11,12,1,2,3",0.03,14
+mizoram_014,Mizoram #14,Mizoram,,even_grid,93.08455,23.79052,10.24,"11,12,1,2,3",0.03,14
+nagaland_014,Nagaland #14,Nagaland,,even_grid,94.6045,26.7163,10.24,"11,12,1,2,3",0.03,14
+odisha_014,Odisha #14,Odisha,,even_grid,84.75513,20.12378,10.24,"11,12,1,2,3",,14
+punjab_014,Punjab #14,Punjab,,even_grid,74.50096,30.2976,10.24,"2,3,4",,14
+rajasthan_014,Rajasthan #14,Rajasthan,,even_grid,73.43664,29.2702,10.24,"11,12,1,2,3",,14
+sikkim_014,Sikkim #14,Sikkim,,even_grid,88.72443,27.1383,10.24,"10,11,12",0.03,14
+tamil_nadu_014,Tamil Nadu #14,Tamil Nadu,,even_grid,80.24796,12.78009,10.24,"1,2,3,4",,14
+telangana_014,Telangana #14,Telangana,,even_grid,78.30244,16.75352,10.24,"11,12,1,2,3",,14
+tripura_014,Tripura #14,Tripura,,even_grid,92.05741,24.2592,10.24,"11,12,1,2,3",0.03,14
+uttar_pradesh_014,Uttar Pradesh #14,Uttar Pradesh,,even_grid,81.31098,27.11766,10.24,"2,3,4",,14
+uttarakhand_014,Uttarakhand #14,Uttarakhand,,even_grid,79.35722,30.74904,10.24,"10,11,12",,14
+west_bengal_014,West Bengal #14,West Bengal,,even_grid,87.38103,22.52162,10.24,"2,3,4",,14
+andhra_pradesh_015,Andhra Pradesh #15,Andhra Pradesh,,even_grid,81.94157,17.38067,10.24,"11,12,1,2,3",,15
+arunachal_pradesh_015,Arunachal Pradesh #15,Arunachal Pradesh,,even_grid,95.71518,29.29187,10.24,"10,11,12",0.03,15
+assam_015,Assam #15,Assam,,even_grid,91.45742,26.28148,10.24,"11,12,1,2,3",0.03,15
+bihar_015,Bihar #15,Bihar,,even_grid,86.42234,26.15114,10.24,"2,3,4",,15
+chhattisgarh_015,Chhattisgarh #15,Chhattisgarh,,even_grid,81.48592,18.12088,10.24,"11,12,1,2,3",,15
+gujarat_015,Gujarat #15,Gujarat,,even_grid,71.37919,22.33997,10.24,"11,12,1,2,3",,15
+haryana_015,Haryana #15,Haryana,,even_grid,76.64596,28.11624,10.24,"2,3,4",,15
+himachal_pradesh_015,Himachal Pradesh #15,Himachal Pradesh,,even_grid,77.53847,31.93097,10.24,"10,11,12",,15
+jammu_and_kashmir_015,Jammu and Kashmir #15,Jammu and Kashmir,,even_grid,76.15614,33.69653,10.24,"10,11,12",,15
+jharkhand_015,Jharkhand #15,Jharkhand,,even_grid,83.42995,24.09159,10.24,"11,12,1,2,3",,15
+karnataka_015,Karnataka #15,Karnataka,,even_grid,74.91792,16.02045,10.24,"11,12,1,2,3",,15
+kerala_015,Kerala #15,Kerala,,even_grid,75.12322,12.28345,10.24,"12,1,2,3",0.03,15
+ladakh_015,Ladakh #15,Ladakh,,even_grid,75.1048,35.67342,10.24,"7,8,9,10",,15
+madhya_pradesh_015,Madhya Pradesh #15,Madhya Pradesh,,even_grid,79.87655,24.1916,10.24,"11,12,1,2,3",,15
+maharashtra_015,Maharashtra #15,Maharashtra,,even_grid,76.62309,18.92872,10.24,"11,12,1,2,3",,15
+manipur_015,Manipur #15,Manipur,,even_grid,93.02682,24.23972,10.24,"11,12,1,2,3",0.03,15
+meghalaya_015,Meghalaya #15,Meghalaya,,even_grid,92.80004,25.21458,10.24,"11,12,1,2,3",0.03,15
+mizoram_015,Mizoram #15,Mizoram,,even_grid,92.52035,23.52493,10.24,"11,12,1,2,3",0.03,15
+nagaland_015,Nagaland #15,Nagaland,,even_grid,95.12818,26.21332,10.24,"11,12,1,2,3",0.03,15
+odisha_015,Odisha #15,Odisha,,even_grid,82.26075,18.02628,10.24,"11,12,1,2,3",,15
+punjab_015,Punjab #15,Punjab,,even_grid,76.61137,31.24816,10.24,"2,3,4",,15
+rajasthan_015,Rajasthan #15,Rajasthan,,even_grid,71.01535,25.559,10.24,"11,12,1,2,3",,15
+tamil_nadu_015,Tamil Nadu #15,Tamil Nadu,,even_grid,78.00458,9.19244,10.24,"1,2,3,4",,15
+telangana_015,Telangana #15,Telangana,,even_grid,79.71459,18.59828,10.24,"11,12,1,2,3",,15
+tripura_015,Tripura #15,Tripura,,even_grid,91.93815,23.43073,10.24,"11,12,1,2,3",0.03,15
+uttar_pradesh_015,Uttar Pradesh #15,Uttar Pradesh,,even_grid,82.40886,24.71402,10.24,"2,3,4",,15
+uttarakhand_015,Uttarakhand #15,Uttarakhand,,even_grid,80.06494,28.97887,10.24,"10,11,12",,15
+west_bengal_015,West Bengal #15,West Bengal,,even_grid,88.17668,25.55803,10.24,"2,3,4",,15
+andhra_pradesh_016,Andhra Pradesh #16,Andhra Pradesh,,even_grid,78.37205,15.25209,10.24,"11,12,1,2,3",,16
+arunachal_pradesh_016,Arunachal Pradesh #16,Arunachal Pradesh,,even_grid,93.29139,27.4133,10.24,"10,11,12",0.03,16
+assam_016,Assam #16,Assam,,even_grid,94.23431,27.09588,10.24,"11,12,1,2,3",0.03,16
+bihar_016,Bihar #16,Bihar,,even_grid,85.77369,25.87041,10.24,"2,3,4",,16
+chhattisgarh_016,Chhattisgarh #16,Chhattisgarh,,even_grid,81.97048,19.56702,10.24,"11,12,1,2,3",,16
+gujarat_016,Gujarat #16,Gujarat,,even_grid,71.81742,21.07107,10.24,"11,12,1,2,3",,16
+haryana_016,Haryana #16,Haryana,,even_grid,75.66297,29.095,10.24,"2,3,4",,16
+himachal_pradesh_016,Himachal Pradesh #16,Himachal Pradesh,,even_grid,78.78109,31.56974,10.24,"10,11,12",,16
+jammu_and_kashmir_016,Jammu and Kashmir #16,Jammu and Kashmir,,even_grid,74.05219,34.54643,10.24,"10,11,12",,16
+jharkhand_016,Jharkhand #16,Jharkhand,,even_grid,87.17184,24.95787,10.24,"11,12,1,2,3",,16
+karnataka_016,Karnataka #16,Karnataka,,even_grid,76.93277,18.11669,10.24,"11,12,1,2,3",,16
+kerala_016,Kerala #16,Kerala,,even_grid,75.87069,11.71412,10.24,"12,1,2,3",0.03,16
+ladakh_016,Ladakh #16,Ladakh,,even_grid,76.93364,34.13104,10.24,"7,8,9,10",,16
+madhya_pradesh_016,Madhya Pradesh #16,Madhya Pradesh,,even_grid,75.10218,22.10499,10.24,"11,12,1,2,3",,16
+maharashtra_016,Maharashtra #16,Maharashtra,,even_grid,73.6572,18.65683,10.24,"11,12,1,2,3",,16
+manipur_016,Manipur #16,Manipur,,even_grid,93.31784,25.0733,10.24,"11,12,1,2,3",0.03,16
+meghalaya_016,Meghalaya #16,Meghalaya,,even_grid,91.39339,25.53344,10.24,"11,12,1,2,3",0.03,16
+mizoram_016,Mizoram #16,Mizoram,,even_grid,92.81582,22.5094,10.24,"11,12,1,2,3",0.03,16
+nagaland_016,Nagaland #16,Nagaland,,even_grid,95.20814,26.65872,10.24,"11,12,1,2,3",0.03,16
+odisha_016,Odisha #16,Odisha,,even_grid,83.25424,20.49007,10.24,"11,12,1,2,3",,16
+punjab_016,Punjab #16,Punjab,,even_grid,75.34332,30.22461,10.24,"2,3,4",,16
+rajasthan_016,Rajasthan #16,Rajasthan,,even_grid,73.10722,28.03224,10.24,"11,12,1,2,3",,16
+tamil_nadu_016,Tamil Nadu #16,Tamil Nadu,,even_grid,78.44871,11.62785,10.24,"1,2,3,4",,16
+telangana_016,Telangana #16,Telangana,,even_grid,79.09413,19.37837,10.24,"11,12,1,2,3",,16
+uttar_pradesh_016,Uttar Pradesh #16,Uttar Pradesh,,even_grid,79.64574,26.18419,10.24,"2,3,4",,16
+uttarakhand_016,Uttarakhand #16,Uttarakhand,,even_grid,79.4781,30.10295,10.24,"10,11,12",,16
+west_bengal_016,West Bengal #16,West Bengal,,even_grid,89.34343,26.80509,10.24,"2,3,4",,16
+andhra_pradesh_017,Andhra Pradesh #17,Andhra Pradesh,,even_grid,79.46547,15.79236,10.24,"11,12,1,2,3",,17
+arunachal_pradesh_017,Arunachal Pradesh #17,Arunachal Pradesh,,even_grid,94.18436,28.98541,10.24,"10,11,12",0.03,17
+assam_017,Assam #17,Assam,,even_grid,92.85018,25.76308,10.24,"11,12,1,2,3",0.03,17
+bihar_017,Bihar #17,Bihar,,even_grid,86.53462,25.03637,10.24,"2,3,4",,17
+chhattisgarh_017,Chhattisgarh #17,Chhattisgarh,,even_grid,80.56693,19.98274,10.24,"11,12,1,2,3",,17
+gujarat_017,Gujarat #17,Gujarat,,even_grid,72.16645,24.17725,10.24,"11,12,1,2,3",,17
+haryana_017,Haryana #17,Haryana,,even_grid,76.9935,30.35162,10.24,"2,3,4",,17
+himachal_pradesh_017,Himachal Pradesh #17,Himachal Pradesh,,even_grid,77.0756,31.24105,10.24,"10,11,12",,17
+jammu_and_kashmir_017,Jammu and Kashmir #17,Jammu and Kashmir,,even_grid,75.07994,34.3097,10.24,"10,11,12",,17
+jharkhand_017,Jharkhand #17,Jharkhand,,even_grid,85.95544,24.01432,10.24,"11,12,1,2,3",,17
+karnataka_017,Karnataka #17,Karnataka,,even_grid,75.81159,16.29825,10.24,"11,12,1,2,3",,17
+kerala_017,Kerala #17,Kerala,,even_grid,77.22577,8.80275,10.24,"12,1,2,3",0.03,17
+ladakh_017,Ladakh #17,Ladakh,,even_grid,74.19827,36.89899,10.24,"7,8,9,10",,17
+madhya_pradesh_017,Madhya Pradesh #17,Madhya Pradesh,,even_grid,74.8169,24.58448,10.24,"11,12,1,2,3",,17
+maharashtra_017,Maharashtra #17,Maharashtra,,even_grid,77.52445,19.73159,10.24,"11,12,1,2,3",,17
+manipur_017,Manipur #17,Manipur,,even_grid,93.5282,24.27678,10.24,"11,12,1,2,3",0.03,17
+meghalaya_017,Meghalaya #17,Meghalaya,,even_grid,91.70528,25.17086,10.24,"11,12,1,2,3",0.03,17
+mizoram_017,Mizoram #17,Mizoram,,even_grid,93.09361,23.32023,10.24,"11,12,1,2,3",0.03,17
+odisha_017,Odisha #17,Odisha,,even_grid,85.19702,21.49562,10.24,"11,12,1,2,3",,17
+punjab_017,Punjab #17,Punjab,,even_grid,74.78185,30.8695,10.24,"2,3,4",,17
+rajasthan_017,Rajasthan #17,Rajasthan,,even_grid,75.84322,25.80705,10.24,"11,12,1,2,3",,17
+tamil_nadu_017,Tamil Nadu #17,Tamil Nadu,,even_grid,79.04396,12.18481,10.24,"1,2,3,4",,17
+telangana_017,Telangana #17,Telangana,,even_grid,77.50631,16.04092,10.24,"11,12,1,2,3",,17
+uttar_pradesh_017,Uttar Pradesh #17,Uttar Pradesh,,even_grid,82.56701,25.60845,10.24,"2,3,4",,17
+uttarakhand_017,Uttarakhand #17,Uttarakhand,,even_grid,77.97996,30.70379,10.24,"10,11,12",,17
+west_bengal_017,West Bengal #17,West Bengal,,even_grid,88.10077,24.36136,10.24,"2,3,4",,17
+andhra_pradesh_018,Andhra Pradesh #18,Andhra Pradesh,,even_grid,79.22309,13.78935,10.24,"11,12,1,2,3",,18
+arunachal_pradesh_018,Arunachal Pradesh #18,Arunachal Pradesh,,even_grid,96.07442,28.76859,10.24,"10,11,12",0.03,18
+assam_018,Assam #18,Assam,,even_grid,90.38761,26.31918,10.24,"11,12,1,2,3",0.03,18
+bihar_018,Bihar #18,Bihar,,even_grid,87.54007,26.40731,10.24,"2,3,4",,18
+chhattisgarh_018,Chhattisgarh #18,Chhattisgarh,,even_grid,83.508,22.97573,10.24,"11,12,1,2,3",,18
+gujarat_018,Gujarat #18,Gujarat,,even_grid,70.07942,21.13301,10.24,"11,12,1,2,3",,18
+haryana_018,Haryana #18,Haryana,,even_grid,74.62141,29.35428,10.24,"2,3,4",,18
+himachal_pradesh_018,Himachal Pradesh #18,Himachal Pradesh,,even_grid,77.866,31.49217,10.24,"10,11,12",,18
+jammu_and_kashmir_018,Jammu and Kashmir #18,Jammu and Kashmir,,even_grid,75.46337,32.79989,10.24,"10,11,12",,18
+jharkhand_018,Jharkhand #18,Jharkhand,,even_grid,86.95072,23.86177,10.24,"11,12,1,2,3",,18
+karnataka_018,Karnataka #18,Karnataka,,even_grid,77.16956,13.10185,10.24,"11,12,1,2,3",,18
+kerala_018,Kerala #18,Kerala,,even_grid,76.83975,9.44246,10.24,"12,1,2,3",0.03,18
+ladakh_018,Ladakh #18,Ladakh,,even_grid,78.69392,34.43875,10.24,"7,8,9,10",,18
+madhya_pradesh_018,Madhya Pradesh #18,Madhya Pradesh,,even_grid,76.6246,21.18681,10.24,"11,12,1,2,3",,18
+maharashtra_018,Maharashtra #18,Maharashtra,,even_grid,75.18806,18.06101,10.24,"11,12,1,2,3",,18
+meghalaya_018,Meghalaya #18,Meghalaya,,even_grid,90.85263,25.9374,10.24,"11,12,1,2,3",0.03,18
+odisha_018,Odisha #18,Odisha,,even_grid,86.42765,21.69299,10.24,"11,12,1,2,3",,18
+punjab_018,Punjab #18,Punjab,,even_grid,75.76382,31.29452,10.24,"2,3,4",,18
+rajasthan_018,Rajasthan #18,Rajasthan,,even_grid,75.14606,27.58273,10.24,"11,12,1,2,3",,18
+tamil_nadu_018,Tamil Nadu #18,Tamil Nadu,,even_grid,79.09309,10.80782,10.24,"1,2,3,4",,18
+telangana_018,Telangana #18,Telangana,,even_grid,79.43295,17.30829,10.24,"11,12,1,2,3",,18
+uttar_pradesh_018,Uttar Pradesh #18,Uttar Pradesh,,even_grid,80.58863,25.50045,10.24,"2,3,4",,18
+uttarakhand_018,Uttarakhand #18,Uttarakhand,,even_grid,79.86881,30.95423,10.24,"10,11,12",,18
+west_bengal_018,West Bengal #18,West Bengal,,even_grid,86.97792,23.29099,10.24,"2,3,4",,18
+andhra_pradesh_019,Andhra Pradesh #19,Andhra Pradesh,,even_grid,77.96233,14.47042,10.24,"11,12,1,2,3",,19
+arunachal_pradesh_019,Arunachal Pradesh #19,Arunachal Pradesh,,even_grid,94.8919,28.84601,10.24,"10,11,12",0.03,19
+assam_019,Assam #19,Assam,,even_grid,92.40362,26.24629,10.24,"11,12,1,2,3",0.03,19
+bihar_019,Bihar #19,Bihar,,even_grid,83.94536,25.54497,10.24,"2,3,4",,19
+chhattisgarh_019,Chhattisgarh #19,Chhattisgarh,,even_grid,81.93563,23.04432,10.24,"11,12,1,2,3",,19
+gujarat_019,Gujarat #19,Gujarat,,even_grid,70.72513,23.97157,10.24,"11,12,1,2,3",,19
+haryana_019,Haryana #19,Haryana,,even_grid,75.49479,29.67174,10.24,"2,3,4",,19
+himachal_pradesh_019,Himachal Pradesh #19,Himachal Pradesh,,even_grid,76.42896,31.60374,10.24,"10,11,12",,19
+jammu_and_kashmir_019,Jammu and Kashmir #19,Jammu and Kashmir,,even_grid,74.61819,34.63262,10.24,"10,11,12",,19
+jharkhand_019,Jharkhand #19,Jharkhand,,even_grid,85.59354,23.06954,10.24,"11,12,1,2,3",,19
+karnataka_019,Karnataka #19,Karnataka,,even_grid,74.72051,13.36269,10.24,"11,12,1,2,3",,19
+kerala_019,Kerala #19,Kerala,,even_grid,76.32551,11.25942,10.24,"12,1,2,3",0.03,19
+ladakh_019,Ladakh #19,Ladakh,,even_grid,77.3105,34.78857,10.24,"7,8,9,10",,19
+madhya_pradesh_019,Madhya Pradesh #19,Madhya Pradesh,,even_grid,77.79989,26.00831,10.24,"11,12,1,2,3",,19
+maharashtra_019,Maharashtra #19,Maharashtra,,even_grid,74.74487,18.91756,10.24,"11,12,1,2,3",,19
+odisha_019,Odisha #19,Odisha,,even_grid,83.32336,19.79595,10.24,"11,12,1,2,3",,19
+punjab_019,Punjab #19,Punjab,,even_grid,76.11059,30.07924,10.24,"2,3,4",,19
+rajasthan_019,Rajasthan #19,Rajasthan,,even_grid,74.18146,27.1999,10.24,"11,12,1,2,3",,19
+tamil_nadu_019,Tamil Nadu #19,Tamil Nadu,,even_grid,77.00703,11.80188,10.24,"1,2,3,4",,19
+telangana_019,Telangana #19,Telangana,,even_grid,79.26666,18.0104,10.24,"11,12,1,2,3",,19
+uttar_pradesh_019,Uttar Pradesh #19,Uttar Pradesh,,even_grid,78.24099,28.56188,10.24,"2,3,4",,19
+uttarakhand_019,Uttarakhand #19,Uttarakhand,,even_grid,78.68318,31.18684,10.24,"10,11,12",,19
+west_bengal_019,West Bengal #19,West Bengal,,even_grid,88.53511,26.58879,10.24,"2,3,4",,19
+andhra_pradesh_020,Andhra Pradesh #20,Andhra Pradesh,,even_grid,80.78079,16.4881,10.24,"11,12,1,2,3",,20
+arunachal_pradesh_020,Arunachal Pradesh #20,Arunachal Pradesh,,even_grid,94.04098,28.09862,10.24,"10,11,12",0.03,20
+assam_020,Assam #20,Assam,,even_grid,95.39531,27.39621,10.24,"11,12,1,2,3",0.03,20
+bihar_020,Bihar #20,Bihar,,even_grid,84.75575,25.79007,10.24,"2,3,4",,20
+chhattisgarh_020,Chhattisgarh #20,Chhattisgarh,,even_grid,81.28143,18.76765,10.24,"11,12,1,2,3",,20
+gujarat_020,Gujarat #20,Gujarat,,even_grid,70.0137,22.59007,10.24,"11,12,1,2,3",,20
+haryana_020,Haryana #20,Haryana,,even_grid,76.45416,29.72796,10.24,"2,3,4",,20
+himachal_pradesh_020,Himachal Pradesh #20,Himachal Pradesh,,even_grid,77.24314,32.60742,10.24,"10,11,12",,20
+jammu_and_kashmir_020,Jammu and Kashmir #20,Jammu and Kashmir,,even_grid,76.21819,33.02182,10.24,"10,11,12",,20
+jharkhand_020,Jharkhand #20,Jharkhand,,even_grid,84.31666,23.00055,10.24,"11,12,1,2,3",,20
+karnataka_020,Karnataka #20,Karnataka,,even_grid,76.13406,12.54239,10.24,"11,12,1,2,3",,20
+kerala_020,Kerala #20,Kerala,,even_grid,77.17683,9.69682,10.24,"12,1,2,3",0.03,20
+ladakh_020,Ladakh #20,Ladakh,,even_grid,78.97611,35.86122,10.24,"7,8,9,10",,20
+madhya_pradesh_020,Madhya Pradesh #20,Madhya Pradesh,,even_grid,77.86212,22.30011,10.24,"11,12,1,2,3",,20
+maharashtra_020,Maharashtra #20,Maharashtra,,even_grid,76.05834,19.43814,10.24,"11,12,1,2,3",,20
+odisha_020,Odisha #20,Odisha,,even_grid,85.2884,20.51347,10.24,"11,12,1,2,3",,20
+punjab_020,Punjab #20,Punjab,,even_grid,75.8205,30.76711,10.24,"2,3,4",,20
+rajasthan_020,Rajasthan #20,Rajasthan,,even_grid,74.73082,25.77335,10.24,"11,12,1,2,3",,20
+tamil_nadu_020,Tamil Nadu #20,Tamil Nadu,,even_grid,79.80686,11.43935,10.24,"1,2,3,4",,20
+telangana_020,Telangana #20,Telangana,,even_grid,78.32607,18.11994,10.24,"11,12,1,2,3",,20
+uttar_pradesh_020,Uttar Pradesh #20,Uttar Pradesh,,even_grid,81.44174,26.04989,10.24,"2,3,4",,20
+uttarakhand_020,Uttarakhand #20,Uttarakhand,,even_grid,79.94816,29.83129,10.24,"10,11,12",,20
+west_bengal_020,West Bengal #20,West Bengal,,even_grid,88.52152,22.04893,10.24,"2,3,4",,20
+andhra_pradesh_021,Andhra Pradesh #21,Andhra Pradesh,,even_grid,80.14098,14.52553,10.24,"11,12,1,2,3",,21
+arunachal_pradesh_021,Arunachal Pradesh #21,Arunachal Pradesh,,even_grid,96.4336,27.30406,10.24,"10,11,12",0.03,21
+assam_021,Assam #21,Assam,,even_grid,92.51444,24.85904,10.24,"11,12,1,2,3",0.03,21
+bihar_021,Bihar #21,Bihar,,even_grid,83.46008,24.75309,10.24,"2,3,4",,21
+chhattisgarh_021,Chhattisgarh #21,Chhattisgarh,,even_grid,83.37872,21.36024,10.24,"11,12,1,2,3",,21
+gujarat_021,Gujarat #21,Gujarat,,even_grid,71.51918,23.64189,10.24,"11,12,1,2,3",,21
+haryana_021,Haryana #21,Haryana,,even_grid,76.65821,29.0219,10.24,"2,3,4",,21
+himachal_pradesh_021,Himachal Pradesh #21,Himachal Pradesh,,even_grid,75.91043,32.78415,10.24,"10,11,12",,21
+jammu_and_kashmir_021,Jammu and Kashmir #21,Jammu and Kashmir,,even_grid,75.59227,33.64895,10.24,"10,11,12",,21
+jharkhand_021,Jharkhand #21,Jharkhand,,even_grid,84.15181,24.07375,10.24,"11,12,1,2,3",,21
+karnataka_021,Karnataka #21,Karnataka,,even_grid,75.54161,12.73099,10.24,"11,12,1,2,3",,21
+kerala_021,Kerala #21,Kerala,,even_grid,76.30465,9.6768,10.24,"12,1,2,3",0.03,21
+ladakh_021,Ladakh #21,Ladakh,,even_grid,72.54237,36.1086,10.24,"7,8,9,10",,21
+madhya_pradesh_021,Madhya Pradesh #21,Madhya Pradesh,,even_grid,80.77991,24.10239,10.24,"11,12,1,2,3",,21
+maharashtra_021,Maharashtra #21,Maharashtra,,even_grid,76.76842,20.50293,10.24,"11,12,1,2,3",,21
+odisha_021,Odisha #21,Odisha,,even_grid,82.45121,19.16158,10.24,"11,12,1,2,3",,21
+punjab_021,Punjab #21,Punjab,,even_grid,75.69434,30.00245,10.24,"2,3,4",,21
+rajasthan_021,Rajasthan #21,Rajasthan,,even_grid,73.90256,24.86581,10.24,"11,12,1,2,3",,21
+tamil_nadu_021,Tamil Nadu #21,Tamil Nadu,,even_grid,77.83069,10.28439,10.24,"1,2,3,4",,21
+telangana_021,Telangana #21,Telangana,,even_grid,80.69526,17.89338,10.24,"11,12,1,2,3",,21
+uttar_pradesh_021,Uttar Pradesh #21,Uttar Pradesh,,even_grid,83.10041,26.23919,10.24,"2,3,4",,21
+uttarakhand_021,Uttarakhand #21,Uttarakhand,,even_grid,77.79552,30.02067,10.24,"10,11,12",,21
+west_bengal_021,West Bengal #21,West Bengal,,even_grid,87.40217,23.60867,10.24,"2,3,4",,21
+andhra_pradesh_022,Andhra Pradesh #22,Andhra Pradesh,,even_grid,77.22966,15.48032,10.24,"11,12,1,2,3",,22
+arunachal_pradesh_022,Arunachal Pradesh #22,Arunachal Pradesh,,even_grid,93.08507,28.25539,10.24,"10,11,12",0.03,22
+assam_022,Assam #22,Assam,,even_grid,92.68638,26.59587,10.24,"11,12,1,2,3",0.03,22
+bihar_022,Bihar #22,Bihar,,even_grid,84.61179,26.48281,10.24,"2,3,4",,22
+chhattisgarh_022,Chhattisgarh #22,Chhattisgarh,,even_grid,81.55029,20.05653,10.24,"11,12,1,2,3",,22
+gujarat_022,Gujarat #22,Gujarat,,even_grid,72.65668,21.15619,10.24,"11,12,1,2,3",,22
+haryana_022,Haryana #22,Haryana,,even_grid,77.08521,28.06019,10.24,"2,3,4",,22
+himachal_pradesh_022,Himachal Pradesh #22,Himachal Pradesh,,even_grid,77.20817,30.66246,10.24,"10,11,12",,22
+jammu_and_kashmir_022,Jammu and Kashmir #22,Jammu and Kashmir,,even_grid,74.62074,32.80871,10.24,"10,11,12",,22
+jharkhand_022,Jharkhand #22,Jharkhand,,even_grid,84.65976,23.69064,10.24,"11,12,1,2,3",,22
+karnataka_022,Karnataka #22,Karnataka,,even_grid,76.78228,17.11333,10.24,"11,12,1,2,3",,22
+kerala_022,Kerala #22,Kerala,,even_grid,75.45687,11.79509,10.24,"12,1,2,3",0.03,22
+ladakh_022,Ladakh #22,Ladakh,,even_grid,75.37643,36.32849,10.24,"7,8,9,10",,22
+madhya_pradesh_022,Madhya Pradesh #22,Madhya Pradesh,,even_grid,81.058,23.22789,10.24,"11,12,1,2,3",,22
+maharashtra_022,Maharashtra #22,Maharashtra,,even_grid,74.2829,20.079,10.24,"11,12,1,2,3",,22
+odisha_022,Odisha #22,Odisha,,even_grid,83.78595,19.41842,10.24,"11,12,1,2,3",,22
+punjab_022,Punjab #22,Punjab,,even_grid,75.40584,30.59053,10.24,"2,3,4",,22
+rajasthan_022,Rajasthan #22,Rajasthan,,even_grid,72.81163,26.31049,10.24,"11,12,1,2,3",,22
+tamil_nadu_022,Tamil Nadu #22,Tamil Nadu,,even_grid,78.62134,10.33343,10.24,"1,2,3,4",,22
+telangana_022,Telangana #22,Telangana,,even_grid,78.87367,16.17469,10.24,"11,12,1,2,3",,22
+uttar_pradesh_022,Uttar Pradesh #22,Uttar Pradesh,,even_grid,79.69118,26.95224,10.24,"2,3,4",,22
+uttarakhand_022,Uttarakhand #22,Uttarakhand,,even_grid,80.4194,30.51168,10.24,"10,11,12",,22
+west_bengal_022,West Bengal #22,West Bengal,,even_grid,89.49805,26.08315,10.24,"2,3,4",,22
+andhra_pradesh_023,Andhra Pradesh #23,Andhra Pradesh,,even_grid,77.13907,13.76305,10.24,"11,12,1,2,3",,23
+arunachal_pradesh_023,Arunachal Pradesh #23,Arunachal Pradesh,,even_grid,92.70406,27.42428,10.24,"10,11,12",0.03,23
+assam_023,Assam #23,Assam,,even_grid,93.2851,25.9873,10.24,"11,12,1,2,3",0.03,23
+bihar_023,Bihar #23,Bihar,,even_grid,86.89063,25.40383,10.24,"2,3,4",,23
+chhattisgarh_023,Chhattisgarh #23,Chhattisgarh,,even_grid,83.17129,23.50925,10.24,"11,12,1,2,3",,23
+gujarat_023,Gujarat #23,Gujarat,,even_grid,74.28308,21.56033,10.24,"11,12,1,2,3",,23
+haryana_023,Haryana #23,Haryana,,even_grid,75.96861,28.74744,10.24,"2,3,4",,23
+himachal_pradesh_023,Himachal Pradesh #23,Himachal Pradesh,,even_grid,76.80936,32.2933,10.24,"10,11,12",,23
+jammu_and_kashmir_023,Jammu and Kashmir #23,Jammu and Kashmir,,even_grid,75.3219,33.33747,10.24,"10,11,12",,23
+jharkhand_023,Jharkhand #23,Jharkhand,,even_grid,85.31737,24.11149,10.24,"11,12,1,2,3",,23
+karnataka_023,Karnataka #23,Karnataka,,even_grid,74.58945,14.55663,10.24,"11,12,1,2,3",,23
+ladakh_023,Ladakh #23,Ladakh,,even_grid,77.48464,33.5692,10.24,"7,8,9,10",,23
+madhya_pradesh_023,Madhya Pradesh #23,Madhya Pradesh,,even_grid,76.07703,23.96691,10.24,"11,12,1,2,3",,23
+maharashtra_023,Maharashtra #23,Maharashtra,,even_grid,79.5512,19.92604,10.24,"11,12,1,2,3",,23
+odisha_023,Odisha #23,Odisha,,even_grid,85.77009,21.63798,10.24,"11,12,1,2,3",,23
+punjab_023,Punjab #23,Punjab,,even_grid,74.94168,31.63452,10.24,"2,3,4",,23
+rajasthan_023,Rajasthan #23,Rajasthan,,even_grid,74.06979,26.45096,10.24,"11,12,1,2,3",,23
+tamil_nadu_023,Tamil Nadu #23,Tamil Nadu,,even_grid,77.6683,8.17554,10.24,"1,2,3,4",,23
+telangana_023,Telangana #23,Telangana,,even_grid,77.88943,17.2942,10.24,"11,12,1,2,3",,23
+uttar_pradesh_023,Uttar Pradesh #23,Uttar Pradesh,,even_grid,78.85924,24.21598,10.24,"2,3,4",,23
+uttarakhand_023,Uttarakhand #23,Uttarakhand,,even_grid,78.58214,29.68878,10.24,"10,11,12",,23
+west_bengal_023,West Bengal #23,West Bengal,,even_grid,87.27344,22.03919,10.24,"2,3,4",,23
+andhra_pradesh_024,Andhra Pradesh #24,Andhra Pradesh,,even_grid,79.13408,14.68636,10.24,"11,12,1,2,3",,24
+arunachal_pradesh_024,Arunachal Pradesh #24,Arunachal Pradesh,,even_grid,95.54198,28.25863,10.24,"10,11,12",0.03,24
+assam_024,Assam #24,Assam,,even_grid,91.77187,26.55577,10.24,"11,12,1,2,3",0.03,24
+bihar_024,Bihar #24,Bihar,,even_grid,85.43109,26.76241,10.24,"2,3,4",,24
+chhattisgarh_024,Chhattisgarh #24,Chhattisgarh,,even_grid,80.56352,19.17546,10.24,"11,12,1,2,3",,24
+gujarat_024,Gujarat #24,Gujarat,,even_grid,71.20599,21.57878,10.24,"11,12,1,2,3",,24
+himachal_pradesh_024,Himachal Pradesh #24,Himachal Pradesh,,even_grid,77.61161,32.27274,10.24,"10,11,12",,24
+jammu_and_kashmir_024,Jammu and Kashmir #24,Jammu and Kashmir,,even_grid,75.43888,32.39255,10.24,"10,11,12",,24
+jharkhand_024,Jharkhand #24,Jharkhand,,even_grid,86.14364,24.59673,10.24,"11,12,1,2,3",,24
+karnataka_024,Karnataka #24,Karnataka,,even_grid,76.41779,14.53069,10.24,"11,12,1,2,3",,24
+ladakh_024,Ladakh #24,Ladakh,,even_grid,78.09663,34.92105,10.24,"7,8,9,10",,24
+madhya_pradesh_024,Madhya Pradesh #24,Madhya Pradesh,,even_grid,76.62994,22.80145,10.24,"11,12,1,2,3",,24
+maharashtra_024,Maharashtra #24,Maharashtra,,even_grid,74.38826,20.86955,10.24,"11,12,1,2,3",,24
+odisha_024,Odisha #24,Odisha,,even_grid,86.3822,20.7563,10.24,"11,12,1,2,3",,24
+punjab_024,Punjab #24,Punjab,,even_grid,75.81787,31.95602,10.24,"2,3,4",,24
+rajasthan_024,Rajasthan #24,Rajasthan,,even_grid,72.24319,26.85333,10.24,"11,12,1,2,3",,24
+tamil_nadu_024,Tamil Nadu #24,Tamil Nadu,,even_grid,78.82446,9.70914,10.24,"1,2,3,4",,24
+telangana_024,Telangana #24,Telangana,,even_grid,78.47805,19.13846,10.24,"11,12,1,2,3",,24
+uttar_pradesh_024,Uttar Pradesh #24,Uttar Pradesh,,even_grid,78.25768,27.36931,10.24,"2,3,4",,24
+uttarakhand_024,Uttarakhand #24,Uttarakhand,,even_grid,79.0842,30.40757,10.24,"10,11,12",,24
+west_bengal_024,West Bengal #24,West Bengal,,even_grid,87.9085,21.89471,10.24,"2,3,4",,24
+andhra_pradesh_025,Andhra Pradesh #25,Andhra Pradesh,,even_grid,77.81915,15.57224,10.24,"11,12,1,2,3",,25
+arunachal_pradesh_025,Arunachal Pradesh #25,Arunachal Pradesh,,even_grid,93.7953,27.40746,10.24,"10,11,12",0.03,25
+assam_025,Assam #25,Assam,,even_grid,93.14962,26.66929,10.24,"11,12,1,2,3",0.03,25
+bihar_025,Bihar #25,Bihar,,even_grid,84.64116,27.28454,10.24,"2,3,4",,25
+chhattisgarh_025,Chhattisgarh #25,Chhattisgarh,,even_grid,82.55095,20.97222,10.24,"11,12,1,2,3",,25
+gujarat_025,Gujarat #25,Gujarat,,even_grid,70.08487,23.43016,10.24,"11,12,1,2,3",,25
+himachal_pradesh_025,Himachal Pradesh #25,Himachal Pradesh,,even_grid,77.15466,32.946,10.24,"10,11,12",,25
+jammu_and_kashmir_025,Jammu and Kashmir #25,Jammu and Kashmir,,even_grid,74.65831,33.75704,10.24,"10,11,12",,25
+jharkhand_025,Jharkhand #25,Jharkhand,,even_grid,87.55569,24.60766,10.24,"11,12,1,2,3",,25
+karnataka_025,Karnataka #25,Karnataka,,even_grid,76.13324,17.09763,10.24,"11,12,1,2,3",,25
+ladakh_025,Ladakh #25,Ladakh,,even_grid,75.76477,35.28535,10.24,"7,8,9,10",,25
+madhya_pradesh_025,Madhya Pradesh #25,Madhya Pradesh,,even_grid,78.9002,21.52598,10.24,"11,12,1,2,3",,25
+maharashtra_025,Maharashtra #25,Maharashtra,,even_grid,74.70667,17.56558,10.24,"11,12,1,2,3",,25
+odisha_025,Odisha #25,Odisha,,even_grid,83.9714,21.32899,10.24,"11,12,1,2,3",,25
+punjab_025,Punjab #25,Punjab,,even_grid,74.88762,30.17776,10.24,"2,3,4",,25
+rajasthan_025,Rajasthan #25,Rajasthan,,even_grid,71.0112,26.30496,10.24,"11,12,1,2,3",,25
+tamil_nadu_025,Tamil Nadu #25,Tamil Nadu,,even_grid,79.68426,12.74043,10.24,"1,2,3,4",,25
+telangana_025,Telangana #25,Telangana,,even_grid,78.9077,16.95424,10.24,"11,12,1,2,3",,25
+uttar_pradesh_025,Uttar Pradesh #25,Uttar Pradesh,,even_grid,82.12242,27.1941,10.24,"2,3,4",,25
+uttarakhand_025,Uttarakhand #25,Uttarakhand,,even_grid,79.24836,29.25004,10.24,"10,11,12",,25
+west_bengal_025,West Bengal #25,West Bengal,,even_grid,88.43304,25.05654,10.24,"2,3,4",,25
+andhra_pradesh_026,Andhra Pradesh #26,Andhra Pradesh,,even_grid,77.41548,14.58418,10.24,"11,12,1,2,3",,26
+arunachal_pradesh_026,Arunachal Pradesh #26,Arunachal Pradesh,,even_grid,93.88127,28.56253,10.24,"10,11,12",0.03,26
+assam_026,Assam #26,Assam,,even_grid,95.52803,27.79306,10.24,"11,12,1,2,3",0.03,26
+bihar_026,Bihar #26,Bihar,,even_grid,86.31819,26.61445,10.24,"2,3,4",,26
+chhattisgarh_026,Chhattisgarh #26,Chhattisgarh,,even_grid,80.52677,20.62924,10.24,"11,12,1,2,3",,26
+gujarat_026,Gujarat #26,Gujarat,,even_grid,74.3073,23.06218,10.24,"11,12,1,2,3",,26
+himachal_pradesh_026,Himachal Pradesh #26,Himachal Pradesh,,even_grid,77.13973,31.89046,10.24,"10,11,12",,26
+jammu_and_kashmir_026,Jammu and Kashmir #26,Jammu and Kashmir,,even_grid,74.56023,35.00096,10.24,"10,11,12",,26
+jharkhand_026,Jharkhand #26,Jharkhand,,even_grid,87.55649,25.30825,10.24,"11,12,1,2,3",,26
+karnataka_026,Karnataka #26,Karnataka,,even_grid,74.85405,15.43681,10.24,"11,12,1,2,3",,26
+ladakh_026,Ladakh #26,Ladakh,,even_grid,76.69873,35.50862,10.24,"7,8,9,10",,26
+madhya_pradesh_026,Madhya Pradesh #26,Madhya Pradesh,,even_grid,77.69463,23.82519,10.24,"11,12,1,2,3",,26
+maharashtra_026,Maharashtra #26,Maharashtra,,even_grid,75.45954,20.81843,10.24,"11,12,1,2,3",,26
+odisha_026,Odisha #26,Odisha,,even_grid,86.30018,19.94419,10.24,"11,12,1,2,3",,26
+rajasthan_026,Rajasthan #26,Rajasthan,,even_grid,71.84633,25.42932,10.24,"11,12,1,2,3",,26
+tamil_nadu_026,Tamil Nadu #26,Tamil Nadu,,even_grid,78.63679,12.81335,10.24,"1,2,3,4",,26
+telangana_026,Telangana #26,Telangana,,even_grid,77.58425,18.46149,10.24,"11,12,1,2,3",,26
+uttar_pradesh_026,Uttar Pradesh #26,Uttar Pradesh,,even_grid,79.64006,28.18803,10.24,"2,3,4",,26
+west_bengal_026,West Bengal #26,West Bengal,,even_grid,86.99228,22.80264,10.24,"2,3,4",,26
+andhra_pradesh_027,Andhra Pradesh #27,Andhra Pradesh,,even_grid,78.70524,15.66472,10.24,"11,12,1,2,3",,27
+arunachal_pradesh_027,Arunachal Pradesh #27,Arunachal Pradesh,,even_grid,94.58947,28.08654,10.24,"10,11,12",0.03,27
+assam_027,Assam #27,Assam,,even_grid,92.47271,26.94802,10.24,"11,12,1,2,3",0.03,27
+bihar_027,Bihar #27,Bihar,,even_grid,84.50687,24.72605,10.24,"2,3,4",,27
+chhattisgarh_027,Chhattisgarh #27,Chhattisgarh,,even_grid,82.61716,22.14394,10.24,"11,12,1,2,3",,27
+gujarat_027,Gujarat #27,Gujarat,,even_grid,73.75032,20.58074,10.24,"11,12,1,2,3",,27
+jharkhand_027,Jharkhand #27,Jharkhand,,even_grid,85.99209,22.20656,10.24,"11,12,1,2,3",,27
+karnataka_027,Karnataka #27,Karnataka,,even_grid,77.75531,13.27708,10.24,"11,12,1,2,3",,27
+ladakh_027,Ladakh #27,Ladakh,,even_grid,78.23407,35.61225,10.24,"7,8,9,10",,27
+madhya_pradesh_027,Madhya Pradesh #27,Madhya Pradesh,,even_grid,76.13307,22.09123,10.24,"11,12,1,2,3",,27
+maharashtra_027,Maharashtra #27,Maharashtra,,even_grid,73.84827,16.48851,10.24,"11,12,1,2,3",,27
+odisha_027,Odisha #27,Odisha,,even_grid,84.90891,21.95416,10.24,"11,12,1,2,3",,27
+rajasthan_027,Rajasthan #27,Rajasthan,,even_grid,74.75892,28.61999,10.24,"11,12,1,2,3",,27
+tamil_nadu_027,Tamil Nadu #27,Tamil Nadu,,even_grid,77.72228,9.65666,10.24,"1,2,3,4",,27
+telangana_027,Telangana #27,Telangana,,even_grid,77.90333,16.39763,10.24,"11,12,1,2,3",,27
+uttar_pradesh_027,Uttar Pradesh #27,Uttar Pradesh,,even_grid,80.50055,27.03704,10.24,"2,3,4",,27
+west_bengal_027,West Bengal #27,West Bengal,,even_grid,88.47512,22.57695,10.24,"2,3,4",,27
+andhra_pradesh_028,Andhra Pradesh #28,Andhra Pradesh,,even_grid,82.4956,17.249,10.24,"11,12,1,2,3",,28
+arunachal_pradesh_028,Arunachal Pradesh #28,Arunachal Pradesh,,even_grid,96.88068,28.12156,10.24,"10,11,12",0.03,28
+assam_028,Assam #28,Assam,,even_grid,93.89288,26.64225,10.24,"11,12,1,2,3",0.03,28
+bihar_028,Bihar #28,Bihar,,even_grid,83.93124,25.0862,10.24,"2,3,4",,28
+chhattisgarh_028,Chhattisgarh #28,Chhattisgarh,,even_grid,81.49197,22.48287,10.24,"11,12,1,2,3",,28
+gujarat_028,Gujarat #28,Gujarat,,even_grid,72.91734,23.75481,10.24,"11,12,1,2,3",,28
+jharkhand_028,Jharkhand #28,Jharkhand,,even_grid,85.81375,23.54052,10.24,"11,12,1,2,3",,28
+karnataka_028,Karnataka #28,Karnataka,,even_grid,76.61316,13.50221,10.24,"11,12,1,2,3",,28
+ladakh_028,Ladakh #28,Ladakh,,even_grid,73.63527,36.19259,10.24,"7,8,9,10",,28
+madhya_pradesh_028,Madhya Pradesh #28,Madhya Pradesh,,even_grid,77.57363,25.21981,10.24,"11,12,1,2,3",,28
+maharashtra_028,Maharashtra #28,Maharashtra,,even_grid,73.6879,18.00433,10.24,"11,12,1,2,3",,28
+odisha_028,Odisha #28,Odisha,,even_grid,82.60495,20.46204,10.24,"11,12,1,2,3",,28
+rajasthan_028,Rajasthan #28,Rajasthan,,even_grid,73.62176,28.57858,10.24,"11,12,1,2,3",,28
+tamil_nadu_028,Tamil Nadu #28,Tamil Nadu,,even_grid,79.72932,10.30067,10.24,"1,2,3,4",,28
+telangana_028,Telangana #28,Telangana,,even_grid,80.3677,17.46504,10.24,"11,12,1,2,3",,28
+uttar_pradesh_028,Uttar Pradesh #28,Uttar Pradesh,,even_grid,80.88631,27.7174,10.24,"2,3,4",,28
+west_bengal_028,West Bengal #28,West Bengal,,even_grid,87.79705,22.72591,10.24,"2,3,4",,28
+andhra_pradesh_029,Andhra Pradesh #29,Andhra Pradesh,,even_grid,80.01519,14.03599,10.24,"11,12,1,2,3",,29
+arunachal_pradesh_029,Arunachal Pradesh #29,Arunachal Pradesh,,even_grid,95.62075,26.86068,10.24,"10,11,12",0.03,29
+assam_029,Assam #29,Assam,,even_grid,91.08183,26.23421,10.24,"11,12,1,2,3",0.03,29
+bihar_029,Bihar #29,Bihar,,even_grid,83.93144,26.46315,10.24,"2,3,4",,29
+chhattisgarh_029,Chhattisgarh #29,Chhattisgarh,,even_grid,81.57175,21.87527,10.24,"11,12,1,2,3",,29
+gujarat_029,Gujarat #29,Gujarat,,even_grid,72.07948,22.62862,10.24,"11,12,1,2,3",,29
+jharkhand_029,Jharkhand #29,Jharkhand,,even_grid,86.50444,22.95958,10.24,"11,12,1,2,3",,29
+karnataka_029,Karnataka #29,Karnataka,,even_grid,75.11313,16.56765,10.24,"11,12,1,2,3",,29
+ladakh_029,Ladakh #29,Ladakh,,even_grid,79.37979,34.76798,10.24,"7,8,9,10",,29
+madhya_pradesh_029,Madhya Pradesh #29,Madhya Pradesh,,even_grid,79.64279,22.70748,10.24,"11,12,1,2,3",,29
+maharashtra_029,Maharashtra #29,Maharashtra,,even_grid,73.43626,19.43265,10.24,"11,12,1,2,3",,29
+odisha_029,Odisha #29,Odisha,,even_grid,84.37929,20.5021,10.24,"11,12,1,2,3",,29
+rajasthan_029,Rajasthan #29,Rajasthan,,even_grid,76.82994,27.01284,10.24,"11,12,1,2,3",,29
+tamil_nadu_029,Tamil Nadu #29,Tamil Nadu,,even_grid,77.25858,11.2165,10.24,"1,2,3,4",,29
+telangana_029,Telangana #29,Telangana,,even_grid,78.23769,18.62716,10.24,"11,12,1,2,3",,29
+uttar_pradesh_029,Uttar Pradesh #29,Uttar Pradesh,,even_grid,79.40282,27.54829,10.24,"2,3,4",,29
+west_bengal_029,West Bengal #29,West Bengal,,even_grid,86.07586,23.10458,10.24,"2,3,4",,29
+andhra_pradesh_030,Andhra Pradesh #30,Andhra Pradesh,,even_grid,79.55262,15.01517,10.24,"11,12,1,2,3",,30
+arunachal_pradesh_030,Arunachal Pradesh #30,Arunachal Pradesh,,even_grid,96.06351,28.35681,10.24,"10,11,12",0.03,30
+assam_030,Assam #30,Assam,,even_grid,91.8853,26.88204,10.24,"11,12,1,2,3",0.03,30
+bihar_030,Bihar #30,Bihar,,even_grid,85.36148,25.11978,10.24,"2,3,4",,30
+chhattisgarh_030,Chhattisgarh #30,Chhattisgarh,,even_grid,82.13237,21.7066,10.24,"11,12,1,2,3",,30
+gujarat_030,Gujarat #30,Gujarat,,even_grid,69.14267,23.86746,10.24,"11,12,1,2,3",,30
+jharkhand_030,Jharkhand #30,Jharkhand,,even_grid,85.41607,22.63367,10.24,"11,12,1,2,3",,30
+karnataka_030,Karnataka #30,Karnataka,,even_grid,76.9712,16.41008,10.24,"11,12,1,2,3",,30
+ladakh_030,Ladakh #30,Ladakh,,even_grid,79.57473,35.337,10.24,"7,8,9,10",,30
+madhya_pradesh_030,Madhya Pradesh #30,Madhya Pradesh,,even_grid,80.53624,22.66332,10.24,"11,12,1,2,3",,30
+maharashtra_030,Maharashtra #30,Maharashtra,,even_grid,79.91968,21.01824,10.24,"11,12,1,2,3",,30
+odisha_030,Odisha #30,Odisha,,even_grid,85.3947,20.99907,10.24,"11,12,1,2,3",,30
+rajasthan_030,Rajasthan #30,Rajasthan,,even_grid,74.18224,23.9991,10.24,"11,12,1,2,3",,30
+tamil_nadu_030,Tamil Nadu #30,Tamil Nadu,,even_grid,77.97525,11.22847,10.24,"1,2,3,4",,30
+telangana_030,Telangana #30,Telangana,,even_grid,79.79913,16.91918,10.24,"11,12,1,2,3",,30
+uttar_pradesh_030,Uttar Pradesh #30,Uttar Pradesh,,even_grid,79.03857,25.15695,10.24,"2,3,4",,30
+west_bengal_030,West Bengal #30,West Bengal,,even_grid,88.66035,23.54249,10.24,"2,3,4",,30
+andhra_pradesh_031,Andhra Pradesh #31,Andhra Pradesh,,even_grid,84.15627,18.4045,10.24,"11,12,1,2,3",,31
+arunachal_pradesh_031,Arunachal Pradesh #31,Arunachal Pradesh,,even_grid,96.55148,28.8323,10.24,"10,11,12",0.03,31
+assam_031,Assam #31,Assam,,even_grid,94.71519,27.64752,10.24,"11,12,1,2,3",0.03,31
+bihar_031,Bihar #31,Bihar,,even_grid,85.1271,24.51526,10.24,"2,3,4",,31
+chhattisgarh_031,Chhattisgarh #31,Chhattisgarh,,even_grid,81.21762,21.06981,10.24,"11,12,1,2,3",,31
+gujarat_031,Gujarat #31,Gujarat,,even_grid,73.06502,21.84271,10.24,"11,12,1,2,3",,31
+jharkhand_031,Jharkhand #31,Jharkhand,,even_grid,84.69441,22.43662,10.24,"11,12,1,2,3",,31
+karnataka_031,Karnataka #31,Karnataka,,even_grid,75.0424,13.78703,10.24,"11,12,1,2,3",,31
+ladakh_031,Ladakh #31,Ladakh,,even_grid,74.01157,35.67949,10.24,"7,8,9,10",,31
+madhya_pradesh_031,Madhya Pradesh #31,Madhya Pradesh,,even_grid,77.38201,22.85991,10.24,"11,12,1,2,3",,31
+maharashtra_031,Maharashtra #31,Maharashtra,,even_grid,73.30277,17.50824,10.24,"11,12,1,2,3",,31
+odisha_031,Odisha #31,Odisha,,even_grid,82.5276,18.67219,10.24,"11,12,1,2,3",,31
+rajasthan_031,Rajasthan #31,Rajasthan,,even_grid,72.31487,28.08338,10.24,"11,12,1,2,3",,31
+tamil_nadu_031,Tamil Nadu #31,Tamil Nadu,,even_grid,77.84238,12.09286,10.24,"1,2,3,4",,31
+telangana_031,Telangana #31,Telangana,,even_grid,79.30284,18.90984,10.24,"11,12,1,2,3",,31
+uttar_pradesh_031,Uttar Pradesh #31,Uttar Pradesh,,even_grid,80.86715,24.94396,10.24,"2,3,4",,31
+west_bengal_031,West Bengal #31,West Bengal,,even_grid,87.99359,23.95416,10.24,"2,3,4",,31
+andhra_pradesh_032,Andhra Pradesh #32,Andhra Pradesh,,even_grid,78.30301,14.02601,10.24,"11,12,1,2,3",,32
+arunachal_pradesh_032,Arunachal Pradesh #32,Arunachal Pradesh,,even_grid,96.40128,28.02169,10.24,"10,11,12",0.03,32
+bihar_032,Bihar #32,Bihar,,even_grid,84.90547,25.288,10.24,"2,3,4",,32
+chhattisgarh_032,Chhattisgarh #32,Chhattisgarh,,even_grid,81.62492,19.16763,10.24,"11,12,1,2,3",,32
+gujarat_032,Gujarat #32,Gujarat,,even_grid,68.55819,23.28133,10.24,"11,12,1,2,3",,32
+jharkhand_032,Jharkhand #32,Jharkhand,,even_grid,86.47615,23.9932,10.24,"11,12,1,2,3",,32
+karnataka_032,Karnataka #32,Karnataka,,even_grid,77.18635,12.27905,10.24,"11,12,1,2,3",,32
+ladakh_032,Ladakh #32,Ladakh,,even_grid,78.95191,33.05375,10.24,"7,8,9,10",,32
+madhya_pradesh_032,Madhya Pradesh #32,Madhya Pradesh,,even_grid,81.49803,24.53346,10.24,"11,12,1,2,3",,32
+maharashtra_032,Maharashtra #32,Maharashtra,,even_grid,74.71741,19.61472,10.24,"11,12,1,2,3",,32
+odisha_032,Odisha #32,Odisha,,even_grid,84.41292,18.91268,10.24,"11,12,1,2,3",,32
+rajasthan_032,Rajasthan #32,Rajasthan,,even_grid,72.59974,27.44016,10.24,"11,12,1,2,3",,32
+tamil_nadu_032,Tamil Nadu #32,Tamil Nadu,,even_grid,78.51392,9.2767,10.24,"1,2,3,4",,32
+telangana_032,Telangana #32,Telangana,,even_grid,80.12444,18.28573,10.24,"11,12,1,2,3",,32
+uttar_pradesh_032,Uttar Pradesh #32,Uttar Pradesh,,even_grid,80.31313,28.27329,10.24,"2,3,4",,32
+west_bengal_032,West Bengal #32,West Bengal,,even_grid,87.82634,25.9136,10.24,"2,3,4",,32
+andhra_pradesh_033,Andhra Pradesh #33,Andhra Pradesh,,even_grid,81.92752,16.39542,10.24,"11,12,1,2,3",,33
+bihar_033,Bihar #33,Bihar,,even_grid,85.353,25.92371,10.24,"2,3,4",,33
+chhattisgarh_033,Chhattisgarh #33,Chhattisgarh,,even_grid,82.14858,20.04911,10.24,"11,12,1,2,3",,33
+gujarat_033,Gujarat #33,Gujarat,,even_grid,69.76557,21.73817,10.24,"11,12,1,2,3",,33
+karnataka_033,Karnataka #33,Karnataka,,even_grid,75.64534,17.45884,10.24,"11,12,1,2,3",,33
+ladakh_033,Ladakh #33,Ladakh,,even_grid,76.07095,36.46675,10.24,"7,8,9,10",,33
+madhya_pradesh_033,Madhya Pradesh #33,Madhya Pradesh,,even_grid,75.06612,23.06436,10.24,"11,12,1,2,3",,33
+maharashtra_033,Maharashtra #33,Maharashtra,,even_grid,77.21383,19.15902,10.24,"11,12,1,2,3",,33
+odisha_033,Odisha #33,Odisha,,even_grid,86.94848,21.62904,10.24,"11,12,1,2,3",,33
+rajasthan_033,Rajasthan #33,Rajasthan,,even_grid,71.11019,27.66999,10.24,"11,12,1,2,3",,33
+tamil_nadu_033,Tamil Nadu #33,Tamil Nadu,,even_grid,78.07292,12.80689,10.24,"1,2,3,4",,33
+telangana_033,Telangana #33,Telangana,,even_grid,80.77239,17.11228,10.24,"11,12,1,2,3",,33
+uttar_pradesh_033,Uttar Pradesh #33,Uttar Pradesh,,even_grid,77.84655,29.0676,10.24,"2,3,4",,33
+west_bengal_033,West Bengal #33,West Bengal,,even_grid,87.64539,22.20837,10.24,"2,3,4",,33
+andhra_pradesh_034,Andhra Pradesh #34,Andhra Pradesh,,even_grid,83.15306,17.93539,10.24,"11,12,1,2,3",,34
+bihar_034,Bihar #34,Bihar,,even_grid,86.66016,25.835,10.24,"2,3,4",,34
+chhattisgarh_034,Chhattisgarh #34,Chhattisgarh,,even_grid,82.0745,23.52808,10.24,"11,12,1,2,3",,34
+gujarat_034,Gujarat #34,Gujarat,,even_grid,70.69414,22.50813,10.24,"11,12,1,2,3",,34
+karnataka_034,Karnataka #34,Karnataka,,even_grid,77.07443,17.61929,10.24,"11,12,1,2,3",,34
+ladakh_034,Ladakh #34,Ladakh,,even_grid,75.83615,34.67764,10.24,"7,8,9,10",,34
+madhya_pradesh_034,Madhya Pradesh #34,Madhya Pradesh,,even_grid,76.14399,23.31376,10.24,"11,12,1,2,3",,34
+maharashtra_034,Maharashtra #34,Maharashtra,,even_grid,72.731,19.70552,10.24,"11,12,1,2,3",,34
+odisha_034,Odisha #34,Odisha,,even_grid,87.0313,20.72721,10.24,"11,12,1,2,3",,34
+rajasthan_034,Rajasthan #34,Rajasthan,,even_grid,71.51546,26.7718,10.24,"11,12,1,2,3",,34
+tamil_nadu_034,Tamil Nadu #34,Tamil Nadu,,even_grid,79.60227,13.2544,10.24,"1,2,3,4",,34
+telangana_034,Telangana #34,Telangana,,even_grid,78.2097,17.64979,10.24,"11,12,1,2,3",,34
+uttar_pradesh_034,Uttar Pradesh #34,Uttar Pradesh,,even_grid,78.91621,28.52533,10.24,"2,3,4",,34
+andhra_pradesh_035,Andhra Pradesh #35,Andhra Pradesh,,even_grid,79.93089,15.58858,10.24,"11,12,1,2,3",,35
+bihar_035,Bihar #35,Bihar,,even_grid,87.49719,25.68203,10.24,"2,3,4",,35
+chhattisgarh_035,Chhattisgarh #35,Chhattisgarh,,even_grid,83.56441,21.84136,10.24,"11,12,1,2,3",,35
+gujarat_035,Gujarat #35,Gujarat,,even_grid,71.51487,23.01548,10.24,"11,12,1,2,3",,35
+karnataka_035,Karnataka #35,Karnataka,,even_grid,75.8075,13.64612,10.24,"11,12,1,2,3",,35
+ladakh_035,Ladakh #35,Ladakh,,even_grid,76.68122,36.1157,10.24,"7,8,9,10",,35
+madhya_pradesh_035,Madhya Pradesh #35,Madhya Pradesh,,even_grid,78.50306,23.66065,10.24,"11,12,1,2,3",,35
+maharashtra_035,Maharashtra #35,Maharashtra,,even_grid,80.01266,20.31954,10.24,"11,12,1,2,3",,35
+odisha_035,Odisha #35,Odisha,,even_grid,85.81978,19.80073,10.24,"11,12,1,2,3",,35
+rajasthan_035,Rajasthan #35,Rajasthan,,even_grid,76.19886,25.24631,10.24,"11,12,1,2,3",,35
+tamil_nadu_035,Tamil Nadu #35,Tamil Nadu,,even_grid,77.69834,8.72026,10.24,"1,2,3,4",,35
+telangana_035,Telangana #35,Telangana,,even_grid,78.77701,17.96808,10.24,"11,12,1,2,3",,35
+uttar_pradesh_035,Uttar Pradesh #35,Uttar Pradesh,,even_grid,83.35159,26.78882,10.24,"2,3,4",,35
+andhra_pradesh_036,Andhra Pradesh #36,Andhra Pradesh,,even_grid,78.71219,14.92838,10.24,"11,12,1,2,3",,36
+chhattisgarh_036,Chhattisgarh #36,Chhattisgarh,,even_grid,81.136,21.59608,10.24,"11,12,1,2,3",,36
+gujarat_036,Gujarat #36,Gujarat,,even_grid,73.08177,20.67629,10.24,"11,12,1,2,3",,36
+karnataka_036,Karnataka #36,Karnataka,,even_grid,76.27244,15.18982,10.24,"11,12,1,2,3",,36
+ladakh_036,Ladakh #36,Ladakh,,even_grid,78.07495,33.2503,10.24,"7,8,9,10",,36
+madhya_pradesh_036,Madhya Pradesh #36,Madhya Pradesh,,even_grid,79.59924,21.57307,10.24,"11,12,1,2,3",,36
+maharashtra_036,Maharashtra #36,Maharashtra,,even_grid,75.25912,18.62973,10.24,"11,12,1,2,3",,36
+odisha_036,Odisha #36,Odisha,,even_grid,84.35656,19.81002,10.24,"11,12,1,2,3",,36
+rajasthan_036,Rajasthan #36,Rajasthan,,even_grid,73.26262,25.14635,10.24,"11,12,1,2,3",,36
+tamil_nadu_036,Tamil Nadu #36,Tamil Nadu,,even_grid,77.14881,10.74293,10.24,"1,2,3,4",,36
+telangana_036,Telangana #36,Telangana,,even_grid,79.9204,17.34839,10.24,"11,12,1,2,3",,36
+uttar_pradesh_036,Uttar Pradesh #36,Uttar Pradesh,,even_grid,81.63787,26.60274,10.24,"2,3,4",,36
+andhra_pradesh_037,Andhra Pradesh #37,Andhra Pradesh,,even_grid,81.80715,16.93049,10.24,"11,12,1,2,3",,37
+chhattisgarh_037,Chhattisgarh #37,Chhattisgarh,,even_grid,81.02407,18.32626,10.24,"11,12,1,2,3",,37
+gujarat_037,Gujarat #37,Gujarat,,even_grid,73.73356,21.87197,10.24,"11,12,1,2,3",,37
+karnataka_037,Karnataka #37,Karnataka,,even_grid,75.91324,14.35178,10.24,"11,12,1,2,3",,37
+ladakh_037,Ladakh #37,Ladakh,,even_grid,74.81292,36.63581,10.24,"7,8,9,10",,37
+madhya_pradesh_037,Madhya Pradesh #37,Madhya Pradesh,,even_grid,77.11958,26.21526,10.24,"11,12,1,2,3",,37
+maharashtra_037,Maharashtra #37,Maharashtra,,even_grid,75.25867,19.93856,10.24,"11,12,1,2,3",,37
+odisha_037,Odisha #37,Odisha,,even_grid,83.48105,20.89259,10.24,"11,12,1,2,3",,37
+rajasthan_037,Rajasthan #37,Rajasthan,,even_grid,74.51544,25.15197,10.24,"11,12,1,2,3",,37
+tamil_nadu_037,Tamil Nadu #37,Tamil Nadu,,even_grid,78.77167,11.23755,10.24,"1,2,3,4",,37
+telangana_037,Telangana #37,Telangana,,even_grid,78.42876,16.32633,10.24,"11,12,1,2,3",,37
+uttar_pradesh_037,Uttar Pradesh #37,Uttar Pradesh,,even_grid,78.37953,25.32229,10.24,"2,3,4",,37
+andhra_pradesh_038,Andhra Pradesh #38,Andhra Pradesh,,even_grid,79.84544,16.44909,10.24,"11,12,1,2,3",,38
+chhattisgarh_038,Chhattisgarh #38,Chhattisgarh,,even_grid,81.60129,20.74284,10.24,"11,12,1,2,3",,38
+gujarat_038,Gujarat #38,Gujarat,,even_grid,72.9513,23.13056,10.24,"11,12,1,2,3",,38
+karnataka_038,Karnataka #38,Karnataka,,even_grid,75.50461,15.16805,10.24,"11,12,1,2,3",,38
+ladakh_038,Ladakh #38,Ladakh,,even_grid,79.05355,32.48158,10.24,"7,8,9,10",,38
+madhya_pradesh_038,Madhya Pradesh #38,Madhya Pradesh,,even_grid,78.42839,22.00163,10.24,"11,12,1,2,3",,38
+maharashtra_038,Maharashtra #38,Maharashtra,,even_grid,77.22079,21.03621,10.24,"11,12,1,2,3",,38
+odisha_038,Odisha #38,Odisha,,even_grid,84.03483,21.98004,10.24,"11,12,1,2,3",,38
+rajasthan_038,Rajasthan #38,Rajasthan,,even_grid,76.41397,26.17179,10.24,"11,12,1,2,3",,38
+tamil_nadu_038,Tamil Nadu #38,Tamil Nadu,,even_grid,79.40619,11.87137,10.24,"1,2,3,4",,38
+telangana_038,Telangana #38,Telangana,,even_grid,78.37822,17.18336,10.24,"11,12,1,2,3",,38
+uttar_pradesh_038,Uttar Pradesh #38,Uttar Pradesh,,even_grid,81.90846,25.66064,10.24,"2,3,4",,38
+andhra_pradesh_039,Andhra Pradesh #39,Andhra Pradesh,,even_grid,78.80411,14.03104,10.24,"11,12,1,2,3",,39
+chhattisgarh_039,Chhattisgarh #39,Chhattisgarh,,even_grid,83.6702,22.52671,10.24,"11,12,1,2,3",,39
+gujarat_039,Gujarat #39,Gujarat,,even_grid,73.7345,22.78942,10.24,"11,12,1,2,3",,39
+karnataka_039,Karnataka #39,Karnataka,,even_grid,76.52004,12.18222,10.24,"11,12,1,2,3",,39
+ladakh_039,Ladakh #39,Ladakh,,even_grid,76.29189,34.28116,10.24,"7,8,9,10",,39
+madhya_pradesh_039,Madhya Pradesh #39,Madhya Pradesh,,even_grid,78.42105,22.61242,10.24,"11,12,1,2,3",,39
+maharashtra_039,Maharashtra #39,Maharashtra,,even_grid,77.92072,20.91648,10.24,"11,12,1,2,3",,39
+odisha_039,Odisha #39,Odisha,,even_grid,85.31368,20.06416,10.24,"11,12,1,2,3",,39
+rajasthan_039,Rajasthan #39,Rajasthan,,even_grid,75.79411,27.29498,10.24,"11,12,1,2,3",,39
+tamil_nadu_039,Tamil Nadu #39,Tamil Nadu,,even_grid,79.44932,11.08455,10.24,"1,2,3,4",,39
+telangana_039,Telangana #39,Telangana,,even_grid,77.40358,17.20836,10.24,"11,12,1,2,3",,39
+uttar_pradesh_039,Uttar Pradesh #39,Uttar Pradesh,,even_grid,82.82027,24.27978,10.24,"2,3,4",,39
+andhra_pradesh_040,Andhra Pradesh #40,Andhra Pradesh,,even_grid,80.56565,15.87417,10.24,"11,12,1,2,3",,40
+chhattisgarh_040,Chhattisgarh #40,Chhattisgarh,,even_grid,81.07919,19.93953,10.24,"11,12,1,2,3",,40
+gujarat_040,Gujarat #40,Gujarat,,even_grid,70.69344,21.25583,10.24,"11,12,1,2,3",,40
+karnataka_040,Karnataka #40,Karnataka,,even_grid,78.26085,13.24285,10.24,"11,12,1,2,3",,40
+ladakh_040,Ladakh #40,Ladakh,,even_grid,80.26777,35.37788,10.24,"7,8,9,10",,40
+madhya_pradesh_040,Madhya Pradesh #40,Madhya Pradesh,,even_grid,79.355,23.84118,10.24,"11,12,1,2,3",,40
+maharashtra_040,Maharashtra #40,Maharashtra,,even_grid,78.06908,20.30706,10.24,"11,12,1,2,3",,40
+odisha_040,Odisha #40,Odisha,,even_grid,83.21186,18.74024,10.24,"11,12,1,2,3",,40
+rajasthan_040,Rajasthan #40,Rajasthan,,even_grid,70.29409,27.40275,10.24,"11,12,1,2,3",,40
+tamil_nadu_040,Tamil Nadu #40,Tamil Nadu,,even_grid,78.2232,10.525,10.24,"1,2,3,4",,40
+telangana_040,Telangana #40,Telangana,,even_grid,78.84358,19.72905,10.24,"11,12,1,2,3",,40
+uttar_pradesh_040,Uttar Pradesh #40,Uttar Pradesh,,even_grid,78.1528,28.00734,10.24,"2,3,4",,40
+andhra_pradesh_041,Andhra Pradesh #41,Andhra Pradesh,,even_grid,81.55972,17.67299,10.24,"11,12,1,2,3",,41
+chhattisgarh_041,Chhattisgarh #41,Chhattisgarh,,even_grid,82.23538,22.67604,10.24,"11,12,1,2,3",,41
+gujarat_041,Gujarat #41,Gujarat,,even_grid,71.82828,21.61387,10.24,"11,12,1,2,3",,41
+karnataka_041,Karnataka #41,Karnataka,,even_grid,74.98213,14.28107,10.24,"11,12,1,2,3",,41
+ladakh_041,Ladakh #41,Ladakh,,even_grid,78.06694,33.74011,10.24,"7,8,9,10",,41
+madhya_pradesh_041,Madhya Pradesh #41,Madhya Pradesh,,even_grid,78.42442,26.23387,10.24,"11,12,1,2,3",,41
+maharashtra_041,Maharashtra #41,Maharashtra,,even_grid,76.36728,18.22546,10.24,"11,12,1,2,3",,41
+odisha_041,Odisha #41,Odisha,,even_grid,82.75837,19.52248,10.24,"11,12,1,2,3",,41
+rajasthan_041,Rajasthan #41,Rajasthan,,even_grid,73.66844,27.66176,10.24,"11,12,1,2,3",,41
+tamil_nadu_041,Tamil Nadu #41,Tamil Nadu,,even_grid,79.24229,12.58074,10.24,"1,2,3,4",,41
+uttar_pradesh_041,Uttar Pradesh #41,Uttar Pradesh,,even_grid,79.97695,25.71504,10.24,"2,3,4",,41
+andhra_pradesh_042,Andhra Pradesh #42,Andhra Pradesh,,even_grid,77.42392,14.13535,10.24,"11,12,1,2,3",,42
+chhattisgarh_042,Chhattisgarh #42,Chhattisgarh,,even_grid,83.10807,22.70114,10.24,"11,12,1,2,3",,42
+gujarat_042,Gujarat #42,Gujarat,,even_grid,71.90845,24.66467,10.24,"11,12,1,2,3",,42
+karnataka_042,Karnataka #42,Karnataka,,even_grid,76.59105,16.11076,10.24,"11,12,1,2,3",,42
+ladakh_042,Ladakh #42,Ladakh,,even_grid,74.56681,35.49512,10.24,"7,8,9,10",,42
+madhya_pradesh_042,Madhya Pradesh #42,Madhya Pradesh,,even_grid,76.68977,24.15598,10.24,"11,12,1,2,3",,42
+maharashtra_042,Maharashtra #42,Maharashtra,,even_grid,78.902,20.3155,10.24,"11,12,1,2,3",,42
+odisha_042,Odisha #42,Odisha,,even_grid,84.91248,19.71123,10.24,"11,12,1,2,3",,42
+rajasthan_042,Rajasthan #42,Rajasthan,,even_grid,75.53303,26.36814,10.24,"11,12,1,2,3",,42
+tamil_nadu_042,Tamil Nadu #42,Tamil Nadu,,even_grid,78.84676,11.78915,10.24,"1,2,3,4",,42
+uttar_pradesh_042,Uttar Pradesh #42,Uttar Pradesh,,even_grid,82.73291,26.75814,10.24,"2,3,4",,42
+andhra_pradesh_043,Andhra Pradesh #43,Andhra Pradesh,,even_grid,77.23876,15.03044,10.24,"11,12,1,2,3",,43
+chhattisgarh_043,Chhattisgarh #43,Chhattisgarh,,even_grid,82.07888,21.06036,10.24,"11,12,1,2,3",,43
+gujarat_043,Gujarat #43,Gujarat,,even_grid,73.40206,24.02677,10.24,"11,12,1,2,3",,43
+karnataka_043,Karnataka #43,Karnataka,,even_grid,74.44257,16.0862,10.24,"11,12,1,2,3",,43
+ladakh_043,Ladakh #43,Ladakh,,even_grid,79.43634,33.2604,10.24,"7,8,9,10",,43
+madhya_pradesh_043,Madhya Pradesh #43,Madhya Pradesh,,even_grid,79.399,24.58321,10.24,"11,12,1,2,3",,43
+maharashtra_043,Maharashtra #43,Maharashtra,,even_grid,78.98957,20.97117,10.24,"11,12,1,2,3",,43
+odisha_043,Odisha #43,Odisha,,even_grid,84.4009,21.15388,10.24,"11,12,1,2,3",,43
+rajasthan_043,Rajasthan #43,Rajasthan,,even_grid,73.40404,29.87991,10.24,"11,12,1,2,3",,43
+tamil_nadu_043,Tamil Nadu #43,Tamil Nadu,,even_grid,76.73461,11.48086,10.24,"1,2,3,4",,43
+uttar_pradesh_043,Uttar Pradesh #43,Uttar Pradesh,,even_grid,82.51231,27.6147,10.24,"2,3,4",,43
+andhra_pradesh_044,Andhra Pradesh #44,Andhra Pradesh,,even_grid,80.313,16.44883,10.24,"11,12,1,2,3",,44
+chhattisgarh_044,Chhattisgarh #44,Chhattisgarh,,even_grid,83.08706,21.81143,10.24,"11,12,1,2,3",,44
+gujarat_044,Gujarat #44,Gujarat,,even_grid,68.83219,24.30489,10.24,"11,12,1,2,3",,44
+karnataka_044,Karnataka #44,Karnataka,,even_grid,75.47975,14.62861,10.24,"11,12,1,2,3",,44
+ladakh_044,Ladakh #44,Ladakh,,even_grid,78.89461,33.9922,10.24,"7,8,9,10",,44
+madhya_pradesh_044,Madhya Pradesh #44,Madhya Pradesh,,even_grid,75.12486,21.49468,10.24,"11,12,1,2,3",,44
+maharashtra_044,Maharashtra #44,Maharashtra,,even_grid,73.73732,19.88234,10.24,"11,12,1,2,3",,44
+odisha_044,Odisha #44,Odisha,,even_grid,81.92524,18.31544,10.24,"11,12,1,2,3",,44
+rajasthan_044,Rajasthan #44,Rajasthan,,even_grid,72.55664,24.85063,10.24,"11,12,1,2,3",,44
+tamil_nadu_044,Tamil Nadu #44,Tamil Nadu,,even_grid,79.37242,10.4955,10.24,"1,2,3,4",,44
+uttar_pradesh_044,Uttar Pradesh #44,Uttar Pradesh,,even_grid,77.63624,27.40386,10.24,"2,3,4",,44
+andhra_pradesh_045,Andhra Pradesh #45,Andhra Pradesh,,even_grid,78.20888,14.84129,10.24,"11,12,1,2,3",,45
+chhattisgarh_045,Chhattisgarh #45,Chhattisgarh,,even_grid,82.94358,21.20763,10.24,"11,12,1,2,3",,45
+gujarat_045,Gujarat #45,Gujarat,,even_grid,72.58666,22.40394,10.24,"11,12,1,2,3",,45
+karnataka_045,Karnataka #45,Karnataka,,even_grid,76.66628,13.04985,10.24,"11,12,1,2,3",,45
+ladakh_045,Ladakh #45,Ladakh,,even_grid,73.70819,36.68028,10.24,"7,8,9,10",,45
+madhya_pradesh_045,Madhya Pradesh #45,Madhya Pradesh,,even_grid,77.45461,21.5521,10.24,"11,12,1,2,3",,45
+maharashtra_045,Maharashtra #45,Maharashtra,,even_grid,73.06598,18.58665,10.24,"11,12,1,2,3",,45
+odisha_045,Odisha #45,Odisha,,even_grid,85.72931,20.70113,10.24,"11,12,1,2,3",,45
+rajasthan_045,Rajasthan #45,Rajasthan,,even_grid,70.14306,26.82312,10.24,"11,12,1,2,3",,45
+tamil_nadu_045,Tamil Nadu #45,Tamil Nadu,,even_grid,78.04771,11.74108,10.24,"1,2,3,4",,45
+uttar_pradesh_045,Uttar Pradesh #45,Uttar Pradesh,,even_grid,82.83811,25.0912,10.24,"2,3,4",,45
+andhra_pradesh_046,Andhra Pradesh #46,Andhra Pradesh,,even_grid,82.67797,17.82138,10.24,"11,12,1,2,3",,46
+gujarat_046,Gujarat #46,Gujarat,,even_grid,71.25981,24.12826,10.24,"11,12,1,2,3",,46
+karnataka_046,Karnataka #46,Karnataka,,even_grid,75.38859,16.07766,10.24,"11,12,1,2,3",,46
+ladakh_046,Ladakh #46,Ladakh,,even_grid,73.08495,36.21202,10.24,"7,8,9,10",,46
+madhya_pradesh_046,Madhya Pradesh #46,Madhya Pradesh,,even_grid,74.75553,22.57363,10.24,"11,12,1,2,3",,46
+maharashtra_046,Maharashtra #46,Maharashtra,,even_grid,74.20145,18.76641,10.24,"11,12,1,2,3",,46
+odisha_046,Odisha #46,Odisha,,even_grid,83.51903,19.05869,10.24,"11,12,1,2,3",,46
+rajasthan_046,Rajasthan #46,Rajasthan,,even_grid,74.09743,28.99016,10.24,"11,12,1,2,3",,46
+tamil_nadu_046,Tamil Nadu #46,Tamil Nadu,,even_grid,80.00635,13.13622,10.24,"1,2,3,4",,46
+uttar_pradesh_046,Uttar Pradesh #46,Uttar Pradesh,,even_grid,79.3647,25.62836,10.24,"2,3,4",,46
+andhra_pradesh_047,Andhra Pradesh #47,Andhra Pradesh,,even_grid,77.09437,15.88724,10.24,"11,12,1,2,3",,47
+gujarat_047,Gujarat #47,Gujarat,,even_grid,71.28346,21.08268,10.24,"11,12,1,2,3",,47
+karnataka_047,Karnataka #47,Karnataka,,even_grid,76.77664,15.5337,10.24,"11,12,1,2,3",,47
+ladakh_047,Ladakh #47,Ladakh,,even_grid,77.00557,35.14911,10.24,"7,8,9,10",,47
+madhya_pradesh_047,Madhya Pradesh #47,Madhya Pradesh,,even_grid,77.73214,24.39313,10.24,"11,12,1,2,3",,47
+maharashtra_047,Maharashtra #47,Maharashtra,,even_grid,75.75054,18.99345,10.24,"11,12,1,2,3",,47
+odisha_047,Odisha #47,Odisha,,even_grid,83.72743,20.39751,10.24,"11,12,1,2,3",,47
+rajasthan_047,Rajasthan #47,Rajasthan,,even_grid,75.57217,28.03267,10.24,"11,12,1,2,3",,47
+uttar_pradesh_047,Uttar Pradesh #47,Uttar Pradesh,,even_grid,83.55845,27.38144,10.24,"2,3,4",,47
+andhra_pradesh_048,Andhra Pradesh #48,Andhra Pradesh,,even_grid,78.76964,13.21625,10.24,"11,12,1,2,3",,48
+gujarat_048,Gujarat #48,Gujarat,,even_grid,69.63735,22.2306,10.24,"11,12,1,2,3",,48
+karnataka_048,Karnataka #48,Karnataka,,even_grid,76.72981,13.91781,10.24,"11,12,1,2,3",,48
+ladakh_048,Ladakh #48,Ladakh,,even_grid,74.69212,37.07588,10.24,"7,8,9,10",,48
+madhya_pradesh_048,Madhya Pradesh #48,Madhya Pradesh,,even_grid,75.22996,25.03439,10.24,"11,12,1,2,3",,48
+maharashtra_048,Maharashtra #48,Maharashtra,,even_grid,77.14753,20.11766,10.24,"11,12,1,2,3",,48
+odisha_048,Odisha #48,Odisha,,even_grid,86.36239,21.24678,10.24,"11,12,1,2,3",,48
+rajasthan_048,Rajasthan #48,Rajasthan,,even_grid,73.44714,26.25076,10.24,"11,12,1,2,3",,48
+uttar_pradesh_048,Uttar Pradesh #48,Uttar Pradesh,,even_grid,83.61351,25.97198,10.24,"2,3,4",,48
+andhra_pradesh_049,Andhra Pradesh #49,Andhra Pradesh,,even_grid,79.68175,13.75035,10.24,"11,12,1,2,3",,49
+gujarat_049,Gujarat #49,Gujarat,,even_grid,69.61456,23.64954,10.24,"11,12,1,2,3",,49
+karnataka_049,Karnataka #49,Karnataka,,even_grid,75.95297,15.88672,10.24,"11,12,1,2,3",,49
+ladakh_049,Ladakh #49,Ladakh,,even_grid,76.82355,34.57687,10.24,"7,8,9,10",,49
+madhya_pradesh_049,Madhya Pradesh #49,Madhya Pradesh,,even_grid,82.11304,24.22076,10.24,"11,12,1,2,3",,49
+maharashtra_049,Maharashtra #49,Maharashtra,,even_grid,75.9211,17.90898,10.24,"11,12,1,2,3",,49
+odisha_049,Odisha #49,Odisha,,even_grid,84.47469,22.04927,10.24,"11,12,1,2,3",,49
+rajasthan_049,Rajasthan #49,Rajasthan,,even_grid,76.40752,24.68132,10.24,"11,12,1,2,3",,49
+uttar_pradesh_049,Uttar Pradesh #49,Uttar Pradesh,,even_grid,82.08849,25.14585,10.24,"2,3,4",,49
+andhra_pradesh_050,Andhra Pradesh #50,Andhra Pradesh,,even_grid,81.08102,16.81449,10.24,"11,12,1,2,3",,50
+gujarat_050,Gujarat #50,Gujarat,,even_grid,70.42287,24.3706,10.24,"11,12,1,2,3",,50
+karnataka_050,Karnataka #50,Karnataka,,even_grid,75.92818,16.71746,10.24,"11,12,1,2,3",,50
+ladakh_050,Ladakh #50,Ladakh,,even_grid,76.99411,33.68359,10.24,"7,8,9,10",,50
+madhya_pradesh_050,Madhya Pradesh #50,Madhya Pradesh,,even_grid,75.40011,24.29739,10.24,"11,12,1,2,3",,50
+maharashtra_050,Maharashtra #50,Maharashtra,,even_grid,76.20877,20.62083,10.24,"11,12,1,2,3",,50
+odisha_050,Odisha #50,Odisha,,even_grid,86.31949,20.35108,10.24,"11,12,1,2,3",,50
+rajasthan_050,Rajasthan #50,Rajasthan,,even_grid,70.42391,25.69927,10.24,"11,12,1,2,3",,50
+uttar_pradesh_050,Uttar Pradesh #50,Uttar Pradesh,,even_grid,81.50769,27.62747,10.24,"2,3,4",,50
+andhra_pradesh_051,Andhra Pradesh #51,Andhra Pradesh,,even_grid,81.13186,17.80027,10.24,"11,12,1,2,3",,51
+gujarat_051,Gujarat #51,Gujarat,,even_grid,70.94954,22.06441,10.24,"11,12,1,2,3",,51
+karnataka_051,Karnataka #51,Karnataka,,even_grid,76.06323,12.08821,10.24,"11,12,1,2,3",,51
+ladakh_051,Ladakh #51,Ladakh,,even_grid,74.88837,36.07215,10.24,"7,8,9,10",,51
+madhya_pradesh_051,Madhya Pradesh #51,Madhya Pradesh,,even_grid,74.71855,23.4894,10.24,"11,12,1,2,3",,51
+maharashtra_051,Maharashtra #51,Maharashtra,,even_grid,74.94222,20.97669,10.24,"11,12,1,2,3",,51
+odisha_051,Odisha #51,Odisha,,even_grid,84.75716,21.38777,10.24,"11,12,1,2,3",,51
+rajasthan_051,Rajasthan #51,Rajasthan,,even_grid,74.83197,28.05403,10.24,"11,12,1,2,3",,51
+uttar_pradesh_051,Uttar Pradesh #51,Uttar Pradesh,,even_grid,77.35626,29.35791,10.24,"2,3,4",,51
+andhra_pradesh_052,Andhra Pradesh #52,Andhra Pradesh,,even_grid,83.59803,18.50153,10.24,"11,12,1,2,3",,52
+gujarat_052,Gujarat #52,Gujarat,,even_grid,73.57746,22.32409,10.24,"11,12,1,2,3",,52
+karnataka_052,Karnataka #52,Karnataka,,even_grid,77.17798,12.69018,10.24,"11,12,1,2,3",,52
+ladakh_052,Ladakh #52,Ladakh,,even_grid,77.36987,34.34201,10.24,"7,8,9,10",,52
+madhya_pradesh_052,Madhya Pradesh #52,Madhya Pradesh,,even_grid,80.35312,24.49671,10.24,"11,12,1,2,3",,52
+maharashtra_052,Maharashtra #52,Maharashtra,,even_grid,77.98909,19.47684,10.24,"11,12,1,2,3",,52
+rajasthan_052,Rajasthan #52,Rajasthan,,even_grid,73.06359,28.81759,10.24,"11,12,1,2,3",,52
+uttar_pradesh_052,Uttar Pradesh #52,Uttar Pradesh,,even_grid,80.30521,25.03151,10.24,"2,3,4",,52
+andhra_pradesh_053,Andhra Pradesh #53,Andhra Pradesh,,even_grid,79.13666,14.27813,10.24,"11,12,1,2,3",,53
+gujarat_053,Gujarat #53,Gujarat,,even_grid,69.79899,23.03529,10.24,"11,12,1,2,3",,53
+karnataka_053,Karnataka #53,Karnataka,,even_grid,75.73972,13.1078,10.24,"11,12,1,2,3",,53
+ladakh_053,Ladakh #53,Ladakh,,even_grid,78.40426,34.06979,10.24,"7,8,9,10",,53
+madhya_pradesh_053,Madhya Pradesh #53,Madhya Pradesh,,even_grid,80.57958,21.8342,10.24,"11,12,1,2,3",,53
+maharashtra_053,Maharashtra #53,Maharashtra,,even_grid,73.4606,16.12425,10.24,"11,12,1,2,3",,53
+rajasthan_053,Rajasthan #53,Rajasthan,,even_grid,73.13124,25.79863,10.24,"11,12,1,2,3",,53
+uttar_pradesh_053,Uttar Pradesh #53,Uttar Pradesh,,even_grid,79.07751,26.26722,10.24,"2,3,4",,53
+gujarat_054,Gujarat #54,Gujarat,,even_grid,71.84181,22.11525,10.24,"11,12,1,2,3",,54
+karnataka_054,Karnataka #54,Karnataka,,even_grid,75.92374,15.42929,10.24,"11,12,1,2,3",,54
+ladakh_054,Ladakh #54,Ladakh,,even_grid,78.20156,34.51563,10.24,"7,8,9,10",,54
+madhya_pradesh_054,Madhya Pradesh #54,Madhya Pradesh,,even_grid,76.51786,21.70786,10.24,"11,12,1,2,3",,54
+maharashtra_054,Maharashtra #54,Maharashtra,,even_grid,77.08761,18.6335,10.24,"11,12,1,2,3",,54
+rajasthan_054,Rajasthan #54,Rajasthan,,even_grid,73.91867,29.59473,10.24,"11,12,1,2,3",,54
+uttar_pradesh_054,Uttar Pradesh #54,Uttar Pradesh,,even_grid,78.87876,27.33231,10.24,"2,3,4",,54
+gujarat_055,Gujarat #55,Gujarat,,even_grid,70.39518,22.90707,10.24,"11,12,1,2,3",,55
+karnataka_055,Karnataka #55,Karnataka,,even_grid,74.92682,16.93588,10.24,"11,12,1,2,3",,55
+ladakh_055,Ladakh #55,Ladakh,,even_grid,75.02312,35.26546,10.24,"7,8,9,10",,55
+madhya_pradesh_055,Madhya Pradesh #55,Madhya Pradesh,,even_grid,75.57576,23.34199,10.24,"11,12,1,2,3",,55
+maharashtra_055,Maharashtra #55,Maharashtra,,even_grid,74.09908,16.93342,10.24,"11,12,1,2,3",,55
+rajasthan_055,Rajasthan #55,Rajasthan,,even_grid,75.27089,25.57152,10.24,"11,12,1,2,3",,55
+uttar_pradesh_055,Uttar Pradesh #55,Uttar Pradesh,,even_grid,80.07168,26.56862,10.24,"2,3,4",,55
+gujarat_056,Gujarat #56,Gujarat,,even_grid,72.05855,23.71262,10.24,"11,12,1,2,3",,56
+karnataka_056,Karnataka #56,Karnataka,,even_grid,74.69763,15.05786,10.24,"11,12,1,2,3",,56
+madhya_pradesh_056,Madhya Pradesh #56,Madhya Pradesh,,even_grid,77.41874,23.3843,10.24,"11,12,1,2,3",,56
+maharashtra_056,Maharashtra #56,Maharashtra,,even_grid,80.14987,18.87999,10.24,"11,12,1,2,3",,56
+rajasthan_056,Rajasthan #56,Rajasthan,,even_grid,72.39592,25.9399,10.24,"11,12,1,2,3",,56
+uttar_pradesh_056,Uttar Pradesh #56,Uttar Pradesh,,even_grid,81.06875,26.65032,10.24,"2,3,4",,56
+gujarat_057,Gujarat #57,Gujarat,,even_grid,72.51575,22.8594,10.24,"11,12,1,2,3",,57
+karnataka_057,Karnataka #57,Karnataka,,even_grid,78.1296,13.61243,10.24,"11,12,1,2,3",,57
+madhya_pradesh_057,Madhya Pradesh #57,Madhya Pradesh,,even_grid,80.63472,23.57937,10.24,"11,12,1,2,3",,57
+maharashtra_057,Maharashtra #57,Maharashtra,,even_grid,78.52209,21.18573,10.24,"11,12,1,2,3",,57
+rajasthan_057,Rajasthan #57,Rajasthan,,even_grid,74.77007,27.17676,10.24,"11,12,1,2,3",,57
+uttar_pradesh_057,Uttar Pradesh #57,Uttar Pradesh,,even_grid,78.26532,26.81501,10.24,"2,3,4",,57
+gujarat_058,Gujarat #58,Gujarat,,even_grid,71.02552,23.57193,10.24,"11,12,1,2,3",,58
+karnataka_058,Karnataka #58,Karnataka,,even_grid,77.40141,11.95449,10.24,"11,12,1,2,3",,58
+madhya_pradesh_058,Madhya Pradesh #58,Madhya Pradesh,,even_grid,74.54442,21.99857,10.24,"11,12,1,2,3",,58
+maharashtra_058,Maharashtra #58,Maharashtra,,even_grid,75.16755,17.36394,10.24,"11,12,1,2,3",,58
+rajasthan_058,Rajasthan #58,Rajasthan,,even_grid,70.95612,25.02859,10.24,"11,12,1,2,3",,58
+uttar_pradesh_058,Uttar Pradesh #58,Uttar Pradesh,,even_grid,83.13404,25.68346,10.24,"2,3,4",,58
+karnataka_059,Karnataka #59,Karnataka,,even_grid,75.19642,13.00822,10.24,"11,12,1,2,3",,59
+madhya_pradesh_059,Madhya Pradesh #59,Madhya Pradesh,,even_grid,75.62274,21.94638,10.24,"11,12,1,2,3",,59
+maharashtra_059,Maharashtra #59,Maharashtra,,even_grid,73.91596,21.02599,10.24,"11,12,1,2,3",,59
+rajasthan_059,Rajasthan #59,Rajasthan,,even_grid,74.50465,27.64927,10.24,"11,12,1,2,3",,59
+uttar_pradesh_059,Uttar Pradesh #59,Uttar Pradesh,,even_grid,80.87384,25.92605,10.24,"2,3,4",,59
+karnataka_060,Karnataka #60,Karnataka,,even_grid,77.37344,13.43558,10.24,"11,12,1,2,3",,60
+madhya_pradesh_060,Madhya Pradesh #60,Madhya Pradesh,,even_grid,79.45738,22.05246,10.24,"11,12,1,2,3",,60
+maharashtra_060,Maharashtra #60,Maharashtra,,even_grid,80.05873,19.83943,10.24,"11,12,1,2,3",,60
+rajasthan_060,Rajasthan #60,Rajasthan,,even_grid,73.75666,26.877,10.24,"11,12,1,2,3",,60
+uttar_pradesh_060,Uttar Pradesh #60,Uttar Pradesh,,even_grid,81.4173,28.09695,10.24,"2,3,4",,60
+karnataka_061,Karnataka #61,Karnataka,,even_grid,75.14432,15.69587,10.24,"11,12,1,2,3",,61
+madhya_pradesh_061,Madhya Pradesh #61,Madhya Pradesh,,even_grid,77.26131,24.12359,10.24,"11,12,1,2,3",,61
+maharashtra_061,Maharashtra #61,Maharashtra,,even_grid,76.36105,20.1442,10.24,"11,12,1,2,3",,61
+rajasthan_061,Rajasthan #61,Rajasthan,,even_grid,75.36489,26.97647,10.24,"11,12,1,2,3",,61
+uttar_pradesh_061,Uttar Pradesh #61,Uttar Pradesh,,even_grid,78.76158,24.68514,10.24,"2,3,4",,61
+madhya_pradesh_062,Madhya Pradesh #62,Madhya Pradesh,,even_grid,78.88917,22.83475,10.24,"11,12,1,2,3",,62
+maharashtra_062,Maharashtra #62,Maharashtra,,even_grid,74.14803,17.89268,10.24,"11,12,1,2,3",,62
+rajasthan_062,Rajasthan #62,Rajasthan,,even_grid,76.38156,27.30955,10.24,"11,12,1,2,3",,62
+uttar_pradesh_062,Uttar Pradesh #62,Uttar Pradesh,,even_grid,82.62374,26.07717,10.24,"2,3,4",,62
+madhya_pradesh_063,Madhya Pradesh #63,Madhya Pradesh,,even_grid,79.64087,23.4057,10.24,"11,12,1,2,3",,63
+maharashtra_063,Maharashtra #63,Maharashtra,,even_grid,73.32029,18.99099,10.24,"11,12,1,2,3",,63
+rajasthan_063,Rajasthan #63,Rajasthan,,even_grid,73.78188,24.37833,10.24,"11,12,1,2,3",,63
+uttar_pradesh_063,Uttar Pradesh #63,Uttar Pradesh,,even_grid,77.76206,28.3856,10.24,"2,3,4",,63
+madhya_pradesh_064,Madhya Pradesh #64,Madhya Pradesh,,even_grid,81.05411,22.74788,10.24,"11,12,1,2,3",,64
+maharashtra_064,Maharashtra #64,Maharashtra,,even_grid,75.72552,19.77807,10.24,"11,12,1,2,3",,64
+rajasthan_064,Rajasthan #64,Rajasthan,,even_grid,71.48292,25.80483,10.24,"11,12,1,2,3",,64
+uttar_pradesh_064,Uttar Pradesh #64,Uttar Pradesh,,even_grid,78.38005,28.98882,10.24,"2,3,4",,64
+madhya_pradesh_065,Madhya Pradesh #65,Madhya Pradesh,,even_grid,80.1615,23.79881,10.24,"11,12,1,2,3",,65
+maharashtra_065,Maharashtra #65,Maharashtra,,even_grid,73.68323,17.13349,10.24,"11,12,1,2,3",,65
+rajasthan_065,Rajasthan #65,Rajasthan,,even_grid,74.56525,26.24984,10.24,"11,12,1,2,3",,65
+uttar_pradesh_065,Uttar Pradesh #65,Uttar Pradesh,,even_grid,79.88,28.57153,10.24,"2,3,4",,65
+madhya_pradesh_066,Madhya Pradesh #66,Madhya Pradesh,,even_grid,75.27365,22.547,10.24,"11,12,1,2,3",,66
+maharashtra_066,Maharashtra #66,Maharashtra,,even_grid,74.49609,17.16629,10.24,"11,12,1,2,3",,66
+rajasthan_066,Rajasthan #66,Rajasthan,,even_grid,71.38533,27.247,10.24,"11,12,1,2,3",,66
+uttar_pradesh_066,Uttar Pradesh #66,Uttar Pradesh,,even_grid,80.5553,28.65572,10.24,"2,3,4",,66
+madhya_pradesh_067,Madhya Pradesh #67,Madhya Pradesh,,even_grid,76.90663,25.03338,10.24,"11,12,1,2,3",,67
+maharashtra_067,Maharashtra #67,Maharashtra,,even_grid,76.97721,21.51221,10.24,"11,12,1,2,3",,67
+rajasthan_067,Rajasthan #67,Rajasthan,,even_grid,69.61504,26.70124,10.24,"11,12,1,2,3",,67
+uttar_pradesh_067,Uttar Pradesh #67,Uttar Pradesh,,even_grid,81.10653,25.54032,10.24,"2,3,4",,67
+madhya_pradesh_068,Madhya Pradesh #68,Madhya Pradesh,,even_grid,81.53224,23.39844,10.24,"11,12,1,2,3",,68
+maharashtra_068,Maharashtra #68,Maharashtra,,even_grid,79.45391,21.14832,10.24,"11,12,1,2,3",,68
+rajasthan_068,Rajasthan #68,Rajasthan,,even_grid,73.13362,27.55187,10.24,"11,12,1,2,3",,68
+uttar_pradesh_068,Uttar Pradesh #68,Uttar Pradesh,,even_grid,79.31209,26.65245,10.24,"2,3,4",,68
+madhya_pradesh_069,Madhya Pradesh #69,Madhya Pradesh,,even_grid,77.34469,22.37919,10.24,"11,12,1,2,3",,69
+maharashtra_069,Maharashtra #69,Maharashtra,,even_grid,76.52021,19.36244,10.24,"11,12,1,2,3",,69
+rajasthan_069,Rajasthan #69,Rajasthan,,even_grid,74.30407,24.48631,10.24,"11,12,1,2,3",,69
+uttar_pradesh_069,Uttar Pradesh #69,Uttar Pradesh,,even_grid,78.39239,24.29725,10.24,"2,3,4",,69
+madhya_pradesh_070,Madhya Pradesh #70,Madhya Pradesh,,even_grid,81.1567,23.70724,10.24,"11,12,1,2,3",,70
+maharashtra_070,Maharashtra #70,Maharashtra,,even_grid,75.38191,20.37915,10.24,"11,12,1,2,3",,70
+rajasthan_070,Rajasthan #70,Rajasthan,,even_grid,72.74003,28.40966,10.24,"11,12,1,2,3",,70
+uttar_pradesh_070,Uttar Pradesh #70,Uttar Pradesh,,even_grid,80.16601,26.14182,10.24,"2,3,4",,70
+madhya_pradesh_071,Madhya Pradesh #71,Madhya Pradesh,,even_grid,77.42013,25.6972,10.24,"11,12,1,2,3",,71
+maharashtra_071,Maharashtra #71,Maharashtra,,even_grid,73.77399,19.09803,10.24,"11,12,1,2,3",,71
+rajasthan_071,Rajasthan #71,Rajasthan,,even_grid,72.78427,26.79148,10.24,"11,12,1,2,3",,71
+uttar_pradesh_071,Uttar Pradesh #71,Uttar Pradesh,,even_grid,81.91486,26.08748,10.24,"2,3,4",,71
+madhya_pradesh_072,Madhya Pradesh #72,Madhya Pradesh,,even_grid,78.28531,25.79637,10.24,"11,12,1,2,3",,72
+maharashtra_072,Maharashtra #72,Maharashtra,,even_grid,73.99244,18.32208,10.24,"11,12,1,2,3",,72
+rajasthan_072,Rajasthan #72,Rajasthan,,even_grid,74.15632,23.51542,10.24,"11,12,1,2,3",,72
+uttar_pradesh_072,Uttar Pradesh #72,Uttar Pradesh,,even_grid,80.07205,27.20838,10.24,"2,3,4",,72
+madhya_pradesh_073,Madhya Pradesh #73,Madhya Pradesh,,even_grid,79.87605,24.71523,10.24,"11,12,1,2,3",,73
+maharashtra_073,Maharashtra #73,Maharashtra,,even_grid,76.169,18.78688,10.24,"11,12,1,2,3",,73
+rajasthan_073,Rajasthan #73,Rajasthan,,even_grid,74.25526,25.58111,10.24,"11,12,1,2,3",,73
+madhya_pradesh_074,Madhya Pradesh #74,Madhya Pradesh,,even_grid,77.93757,26.44617,10.24,"11,12,1,2,3",,74
+maharashtra_074,Maharashtra #74,Maharashtra,,even_grid,74.85479,18.44185,10.24,"11,12,1,2,3",,74
+rajasthan_074,Rajasthan #74,Rajasthan,,even_grid,76.37916,25.68896,10.24,"11,12,1,2,3",,74
+madhya_pradesh_075,Madhya Pradesh #75,Madhya Pradesh,,even_grid,80.15883,21.61714,10.24,"11,12,1,2,3",,75
+maharashtra_075,Maharashtra #75,Maharashtra,,even_grid,74.69408,21.36158,10.24,"11,12,1,2,3",,75
+rajasthan_075,Rajasthan #75,Rajasthan,,even_grid,75.15606,26.05016,10.24,"11,12,1,2,3",,75
+madhya_pradesh_076,Madhya Pradesh #76,Madhya Pradesh,,even_grid,76.54852,22.3195,10.24,"11,12,1,2,3",,76
+maharashtra_076,Maharashtra #76,Maharashtra,,even_grid,80.42678,19.57707,10.24,"11,12,1,2,3",,76
+rajasthan_076,Rajasthan #76,Rajasthan,,even_grid,71.53234,25.06125,10.24,"11,12,1,2,3",,76
+madhya_pradesh_077,Madhya Pradesh #77,Madhya Pradesh,,even_grid,76.99837,23.15836,10.24,"11,12,1,2,3",,77
+maharashtra_077,Maharashtra #77,Maharashtra,,even_grid,77.06763,19.54875,10.24,"11,12,1,2,3",,77
+rajasthan_077,Rajasthan #77,Rajasthan,,even_grid,75.66758,25.2762,10.24,"11,12,1,2,3",,77
+madhya_pradesh_078,Madhya Pradesh #78,Madhya Pradesh,,even_grid,78.60251,23.22516,10.24,"11,12,1,2,3",,78
+maharashtra_078,Maharashtra #78,Maharashtra,,even_grid,77.93638,19.91242,10.24,"11,12,1,2,3",,78
+rajasthan_078,Rajasthan #78,Rajasthan,,even_grid,70.55536,26.54137,10.24,"11,12,1,2,3",,78
+madhya_pradesh_079,Madhya Pradesh #79,Madhya Pradesh,,even_grid,74.92944,24.15158,10.24,"11,12,1,2,3",,79
+maharashtra_079,Maharashtra #79,Maharashtra,,even_grid,80.38491,21.01776,10.24,"11,12,1,2,3",,79
+rajasthan_079,Rajasthan #79,Rajasthan,,even_grid,76.74467,26.52945,10.24,"11,12,1,2,3",,79
+madhya_pradesh_080,Madhya Pradesh #80,Madhya Pradesh,,even_grid,76.16112,21.13206,10.24,"11,12,1,2,3",,80
+maharashtra_080,Maharashtra #80,Maharashtra,,even_grid,74.17148,20.51161,10.24,"11,12,1,2,3",,80
+rajasthan_080,Rajasthan #80,Rajasthan,,even_grid,74.44522,26.77144,10.24,"11,12,1,2,3",,80
+madhya_pradesh_081,Madhya Pradesh #81,Madhya Pradesh,,even_grid,77.82249,21.86323,10.24,"11,12,1,2,3",,81
+maharashtra_081,Maharashtra #81,Maharashtra,,even_grid,74.78218,17.96008,10.24,"11,12,1,2,3",,81
+rajasthan_081,Rajasthan #81,Rajasthan,,even_grid,74.26843,28.5157,10.24,"11,12,1,2,3",,81
+madhya_pradesh_082,Madhya Pradesh #82,Madhya Pradesh,,even_grid,80.06598,22.48971,10.24,"11,12,1,2,3",,82
+maharashtra_082,Maharashtra #82,Maharashtra,,even_grid,75.59456,18.16084,10.24,"11,12,1,2,3",,82
+rajasthan_082,Rajasthan #82,Rajasthan,,even_grid,72.32115,26.37486,10.24,"11,12,1,2,3",,82
+madhya_pradesh_083,Madhya Pradesh #83,Madhya Pradesh,,even_grid,80.58521,23.09952,10.24,"11,12,1,2,3",,83
+maharashtra_083,Maharashtra #83,Maharashtra,,even_grid,73.35485,18.29472,10.24,"11,12,1,2,3",,83
+rajasthan_083,Rajasthan #83,Rajasthan,,even_grid,73.73722,25.2979,10.24,"11,12,1,2,3",,83
+madhya_pradesh_084,Madhya Pradesh #84,Madhya Pradesh,,even_grid,81.25571,24.14288,10.24,"11,12,1,2,3",,84
+maharashtra_084,Maharashtra #84,Maharashtra,,even_grid,76.67967,18.49418,10.24,"11,12,1,2,3",,84
+rajasthan_084,Rajasthan #84,Rajasthan,,even_grid,73.59482,28.14017,10.24,"11,12,1,2,3",,84
+madhya_pradesh_085,Madhya Pradesh #85,Madhya Pradesh,,even_grid,76.12018,22.52737,10.24,"11,12,1,2,3",,85
+maharashtra_085,Maharashtra #85,Maharashtra,,even_grid,74.79411,20.01038,10.24,"11,12,1,2,3",,85
+rajasthan_085,Rajasthan #85,Rajasthan,,even_grid,72.1569,25.09422,10.24,"11,12,1,2,3",,85
+madhya_pradesh_086,Madhya Pradesh #86,Madhya Pradesh,,even_grid,77.85498,22.73639,10.24,"11,12,1,2,3",,86
+maharashtra_086,Maharashtra #86,Maharashtra,,even_grid,73.35194,16.51019,10.24,"11,12,1,2,3",,86
+rajasthan_086,Rajasthan #86,Rajasthan,,even_grid,75.14438,28.89429,10.24,"11,12,1,2,3",,86
+madhya_pradesh_087,Madhya Pradesh #87,Madhya Pradesh,,even_grid,76.4178,23.66967,10.24,"11,12,1,2,3",,87
+maharashtra_087,Maharashtra #87,Maharashtra,,even_grid,79.50652,19.53324,10.24,"11,12,1,2,3",,87
+rajasthan_087,Rajasthan #87,Rajasthan,,even_grid,74.13862,26.01523,10.24,"11,12,1,2,3",,87
+madhya_pradesh_088,Madhya Pradesh #88,Madhya Pradesh,,even_grid,77.90428,25.53,10.24,"11,12,1,2,3",,88
+maharashtra_088,Maharashtra #88,Maharashtra,,even_grid,72.7557,20.09997,10.24,"11,12,1,2,3",,88
+rajasthan_088,Rajasthan #88,Rajasthan,,even_grid,75.21585,28.3284,10.24,"11,12,1,2,3",,88
+rajasthan_089,Rajasthan #89,Rajasthan,,even_grid,77.17875,26.71303,10.24,"11,12,1,2,3",,89
+rajasthan_090,Rajasthan #90,Rajasthan,,even_grid,71.83649,27.09573,10.24,"11,12,1,2,3",,90
+rajasthan_091,Rajasthan #91,Rajasthan,,even_grid,71.53966,27.86877,10.24,"11,12,1,2,3",,91
+rajasthan_092,Rajasthan #92,Rajasthan,,even_grid,73.23211,26.63613,10.24,"11,12,1,2,3",,92
+rajasthan_093,Rajasthan #93,Rajasthan,,even_grid,73.42936,24.71474,10.24,"11,12,1,2,3",,93
+rajasthan_094,Rajasthan #94,Rajasthan,,even_grid,77.26676,27.15234,10.24,"11,12,1,2,3",,94
+rajasthan_095,Rajasthan #95,Rajasthan,,even_grid,76.03197,24.40898,10.24,"11,12,1,2,3",,95
+rajasthan_096,Rajasthan #96,Rajasthan,,even_grid,70.79416,25.94117,10.24,"11,12,1,2,3",,96
+rajasthan_097,Rajasthan #97,Rajasthan,,even_grid,75.66976,23.78514,10.24,"11,12,1,2,3",,97
+polavaram_project_andhra_pradesh,Polavaram project,Andhra Pradesh,,curated,81.64,17.2925,10.24,"11,12,1,2,3",,
+navi_mumbai_airport_maharashtra,Navi Mumbai International Airport,Maharashtra,,curated,73.05,18.97,10.24,"11,12,1,2,3",,
+statue_of_unity_gujarat,Statue of Unity / Kevadia,Gujarat,,curated,73.72,21.84,10.24,"11,12,1,2,3",,
+puducherry_003,Puducherry town (inland),Puducherry,,topup,79.765,11.935,10.24,"1,2,3,4",,
+puducherry_004,Karaikal (inland),Puducherry,,topup,79.775,10.925,10.24,"1,2,3,4",,
+puducherry_005,Yanam (Godavari delta),Puducherry,,topup,82.205,16.735,10.24,"11,12,1,2,3",,
+puducherry_006,Mahe (Kerala coast),Puducherry,,topup,75.560,11.700,10.24,"12,1,2,3",0.03,
+goa_t1_001,Goa top-up 1.1,Goa,,topup,73.88662,15.62556,10.24,"11,12,1,2,3",,
+sikkim_t1_001,Sikkim top-up 1.1,Sikkim,,topup,88.12813,27.37546,10.24,"10,11,12",0.03,
+andaman_and_nicobar_islands_t1_001,Andaman and Nicobar Islands top-up 1.1,Andaman and Nicobar Islands,,topup,92.7111,12.4037,10.24,"1,2,3,4",0.03,
+andaman_and_nicobar_islands_t1_002,Andaman and Nicobar Islands top-up 1.2,Andaman and Nicobar Islands,,topup,93.8354,7.21576,10.24,"1,2,3,4",0.03,
+tripura_t1_001,Tripura top-up 1.1,Tripura,,topup,92.18462,23.93547,10.24,"11,12,1,2,3",0.03,
+tripura_t1_002,Tripura top-up 1.2,Tripura,,topup,91.17227,23.6394,10.24,"11,12,1,2,3",0.03,
+nagaland_t1_001,Nagaland top-up 1.1,Nagaland,,topup,94.66011,25.78987,10.24,"11,12,1,2,3",0.03,
+nagaland_t1_002,Nagaland top-up 1.2,Nagaland,,topup,94.05187,25.79109,10.24,"11,12,1,2,3",0.03,
+nagaland_t1_003,Nagaland top-up 1.3,Nagaland,,topup,94.90188,26.8133,10.24,"11,12,1,2,3",0.03,
+mizoram_t1_001,Mizoram top-up 1.1,Mizoram,,topup,93.12386,22.91694,10.24,"11,12,1,2,3",0.03,
+mizoram_t1_002,Mizoram top-up 1.2,Mizoram,,topup,92.6278,21.9916,10.24,"11,12,1,2,3",0.03,
+mizoram_t1_003,Mizoram top-up 1.3,Mizoram,,topup,92.52024,23.88177,10.24,"11,12,1,2,3",0.03,
+mizoram_t1_004,Mizoram top-up 1.4,Mizoram,,topup,92.87782,22.77674,10.24,"11,12,1,2,3",0.03,
+manipur_t1_001,Manipur top-up 1.1,Manipur,,topup,93.49572,24.75647,10.24,"11,12,1,2,3",0.03,
+manipur_t1_002,Manipur top-up 1.2,Manipur,,topup,93.94148,24.37022,10.24,"11,12,1,2,3",0.03,
+manipur_t1_003,Manipur top-up 1.3,Manipur,,topup,93.09976,24.59282,10.24,"11,12,1,2,3",0.03,
+manipur_t1_004,Manipur top-up 1.4,Manipur,,topup,94.44095,24.96765,10.24,"11,12,1,2,3",0.03,
+manipur_t1_005,Manipur top-up 1.5,Manipur,,topup,94.21027,25.33556,10.24,"11,12,1,2,3",0.03,
+meghalaya_t1_001,Meghalaya top-up 1.1,Meghalaya,,topup,90.61895,25.55263,10.24,"11,12,1,2,3",0.03,
+meghalaya_t1_002,Meghalaya top-up 1.2,Meghalaya,,topup,92.63834,25.54964,10.24,"11,12,1,2,3",0.03,
+meghalaya_t1_003,Meghalaya top-up 1.3,Meghalaya,,topup,90.96898,25.18173,10.24,"11,12,1,2,3",0.03,
+meghalaya_t1_004,Meghalaya top-up 1.4,Meghalaya,,topup,92.0018,25.74882,10.24,"11,12,1,2,3",0.03,
+meghalaya_t1_005,Meghalaya top-up 1.5,Meghalaya,,topup,92.19537,25.48607,10.24,"11,12,1,2,3",0.03,
+kerala_t1_001,Kerala top-up 1.1,Kerala,,topup,76.98272,9.08147,10.24,"12,1,2,3",0.03,
+kerala_t1_002,Kerala top-up 1.2,Kerala,,topup,76.90757,10.15636,10.24,"12,1,2,3",0.03,
+kerala_t1_003,Kerala top-up 1.3,Kerala,,topup,76.54351,10.19936,10.24,"12,1,2,3",0.03,
+kerala_t1_004,Kerala top-up 1.4,Kerala,,topup,76.43063,10.55655,10.24,"12,1,2,3",0.03,
+kerala_t1_005,Kerala top-up 1.5,Kerala,,topup,76.04201,11.4226,10.24,"12,1,2,3",0.03,
+kerala_t1_006,Kerala top-up 1.6,Kerala,,topup,75.90035,10.90276,10.24,"12,1,2,3",0.03,
+kerala_t1_007,Kerala top-up 1.7,Kerala,,topup,76.89233,8.5176,10.24,"12,1,2,3",0.03,
+kerala_t1_008,Kerala top-up 1.8,Kerala,,topup,76.67291,9.12569,10.24,"12,1,2,3",0.03,
+haryana_t1_001,Haryana top-up 1.1,Haryana,,topup,76.22911,29.42108,10.24,"2,3,4",,
+haryana_t1_002,Haryana top-up 1.2,Haryana,,topup,75.97659,28.12292,10.24,"2,3,4",,
+haryana_t1_003,Haryana top-up 1.3,Haryana,,topup,76.48539,28.70376,10.24,"2,3,4",,
+haryana_t1_004,Haryana top-up 1.4,Haryana,,topup,75.81669,29.41088,10.24,"2,3,4",,
+haryana_t1_005,Haryana top-up 1.5,Haryana,,topup,76.8077,29.84636,10.24,"2,3,4",,
+haryana_t1_006,Haryana top-up 1.6,Haryana,,topup,74.92471,29.59173,10.24,"2,3,4",,
+haryana_t1_007,Haryana top-up 1.7,Haryana,,topup,77.00146,29.1792,10.24,"2,3,4",,
+haryana_t1_008,Haryana top-up 1.8,Haryana,,topup,75.84967,28.43,10.24,"2,3,4",,
+haryana_t1_009,Haryana top-up 1.9,Haryana,,topup,77.05043,29.59305,10.24,"2,3,4",,
+punjab_t1_001,Punjab top-up 1.1,Punjab,,topup,74.17889,30.48166,10.24,"2,3,4",,
+punjab_t1_002,Punjab top-up 1.2,Punjab,,topup,75.1453,30.81267,10.24,"2,3,4",,
+punjab_t1_003,Punjab top-up 1.3,Punjab,,topup,75.57433,31.72135,10.24,"2,3,4",,
+punjab_t1_004,Punjab top-up 1.4,Punjab,,topup,76.65705,30.4517,10.24,"2,3,4",,
+punjab_t1_005,Punjab top-up 1.5,Punjab,,topup,74.31486,30.03705,10.24,"2,3,4",,
+punjab_t1_006,Punjab top-up 1.6,Punjab,,topup,74.59058,31.59244,10.24,"2,3,4",,
+punjab_t1_007,Punjab top-up 1.7,Punjab,,topup,75.13133,31.16116,10.24,"2,3,4",,
+punjab_t1_008,Punjab top-up 1.8,Punjab,,topup,74.63482,30.59715,10.24,"2,3,4",,
+punjab_t1_009,Punjab top-up 1.9,Punjab,,topup,75.03881,32.00452,10.24,"2,3,4",,
+punjab_t1_010,Punjab top-up 1.10,Punjab,,topup,76.11054,31.33674,10.24,"2,3,4",,
+punjab_t1_011,Punjab top-up 1.11,Punjab,,topup,76.47143,30.89657,10.24,"2,3,4",,
+uttarakhand_t1_001,Uttarakhand top-up 1.1,Uttarakhand,,topup,79.02902,29.61991,10.24,"10,11,12",,
+uttarakhand_t1_002,Uttarakhand top-up 1.2,Uttarakhand,,topup,79.85269,29.31438,10.24,"10,11,12",,
+uttarakhand_t1_003,Uttarakhand top-up 1.3,Uttarakhand,,topup,78.66841,30.33622,10.24,"10,11,12",,
+uttarakhand_t1_004,Uttarakhand top-up 1.4,Uttarakhand,,topup,79.01837,30.95401,10.24,"10,11,12",,
+uttarakhand_t1_005,Uttarakhand top-up 1.5,Uttarakhand,,topup,78.36512,30.89754,10.24,"10,11,12",,
+uttarakhand_t1_006,Uttarakhand top-up 1.6,Uttarakhand,,topup,78.49476,30.02673,10.24,"10,11,12",,
+uttarakhand_t1_007,Uttarakhand top-up 1.7,Uttarakhand,,topup,79.49611,30.4435,10.24,"10,11,12",,
+uttarakhand_t1_008,Uttarakhand top-up 1.8,Uttarakhand,,topup,79.85171,30.13633,10.24,"10,11,12",,
+uttarakhand_t1_009,Uttarakhand top-up 1.9,Uttarakhand,,topup,80.14773,30.75189,10.24,"10,11,12",,
+uttarakhand_t1_010,Uttarakhand top-up 1.10,Uttarakhand,,topup,78.36925,30.58998,10.24,"10,11,12",,
+uttarakhand_t1_011,Uttarakhand top-up 1.11,Uttarakhand,,topup,77.89864,30.3794,10.24,"10,11,12",,
+jammu_and_kashmir_t1_001,Jammu and Kashmir top-up 1.1,Jammu and Kashmir,,topup,74.43503,33.16597,10.24,"10,11,12",,
+jammu_and_kashmir_t1_002,Jammu and Kashmir top-up 1.2,Jammu and Kashmir,,topup,74.01611,33.25115,10.24,"10,11,12",,
+jammu_and_kashmir_t1_003,Jammu and Kashmir top-up 1.3,Jammu and Kashmir,,topup,73.7573,34.78193,10.24,"10,11,12",,
+jammu_and_kashmir_t1_004,Jammu and Kashmir top-up 1.4,Jammu and Kashmir,,topup,74.08725,34.1985,10.24,"10,11,12",,
+jammu_and_kashmir_t1_005,Jammu and Kashmir top-up 1.5,Jammu and Kashmir,,topup,76.20505,33.36474,10.24,"10,11,12",,
+jammu_and_kashmir_t1_006,Jammu and Kashmir top-up 1.6,Jammu and Kashmir,,topup,73.66912,33.08892,10.24,"10,11,12",,
+jammu_and_kashmir_t1_007,Jammu and Kashmir top-up 1.7,Jammu and Kashmir,,topup,75.04104,32.83622,10.24,"10,11,12",,
+jammu_and_kashmir_t1_008,Jammu and Kashmir top-up 1.8,Jammu and Kashmir,,topup,74.22368,33.85547,10.24,"10,11,12",,
+jammu_and_kashmir_t1_009,Jammu and Kashmir top-up 1.9,Jammu and Kashmir,,topup,75.2886,34.03757,10.24,"10,11,12",,
+jammu_and_kashmir_t1_010,Jammu and Kashmir top-up 1.10,Jammu and Kashmir,,topup,74.87154,34.02544,10.24,"10,11,12",,
+jammu_and_kashmir_t1_011,Jammu and Kashmir top-up 1.11,Jammu and Kashmir,,topup,73.93912,33.59683,10.24,"10,11,12",,
+jammu_and_kashmir_t1_012,Jammu and Kashmir top-up 1.12,Jammu and Kashmir,,topup,74.836,33.4775,10.24,"10,11,12",,
+himachal_pradesh_t1_001,Himachal Pradesh top-up 1.1,Himachal Pradesh,,topup,76.15221,32.13472,10.24,"10,11,12",,
+himachal_pradesh_t1_002,Himachal Pradesh top-up 1.2,Himachal Pradesh,,topup,77.76356,31.05965,10.24,"10,11,12",,
+himachal_pradesh_t1_003,Himachal Pradesh top-up 1.3,Himachal Pradesh,,topup,76.59929,32.99605,10.24,"10,11,12",,
+himachal_pradesh_t1_004,Himachal Pradesh top-up 1.4,Himachal Pradesh,,topup,78.33442,32.02061,10.24,"10,11,12",,
+himachal_pradesh_t1_005,Himachal Pradesh top-up 1.5,Himachal Pradesh,,topup,77.86709,31.81455,10.24,"10,11,12",,
+himachal_pradesh_t1_006,Himachal Pradesh top-up 1.6,Himachal Pradesh,,topup,78.45987,31.41948,10.24,"10,11,12",,
+himachal_pradesh_t1_007,Himachal Pradesh top-up 1.7,Himachal Pradesh,,topup,76.31041,32.73967,10.24,"10,11,12",,
+himachal_pradesh_t1_008,Himachal Pradesh top-up 1.8,Himachal Pradesh,,topup,77.59536,30.70514,10.24,"10,11,12",,
+himachal_pradesh_t1_009,Himachal Pradesh top-up 1.9,Himachal Pradesh,,topup,77.06534,30.94803,10.24,"10,11,12",,
+himachal_pradesh_t1_010,Himachal Pradesh top-up 1.10,Himachal Pradesh,,topup,76.22059,31.83524,10.24,"10,11,12",,
+himachal_pradesh_t1_011,Himachal Pradesh top-up 1.11,Himachal Pradesh,,topup,77.52589,31.25732,10.24,"10,11,12",,
+himachal_pradesh_t1_012,Himachal Pradesh top-up 1.12,Himachal Pradesh,,topup,77.55802,32.56233,10.24,"10,11,12",,
+assam_t1_001,Assam top-up 1.1,Assam,,topup,90.06676,26.15108,10.24,"11,12,1,2,3",0.03,
+assam_t1_002,Assam top-up 1.2,Assam,,topup,89.99725,26.72478,10.24,"11,12,1,2,3",0.03,
+assam_t1_003,Assam top-up 1.3,Assam,,topup,92.574,25.96874,10.24,"11,12,1,2,3",0.03,
+assam_t1_004,Assam top-up 1.4,Assam,,topup,92.03406,26.32237,10.24,"11,12,1,2,3",0.03,
+assam_t1_005,Assam top-up 1.5,Assam,,topup,92.86801,24.90725,10.24,"11,12,1,2,3",0.03,
+assam_t1_006,Assam top-up 1.6,Assam,,topup,91.24834,26.53633,10.24,"11,12,1,2,3",0.03,
+assam_t1_007,Assam top-up 1.7,Assam,,topup,93.30733,26.94464,10.24,"11,12,1,2,3",0.03,
+assam_t1_008,Assam top-up 1.8,Assam,,topup,95.0409,27.41024,10.24,"11,12,1,2,3",0.03,
+assam_t1_009,Assam top-up 1.9,Assam,,topup,90.70291,26.21224,10.24,"11,12,1,2,3",0.03,
+assam_t1_010,Assam top-up 1.10,Assam,,topup,92.98176,25.46841,10.24,"11,12,1,2,3",0.03,
+assam_t1_011,Assam top-up 1.11,Assam,,topup,94.59083,27.0378,10.24,"11,12,1,2,3",0.03,
+assam_t1_012,Assam top-up 1.12,Assam,,topup,95.75572,27.54777,10.24,"11,12,1,2,3",0.03,
+assam_t1_013,Assam top-up 1.13,Assam,,topup,91.03748,26.75843,10.24,"11,12,1,2,3",0.03,
+assam_t1_014,Assam top-up 1.14,Assam,,topup,90.566,26.63569,10.24,"11,12,1,2,3",0.03,
+assam_t1_015,Assam top-up 1.15,Assam,,topup,93.63056,26.19089,10.24,"11,12,1,2,3",0.03,
+assam_t1_016,Assam top-up 1.16,Assam,,topup,94.1607,26.81796,10.24,"11,12,1,2,3",0.03,
+jharkhand_t1_001,Jharkhand top-up 1.1,Jharkhand,,topup,84.75795,23.24955,10.24,"11,12,1,2,3",,
+jharkhand_t1_002,Jharkhand top-up 1.2,Jharkhand,,topup,87.11279,24.27097,10.24,"11,12,1,2,3",,
+jharkhand_t1_003,Jharkhand top-up 1.3,Jharkhand,,topup,83.7337,23.78361,10.24,"11,12,1,2,3",,
+jharkhand_t1_004,Jharkhand top-up 1.4,Jharkhand,,topup,86.41426,22.43009,10.24,"11,12,1,2,3",,
+jharkhand_t1_005,Jharkhand top-up 1.5,Jharkhand,,topup,85.19315,23.18478,10.24,"11,12,1,2,3",,
+jharkhand_t1_006,Jharkhand top-up 1.6,Jharkhand,,topup,85.10486,22.3282,10.24,"11,12,1,2,3",,
+jharkhand_t1_007,Jharkhand top-up 1.7,Jharkhand,,topup,83.80341,24.2874,10.24,"11,12,1,2,3",,
+jharkhand_t1_008,Jharkhand top-up 1.8,Jharkhand,,topup,85.0018,23.89911,10.24,"11,12,1,2,3",,
+jharkhand_t1_009,Jharkhand top-up 1.9,Jharkhand,,topup,84.35785,24.37379,10.24,"11,12,1,2,3",,
+jharkhand_t1_010,Jharkhand top-up 1.10,Jharkhand,,topup,85.54885,23.8297,10.24,"11,12,1,2,3",,
+jharkhand_t1_011,Jharkhand top-up 1.11,Jharkhand,,topup,85.76486,22.50677,10.24,"11,12,1,2,3",,
+jharkhand_t1_012,Jharkhand top-up 1.12,Jharkhand,,topup,86.9667,24.6318,10.24,"11,12,1,2,3",,
+jharkhand_t1_013,Jharkhand top-up 1.13,Jharkhand,,topup,86.22927,24.25876,10.24,"11,12,1,2,3",,
+jharkhand_t1_014,Jharkhand top-up 1.14,Jharkhand,,topup,84.3787,23.36204,10.24,"11,12,1,2,3",,
+jharkhand_t1_015,Jharkhand top-up 1.15,Jharkhand,,topup,86.64114,23.68501,10.24,"11,12,1,2,3",,
+jharkhand_t1_016,Jharkhand top-up 1.16,Jharkhand,,topup,87.53937,24.959,10.24,"11,12,1,2,3",,
+jharkhand_t1_017,Jharkhand top-up 1.17,Jharkhand,,topup,85.67633,24.22962,10.24,"11,12,1,2,3",,
+arunachal_pradesh_t1_001,Arunachal Pradesh top-up 1.1,Arunachal Pradesh,,topup,96.17885,27.63118,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_002,Arunachal Pradesh top-up 1.2,Arunachal Pradesh,,topup,93.12719,27.76019,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_003,Arunachal Pradesh top-up 1.3,Arunachal Pradesh,,topup,93.58937,28.28696,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_004,Arunachal Pradesh top-up 1.4,Arunachal Pradesh,,topup,95.25395,29.06179,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_005,Arunachal Pradesh top-up 1.5,Arunachal Pradesh,,topup,97.19846,27.88432,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_006,Arunachal Pradesh top-up 1.6,Arunachal Pradesh,,topup,91.71654,27.51123,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_007,Arunachal Pradesh top-up 1.7,Arunachal Pradesh,,topup,96.83675,27.35575,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_008,Arunachal Pradesh top-up 1.8,Arunachal Pradesh,,topup,93.87776,27.74746,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_009,Arunachal Pradesh top-up 1.9,Arunachal Pradesh,,topup,92.26675,27.82933,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_010,Arunachal Pradesh top-up 1.10,Arunachal Pradesh,,topup,92.08778,27.17457,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_011,Arunachal Pradesh top-up 1.11,Arunachal Pradesh,,topup,95.76784,28.96042,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_012,Arunachal Pradesh top-up 1.12,Arunachal Pradesh,,topup,94.52351,28.82143,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_013,Arunachal Pradesh top-up 1.13,Arunachal Pradesh,,topup,95.77365,28.5481,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_014,Arunachal Pradesh top-up 1.14,Arunachal Pradesh,,topup,95.25021,28.08436,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_015,Arunachal Pradesh top-up 1.15,Arunachal Pradesh,,topup,96.06502,29.4452,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_016,Arunachal Pradesh top-up 1.16,Arunachal Pradesh,,topup,94.72424,28.54585,10.24,"10,11,12",0.03,
+arunachal_pradesh_t1_017,Arunachal Pradesh top-up 1.17,Arunachal Pradesh,,topup,95.30027,28.49143,10.24,"10,11,12",0.03,
+west_bengal_t1_001,West Bengal top-up 1.1,West Bengal,,topup,88.83943,22.79568,10.24,"2,3,4",,
+west_bengal_t1_002,West Bengal top-up 1.2,West Bengal,,topup,89.00542,22.0235,10.24,"2,3,4",,
+west_bengal_t1_003,West Bengal top-up 1.3,West Bengal,,topup,88.41976,23.93767,10.24,"2,3,4",,
+west_bengal_t1_004,West Bengal top-up 1.4,West Bengal,,topup,87.83795,23.46043,10.24,"2,3,4",,
+west_bengal_t1_005,West Bengal top-up 1.5,West Bengal,,topup,88.94284,26.70248,10.24,"2,3,4",,
+west_bengal_t1_006,West Bengal top-up 1.6,West Bengal,,topup,88.21743,26.84368,10.24,"2,3,4",,
+west_bengal_t1_007,West Bengal top-up 1.7,West Bengal,,topup,89.37431,26.42336,10.24,"2,3,4",,
+west_bengal_t1_008,West Bengal top-up 1.8,West Bengal,,topup,88.53825,23.21952,10.24,"2,3,4",,
+west_bengal_t1_009,West Bengal top-up 1.9,West Bengal,,topup,87.36412,22.8744,10.24,"2,3,4",,
+west_bengal_t1_010,West Bengal top-up 1.10,West Bengal,,topup,88.7138,21.73576,10.24,"2,3,4",,
+west_bengal_t1_011,West Bengal top-up 1.11,West Bengal,,topup,87.9496,25.28376,10.24,"2,3,4",,
+west_bengal_t1_012,West Bengal top-up 1.12,West Bengal,,topup,87.92612,23.10017,10.24,"2,3,4",,
+west_bengal_t1_013,West Bengal top-up 1.13,West Bengal,,topup,86.61648,23.26431,10.24,"2,3,4",,
+west_bengal_t1_014,West Bengal top-up 1.14,West Bengal,,topup,87.01424,22.48462,10.24,"2,3,4",,
+west_bengal_t1_015,West Bengal top-up 1.15,West Bengal,,topup,87.90892,24.62545,10.24,"2,3,4",,
+west_bengal_t1_016,West Bengal top-up 1.16,West Bengal,,topup,86.69488,22.65142,10.24,"2,3,4",,
+west_bengal_t1_017,West Bengal top-up 1.17,West Bengal,,topup,87.69122,23.77276,10.24,"2,3,4",,
+west_bengal_t1_018,West Bengal top-up 1.18,West Bengal,,topup,88.21265,23.28825,10.24,"2,3,4",,
+bihar_t1_001,Bihar top-up 1.1,Bihar,,topup,84.37062,25.68198,10.24,"2,3,4",,
+bihar_t1_002,Bihar top-up 1.2,Bihar,,topup,85.92758,25.52912,10.24,"2,3,4",,
+bihar_t1_003,Bihar top-up 1.3,Bihar,,topup,86.85386,26.14926,10.24,"2,3,4",,
+bihar_t1_004,Bihar top-up 1.4,Bihar,,topup,87.41041,26.07317,10.24,"2,3,4",,
+bihar_t1_005,Bihar top-up 1.5,Bihar,,topup,85.51241,26.25301,10.24,"2,3,4",,
+bihar_t1_006,Bihar top-up 1.6,Bihar,,topup,84.52703,26.9421,10.24,"2,3,4",,
+bihar_t1_007,Bihar top-up 1.7,Bihar,,topup,86.12374,24.96443,10.24,"2,3,4",,
+bihar_t1_008,Bihar top-up 1.8,Bihar,,topup,88.11021,26.49412,10.24,"2,3,4",,
+bihar_t1_009,Bihar top-up 1.9,Bihar,,topup,86.01182,26.13337,10.24,"2,3,4",,
+bihar_t1_010,Bihar top-up 1.10,Bihar,,topup,84.02628,27.1579,10.24,"2,3,4",,
+bihar_t1_011,Bihar top-up 1.11,Bihar,,topup,84.72219,26.12713,10.24,"2,3,4",,
+bihar_t1_012,Bihar top-up 1.12,Bihar,,topup,85.07624,26.57132,10.24,"2,3,4",,
+bihar_t1_013,Bihar top-up 1.13,Bihar,,topup,86.24942,25.26329,10.24,"2,3,4",,
+bihar_t1_014,Bihar top-up 1.14,Bihar,,topup,85.58889,25.44043,10.24,"2,3,4",,
+bihar_t1_015,Bihar top-up 1.15,Bihar,,topup,84.23386,24.92652,10.24,"2,3,4",,
+bihar_t1_016,Bihar top-up 1.16,Bihar,,topup,86.22332,25.87197,10.24,"2,3,4",,
+bihar_t1_017,Bihar top-up 1.17,Bihar,,topup,85.73098,24.87821,10.24,"2,3,4",,
+bihar_t1_018,Bihar top-up 1.18,Bihar,,topup,87.82967,25.59677,10.24,"2,3,4",,
+bihar_t1_019,Bihar top-up 1.19,Bihar,,topup,84.62575,25.01654,10.24,"2,3,4",,
+bihar_t1_020,Bihar top-up 1.20,Bihar,,topup,84.28278,26.39273,10.24,"2,3,4",,
+telangana_t1_001,Telangana top-up 1.1,Telangana,,topup,79.27544,18.44418,10.24,"11,12,1,2,3",,
+telangana_t1_002,Telangana top-up 1.2,Telangana,,topup,79.11878,17.6189,10.24,"11,12,1,2,3",,
+telangana_t1_003,Telangana top-up 1.3,Telangana,,topup,79.65428,18.1878,10.24,"11,12,1,2,3",,
+telangana_t1_004,Telangana top-up 1.4,Telangana,,topup,77.89515,16.88603,10.24,"11,12,1,2,3",,
+telangana_t1_005,Telangana top-up 1.5,Telangana,,topup,78.89261,19.00923,10.24,"11,12,1,2,3",,
+telangana_t1_006,Telangana top-up 1.6,Telangana,,topup,79.70629,19.06468,10.24,"11,12,1,2,3",,
+telangana_t1_007,Telangana top-up 1.7,Telangana,,topup,78.75244,16.58743,10.24,"11,12,1,2,3",,
+telangana_t1_008,Telangana top-up 1.8,Telangana,,topup,77.92813,18.22519,10.24,"11,12,1,2,3",,
+telangana_t1_009,Telangana top-up 1.9,Telangana,,topup,79.54799,17.72384,10.24,"11,12,1,2,3",,
+telangana_t1_010,Telangana top-up 1.10,Telangana,,topup,80.78274,17.51649,10.24,"11,12,1,2,3",,
+telangana_t1_011,Telangana top-up 1.11,Telangana,,topup,77.37016,16.41493,10.24,"11,12,1,2,3",,
+telangana_t1_012,Telangana top-up 1.12,Telangana,,topup,77.61642,17.55072,10.24,"11,12,1,2,3",,
+telangana_t1_013,Telangana top-up 1.13,Telangana,,topup,79.28341,16.95084,10.24,"11,12,1,2,3",,
+telangana_t1_014,Telangana top-up 1.14,Telangana,,topup,77.85637,15.96074,10.24,"11,12,1,2,3",,
+telangana_t1_015,Telangana top-up 1.15,Telangana,,topup,80.30088,17.98178,10.24,"11,12,1,2,3",,
+telangana_t1_016,Telangana top-up 1.16,Telangana,,topup,78.56213,19.47098,10.24,"11,12,1,2,3",,
+telangana_t1_017,Telangana top-up 1.17,Telangana,,topup,79.06757,17.25827,10.24,"11,12,1,2,3",,
+telangana_t1_018,Telangana top-up 1.18,Telangana,,topup,78.56932,18.80006,10.24,"11,12,1,2,3",,
+telangana_t1_019,Telangana top-up 1.19,Telangana,,topup,79.18028,16.33359,10.24,"11,12,1,2,3",,
+telangana_t1_020,Telangana top-up 1.20,Telangana,,topup,78.5737,18.38751,10.24,"11,12,1,2,3",,
+telangana_t1_021,Telangana top-up 1.21,Telangana,,topup,80.67905,18.23819,10.24,"11,12,1,2,3",,
+telangana_t1_022,Telangana top-up 1.22,Telangana,,topup,79.00685,18.23641,10.24,"11,12,1,2,3",,
+telangana_t1_023,Telangana top-up 1.23,Telangana,,topup,78.13098,19.15641,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_001,Chhattisgarh top-up 1.1,Chhattisgarh,,topup,82.50251,23.32131,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_002,Chhattisgarh top-up 1.2,Chhattisgarh,,topup,80.86219,18.88184,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_003,Chhattisgarh top-up 1.3,Chhattisgarh,,topup,83.053,23.10606,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_004,Chhattisgarh top-up 1.4,Chhattisgarh,,topup,80.821,20.92963,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_005,Chhattisgarh top-up 1.5,Chhattisgarh,,topup,83.61587,23.4016,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_006,Chhattisgarh top-up 1.6,Chhattisgarh,,topup,83.01536,23.87641,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_007,Chhattisgarh top-up 1.7,Chhattisgarh,,topup,81.56933,19.64334,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_008,Chhattisgarh top-up 1.8,Chhattisgarh,,topup,83.93214,22.82933,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_009,Chhattisgarh top-up 1.9,Chhattisgarh,,topup,82.04835,19.17702,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_010,Chhattisgarh top-up 1.10,Chhattisgarh,,topup,80.76292,20.3152,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_011,Chhattisgarh top-up 1.11,Chhattisgarh,,topup,82.76275,22.49599,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_012,Chhattisgarh top-up 1.12,Chhattisgarh,,topup,80.81313,19.64939,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_013,Chhattisgarh top-up 1.13,Chhattisgarh,,topup,82.35615,21.37468,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_014,Chhattisgarh top-up 1.14,Chhattisgarh,,topup,81.61038,18.56889,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_015,Chhattisgarh top-up 1.15,Chhattisgarh,,topup,81.82669,22.66404,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_016,Chhattisgarh top-up 1.16,Chhattisgarh,,topup,81.74138,20.40944,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_017,Chhattisgarh top-up 1.17,Chhattisgarh,,topup,83.94298,23.18824,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_018,Chhattisgarh top-up 1.18,Chhattisgarh,,topup,82.33039,23.01623,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_019,Chhattisgarh top-up 1.19,Chhattisgarh,,topup,81.18624,19.08413,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_020,Chhattisgarh top-up 1.20,Chhattisgarh,,topup,82.47423,21.83424,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_021,Chhattisgarh top-up 1.21,Chhattisgarh,,topup,82.83794,23.41805,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_022,Chhattisgarh top-up 1.22,Chhattisgarh,,topup,81.84292,19.89613,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_023,Chhattisgarh top-up 1.23,Chhattisgarh,,topup,82.0106,23.84159,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_024,Chhattisgarh top-up 1.24,Chhattisgarh,,topup,81.65507,22.20441,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_025,Chhattisgarh top-up 1.25,Chhattisgarh,,topup,81.25053,20.20949,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_026,Chhattisgarh top-up 1.26,Chhattisgarh,,topup,81.74947,21.02417,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_027,Chhattisgarh top-up 1.27,Chhattisgarh,,topup,80.86483,19.29094,10.24,"11,12,1,2,3",,
+chhattisgarh_t1_028,Chhattisgarh top-up 1.28,Chhattisgarh,,topup,82.42974,22.39911,10.24,"11,12,1,2,3",,
+tamil_nadu_t1_001,Tamil Nadu top-up 1.1,Tamil Nadu,,topup,77.63193,9.09997,10.24,"1,2,3,4",,
+tamil_nadu_t1_002,Tamil Nadu top-up 1.2,Tamil Nadu,,topup,80.09753,12.38878,10.24,"1,2,3,4",,
+tamil_nadu_t1_003,Tamil Nadu top-up 1.3,Tamil Nadu,,topup,78.75887,12.43404,10.24,"1,2,3,4",,
+tamil_nadu_t1_004,Tamil Nadu top-up 1.4,Tamil Nadu,,topup,77.45665,10.44996,10.24,"1,2,3,4",,
+tamil_nadu_t1_005,Tamil Nadu top-up 1.5,Tamil Nadu,,topup,78.00919,10.86105,10.24,"1,2,3,4",,
+tamil_nadu_t1_006,Tamil Nadu top-up 1.6,Tamil Nadu,,topup,78.72325,10.71831,10.24,"1,2,3,4",,
+tamil_nadu_t1_007,Tamil Nadu top-up 1.7,Tamil Nadu,,topup,78.55715,12.02758,10.24,"1,2,3,4",,
+tamil_nadu_t1_008,Tamil Nadu top-up 1.8,Tamil Nadu,,topup,78.17966,9.50816,10.24,"1,2,3,4",,
+tamil_nadu_t1_009,Tamil Nadu top-up 1.9,Tamil Nadu,,topup,78.13791,8.85781,10.24,"1,2,3,4",,
+tamil_nadu_t1_010,Tamil Nadu top-up 1.10,Tamil Nadu,,topup,77.98664,12.42527,10.24,"1,2,3,4",,
+tamil_nadu_t1_011,Tamil Nadu top-up 1.11,Tamil Nadu,,topup,77.44275,8.44799,10.24,"1,2,3,4",,
+tamil_nadu_t1_012,Tamil Nadu top-up 1.12,Tamil Nadu,,topup,78.97936,10.46902,10.24,"1,2,3,4",,
+tamil_nadu_t1_013,Tamil Nadu top-up 1.13,Tamil Nadu,,topup,77.61662,10.00089,10.24,"1,2,3,4",,
+tamil_nadu_t1_014,Tamil Nadu top-up 1.14,Tamil Nadu,,topup,78.36078,11.26843,10.24,"1,2,3,4",,
+tamil_nadu_t1_015,Tamil Nadu top-up 1.15,Tamil Nadu,,topup,79.42883,12.2865,10.24,"1,2,3,4",,
+tamil_nadu_t1_016,Tamil Nadu top-up 1.16,Tamil Nadu,,topup,78.83045,10.06622,10.24,"1,2,3,4",,
+tamil_nadu_t1_017,Tamil Nadu top-up 1.17,Tamil Nadu,,topup,77.59504,11.25758,10.24,"1,2,3,4",,
+tamil_nadu_t1_018,Tamil Nadu top-up 1.18,Tamil Nadu,,topup,80.30542,13.30055,10.24,"1,2,3,4",,
+tamil_nadu_t1_019,Tamil Nadu top-up 1.19,Tamil Nadu,,topup,77.52606,12.26628,10.24,"1,2,3,4",,
+tamil_nadu_t1_020,Tamil Nadu top-up 1.20,Tamil Nadu,,topup,77.23172,11.55359,10.24,"1,2,3,4",,
+tamil_nadu_t1_021,Tamil Nadu top-up 1.21,Tamil Nadu,,topup,78.32249,10.21168,10.24,"1,2,3,4",,
+tamil_nadu_t1_022,Tamil Nadu top-up 1.22,Tamil Nadu,,topup,78.48105,9.61183,10.24,"1,2,3,4",,
+tamil_nadu_t1_023,Tamil Nadu top-up 1.23,Tamil Nadu,,topup,77.92165,9.90538,10.24,"1,2,3,4",,
+tamil_nadu_t1_024,Tamil Nadu top-up 1.24,Tamil Nadu,,topup,79.12757,11.12402,10.24,"1,2,3,4",,
+tamil_nadu_t1_025,Tamil Nadu top-up 1.25,Tamil Nadu,,topup,78.19783,12.02351,10.24,"1,2,3,4",,
+tamil_nadu_t1_026,Tamil Nadu top-up 1.26,Tamil Nadu,,topup,78.96254,12.73944,10.24,"1,2,3,4",,
+tamil_nadu_t1_027,Tamil Nadu top-up 1.27,Tamil Nadu,,topup,79.4831,11.52902,10.24,"1,2,3,4",,
+tamil_nadu_t1_028,Tamil Nadu top-up 1.28,Tamil Nadu,,topup,77.10246,10.39294,10.24,"1,2,3,4",,
+odisha_t1_001,Odisha top-up 1.1,Odisha,,topup,82.92324,20.74513,10.24,"11,12,1,2,3",,
+odisha_t1_002,Odisha top-up 1.2,Odisha,,topup,83.07297,20.12478,10.24,"11,12,1,2,3",,
+odisha_t1_003,Odisha top-up 1.3,Odisha,,topup,84.13412,19.22511,10.24,"11,12,1,2,3",,
+odisha_t1_004,Odisha top-up 1.4,Odisha,,topup,84.9485,19.30296,10.24,"11,12,1,2,3",,
+odisha_t1_005,Odisha top-up 1.5,Odisha,,topup,82.35717,19.67509,10.24,"11,12,1,2,3",,
+odisha_t1_006,Odisha top-up 1.6,Odisha,,topup,84.88348,20.48813,10.24,"11,12,1,2,3",,
+odisha_t1_007,Odisha top-up 1.7,Odisha,,topup,82.82903,18.89621,10.24,"11,12,1,2,3",,
+odisha_t1_008,Odisha top-up 1.8,Odisha,,topup,85.37398,21.81032,10.24,"11,12,1,2,3",,
+odisha_t1_009,Odisha top-up 1.9,Odisha,,topup,86.43558,22.078,10.24,"11,12,1,2,3",,
+odisha_t1_010,Odisha top-up 1.10,Odisha,,topup,83.38251,19.44971,10.24,"11,12,1,2,3",,
+odisha_t1_011,Odisha top-up 1.11,Odisha,,topup,83.50834,20.11517,10.24,"11,12,1,2,3",,
+odisha_t1_012,Odisha top-up 1.12,Odisha,,topup,85.57472,21.33935,10.24,"11,12,1,2,3",,
+odisha_t1_013,Odisha top-up 1.13,Odisha,,topup,82.28097,18.39238,10.24,"11,12,1,2,3",,
+odisha_t1_014,Odisha top-up 1.14,Odisha,,topup,81.79122,17.93755,10.24,"11,12,1,2,3",,
+odisha_t1_015,Odisha top-up 1.15,Odisha,,topup,83.67394,22.17036,10.24,"11,12,1,2,3",,
+odisha_t1_016,Odisha top-up 1.16,Odisha,,topup,86.09246,21.83453,10.24,"11,12,1,2,3",,
+odisha_t1_017,Odisha top-up 1.17,Odisha,,topup,84.27172,20.1467,10.24,"11,12,1,2,3",,
+odisha_t1_018,Odisha top-up 1.18,Odisha,,topup,83.71595,19.75017,10.24,"11,12,1,2,3",,
+odisha_t1_019,Odisha top-up 1.19,Odisha,,topup,85.07268,21.15113,10.24,"11,12,1,2,3",,
+odisha_t1_020,Odisha top-up 1.20,Odisha,,topup,84.09106,19.58609,10.24,"11,12,1,2,3",,
+odisha_t1_021,Odisha top-up 1.21,Odisha,,topup,83.87978,21.65013,10.24,"11,12,1,2,3",,
+odisha_t1_022,Odisha top-up 1.22,Odisha,,topup,86.75874,21.90923,10.24,"11,12,1,2,3",,
+odisha_t1_023,Odisha top-up 1.23,Odisha,,topup,86.07582,21.4745,10.24,"11,12,1,2,3",,
+odisha_t1_024,Odisha top-up 1.24,Odisha,,topup,82.60135,18.28447,10.24,"11,12,1,2,3",,
+odisha_t1_025,Odisha top-up 1.25,Odisha,,topup,85.11357,20.7893,10.24,"11,12,1,2,3",,
+odisha_t1_026,Odisha top-up 1.26,Odisha,,topup,84.29328,20.81506,10.24,"11,12,1,2,3",,
+odisha_t1_027,Odisha top-up 1.27,Odisha,,topup,86.09036,20.59827,10.24,"11,12,1,2,3",,
+odisha_t1_028,Odisha top-up 1.28,Odisha,,topup,83.70017,21.13974,10.24,"11,12,1,2,3",,
+odisha_t1_029,Odisha top-up 1.29,Odisha,,topup,82.37547,20.70336,10.24,"11,12,1,2,3",,
+odisha_t1_030,Odisha top-up 1.30,Odisha,,topup,84.06187,20.4098,10.24,"11,12,1,2,3",,
+odisha_t1_031,Odisha top-up 1.31,Odisha,,topup,85.76638,21.95042,10.24,"11,12,1,2,3",,
+odisha_t1_032,Odisha top-up 1.32,Odisha,,topup,86.70363,20.82956,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_001,Andhra Pradesh top-up 1.1,Andhra Pradesh,,topup,76.99829,14.7115,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_002,Andhra Pradesh top-up 1.2,Andhra Pradesh,,topup,81.20409,16.27071,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_003,Andhra Pradesh top-up 1.3,Andhra Pradesh,,topup,79.56384,15.40559,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_004,Andhra Pradesh top-up 1.4,Andhra Pradesh,,topup,79.77568,14.69145,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_005,Andhra Pradesh top-up 1.5,Andhra Pradesh,,topup,82.28632,17.59076,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_006,Andhra Pradesh top-up 1.6,Andhra Pradesh,,topup,79.56138,16.17265,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_007,Andhra Pradesh top-up 1.7,Andhra Pradesh,,topup,79.10294,13.41614,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_008,Andhra Pradesh top-up 1.8,Andhra Pradesh,,topup,79.08782,15.71005,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_009,Andhra Pradesh top-up 1.9,Andhra Pradesh,,topup,81.42357,16.98602,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_010,Andhra Pradesh top-up 1.10,Andhra Pradesh,,topup,78.35015,15.6013,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_011,Andhra Pradesh top-up 1.11,Andhra Pradesh,,topup,82.17105,17.07941,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_012,Andhra Pradesh top-up 1.12,Andhra Pradesh,,topup,78.72219,15.29845,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_013,Andhra Pradesh top-up 1.13,Andhra Pradesh,,topup,77.98628,15.23903,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_014,Andhra Pradesh top-up 1.14,Andhra Pradesh,,topup,83.31929,18.23887,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_015,Andhra Pradesh top-up 1.15,Andhra Pradesh,,topup,80.56787,16.22339,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_016,Andhra Pradesh top-up 1.16,Andhra Pradesh,,topup,80.24905,15.71269,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_017,Andhra Pradesh top-up 1.17,Andhra Pradesh,,topup,77.48755,13.75292,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_018,Andhra Pradesh top-up 1.18,Andhra Pradesh,,topup,77.50456,15.6915,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_019,Andhra Pradesh top-up 1.19,Andhra Pradesh,,topup,77.56372,15.33472,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_020,Andhra Pradesh top-up 1.20,Andhra Pradesh,,topup,79.41395,13.51938,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_021,Andhra Pradesh top-up 1.21,Andhra Pradesh,,topup,78.55678,16.01264,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_022,Andhra Pradesh top-up 1.22,Andhra Pradesh,,topup,79.77366,15.91729,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_023,Andhra Pradesh top-up 1.23,Andhra Pradesh,,topup,77.74018,14.21524,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_024,Andhra Pradesh top-up 1.24,Andhra Pradesh,,topup,79.88077,14.33476,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_025,Andhra Pradesh top-up 1.25,Andhra Pradesh,,topup,80.09135,16.68539,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_026,Andhra Pradesh top-up 1.26,Andhra Pradesh,,topup,77.88818,14.77823,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_027,Andhra Pradesh top-up 1.27,Andhra Pradesh,,topup,79.19157,16.01754,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_028,Andhra Pradesh top-up 1.28,Andhra Pradesh,,topup,80.62343,16.78657,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_029,Andhra Pradesh top-up 1.29,Andhra Pradesh,,topup,80.24555,13.77461,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_030,Andhra Pradesh top-up 1.30,Andhra Pradesh,,topup,79.46153,14.63962,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_031,Andhra Pradesh top-up 1.31,Andhra Pradesh,,topup,84.69342,19.07608,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_032,Andhra Pradesh top-up 1.32,Andhra Pradesh,,topup,79.46392,14.02825,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_033,Andhra Pradesh top-up 1.33,Andhra Pradesh,,topup,78.2603,14.37529,10.24,"11,12,1,2,3",,
+andhra_pradesh_t1_034,Andhra Pradesh top-up 1.34,Andhra Pradesh,,topup,78.89287,13.7197,10.24,"11,12,1,2,3",,
+ladakh_t1_001,Ladakh top-up 1.1,Ladakh,,topup,77.11792,35.76608,10.24,"7,8,9,10",,
+ladakh_t1_002,Ladakh top-up 1.2,Ladakh,,topup,75.51428,35.93213,10.24,"7,8,9,10",,
+ladakh_t1_003,Ladakh top-up 1.3,Ladakh,,topup,73.70141,35.32422,10.24,"7,8,9,10",,
+ladakh_t1_004,Ladakh top-up 1.4,Ladakh,,topup,79.45173,35.73918,10.24,"7,8,9,10",,
+ladakh_t1_005,Ladakh top-up 1.5,Ladakh,,topup,76.27313,35.29891,10.24,"7,8,9,10",,
+ladakh_t1_006,Ladakh top-up 1.6,Ladakh,,topup,75.60847,36.68396,10.24,"7,8,9,10",,
+ladakh_t1_007,Ladakh top-up 1.7,Ladakh,,topup,79.7613,34.48556,10.24,"7,8,9,10",,
+ladakh_t1_008,Ladakh top-up 1.8,Ladakh,,topup,77.68364,35.12307,10.24,"7,8,9,10",,
+ladakh_t1_009,Ladakh top-up 1.9,Ladakh,,topup,78.60322,34.83182,10.24,"7,8,9,10",,
+ladakh_t1_010,Ladakh top-up 1.10,Ladakh,,topup,76.5595,33.897,10.24,"7,8,9,10",,
+ladakh_t1_011,Ladakh top-up 1.11,Ladakh,,topup,77.46469,33.9634,10.24,"7,8,9,10",,
+ladakh_t1_012,Ladakh top-up 1.12,Ladakh,,topup,77.75443,34.62176,10.24,"7,8,9,10",,
+ladakh_t1_013,Ladakh top-up 1.13,Ladakh,,topup,79.15435,34.43333,10.24,"7,8,9,10",,
+ladakh_t1_014,Ladakh top-up 1.14,Ladakh,,topup,78.5034,33.11813,10.24,"7,8,9,10",,
+ladakh_t1_015,Ladakh top-up 1.15,Ladakh,,topup,79.08538,35.48723,10.24,"7,8,9,10",,
+ladakh_t1_016,Ladakh top-up 1.16,Ladakh,,topup,74.13178,36.49084,10.24,"7,8,9,10",,
+ladakh_t1_017,Ladakh top-up 1.17,Ladakh,,topup,78.35389,35.23114,10.24,"7,8,9,10",,
+ladakh_t1_018,Ladakh top-up 1.18,Ladakh,,topup,79.09986,33.62716,10.24,"7,8,9,10",,
+ladakh_t1_019,Ladakh top-up 1.19,Ladakh,,topup,75.51158,34.4265,10.24,"7,8,9,10",,
+ladakh_t1_020,Ladakh top-up 1.20,Ladakh,,topup,76.03891,34.99254,10.24,"7,8,9,10",,
+ladakh_t1_021,Ladakh top-up 1.21,Ladakh,,topup,77.17818,33.30309,10.24,"7,8,9,10",,
+ladakh_t1_022,Ladakh top-up 1.22,Ladakh,,topup,78.656,35.53452,10.24,"7,8,9,10",,
+ladakh_t1_023,Ladakh top-up 1.23,Ladakh,,topup,75.55117,34.98056,10.24,"7,8,9,10",,
+ladakh_t1_024,Ladakh top-up 1.24,Ladakh,,topup,75.52794,35.58196,10.24,"7,8,9,10",,
+ladakh_t1_025,Ladakh top-up 1.25,Ladakh,,topup,73.61258,35.82231,10.24,"7,8,9,10",,
+ladakh_t1_026,Ladakh top-up 1.26,Ladakh,,topup,74.53346,35.85387,10.24,"7,8,9,10",,
+ladakh_t1_027,Ladakh top-up 1.27,Ladakh,,topup,75.81249,36.18964,10.24,"7,8,9,10",,
+ladakh_t1_028,Ladakh top-up 1.28,Ladakh,,topup,72.87005,35.89347,10.24,"7,8,9,10",,
+ladakh_t1_029,Ladakh top-up 1.29,Ladakh,,topup,79.69927,34.9879,10.24,"7,8,9,10",,
+ladakh_t1_030,Ladakh top-up 1.30,Ladakh,,topup,77.96665,32.91032,10.24,"7,8,9,10",,
+ladakh_t1_031,Ladakh top-up 1.31,Ladakh,,topup,76.4411,35.80353,10.24,"7,8,9,10",,
+ladakh_t1_032,Ladakh top-up 1.32,Ladakh,,topup,77.6601,33.26,10.24,"7,8,9,10",,
+ladakh_t1_033,Ladakh top-up 1.33,Ladakh,,topup,79.27168,35.08699,10.24,"7,8,9,10",,
+ladakh_t1_034,Ladakh top-up 1.34,Ladakh,,topup,78.74725,32.76632,10.24,"7,8,9,10",,
+ladakh_t1_035,Ladakh top-up 1.35,Ladakh,,topup,77.92338,35.37691,10.24,"7,8,9,10",,
+ladakh_t1_036,Ladakh top-up 1.36,Ladakh,,topup,76.01995,35.54391,10.24,"7,8,9,10",,
+gujarat_t1_001,Gujarat top-up 1.1,Gujarat,,topup,71.09719,22.76598,10.24,"11,12,1,2,3",,
+gujarat_t1_002,Gujarat top-up 1.2,Gujarat,,topup,70.23353,23.8997,10.24,"11,12,1,2,3",,
+gujarat_t1_003,Gujarat top-up 1.3,Gujarat,,topup,72.68528,24.19108,10.24,"11,12,1,2,3",,
+gujarat_t1_004,Gujarat top-up 1.4,Gujarat,,topup,72.6632,21.6129,10.24,"11,12,1,2,3",,
+gujarat_t1_005,Gujarat top-up 1.5,Gujarat,,topup,70.53916,23.55772,10.24,"11,12,1,2,3",,
+gujarat_t1_006,Gujarat top-up 1.6,Gujarat,,topup,69.36225,24.25458,10.24,"11,12,1,2,3",,
+gujarat_t1_007,Gujarat top-up 1.7,Gujarat,,topup,71.84085,23.32343,10.24,"11,12,1,2,3",,
+gujarat_t1_008,Gujarat top-up 1.8,Gujarat,,topup,70.45711,20.87047,10.24,"11,12,1,2,3",,
+gujarat_t1_009,Gujarat top-up 1.9,Gujarat,,topup,70.18548,21.57477,10.24,"11,12,1,2,3",,
+gujarat_t1_010,Gujarat top-up 1.10,Gujarat,,topup,70.08808,22.13582,10.24,"11,12,1,2,3",,
+gujarat_t1_011,Gujarat top-up 1.11,Gujarat,,topup,73.06142,21.37423,10.24,"11,12,1,2,3",,
+gujarat_t1_012,Gujarat top-up 1.12,Gujarat,,topup,71.73947,24.03993,10.24,"11,12,1,2,3",,
+gujarat_t1_013,Gujarat top-up 1.13,Gujarat,,topup,68.73549,23.69338,10.24,"11,12,1,2,3",,
+gujarat_t1_014,Gujarat top-up 1.14,Gujarat,,topup,68.1831,23.59995,10.24,"11,12,1,2,3",,
+gujarat_t1_015,Gujarat top-up 1.15,Gujarat,,topup,72.48208,23.82039,10.24,"11,12,1,2,3",,
+gujarat_t1_016,Gujarat top-up 1.16,Gujarat,,topup,73.4709,20.87768,10.24,"11,12,1,2,3",,
+gujarat_t1_017,Gujarat top-up 1.17,Gujarat,,topup,72.22977,21.48809,10.24,"11,12,1,2,3",,
+gujarat_t1_018,Gujarat top-up 1.18,Gujarat,,topup,73.3653,22.9851,10.24,"11,12,1,2,3",,
+gujarat_t1_019,Gujarat top-up 1.19,Gujarat,,topup,71.43156,21.90865,10.24,"11,12,1,2,3",,
+gujarat_t1_020,Gujarat top-up 1.20,Gujarat,,topup,71.66113,22.64332,10.24,"11,12,1,2,3",,
+gujarat_t1_021,Gujarat top-up 1.21,Gujarat,,topup,73.88209,21.46136,10.24,"11,12,1,2,3",,
+gujarat_t1_022,Gujarat top-up 1.22,Gujarat,,topup,70.78565,21.6643,10.24,"11,12,1,2,3",,
+gujarat_t1_023,Gujarat top-up 1.23,Gujarat,,topup,68.90412,23.03441,10.24,"11,12,1,2,3",,
+gujarat_t1_024,Gujarat top-up 1.24,Gujarat,,topup,72.69534,22.02666,10.24,"11,12,1,2,3",,
+gujarat_t1_025,Gujarat top-up 1.25,Gujarat,,topup,72.32769,24.53448,10.24,"11,12,1,2,3",,
+gujarat_t1_026,Gujarat top-up 1.26,Gujarat,,topup,69.42415,22.81338,10.24,"11,12,1,2,3",,
+gujarat_t1_027,Gujarat top-up 1.27,Gujarat,,topup,73.3847,20.41067,10.24,"11,12,1,2,3",,
+gujarat_t1_028,Gujarat top-up 1.28,Gujarat,,topup,73.17447,23.44051,10.24,"11,12,1,2,3",,
+gujarat_t1_029,Gujarat top-up 1.29,Gujarat,,topup,73.91358,23.16261,10.24,"11,12,1,2,3",,
+gujarat_t1_030,Gujarat top-up 1.30,Gujarat,,topup,68.98461,23.40173,10.24,"11,12,1,2,3",,
+gujarat_t1_031,Gujarat top-up 1.31,Gujarat,,topup,69.01157,22.42264,10.24,"11,12,1,2,3",,
+gujarat_t1_032,Gujarat top-up 1.32,Gujarat,,topup,72.67009,23.46866,10.24,"11,12,1,2,3",,
+gujarat_t1_033,Gujarat top-up 1.33,Gujarat,,topup,71.91887,22.96664,10.24,"11,12,1,2,3",,
+gujarat_t1_034,Gujarat top-up 1.34,Gujarat,,topup,74.2123,22.71057,10.24,"11,12,1,2,3",,
+gujarat_t1_035,Gujarat top-up 1.35,Gujarat,,topup,74.13376,21.98637,10.24,"11,12,1,2,3",,
+gujarat_t1_036,Gujarat top-up 1.36,Gujarat,,topup,73.07309,22.19905,10.24,"11,12,1,2,3",,
+gujarat_t1_037,Gujarat top-up 1.37,Gujarat,,topup,71.6042,24.39356,10.24,"11,12,1,2,3",,
+gujarat_t1_038,Gujarat top-up 1.38,Gujarat,,topup,69.39277,21.83052,10.24,"11,12,1,2,3",,
+karnataka_t1_001,Karnataka top-up 1.1,Karnataka,,topup,76.20578,16.23952,10.24,"11,12,1,2,3",,
+karnataka_t1_002,Karnataka top-up 1.2,Karnataka,,topup,76.22777,13.56198,10.24,"11,12,1,2,3",,
+karnataka_t1_003,Karnataka top-up 1.3,Karnataka,,topup,77.0328,16.81664,10.24,"11,12,1,2,3",,
+karnataka_t1_004,Karnataka top-up 1.4,Karnataka,,topup,75.51246,16.57488,10.24,"11,12,1,2,3",,
+karnataka_t1_005,Karnataka top-up 1.5,Karnataka,,topup,77.32281,18.14341,10.24,"11,12,1,2,3",,
+karnataka_t1_006,Karnataka top-up 1.6,Karnataka,,topup,77.52454,12.98658,10.24,"11,12,1,2,3",,
+karnataka_t1_007,Karnataka top-up 1.7,Karnataka,,topup,75.44986,13.74096,10.24,"11,12,1,2,3",,
+karnataka_t1_008,Karnataka top-up 1.8,Karnataka,,topup,77.00254,13.4292,10.24,"11,12,1,2,3",,
+karnataka_t1_009,Karnataka top-up 1.9,Karnataka,,topup,75.80261,14.00366,10.24,"11,12,1,2,3",,
+karnataka_t1_010,Karnataka top-up 1.10,Karnataka,,topup,74.65102,15.7346,10.24,"11,12,1,2,3",,
+karnataka_t1_011,Karnataka top-up 1.11,Karnataka,,topup,74.73203,16.34586,10.24,"11,12,1,2,3",,
+karnataka_t1_012,Karnataka top-up 1.12,Karnataka,,topup,76.34928,12.86103,10.24,"11,12,1,2,3",,
+karnataka_t1_013,Karnataka top-up 1.13,Karnataka,,topup,76.45122,14.87909,10.24,"11,12,1,2,3",,
+karnataka_t1_014,Karnataka top-up 1.14,Karnataka,,topup,76.74634,17.77578,10.24,"11,12,1,2,3",,
+karnataka_t1_015,Karnataka top-up 1.15,Karnataka,,topup,76.87801,12.12093,10.24,"11,12,1,2,3",,
+karnataka_t1_016,Karnataka top-up 1.16,Karnataka,,topup,75.89032,12.79839,10.24,"11,12,1,2,3",,
+karnataka_t1_017,Karnataka top-up 1.17,Karnataka,,topup,75.79872,12.44433,10.24,"11,12,1,2,3",,
+karnataka_t1_018,Karnataka top-up 1.18,Karnataka,,topup,76.5715,14.22568,10.24,"11,12,1,2,3",,
+karnataka_t1_019,Karnataka top-up 1.19,Karnataka,,topup,76.4415,17.26046,10.24,"11,12,1,2,3",,
+karnataka_t1_020,Karnataka top-up 1.20,Karnataka,,topup,75.13916,15.24551,10.24,"11,12,1,2,3",,
+karnataka_t1_021,Karnataka top-up 1.21,Karnataka,,topup,75.04889,13.42557,10.24,"11,12,1,2,3",,
+karnataka_t1_022,Karnataka top-up 1.22,Karnataka,,topup,74.85658,13.06663,10.24,"11,12,1,2,3",,
+karnataka_t1_023,Karnataka top-up 1.23,Karnataka,,topup,75.23081,12.62733,10.24,"11,12,1,2,3",,
+karnataka_t1_024,Karnataka top-up 1.24,Karnataka,,topup,76.68042,11.86604,10.24,"11,12,1,2,3",,
+karnataka_t1_025,Karnataka top-up 1.25,Karnataka,,topup,77.07563,17.27448,10.24,"11,12,1,2,3",,
+karnataka_t1_026,Karnataka top-up 1.26,Karnataka,,topup,75.1106,14.58742,10.24,"11,12,1,2,3",,
+karnataka_t1_027,Karnataka top-up 1.27,Karnataka,,topup,74.72921,13.7164,10.24,"11,12,1,2,3",,
+karnataka_t1_028,Karnataka top-up 1.28,Karnataka,,topup,75.81065,17.14219,10.24,"11,12,1,2,3",,
+karnataka_t1_029,Karnataka top-up 1.29,Karnataka,,topup,76.46062,12.51237,10.24,"11,12,1,2,3",,
+karnataka_t1_030,Karnataka top-up 1.30,Karnataka,,topup,75.44335,12.3833,10.24,"11,12,1,2,3",,
+karnataka_t1_031,Karnataka top-up 1.31,Karnataka,,topup,76.50221,16.95721,10.24,"11,12,1,2,3",,
+karnataka_t1_032,Karnataka top-up 1.32,Karnataka,,topup,76.7549,17.42015,10.24,"11,12,1,2,3",,
+karnataka_t1_033,Karnataka top-up 1.33,Karnataka,,topup,76.26008,14.26839,10.24,"11,12,1,2,3",,
+karnataka_t1_034,Karnataka top-up 1.34,Karnataka,,topup,78.34477,12.94813,10.24,"11,12,1,2,3",,
+karnataka_t1_035,Karnataka top-up 1.35,Karnataka,,topup,77.32886,17.83836,10.24,"11,12,1,2,3",,
+karnataka_t1_036,Karnataka top-up 1.36,Karnataka,,topup,76.91217,12.87424,10.24,"11,12,1,2,3",,
+karnataka_t1_037,Karnataka top-up 1.37,Karnataka,,topup,76.09498,14.61734,10.24,"11,12,1,2,3",,
+karnataka_t1_038,Karnataka top-up 1.38,Karnataka,,topup,75.92519,13.3524,10.24,"11,12,1,2,3",,
+karnataka_t1_039,Karnataka top-up 1.39,Karnataka,,topup,76.73995,15.84707,10.24,"11,12,1,2,3",,
+karnataka_t1_040,Karnataka top-up 1.40,Karnataka,,topup,76.54361,15.33635,10.24,"11,12,1,2,3",,
+karnataka_t1_041,Karnataka top-up 1.41,Karnataka,,topup,74.5627,15.32625,10.24,"11,12,1,2,3",,
+uttar_pradesh_t1_001,Uttar Pradesh top-up 1.1,Uttar Pradesh,,topup,83.0017,24.66517,10.24,"2,3,4",,
+uttar_pradesh_t1_002,Uttar Pradesh top-up 1.2,Uttar Pradesh,,topup,80.88817,27.30396,10.24,"2,3,4",,
+uttar_pradesh_t1_003,Uttar Pradesh top-up 1.3,Uttar Pradesh,,topup,79.28553,27.15135,10.24,"2,3,4",,
+uttar_pradesh_t1_004,Uttar Pradesh top-up 1.4,Uttar Pradesh,,topup,81.74287,26.9898,10.24,"2,3,4",,
+uttar_pradesh_t1_005,Uttar Pradesh top-up 1.5,Uttar Pradesh,,topup,78.52946,28.21997,10.24,"2,3,4",,
+uttar_pradesh_t1_006,Uttar Pradesh top-up 1.6,Uttar Pradesh,,topup,83.49765,26.39727,10.24,"2,3,4",,
+uttar_pradesh_t1_007,Uttar Pradesh top-up 1.7,Uttar Pradesh,,topup,79.16436,28.17347,10.24,"2,3,4",,
+uttar_pradesh_t1_008,Uttar Pradesh top-up 1.8,Uttar Pradesh,,topup,78.98513,28.93851,10.24,"2,3,4",,
+uttar_pradesh_t1_009,Uttar Pradesh top-up 1.9,Uttar Pradesh,,topup,80.48969,27.91936,10.24,"2,3,4",,
+uttar_pradesh_t1_010,Uttar Pradesh top-up 1.10,Uttar Pradesh,,topup,82.31124,26.82891,10.24,"2,3,4",,
+uttar_pradesh_t1_011,Uttar Pradesh top-up 1.11,Uttar Pradesh,,topup,77.57783,29.68861,10.24,"2,3,4",,
+uttar_pradesh_t1_012,Uttar Pradesh top-up 1.12,Uttar Pradesh,,topup,77.96182,27.65136,10.24,"2,3,4",,
+uttar_pradesh_t1_013,Uttar Pradesh top-up 1.13,Uttar Pradesh,,topup,79.74176,27.81766,10.24,"2,3,4",,
+uttar_pradesh_t1_014,Uttar Pradesh top-up 1.14,Uttar Pradesh,,topup,82.54766,27.23471,10.24,"2,3,4",,
+uttar_pradesh_t1_015,Uttar Pradesh top-up 1.15,Uttar Pradesh,,topup,78.47801,27.7083,10.24,"2,3,4",,
+uttar_pradesh_t1_016,Uttar Pradesh top-up 1.16,Uttar Pradesh,,topup,77.97092,27.08872,10.24,"2,3,4",,
+uttar_pradesh_t1_017,Uttar Pradesh top-up 1.17,Uttar Pradesh,,topup,81.92281,27.55051,10.24,"2,3,4",,
+uttar_pradesh_t1_018,Uttar Pradesh top-up 1.18,Uttar Pradesh,,topup,78.54259,27.09506,10.24,"2,3,4",,
+uttar_pradesh_t1_019,Uttar Pradesh top-up 1.19,Uttar Pradesh,,topup,81.10822,26.27882,10.24,"2,3,4",,
+uttar_pradesh_t1_020,Uttar Pradesh top-up 1.20,Uttar Pradesh,,topup,80.48789,27.45916,10.24,"2,3,4",,
+uttar_pradesh_t1_021,Uttar Pradesh top-up 1.21,Uttar Pradesh,,topup,81.49859,25.66086,10.24,"2,3,4",,
+uttar_pradesh_t1_022,Uttar Pradesh top-up 1.22,Uttar Pradesh,,topup,80.36842,25.82134,10.24,"2,3,4",,
+uttar_pradesh_t1_023,Uttar Pradesh top-up 1.23,Uttar Pradesh,,topup,79.33545,28.53189,10.24,"2,3,4",,
+uttar_pradesh_t1_024,Uttar Pradesh top-up 1.24,Uttar Pradesh,,topup,80.0851,25.36063,10.24,"2,3,4",,
+uttar_pradesh_t1_025,Uttar Pradesh top-up 1.25,Uttar Pradesh,,topup,83.74009,26.90378,10.24,"2,3,4",,
+uttar_pradesh_t1_026,Uttar Pradesh top-up 1.26,Uttar Pradesh,,topup,78.28326,29.34073,10.24,"2,3,4",,
+uttar_pradesh_t1_027,Uttar Pradesh top-up 1.27,Uttar Pradesh,,topup,78.56644,24.99527,10.24,"2,3,4",,
+uttar_pradesh_t1_028,Uttar Pradesh top-up 1.28,Uttar Pradesh,,topup,82.23698,25.85693,10.24,"2,3,4",,
+uttar_pradesh_t1_029,Uttar Pradesh top-up 1.29,Uttar Pradesh,,topup,83.53311,25.62792,10.24,"2,3,4",,
+uttar_pradesh_t1_030,Uttar Pradesh top-up 1.30,Uttar Pradesh,,topup,79.29214,25.97384,10.24,"2,3,4",,
+uttar_pradesh_t1_031,Uttar Pradesh top-up 1.31,Uttar Pradesh,,topup,79.68554,27.30614,10.24,"2,3,4",,
+uttar_pradesh_t1_032,Uttar Pradesh top-up 1.32,Uttar Pradesh,,topup,79.68744,26.53846,10.24,"2,3,4",,
+uttar_pradesh_t1_033,Uttar Pradesh top-up 1.33,Uttar Pradesh,,topup,77.88631,28.72355,10.24,"2,3,4",,
+uttar_pradesh_t1_034,Uttar Pradesh top-up 1.34,Uttar Pradesh,,topup,82.75863,26.41205,10.24,"2,3,4",,
+uttar_pradesh_t1_035,Uttar Pradesh top-up 1.35,Uttar Pradesh,,topup,80.48493,26.69161,10.24,"2,3,4",,
+uttar_pradesh_t1_036,Uttar Pradesh top-up 1.36,Uttar Pradesh,,topup,80.836,28.07126,10.24,"2,3,4",,
+uttar_pradesh_t1_037,Uttar Pradesh top-up 1.37,Uttar Pradesh,,topup,82.45159,25.23876,10.24,"2,3,4",,
+uttar_pradesh_t1_038,Uttar Pradesh top-up 1.38,Uttar Pradesh,,topup,83.27557,24.40322,10.24,"2,3,4",,
+uttar_pradesh_t1_039,Uttar Pradesh top-up 1.39,Uttar Pradesh,,topup,80.08688,27.97121,10.24,"2,3,4",,
+uttar_pradesh_t1_040,Uttar Pradesh top-up 1.40,Uttar Pradesh,,topup,80.88565,26.94579,10.24,"2,3,4",,
+uttar_pradesh_t1_041,Uttar Pradesh top-up 1.41,Uttar Pradesh,,topup,81.09892,25.20302,10.24,"2,3,4",,
+uttar_pradesh_t1_042,Uttar Pradesh top-up 1.42,Uttar Pradesh,,topup,79.0529,27.66165,10.24,"2,3,4",,
+uttar_pradesh_t1_043,Uttar Pradesh top-up 1.43,Uttar Pradesh,,topup,83.17753,24.96926,10.24,"2,3,4",,
+uttar_pradesh_t1_044,Uttar Pradesh top-up 1.44,Uttar Pradesh,,topup,77.4747,29.0239,10.24,"2,3,4",,
+uttar_pradesh_t1_045,Uttar Pradesh top-up 1.45,Uttar Pradesh,,topup,83.99306,25.87304,10.24,"2,3,4",,
+uttar_pradesh_t1_046,Uttar Pradesh top-up 1.46,Uttar Pradesh,,topup,78.73109,25.4067,10.24,"2,3,4",,
+uttar_pradesh_t1_047,Uttar Pradesh top-up 1.47,Uttar Pradesh,,topup,77.7585,29.38527,10.24,"2,3,4",,
+uttar_pradesh_t1_048,Uttar Pradesh top-up 1.48,Uttar Pradesh,,topup,83.34603,27.11742,10.24,"2,3,4",,
+uttar_pradesh_t1_049,Uttar Pradesh top-up 1.49,Uttar Pradesh,,topup,79.33898,27.86762,10.24,"2,3,4",,
+uttar_pradesh_t1_050,Uttar Pradesh top-up 1.50,Uttar Pradesh,,topup,78.58192,28.68018,10.24,"2,3,4",,
+madhya_pradesh_t1_001,Madhya Pradesh top-up 1.1,Madhya Pradesh,,topup,80.95705,24.515,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_002,Madhya Pradesh top-up 1.2,Madhya Pradesh,,topup,81.44315,22.97598,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_003,Madhya Pradesh top-up 1.3,Madhya Pradesh,,topup,77.65208,24.80711,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_004,Madhya Pradesh top-up 1.4,Madhya Pradesh,,topup,81.91071,24.7108,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_005,Madhya Pradesh top-up 1.5,Madhya Pradesh,,topup,78.0629,23.58462,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_006,Madhya Pradesh top-up 1.6,Madhya Pradesh,,topup,75.71521,22.35938,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_007,Madhya Pradesh top-up 1.7,Madhya Pradesh,,topup,80.44594,22.26583,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_008,Madhya Pradesh top-up 1.8,Madhya Pradesh,,topup,80.00625,22.93165,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_009,Madhya Pradesh top-up 1.9,Madhya Pradesh,,topup,78.95084,23.64447,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_010,Madhya Pradesh top-up 1.10,Madhya Pradesh,,topup,78.47498,21.59379,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_011,Madhya Pradesh top-up 1.11,Madhya Pradesh,,topup,76.57228,23.25133,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_012,Madhya Pradesh top-up 1.12,Madhya Pradesh,,topup,77.98434,25.06762,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_013,Madhya Pradesh top-up 1.13,Madhya Pradesh,,topup,78.056,24.04514,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_014,Madhya Pradesh top-up 1.14,Madhya Pradesh,,topup,79.01953,21.90521,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_015,Madhya Pradesh top-up 1.15,Madhya Pradesh,,topup,76.06508,21.7036,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_016,Madhya Pradesh top-up 1.16,Madhya Pradesh,,topup,77.37432,21.93672,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_017,Madhya Pradesh top-up 1.17,Madhya Pradesh,,topup,77.02925,22.64673,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_018,Madhya Pradesh top-up 1.18,Madhya Pradesh,,topup,77.50928,26.39044,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_019,Madhya Pradesh top-up 1.19,Madhya Pradesh,,topup,79.23462,22.62271,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_020,Madhya Pradesh top-up 1.20,Madhya Pradesh,,topup,76.19373,22.9352,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_021,Madhya Pradesh top-up 1.21,Madhya Pradesh,,topup,75.24691,24.64937,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_022,Madhya Pradesh top-up 1.22,Madhya Pradesh,,topup,81.29618,24.87068,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_023,Madhya Pradesh top-up 1.23,Madhya Pradesh,,topup,79.44839,24.20997,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_024,Madhya Pradesh top-up 1.24,Madhya Pradesh,,topup,77.19147,25.36223,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_025,Madhya Pradesh top-up 1.25,Madhya Pradesh,,topup,74.8578,21.7696,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_026,Madhya Pradesh top-up 1.26,Madhya Pradesh,,topup,79.45337,23.03301,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_027,Madhya Pradesh top-up 1.27,Madhya Pradesh,,topup,79.38897,24.97723,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_028,Madhya Pradesh top-up 1.28,Madhya Pradesh,,topup,77.2825,23.72629,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_029,Madhya Pradesh top-up 1.29,Madhya Pradesh,,topup,80.83166,22.41769,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_030,Madhya Pradesh top-up 1.30,Madhya Pradesh,,topup,77.6825,23.11871,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_031,Madhya Pradesh top-up 1.31,Madhya Pradesh,,topup,74.84301,24.94356,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_032,Madhya Pradesh top-up 1.32,Madhya Pradesh,,topup,74.701,22.94171,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_033,Madhya Pradesh top-up 1.33,Madhya Pradesh,,topup,75.12554,23.41674,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_034,Madhya Pradesh top-up 1.34,Madhya Pradesh,,topup,79.73129,22.31741,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_035,Madhya Pradesh top-up 1.35,Madhya Pradesh,,topup,79.72832,23.75017,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_036,Madhya Pradesh top-up 1.36,Madhya Pradesh,,topup,80.39654,24.10811,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_037,Madhya Pradesh top-up 1.37,Madhya Pradesh,,topup,76.68496,25.35223,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_038,Madhya Pradesh top-up 1.38,Madhya Pradesh,,topup,81.73648,24.25232,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_039,Madhya Pradesh top-up 1.39,Madhya Pradesh,,topup,78.24673,22.3075,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_040,Madhya Pradesh top-up 1.40,Madhya Pradesh,,topup,77.31263,24.95508,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_041,Madhya Pradesh top-up 1.41,Madhya Pradesh,,topup,75.41888,22.96503,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_042,Madhya Pradesh top-up 1.42,Madhya Pradesh,,topup,82.45899,24.08892,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_043,Madhya Pradesh top-up 1.43,Madhya Pradesh,,topup,78.52896,26.55668,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_044,Madhya Pradesh top-up 1.44,Madhya Pradesh,,topup,78.55804,23.9995,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_045,Madhya Pradesh top-up 1.45,Madhya Pradesh,,topup,78.76075,26.09865,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_046,Madhya Pradesh top-up 1.46,Madhya Pradesh,,topup,78.63159,22.31147,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_047,Madhya Pradesh top-up 1.47,Madhya Pradesh,,topup,75.29562,21.7839,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_048,Madhya Pradesh top-up 1.48,Madhya Pradesh,,topup,76.83863,25.96926,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_049,Madhya Pradesh top-up 1.49,Madhya Pradesh,,topup,76.94425,23.92465,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_050,Madhya Pradesh top-up 1.50,Madhya Pradesh,,topup,76.32338,24.21814,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_051,Madhya Pradesh top-up 1.51,Madhya Pradesh,,topup,76.29113,21.45353,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_052,Madhya Pradesh top-up 1.52,Madhya Pradesh,,topup,81.69005,24.9692,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_053,Madhya Pradesh top-up 1.53,Madhya Pradesh,,topup,76.00613,23.6471,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_054,Madhya Pradesh top-up 1.54,Madhya Pradesh,,topup,79.10976,24.77123,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_055,Madhya Pradesh top-up 1.55,Madhya Pradesh,,topup,74.50602,22.32033,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_056,Madhya Pradesh top-up 1.56,Madhya Pradesh,,topup,80.5667,24.77276,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_057,Madhya Pradesh top-up 1.57,Madhya Pradesh,,topup,75.85589,23.13115,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_058,Madhya Pradesh top-up 1.58,Madhya Pradesh,,topup,75.7116,24.15109,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_059,Madhya Pradesh top-up 1.59,Madhya Pradesh,,topup,78.34895,22.92269,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_060,Madhya Pradesh top-up 1.60,Madhya Pradesh,,topup,77.40312,26.03083,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_061,Madhya Pradesh top-up 1.61,Madhya Pradesh,,topup,79.2947,21.70215,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_062,Madhya Pradesh top-up 1.62,Madhya Pradesh,,topup,82.40898,24.39678,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_063,Madhya Pradesh top-up 1.63,Madhya Pradesh,,topup,79.73223,21.85701,10.24,"11,12,1,2,3",,
+madhya_pradesh_t1_064,Madhya Pradesh top-up 1.64,Madhya Pradesh,,topup,78.14401,21.79468,10.24,"11,12,1,2,3",,
+maharashtra_t1_001,Maharashtra top-up 1.1,Maharashtra,,topup,77.63513,21.19863,10.24,"11,12,1,2,3",,
+maharashtra_t1_002,Maharashtra top-up 1.2,Maharashtra,,topup,74.03837,16.1409,10.24,"11,12,1,2,3",,
+maharashtra_t1_003,Maharashtra top-up 1.3,Maharashtra,,topup,77.61473,19.30418,10.24,"11,12,1,2,3",,
+maharashtra_t1_004,Maharashtra top-up 1.4,Maharashtra,,topup,75.39472,21.1979,10.24,"11,12,1,2,3",,
+maharashtra_t1_005,Maharashtra top-up 1.5,Maharashtra,,topup,77.60005,20.12258,10.24,"11,12,1,2,3",,
+maharashtra_t1_006,Maharashtra top-up 1.6,Maharashtra,,topup,78.4658,20.23637,10.24,"11,12,1,2,3",,
+maharashtra_t1_007,Maharashtra top-up 1.7,Maharashtra,,topup,74.92163,19.28759,10.24,"11,12,1,2,3",,
+maharashtra_t1_008,Maharashtra top-up 1.8,Maharashtra,,topup,75.79649,20.59479,10.24,"11,12,1,2,3",,
+maharashtra_t1_009,Maharashtra top-up 1.9,Maharashtra,,topup,75.35341,17.71761,10.24,"11,12,1,2,3",,
+maharashtra_t1_010,Maharashtra top-up 1.10,Maharashtra,,topup,74.49328,19.22114,10.24,"11,12,1,2,3",,
+maharashtra_t1_011,Maharashtra top-up 1.11,Maharashtra,,topup,76.05249,17.48296,10.24,"11,12,1,2,3",,
+maharashtra_t1_012,Maharashtra top-up 1.12,Maharashtra,,topup,73.90905,20.22237,10.24,"11,12,1,2,3",,
+maharashtra_t1_013,Maharashtra top-up 1.13,Maharashtra,,topup,79.82108,20.65373,10.24,"11,12,1,2,3",,
+maharashtra_t1_014,Maharashtra top-up 1.14,Maharashtra,,topup,79.17209,20.03723,10.24,"11,12,1,2,3",,
+maharashtra_t1_015,Maharashtra top-up 1.15,Maharashtra,,topup,76.55225,20.81902,10.24,"11,12,1,2,3",,
+maharashtra_t1_016,Maharashtra top-up 1.16,Maharashtra,,topup,76.20047,19.78635,10.24,"11,12,1,2,3",,
+maharashtra_t1_017,Maharashtra top-up 1.17,Maharashtra,,topup,73.12307,19.67589,10.24,"11,12,1,2,3",,
+maharashtra_t1_018,Maharashtra top-up 1.18,Maharashtra,,topup,75.36282,18.99514,10.24,"11,12,1,2,3",,
+maharashtra_t1_019,Maharashtra top-up 1.19,Maharashtra,,topup,77.40826,18.8406,10.24,"11,12,1,2,3",,
+maharashtra_t1_020,Maharashtra top-up 1.20,Maharashtra,,topup,75.78184,21.05552,10.24,"11,12,1,2,3",,
+maharashtra_t1_021,Maharashtra top-up 1.21,Maharashtra,,topup,77.15461,20.67801,10.24,"11,12,1,2,3",,
+maharashtra_t1_022,Maharashtra top-up 1.22,Maharashtra,,topup,74.25624,19.72399,10.24,"11,12,1,2,3",,
+maharashtra_t1_023,Maharashtra top-up 1.23,Maharashtra,,topup,74.5488,20.50328,10.24,"11,12,1,2,3",,
+maharashtra_t1_024,Maharashtra top-up 1.24,Maharashtra,,topup,73.65196,17.65394,10.24,"11,12,1,2,3",,
+maharashtra_t1_025,Maharashtra top-up 1.25,Maharashtra,,topup,74.24626,21.20955,10.24,"11,12,1,2,3",,
+maharashtra_t1_026,Maharashtra top-up 1.26,Maharashtra,,topup,73.63963,16.78619,10.24,"11,12,1,2,3",,
+maharashtra_t1_027,Maharashtra top-up 1.27,Maharashtra,,topup,73.32053,17.89459,10.24,"11,12,1,2,3",,
+maharashtra_t1_028,Maharashtra top-up 1.28,Maharashtra,,topup,76.73204,20.15728,10.24,"11,12,1,2,3",,
+maharashtra_t1_029,Maharashtra top-up 1.29,Maharashtra,,topup,76.86214,19.23903,10.24,"11,12,1,2,3",,
+maharashtra_t1_030,Maharashtra top-up 1.30,Maharashtra,,topup,74.5184,18.60834,10.24,"11,12,1,2,3",,
+maharashtra_t1_031,Maharashtra top-up 1.31,Maharashtra,,topup,79.60454,20.29492,10.24,"11,12,1,2,3",,
+maharashtra_t1_032,Maharashtra top-up 1.32,Maharashtra,,topup,76.21932,19.12176,10.24,"11,12,1,2,3",,
+maharashtra_t1_033,Maharashtra top-up 1.33,Maharashtra,,topup,78.84185,20.64936,10.24,"11,12,1,2,3",,
+maharashtra_t1_034,Maharashtra top-up 1.34,Maharashtra,,topup,75.06989,19.65081,10.24,"11,12,1,2,3",,
+maharashtra_t1_035,Maharashtra top-up 1.35,Maharashtra,,topup,73.83155,19.55337,10.24,"11,12,1,2,3",,
+maharashtra_t1_036,Maharashtra top-up 1.36,Maharashtra,,topup,77.86355,20.58738,10.24,"11,12,1,2,3",,
+maharashtra_t1_037,Maharashtra top-up 1.37,Maharashtra,,topup,80.36413,20.295,10.24,"11,12,1,2,3",,
+maharashtra_t1_038,Maharashtra top-up 1.38,Maharashtra,,topup,75.67185,19.4137,10.24,"11,12,1,2,3",,
+maharashtra_t1_039,Maharashtra top-up 1.39,Maharashtra,,topup,75.14058,20.67739,10.24,"11,12,1,2,3",,
+maharashtra_t1_040,Maharashtra top-up 1.40,Maharashtra,,topup,74.34725,17.58026,10.24,"11,12,1,2,3",,
+maharashtra_t1_041,Maharashtra top-up 1.41,Maharashtra,,topup,80.14819,21.2684,10.24,"11,12,1,2,3",,
+maharashtra_t1_042,Maharashtra top-up 1.42,Maharashtra,,topup,74.23787,16.40346,10.24,"11,12,1,2,3",,
+maharashtra_t1_043,Maharashtra top-up 1.43,Maharashtra,,topup,80.14762,20.75618,10.24,"11,12,1,2,3",,
+maharashtra_t1_044,Maharashtra top-up 1.44,Maharashtra,,topup,77.53163,20.88958,10.24,"11,12,1,2,3",,
+maharashtra_t1_045,Maharashtra top-up 1.45,Maharashtra,,topup,76.87658,20.92859,10.24,"11,12,1,2,3",,
+maharashtra_t1_046,Maharashtra top-up 1.46,Maharashtra,,topup,78.73889,20.0342,10.24,"11,12,1,2,3",,
+maharashtra_t1_047,Maharashtra top-up 1.47,Maharashtra,,topup,75.58773,18.69526,10.24,"11,12,1,2,3",,
+maharashtra_t1_048,Maharashtra top-up 1.48,Maharashtra,,topup,78.18207,21.15501,10.24,"11,12,1,2,3",,
+maharashtra_t1_049,Maharashtra top-up 1.49,Maharashtra,,topup,79.16406,21.31738,10.24,"11,12,1,2,3",,
+maharashtra_t1_050,Maharashtra top-up 1.50,Maharashtra,,topup,76.25364,17.89642,10.24,"11,12,1,2,3",,
+maharashtra_t1_051,Maharashtra top-up 1.51,Maharashtra,,topup,76.9767,18.93464,10.24,"11,12,1,2,3",,
+maharashtra_t1_052,Maharashtra top-up 1.52,Maharashtra,,topup,74.83908,17.24127,10.24,"11,12,1,2,3",,
+maharashtra_t1_053,Maharashtra top-up 1.53,Maharashtra,,topup,72.92088,19.41034,10.24,"11,12,1,2,3",,
+maharashtra_t1_054,Maharashtra top-up 1.54,Maharashtra,,topup,75.03614,17.6562,10.24,"11,12,1,2,3",,
+maharashtra_t1_055,Maharashtra top-up 1.55,Maharashtra,,topup,79.22802,19.73052,10.24,"11,12,1,2,3",,
+maharashtra_t1_056,Maharashtra top-up 1.56,Maharashtra,,topup,79.82018,21.3196,10.24,"11,12,1,2,3",,
+maharashtra_t1_057,Maharashtra top-up 1.57,Maharashtra,,topup,73.58649,20.15762,10.24,"11,12,1,2,3",,
+maharashtra_t1_058,Maharashtra top-up 1.58,Maharashtra,,topup,73.44423,19.74162,10.24,"11,12,1,2,3",,
+maharashtra_t1_059,Maharashtra top-up 1.59,Maharashtra,,topup,76.03154,18.19694,10.24,"11,12,1,2,3",,
+maharashtra_t1_060,Maharashtra top-up 1.60,Maharashtra,,topup,73.67407,18.31898,10.24,"11,12,1,2,3",,
+maharashtra_t1_061,Maharashtra top-up 1.61,Maharashtra,,topup,75.21731,17.05016,10.24,"11,12,1,2,3",,
+maharashtra_t1_062,Maharashtra top-up 1.62,Maharashtra,,topup,79.54837,20.858,10.24,"11,12,1,2,3",,
+maharashtra_t1_063,Maharashtra top-up 1.63,Maharashtra,,topup,75.33225,18.3297,10.24,"11,12,1,2,3",,
+maharashtra_t1_064,Maharashtra top-up 1.64,Maharashtra,,topup,75.54194,20.07525,10.24,"11,12,1,2,3",,
+rajasthan_t1_001,Rajasthan top-up 1.1,Rajasthan,,topup,75.98034,26.31688,10.24,"11,12,1,2,3",,
+rajasthan_t1_002,Rajasthan top-up 1.2,Rajasthan,,topup,72.70964,27.83744,10.24,"11,12,1,2,3",,
+rajasthan_t1_003,Rajasthan top-up 1.3,Rajasthan,,topup,73.77425,23.78331,10.24,"11,12,1,2,3",,
+rajasthan_t1_004,Rajasthan top-up 1.4,Rajasthan,,topup,71.92776,26.57009,10.24,"11,12,1,2,3",,
+rajasthan_t1_005,Rajasthan top-up 1.5,Rajasthan,,topup,73.60237,27.26195,10.24,"11,12,1,2,3",,
+rajasthan_t1_006,Rajasthan top-up 1.6,Rajasthan,,topup,73.19589,28.42162,10.24,"11,12,1,2,3",,
+rajasthan_t1_007,Rajasthan top-up 1.7,Rajasthan,,topup,74.88225,25.36247,10.24,"11,12,1,2,3",,
+rajasthan_t1_008,Rajasthan top-up 1.8,Rajasthan,,topup,70.65223,27.62682,10.24,"11,12,1,2,3",,
+rajasthan_t1_009,Rajasthan top-up 1.9,Rajasthan,,topup,74.60682,23.8662,10.24,"11,12,1,2,3",,
+rajasthan_t1_010,Rajasthan top-up 1.10,Rajasthan,,topup,71.97635,25.80347,10.24,"11,12,1,2,3",,
+rajasthan_t1_011,Rajasthan top-up 1.11,Rajasthan,,topup,75.59354,27.63709,10.24,"11,12,1,2,3",,
+rajasthan_t1_012,Rajasthan top-up 1.12,Rajasthan,,topup,71.42689,26.38963,10.24,"11,12,1,2,3",,
+rajasthan_t1_013,Rajasthan top-up 1.13,Rajasthan,,topup,72.22791,27.25134,10.24,"11,12,1,2,3",,
+rajasthan_t1_014,Rajasthan top-up 1.14,Rajasthan,,topup,70.12494,27.74845,10.24,"11,12,1,2,3",,
+rajasthan_t1_015,Rajasthan top-up 1.15,Rajasthan,,topup,72.25991,27.66254,10.24,"11,12,1,2,3",,
+rajasthan_t1_016,Rajasthan top-up 1.16,Rajasthan,,topup,75.68256,26.71855,10.24,"11,12,1,2,3",,
+rajasthan_t1_017,Rajasthan top-up 1.17,Rajasthan,,topup,71.06499,26.67703,10.24,"11,12,1,2,3",,
+rajasthan_t1_018,Rajasthan top-up 1.18,Rajasthan,,topup,74.55872,28.98472,10.24,"11,12,1,2,3",,
+rajasthan_t1_019,Rajasthan top-up 1.19,Rajasthan,,topup,76.56897,27.66125,10.24,"11,12,1,2,3",,
+rajasthan_t1_020,Rajasthan top-up 1.20,Rajasthan,,topup,73.40756,25.51185,10.24,"11,12,1,2,3",,
+rajasthan_t1_021,Rajasthan top-up 1.21,Rajasthan,,topup,74.09776,27.69064,10.24,"11,12,1,2,3",,
+rajasthan_t1_022,Rajasthan top-up 1.22,Rajasthan,,topup,72.99029,24.87809,10.24,"11,12,1,2,3",,
+rajasthan_t1_023,Rajasthan top-up 1.23,Rajasthan,,topup,71.43576,25.41547,10.24,"11,12,1,2,3",,
+rajasthan_t1_024,Rajasthan top-up 1.24,Rajasthan,,topup,73.63137,28.95052,10.24,"11,12,1,2,3",,
+rajasthan_t1_025,Rajasthan top-up 1.25,Rajasthan,,topup,73.03773,29.18114,10.24,"11,12,1,2,3",,
+rajasthan_t1_026,Rajasthan top-up 1.26,Rajasthan,,topup,72.27427,25.56212,10.24,"11,12,1,2,3",,
+rajasthan_t1_027,Rajasthan top-up 1.27,Rajasthan,,topup,71.95697,27.90336,10.24,"11,12,1,2,3",,
+rajasthan_t1_028,Rajasthan top-up 1.28,Rajasthan,,topup,70.46589,27.05193,10.24,"11,12,1,2,3",,
+rajasthan_t1_029,Rajasthan top-up 1.29,Rajasthan,,topup,72.32769,28.43328,10.24,"11,12,1,2,3",,
+rajasthan_t1_030,Rajasthan top-up 1.30,Rajasthan,,topup,74.19417,29.32921,10.24,"11,12,1,2,3",,
+rajasthan_t1_031,Rajasthan top-up 1.31,Rajasthan,,topup,74.10079,25.18089,10.24,"11,12,1,2,3",,
+rajasthan_t1_032,Rajasthan top-up 1.32,Rajasthan,,topup,76.47715,26.84077,10.24,"11,12,1,2,3",,
+rajasthan_t1_033,Rajasthan top-up 1.33,Rajasthan,,topup,76.86359,27.36056,10.24,"11,12,1,2,3",,
+rajasthan_t1_034,Rajasthan top-up 1.34,Rajasthan,,topup,74.3416,24.83099,10.24,"11,12,1,2,3",,
+rajasthan_t1_035,Rajasthan top-up 1.35,Rajasthan,,topup,73.63853,26.54648,10.24,"11,12,1,2,3",,
+rajasthan_t1_036,Rajasthan top-up 1.36,Rajasthan,,topup,74.53226,28.26868,10.24,"11,12,1,2,3",,
+rajasthan_t1_037,Rajasthan top-up 1.37,Rajasthan,,topup,74.53602,24.22267,10.24,"11,12,1,2,3",,
+rajasthan_t1_038,Rajasthan top-up 1.38,Rajasthan,,topup,70.70419,25.3733,10.24,"11,12,1,2,3",,
+rajasthan_t1_039,Rajasthan top-up 1.39,Rajasthan,,topup,72.76437,25.8934,10.24,"11,12,1,2,3",,
+rajasthan_t1_040,Rajasthan top-up 1.40,Rajasthan,,topup,73.77483,26.09083,10.24,"11,12,1,2,3",,
+rajasthan_t1_041,Rajasthan top-up 1.41,Rajasthan,,topup,75.53698,25.99753,10.24,"11,12,1,2,3",,
+rajasthan_t1_042,Rajasthan top-up 1.42,Rajasthan,,topup,76.52636,25.04934,10.24,"11,12,1,2,3",,
+rajasthan_t1_043,Rajasthan top-up 1.43,Rajasthan,,topup,69.92038,27.42804,10.24,"11,12,1,2,3",,
+rajasthan_t1_044,Rajasthan top-up 1.44,Rajasthan,,topup,72.80812,27.12527,10.24,"11,12,1,2,3",,
+rajasthan_t1_045,Rajasthan top-up 1.45,Rajasthan,,topup,73.89332,28.34766,10.24,"11,12,1,2,3",,
+rajasthan_t1_046,Rajasthan top-up 1.46,Rajasthan,,topup,76.70947,24.48962,10.24,"11,12,1,2,3",,
+rajasthan_t1_047,Rajasthan top-up 1.47,Rajasthan,,topup,75.18024,27.93185,10.24,"11,12,1,2,3",,
+rajasthan_t1_048,Rajasthan top-up 1.48,Rajasthan,,topup,73.40925,24.38362,10.24,"11,12,1,2,3",,
+rajasthan_t1_049,Rajasthan top-up 1.49,Rajasthan,,topup,71.01781,27.34066,10.24,"11,12,1,2,3",,
+rajasthan_t1_050,Rajasthan top-up 1.50,Rajasthan,,topup,75.37539,27.32394,10.24,"11,12,1,2,3",,
+rajasthan_t1_051,Rajasthan top-up 1.51,Rajasthan,,topup,73.01856,25.39227,10.24,"11,12,1,2,3",,
+rajasthan_t1_052,Rajasthan top-up 1.52,Rajasthan,,topup,76.07977,24.93617,10.24,"11,12,1,2,3",,
+rajasthan_t1_053,Rajasthan top-up 1.53,Rajasthan,,topup,71.27782,26.07365,10.24,"11,12,1,2,3",,
+rajasthan_t1_054,Rajasthan top-up 1.54,Rajasthan,,topup,72.7515,25.12355,10.24,"11,12,1,2,3",,
+rajasthan_t1_055,Rajasthan top-up 1.55,Rajasthan,,topup,75.94968,25.49651,10.24,"11,12,1,2,3",,
+rajasthan_t1_056,Rajasthan top-up 1.56,Rajasthan,,topup,77.31729,27.57346,10.24,"11,12,1,2,3",,
+rajasthan_t1_057,Rajasthan top-up 1.57,Rajasthan,,topup,76.07013,27.08698,10.24,"11,12,1,2,3",,
+rajasthan_t1_058,Rajasthan top-up 1.58,Rajasthan,,topup,74.9003,29.14908,10.24,"11,12,1,2,3",,
+rajasthan_t1_059,Rajasthan top-up 1.59,Rajasthan,,topup,75.28775,26.60479,10.24,"11,12,1,2,3",,
+rajasthan_t1_060,Rajasthan top-up 1.60,Rajasthan,,topup,74.9566,26.33841,10.24,"11,12,1,2,3",,
+rajasthan_t1_061,Rajasthan top-up 1.61,Rajasthan,,topup,76.31655,26.47877,10.24,"11,12,1,2,3",,
+rajasthan_t1_062,Rajasthan top-up 1.62,Rajasthan,,topup,73.81479,29.9271,10.24,"11,12,1,2,3",,
+rajasthan_t1_063,Rajasthan top-up 1.63,Rajasthan,,topup,72.72724,24.55809,10.24,"11,12,1,2,3",,
+rajasthan_t1_064,Rajasthan top-up 1.64,Rajasthan,,topup,73.09251,26.11335,10.24,"11,12,1,2,3",,
+rajasthan_t1_065,Rajasthan top-up 1.65,Rajasthan,,topup,70.05893,27.12925,10.24,"11,12,1,2,3",,
+rajasthan_t1_066,Rajasthan top-up 1.66,Rajasthan,,topup,73.8505,29.21435,10.24,"11,12,1,2,3",,
+rajasthan_t1_067,Rajasthan top-up 1.67,Rajasthan,,topup,74.08377,26.7688,10.24,"11,12,1,2,3",,
+rajasthan_t1_068,Rajasthan top-up 1.68,Rajasthan,,topup,76.10331,26.01272,10.24,"11,12,1,2,3",,
+rajasthan_t1_069,Rajasthan top-up 1.69,Rajasthan,,topup,75.9984,27.54557,10.24,"11,12,1,2,3",,
+rajasthan_t1_070,Rajasthan top-up 1.70,Rajasthan,,topup,70.15472,25.90405,10.24,"11,12,1,2,3",,
+rajasthan_t1_071,Rajasthan top-up 1.71,Rajasthan,,topup,70.64057,26.24189,10.24,"11,12,1,2,3",,

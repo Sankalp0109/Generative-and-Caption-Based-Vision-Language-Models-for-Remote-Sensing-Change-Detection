@@ -1,0 +1,17 @@
+{
+ "pairs": 15610,
+ "sites": 1669,
+ "states": 35,
+ "by_split": {
+  "test": 1601,
+  "train": 12303,
+  "val": 1706
+ },
+ "labelled": 1002,
+ "zip_mb": {
+  "images_test.zip": 848,
+  "images_train.zip": 6521,
+  "images_val.zip": 910
+ },
+ "sites_in_two_splits": 0
+}
