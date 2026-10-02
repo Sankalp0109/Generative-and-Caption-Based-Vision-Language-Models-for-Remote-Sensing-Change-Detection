@@ -1,0 +1,2677 @@
+{
+ "uttar_pradesh_t1_025_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790824385
+ },
+ "maharashtra_t1_025_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790824393
+ },
+ "madhya_pradesh_t1_012_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790824417
+ },
+ "gujarat_t1_012_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790824816
+ },
+ "uttar_pradesh_042_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790824836
+ },
+ "uttar_pradesh_t1_042_r2c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790824850
+ },
+ "madhya_pradesh_t1_007_r3c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790824865
+ },
+ "chhattisgarh_033_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790824868
+ },
+ "navi_mumbai_airport_maharashtra_r1c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790824874
+ },
+ "uttar_pradesh_t1_035_r2c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790824886
+ },
+ "andhra_pradesh_t1_019_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790824903
+ },
+ "navi_mumbai_airport_maharashtra_r0c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790824908
+ },
+ "maharashtra_t1_032_r1c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790824921
+ },
+ "maharashtra_t1_037_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790824928
+ },
+ "telangana_t1_006_r0c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790824938
+ },
+ "rajasthan_t1_039_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790824961
+ },
+ "assam_t1_012_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790824975
+ },
+ "punjab_t1_005_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825008
+ },
+ "tamil_nadu_t1_025_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825017
+ },
+ "punjab_t1_007_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825023
+ },
+ "madhya_pradesh_t1_002_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825029
+ },
+ "haryana_015_r3c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825033
+ },
+ "rajasthan_050_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825036
+ },
+ "gujarat_t1_001_r1c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825039
+ },
+ "odisha_t1_026_r1c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825047
+ },
+ "chhattisgarh_t1_028_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825057
+ },
+ "bihar_003_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825062
+ },
+ "rajasthan_t1_065_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825064
+ },
+ "odisha_031_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825190
+ },
+ "assam_005_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825196
+ },
+ "karnataka_t1_002_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825203
+ },
+ "rajasthan_050_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825205
+ },
+ "madhya_pradesh_t1_055_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825215
+ },
+ "uttar_pradesh_t1_042_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825225
+ },
+ "odisha_t1_013_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825229
+ },
+ "maharashtra_t1_018_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825268
+ },
+ "haryana_015_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825274
+ },
+ "madhya_pradesh_082_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825283
+ },
+ "himachal_pradesh_t1_009_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825290
+ },
+ "himachal_pradesh_t1_009_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825293
+ },
+ "maharashtra_067_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825303
+ },
+ "karnataka_t1_004_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825315
+ },
+ "bihar_003_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825323
+ },
+ "punjab_t1_005_r2c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825329
+ },
+ "karnataka_t1_002_r2c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825334
+ },
+ "bihar_005_r1c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825341
+ },
+ "odisha_t1_013_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825344
+ },
+ "madhya_pradesh_t1_007_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825348
+ },
+ "uttar_pradesh_067_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825361
+ },
+ "odisha_t1_026_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825369
+ },
+ "kerala_t1_008_r2c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790825381
+ },
+ "andhra_pradesh_006_r3c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790825384
+ },
+ "gujarat_t1_001_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825387
+ },
+ "jharkhand_001_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825390
+ },
+ "karnataka_014_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825402
+ },
+ "telangana_017_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825405
+ },
+ "karnataka_014_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825427
+ },
+ "gujarat_t1_020_r1c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825436
+ },
+ "maharashtra_t1_025_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825441
+ },
+ "mizoram_006_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825444
+ },
+ "arunachal_pradesh_025_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825450
+ },
+ "rajasthan_t1_045_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825452
+ },
+ "bihar_003_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825456
+ },
+ "tamil_nadu_012_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825463
+ },
+ "gujarat_t1_017_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825469
+ },
+ "karnataka_041_r1c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825478
+ },
+ "gujarat_012_r0c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825507
+ },
+ "andhra_pradesh_038_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825514
+ },
+ "goa_004_r2c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825523
+ },
+ "madhya_pradesh_t1_055_r2c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825527
+ },
+ "bihar_023_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825535
+ },
+ "andhra_pradesh_021_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825546
+ },
+ "west_bengal_t1_005_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825555
+ },
+ "rajasthan_024_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825558
+ },
+ "andhra_pradesh_001_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825566
+ },
+ "odisha_t1_012_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825569
+ },
+ "uttarakhand_009_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825580
+ },
+ "andhra_pradesh_021_r0c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790825594
+ },
+ "chhattisgarh_042_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825597
+ },
+ "gujarat_017_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825602
+ },
+ "punjab_014_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790825608
+ },
+ "kerala_t1_002_r3c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790825610
+ },
+ "jharkhand_022_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825615
+ },
+ "andhra_pradesh_023_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825618
+ },
+ "odisha_026_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825632
+ },
+ "maharashtra_080_r0c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825645
+ },
+ "chhattisgarh_042_r1c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790825656
+ },
+ "uttar_pradesh_t1_042_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825662
+ },
+ "mizoram_005_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825672
+ },
+ "madhya_pradesh_071_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825730
+ },
+ "madhya_pradesh_066_r0c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825748
+ },
+ "tamil_nadu_t1_021_r0c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790825753
+ },
+ "meghalaya_016_r1c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790825764
+ },
+ "madhya_pradesh_075_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790825972
+ },
+ "karnataka_t1_004_r0c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826118
+ },
+ "madhya_pradesh_071_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826122
+ },
+ "maharashtra_063_r2c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826137
+ },
+ "telangana_024_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826264
+ },
+ "rajasthan_006_r3c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826267
+ },
+ "rajasthan_050_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826270
+ },
+ "assam_028_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826278
+ },
+ "rajasthan_096_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826280
+ },
+ "rajasthan_096_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826285
+ },
+ "madhya_pradesh_071_r2c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826295
+ },
+ "rajasthan_t1_018_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826303
+ },
+ "maharashtra_039_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826413
+ },
+ "maharashtra_057_r3c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826419
+ },
+ "arunachal_pradesh_008_r1c0": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826421
+ },
+ "tripura_008_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826424
+ },
+ "uttar_pradesh_t1_025_r3c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826438
+ },
+ "chhattisgarh_t1_012_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826442
+ },
+ "maharashtra_t1_032_r0c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826444
+ },
+ "maharashtra_067_r0c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826461
+ },
+ "tamil_nadu_t1_021_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826503
+ },
+ "madhya_pradesh_t1_002_r2c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826511
+ },
+ "gujarat_048_r3c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826514
+ },
+ "gujarat_t1_012_r1c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826518
+ },
+ "madhya_pradesh_034_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826522
+ },
+ "chhattisgarh_t1_015_r1c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826524
+ },
+ "maharashtra_t1_025_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826553
+ },
+ "odisha_t1_026_r2c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826561
+ },
+ "gujarat_t1_017_r0c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826572
+ },
+ "maharashtra_t1_022_r3c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826589
+ },
+ "rajasthan_050_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826591
+ },
+ "uttar_pradesh_t1_013_r3c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826611
+ },
+ "assam_005_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826619
+ },
+ "rajasthan_088_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826629
+ },
+ "rajasthan_t1_018_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826667
+ },
+ "uttar_pradesh_067_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826674
+ },
+ "tripura_008_r1c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826685
+ },
+ "punjab_018_r1c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826693
+ },
+ "west_bengal_024_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826701
+ },
+ "assam_028_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826707
+ },
+ "madhya_pradesh_t1_012_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826717
+ },
+ "karnataka_t1_002_r1c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826729
+ },
+ "himachal_pradesh_019_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826737
+ },
+ "maharashtra_039_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826742
+ },
+ "punjab_t1_007_r2c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790826746
+ },
+ "gujarat_t1_001_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826750
+ },
+ "karnataka_t1_002_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790826758
+ },
+ "uttar_pradesh_055_r0c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790826774
+ },
+ "chhattisgarh_042_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826777
+ },
+ "maharashtra_t1_025_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790826896
+ },
+ "telangana_t1_007_r1c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790829905
+ },
+ "chhattisgarh_021_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790829916
+ },
+ "odisha_t1_026_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790829923
+ },
+ "maharashtra_067_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790829927
+ },
+ "uttar_pradesh_t1_042_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790829947
+ },
+ "gujarat_048_r1c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790829950
+ },
+ "rajasthan_t1_039_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790829961
+ },
+ "uttarakhand_009_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790829969
+ },
+ "andhra_pradesh_001_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790829977
+ },
+ "manipur_002_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790829979
+ },
+ "uttar_pradesh_t1_042_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790829991
+ },
+ "uttar_pradesh_t1_014_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790829998
+ },
+ "telangana_024_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830000
+ },
+ "karnataka_051_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830014
+ },
+ "bihar_023_r1c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830019
+ },
+ "karnataka_006_r3c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830033
+ },
+ "rajasthan_025_r1c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830035
+ },
+ "gujarat_t1_001_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830040
+ },
+ "maharashtra_057_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830046
+ },
+ "odisha_t1_026_r3c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830054
+ },
+ "rajasthan_t1_018_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830071
+ },
+ "tamil_nadu_t1_014_r0c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830085
+ },
+ "karnataka_t1_040_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830088
+ },
+ "tamil_nadu_t1_015_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830098
+ },
+ "madhya_pradesh_066_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830113
+ },
+ "chhattisgarh_021_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830117
+ },
+ "assam_005_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830125
+ },
+ "andhra_pradesh_023_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830137
+ },
+ "assam_t1_012_r2c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830142
+ },
+ "madhya_pradesh_066_r2c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830146
+ },
+ "jharkhand_t1_013_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830151
+ },
+ "maharashtra_067_r3c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830159
+ },
+ "rajasthan_015_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830161
+ },
+ "chhattisgarh_021_r0c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830167
+ },
+ "andhra_pradesh_t1_019_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830170
+ },
+ "karnataka_t1_040_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830175
+ },
+ "uttar_pradesh_t1_025_r2c0": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830184
+ },
+ "andhra_pradesh_023_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830205
+ },
+ "madhya_pradesh_t1_012_r3c0": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830194
+ },
+ "andhra_pradesh_t1_019_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830207
+ },
+ "madhya_pradesh_071_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830209
+ },
+ "karnataka_041_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830211
+ },
+ "madhya_pradesh_062_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830216
+ },
+ "karnataka_014_r1c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830220
+ },
+ "uttar_pradesh_t1_013_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830223
+ },
+ "jharkhand_022_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830230
+ },
+ "arunachal_pradesh_025_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830242
+ },
+ "kerala_005_r1c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830246
+ },
+ "andhra_pradesh_001_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830252
+ },
+ "tamil_nadu_t1_025_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830256
+ },
+ "maharashtra_t1_022_r1c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830259
+ },
+ "maharashtra_t1_037_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830262
+ },
+ "odisha_031_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830264
+ },
+ "madhya_pradesh_t1_002_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830267
+ },
+ "tamil_nadu_t1_015_r0c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830277
+ },
+ "punjab_t1_007_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830281
+ },
+ "odisha_t1_012_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830283
+ },
+ "madhya_pradesh_t1_002_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830287
+ },
+ "uttar_pradesh_t1_024_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830292
+ },
+ "uttar_pradesh_t1_013_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830299
+ },
+ "assam_t1_012_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830302
+ },
+ "manipur_t1_003_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830305
+ },
+ "gujarat_t1_017_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830316
+ },
+ "uttar_pradesh_t1_042_r0c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830318
+ },
+ "chhattisgarh_025_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830326
+ },
+ "odisha_t1_031_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830329
+ },
+ "jharkhand_028_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830333
+ },
+ "maharashtra_039_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830337
+ },
+ "meghalaya_016_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830349
+ },
+ "telangana_t1_006_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830352
+ },
+ "karnataka_041_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830355
+ },
+ "chhattisgarh_033_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830359
+ },
+ "rajasthan_t1_018_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830384
+ },
+ "maharashtra_057_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830390
+ },
+ "gujarat_048_r0c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830395
+ },
+ "maharashtra_t1_018_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830493
+ },
+ "manipur_t1_003_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830495
+ },
+ "uttar_pradesh_t1_025_r3c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830504
+ },
+ "ladakh_023_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830508
+ },
+ "punjab_014_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830511
+ },
+ "assam_005_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830523
+ },
+ "uttar_pradesh_t1_013_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830527
+ },
+ "andhra_pradesh_023_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830530
+ },
+ "madhya_pradesh_056_r3c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830540
+ },
+ "karnataka_t1_040_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830547
+ },
+ "odisha_t1_031_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830550
+ },
+ "madhya_pradesh_045_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830554
+ },
+ "tamil_nadu_005_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830562
+ },
+ "west_bengal_024_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830568
+ },
+ "uttar_pradesh_t1_035_r3c0": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830573
+ },
+ "manipur_002_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830576
+ },
+ "uttar_pradesh_t1_042_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830584
+ },
+ "bihar_003_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830591
+ },
+ "himachal_pradesh_t1_009_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830598
+ },
+ "madhya_pradesh_t1_012_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830608
+ },
+ "rajasthan_t1_031_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830616
+ },
+ "assam_t1_012_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830656
+ },
+ "punjab_014_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830659
+ },
+ "telangana_t1_006_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830665
+ },
+ "maharashtra_067_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830670
+ },
+ "andhra_pradesh_t1_024_r1c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830686
+ },
+ "tamil_nadu_t1_014_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830692
+ },
+ "karnataka_t1_040_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830696
+ },
+ "maharashtra_039_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830703
+ },
+ "telangana_t1_007_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830709
+ },
+ "delhi_002_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830716
+ },
+ "odisha_026_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830720
+ },
+ "maharashtra_063_r2c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830732
+ },
+ "maharashtra_t1_018_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830737
+ },
+ "odisha_010_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830749
+ },
+ "bihar_026_r3c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830751
+ },
+ "jharkhand_t1_013_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830783
+ },
+ "madhya_pradesh_062_r0c0": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830786
+ },
+ "meghalaya_002_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830788
+ },
+ "maharashtra_061_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830791
+ },
+ "maharashtra_t1_041_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830794
+ },
+ "odisha_t1_031_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830801
+ },
+ "west_bengal_t1_005_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830811
+ },
+ "telangana_t1_006_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830813
+ },
+ "himachal_pradesh_t1_009_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830817
+ },
+ "andhra_pradesh_023_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830823
+ },
+ "jharkhand_022_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830824
+ },
+ "uttar_pradesh_068_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830826
+ },
+ "uttar_pradesh_t1_025_r0c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790830829
+ },
+ "gujarat_048_r2c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790830831
+ },
+ "odisha_t1_013_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830833
+ },
+ "assam_028_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830847
+ },
+ "andhra_pradesh_t1_024_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830850
+ },
+ "west_bengal_t1_005_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830865
+ },
+ "uttar_pradesh_068_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830869
+ },
+ "rajasthan_006_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830871
+ },
+ "maharashtra_063_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830875
+ },
+ "madhya_pradesh_034_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830880
+ },
+ "madhya_pradesh_t1_007_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790830890
+ },
+ "madhya_pradesh_t1_012_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790830896
+ },
+ "kerala_t1_008_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831038
+ },
+ "uttar_pradesh_t1_015_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831046
+ },
+ "bihar_004_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831050
+ },
+ "maharashtra_t1_041_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831051
+ },
+ "madhya_pradesh_056_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831054
+ },
+ "uttar_pradesh_068_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831057
+ },
+ "assam_018_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831058
+ },
+ "rajasthan_042_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831061
+ },
+ "maharashtra_073_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831064
+ },
+ "madhya_pradesh_006_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831066
+ },
+ "meghalaya_016_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831092
+ },
+ "karnataka_t1_002_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831109
+ },
+ "odisha_t1_002_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831111
+ },
+ "haryana_t1_003_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831117
+ },
+ "maharashtra_t1_022_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831119
+ },
+ "karnataka_t1_002_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831125
+ },
+ "haryana_t1_003_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831133
+ },
+ "madhya_pradesh_066_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831139
+ },
+ "jammu_and_kashmir_011_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831142
+ },
+ "karnataka_051_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831144
+ },
+ "maharashtra_067_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831152
+ },
+ "maharashtra_t1_032_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831160
+ },
+ "himachal_pradesh_019_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831163
+ },
+ "karnataka_006_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831167
+ },
+ "tamil_nadu_t1_025_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831223
+ },
+ "uttar_pradesh_067_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831229
+ },
+ "uttar_pradesh_t1_042_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831296
+ },
+ "andhra_pradesh_002_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831304
+ },
+ "gujarat_t1_020_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831310
+ },
+ "madhya_pradesh_082_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831314
+ },
+ "haryana_015_r2c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831325
+ },
+ "chhattisgarh_033_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831328
+ },
+ "jammu_and_kashmir_011_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831335
+ },
+ "mizoram_005_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831336
+ },
+ "chhattisgarh_033_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831340
+ },
+ "assam_005_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831342
+ },
+ "haryana_015_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831348
+ },
+ "madhya_pradesh_t1_002_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831351
+ },
+ "chhattisgarh_033_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831353
+ },
+ "odisha_010_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831356
+ },
+ "maharashtra_t1_037_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831359
+ },
+ "madhya_pradesh_066_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831364
+ },
+ "rajasthan_042_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831368
+ },
+ "ladakh_t1_023_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831370
+ },
+ "maharashtra_073_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831371
+ },
+ "madhya_pradesh_t1_012_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831376
+ },
+ "karnataka_032_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831382
+ },
+ "odisha_t1_002_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831386
+ },
+ "madhya_pradesh_056_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831388
+ },
+ "meghalaya_002_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831391
+ },
+ "gujarat_t1_009_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831396
+ },
+ "andhra_pradesh_t1_024_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831399
+ },
+ "karnataka_032_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831402
+ },
+ "gujarat_t1_001_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831407
+ },
+ "tamil_nadu_t1_015_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831413
+ },
+ "west_bengal_t1_018_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831419
+ },
+ "ladakh_t1_023_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831421
+ },
+ "uttar_pradesh_t1_042_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831425
+ },
+ "bihar_023_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831427
+ },
+ "uttar_pradesh_t1_042_r1c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831433
+ },
+ "andhra_pradesh_001_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831436
+ },
+ "haryana_019_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831442
+ },
+ "rajasthan_096_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831444
+ },
+ "andhra_pradesh_006_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831446
+ },
+ "bihar_004_r2c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831452
+ },
+ "karnataka_014_r3c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831461
+ },
+ "chhattisgarh_042_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831465
+ },
+ "uttar_pradesh_t1_025_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831476
+ },
+ "maharashtra_067_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831479
+ },
+ "karnataka_t1_002_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831486
+ },
+ "andhra_pradesh_001_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831488
+ },
+ "madhya_pradesh_t1_055_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831491
+ },
+ "gujarat_t1_001_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831494
+ },
+ "jammu_and_kashmir_011_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831499
+ },
+ "assam_t1_012_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831503
+ },
+ "karnataka_041_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831514
+ },
+ "madhya_pradesh_t1_002_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831517
+ },
+ "karnataka_t1_002_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831520
+ },
+ "punjab_t1_007_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831526
+ },
+ "madhya_pradesh_034_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831529
+ },
+ "karnataka_014_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831533
+ },
+ "maharashtra_t1_022_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831538
+ },
+ "himachal_pradesh_019_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831542
+ },
+ "madhya_pradesh_t1_055_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831545
+ },
+ "chhattisgarh_025_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831547
+ },
+ "chhattisgarh_t1_028_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831551
+ },
+ "jharkhand_028_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831554
+ },
+ "andhra_pradesh_021_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831559
+ },
+ "kerala_005_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831563
+ },
+ "jharkhand_t1_014_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831571
+ },
+ "jharkhand_t1_013_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831572
+ },
+ "assam_018_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831575
+ },
+ "jammu_and_kashmir_013_r2c0": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790831581
+ },
+ "tamil_nadu_005_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831588
+ },
+ "navi_mumbai_airport_maharashtra_r3c0": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831594
+ },
+ "meghalaya_016_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831597
+ },
+ "karnataka_t1_005_r2c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831600
+ },
+ "madhya_pradesh_t1_012_r1c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831603
+ },
+ "ladakh_t1_023_r2c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831606
+ },
+ "bihar_003_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831612
+ },
+ "jharkhand_028_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831615
+ },
+ "uttarakhand_009_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831621
+ },
+ "maharashtra_039_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831624
+ },
+ "karnataka_t1_005_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831629
+ },
+ "maharashtra_061_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831638
+ },
+ "madhya_pradesh_062_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831717
+ },
+ "west_bengal_t1_018_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831719
+ },
+ "jammu_and_kashmir_011_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831737
+ },
+ "rajasthan_024_r1c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790831753
+ },
+ "uttar_pradesh_t1_015_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831771
+ },
+ "gujarat_t1_020_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831773
+ },
+ "haryana_t1_003_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831778
+ },
+ "odisha_t1_013_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831783
+ },
+ "jammu_and_kashmir_011_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831788
+ },
+ "madhya_pradesh_t1_055_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831795
+ },
+ "uttar_pradesh_t1_013_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831804
+ },
+ "madhya_pradesh_082_r3c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831810
+ },
+ "odisha_031_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831812
+ },
+ "nagaland_t1_001_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831814
+ },
+ "uttar_pradesh_t1_042_r0c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790831819
+ },
+ "telangana_017_r1c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831822
+ },
+ "maharashtra_073_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831824
+ },
+ "uttar_pradesh_t1_024_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831828
+ },
+ "rajasthan_006_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831832
+ },
+ "odisha_t1_002_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831841
+ },
+ "gujarat_t1_020_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831845
+ },
+ "gujarat_t1_001_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831849
+ },
+ "uttar_pradesh_t1_013_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831853
+ },
+ "delhi_002_r0c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831862
+ },
+ "madhya_pradesh_t1_002_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831865
+ },
+ "telangana_017_r0c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790831869
+ },
+ "manipur_002_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831875
+ },
+ "mizoram_005_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831880
+ },
+ "karnataka_032_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831883
+ },
+ "chhattisgarh_033_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831885
+ },
+ "andhra_pradesh_006_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831888
+ },
+ "madhya_pradesh_082_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831894
+ },
+ "karnataka_t1_004_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831899
+ },
+ "himachal_pradesh_t1_009_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831903
+ },
+ "uttar_pradesh_042_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831906
+ },
+ "haryana_t1_003_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831911
+ },
+ "punjab_t1_007_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831916
+ },
+ "tamil_nadu_t1_021_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831920
+ },
+ "telangana_024_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831922
+ },
+ "rajasthan_t1_031_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831965
+ },
+ "uttar_pradesh_t1_024_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831977
+ },
+ "madhya_pradesh_t1_012_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831980
+ },
+ "himachal_pradesh_019_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790831983
+ },
+ "karnataka_t1_039_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831984
+ },
+ "maharashtra_061_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831987
+ },
+ "tamil_nadu_012_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831992
+ },
+ "gujarat_t1_001_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790831997
+ },
+ "assam_005_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832000
+ },
+ "jammu_and_kashmir_011_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832004
+ },
+ "karnataka_014_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832006
+ },
+ "uttar_pradesh_t1_042_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832020
+ },
+ "kerala_t1_008_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832021
+ },
+ "chhattisgarh_042_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832023
+ },
+ "uttar_pradesh_067_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832027
+ },
+ "punjab_018_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832030
+ },
+ "tripura_001_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832031
+ },
+ "karnataka_051_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832033
+ },
+ "mizoram_005_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832034
+ },
+ "jammu_and_kashmir_011_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832036
+ },
+ "gujarat_048_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832041
+ },
+ "mizoram_006_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832044
+ },
+ "ladakh_t1_030_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832046
+ },
+ "madhya_pradesh_066_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832053
+ },
+ "karnataka_t1_002_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832058
+ },
+ "assam_028_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832061
+ },
+ "uttarakhand_009_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832078
+ },
+ "odisha_t1_031_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832086
+ },
+ "uttar_pradesh_t1_025_r3c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790832089
+ },
+ "karnataka_030_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832094
+ },
+ "meghalaya_016_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832107
+ },
+ "punjab_t1_005_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832113
+ },
+ "west_bengal_024_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832118
+ },
+ "maharashtra_039_r3c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832120
+ },
+ "madhya_pradesh_075_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832126
+ },
+ "rajasthan_t1_045_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832127
+ },
+ "telangana_t1_004_r2c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832130
+ },
+ "punjab_018_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832135
+ },
+ "tripura_008_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832137
+ },
+ "karnataka_t1_005_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832141
+ },
+ "west_bengal_024_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832157
+ },
+ "madhya_pradesh_071_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832166
+ },
+ "rajasthan_097_r3c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832168
+ },
+ "rajasthan_096_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832170
+ },
+ "assam_t1_012_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832172
+ },
+ "maharashtra_067_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832175
+ },
+ "goa_004_r2c1": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790832184
+ },
+ "uttar_pradesh_t1_024_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832187
+ },
+ "andhra_pradesh_021_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832192
+ },
+ "tamil_nadu_t1_025_r1c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790832196
+ },
+ "jharkhand_t1_013_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832200
+ },
+ "punjab_t1_007_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832201
+ },
+ "west_bengal_t1_005_r1c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790832205
+ },
+ "odisha_026_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832210
+ },
+ "maharashtra_067_r1c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832215
+ },
+ "odisha_t1_002_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832219
+ },
+ "chhattisgarh_033_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832222
+ },
+ "karnataka_t1_005_r3c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832225
+ },
+ "rajasthan_096_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832227
+ },
+ "gujarat_t1_012_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832230
+ },
+ "jharkhand_t1_013_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832233
+ },
+ "uttar_pradesh_t1_011_r3c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832236
+ },
+ "uttar_pradesh_067_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832238
+ },
+ "maharashtra_057_r3c1": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790832246
+ },
+ "jharkhand_001_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832251
+ },
+ "maharashtra_063_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832256
+ },
+ "andhra_pradesh_002_r1c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832262
+ },
+ "haryana_t1_003_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832272
+ },
+ "uttar_pradesh_t1_025_r2c2": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790832274
+ },
+ "west_bengal_t1_018_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832278
+ },
+ "jammu_and_kashmir_011_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832279
+ },
+ "rajasthan_042_r3c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832283
+ },
+ "jammu_and_kashmir_011_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832285
+ },
+ "assam_028_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832304
+ },
+ "nagaland_013_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832308
+ },
+ "telangana_t1_006_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832310
+ },
+ "mizoram_005_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832311
+ },
+ "punjab_t1_005_r0c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832312
+ },
+ "telangana_t1_007_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832317
+ },
+ "bihar_003_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832320
+ },
+ "bihar_026_r2c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832325
+ },
+ "maharashtra_011_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832327
+ },
+ "odisha_t1_002_r2c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832329
+ },
+ "madhya_pradesh_t1_002_r3c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832331
+ },
+ "maharashtra_073_r2c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832333
+ },
+ "telangana_t1_007_r1c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832344
+ },
+ "maharashtra_t1_037_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832349
+ },
+ "haryana_t1_003_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832354
+ },
+ "west_bengal_024_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832357
+ },
+ "odisha_031_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832359
+ },
+ "west_bengal_018_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832368
+ },
+ "karnataka_006_r2c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832379
+ },
+ "andhra_pradesh_001_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832542
+ },
+ "tripura_001_r2c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832543
+ },
+ "west_bengal_t1_018_r1c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832545
+ },
+ "gujarat_t1_001_r0c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832555
+ },
+ "gujarat_048_r1c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832561
+ },
+ "madhya_pradesh_082_r0c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832565
+ },
+ "telangana_t1_006_r0c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832566
+ },
+ "assam_t1_012_r1c0": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832569
+ },
+ "kerala_t1_008_r3c3": {
+  "label": "cant_tell",
+  "caption": null,
+  "ts": 1790832574
+ },
+ "uttar_pradesh_t1_028_r0c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832577
+ },
+ "telangana_t1_006_r0c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832579
+ },
+ "tamil_nadu_012_r1c1": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832582
+ },
+ "uttarakhand_009_r0c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832586
+ },
+ "madhya_pradesh_066_r3c1": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832589
+ },
+ "maharashtra_t1_032_r3c3": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832601
+ },
+ "madhya_pradesh_066_r0c2": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790832607
+ },
+ "punjab_t1_007_r1c0": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832612
+ },
+ "odisha_026_r0c2": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832614
+ },
+ "odisha_t1_013_r1c2": {
+  "label": "no_change",
+  "caption": null,
+  "ts": 1790832616
+ },
+ "west_bengal_t1_018_r2c3": {
+  "label": "seasonal",
+  "caption": null,
+  "ts": 1790832618
+ },
+ "jammu_and_kashmir_011_r3c3": {
+  "label": "change",
+  "caption": null,
+  "ts": 1790832622
+ }
+}

@@ -1,0 +1,222 @@
+[
+ {
+  "idx": 0,
+  "patch_id": "bihar_004_r1c2",
+  "state": "Bihar",
+  "before_date": "2020-02-17",
+  "after_date": "2026-02-15",
+  "before": "images/bihar_004_r1c2_before.png",
+  "after": "images/bihar_004_r1c2_after.png",
+  "lat": 25.52785,
+  "lon": 85.27714
+ },
+ {
+  "idx": 1,
+  "patch_id": "karnataka_t1_040_r2c0",
+  "state": "Karnataka",
+  "before_date": "2020-01-22",
+  "after_date": "2026-01-20",
+  "before": "images/karnataka_t1_040_r2c0_before.png",
+  "after": "images/karnataka_t1_040_r2c0_after.png",
+  "lat": 15.31414,
+  "lon": 76.51565
+ },
+ {
+  "idx": 2,
+  "patch_id": "maharashtra_039_r3c1",
+  "state": "Maharashtra",
+  "before_date": "2019-11-13",
+  "after_date": "2025-11-11",
+  "before": "images/maharashtra_039_r3c1_before.png",
+  "after": "images/maharashtra_039_r3c1_after.png",
+  "lat": 20.85737,
+  "lon": 77.91963
+ },
+ {
+  "idx": 3,
+  "patch_id": "assam_028_r0c0",
+  "state": "Assam",
+  "before_date": "2020-01-14",
+  "after_date": "2026-01-12",
+  "before": "images/assam_028_r0c0_before.png",
+  "after": "images/assam_028_r0c0_after.png",
+  "lat": 26.64618,
+  "lon": 93.83576
+ },
+ {
+  "idx": 4,
+  "patch_id": "sikkim_007_r0c1",
+  "state": "Sikkim",
+  "before_date": "2019-12-31",
+  "after_date": "2025-12-21",
+  "before": "images/sikkim_007_r0c1_before.png",
+  "after": "images/sikkim_007_r0c1_after.png",
+  "lat": 27.54827,
+  "lon": 87.97213
+ },
+ {
+  "idx": 5,
+  "patch_id": "jammu_and_kashmir_013_r0c2",
+  "state": "Jammu and Kashmir",
+  "before_date": "2019-10-20",
+  "after_date": "2025-10-31",
+  "before": "images/jammu_and_kashmir_013_r0c2_before.png",
+  "after": "images/jammu_and_kashmir_013_r0c2_after.png",
+  "lat": 33.58943,
+  "lon": 74.32191
+ },
+ {
+  "idx": 6,
+  "patch_id": "madhya_pradesh_075_r0c3",
+  "state": "Madhya Pradesh",
+  "before_date": "2019-11-15",
+  "after_date": "2025-11-13",
+  "before": "images/madhya_pradesh_075_r0c3_before.png",
+  "after": "images/madhya_pradesh_075_r0c3_after.png",
+  "lat": 21.69001,
+  "lon": 80.21853
+ },
+ {
+  "idx": 7,
+  "patch_id": "andhra_pradesh_006_r3c1",
+  "state": "Andhra Pradesh",
+  "before_date": "2020-03-04",
+  "after_date": "2026-03-03",
+  "before": "images/andhra_pradesh_006_r3c1_before.png",
+  "after": "images/andhra_pradesh_006_r3c1_after.png",
+  "lat": 15.19554,
+  "lon": 79.10084
+ },
+ {
+  "idx": 8,
+  "patch_id": "punjab_018_r1c0",
+  "state": "Punjab",
+  "before_date": "2020-02-22",
+  "after_date": "2026-02-20",
+  "before": "images/punjab_018_r1c0_before.png",
+  "after": "images/punjab_018_r1c0_after.png",
+  "lat": 31.32144,
+  "lon": 75.76662
+ },
+ {
+  "idx": 9,
+  "patch_id": "uttarakhand_010_r2c0",
+  "state": "Uttarakhand",
+  "before_date": "2019-11-18",
+  "after_date": "2025-11-24",
+  "before": "images/uttarakhand_010_r2c0_before.png",
+  "after": "images/uttarakhand_010_r2c0_after.png",
+  "lat": 30.72648,
+  "lon": 78.73555
+ },
+ {
+  "idx": 10,
+  "patch_id": "maharashtra_067_r2c2",
+  "state": "Maharashtra",
+  "before_date": "2020-02-11",
+  "after_date": "2026-02-09",
+  "before": "images/maharashtra_067_r2c2_before.png",
+  "after": "images/maharashtra_067_r2c2_after.png",
+  "lat": 21.54117,
+  "lon": 76.99257
+ },
+ {
+  "idx": 11,
+  "patch_id": "odisha_t1_031_r2c1",
+  "state": "Odisha",
+  "before_date": "2020-01-13",
+  "after_date": "2026-01-11",
+  "before": "images/odisha_t1_031_r2c1_before.png",
+  "after": "images/odisha_t1_031_r2c1_after.png",
+  "lat": 21.89723,
+  "lon": 85.79497
+ },
+ {
+  "idx": 12,
+  "patch_id": "nagaland_t1_001_r3c1",
+  "state": "Nagaland",
+  "before_date": "2020-02-18",
+  "after_date": "2026-01-27",
+  "before": "images/nagaland_t1_001_r3c1_before.png",
+  "after": "images/nagaland_t1_001_r3c1_after.png",
+  "lat": 25.75983,
+  "lon": 94.64804
+ },
+ {
+  "idx": 13,
+  "patch_id": "uttar_pradesh_t1_028_r0c1",
+  "state": "Uttar Pradesh",
+  "before_date": "2020-02-08",
+  "after_date": "2026-02-06",
+  "before": "images/uttar_pradesh_t1_028_r0c1_before.png",
+  "after": "images/uttar_pradesh_t1_028_r0c1_after.png",
+  "lat": 25.92566,
+  "lon": 82.2414
+ },
+ {
+  "idx": 14,
+  "patch_id": "madhya_pradesh_071_r2c2",
+  "state": "Madhya Pradesh",
+  "before_date": "2020-01-12",
+  "after_date": "2026-01-13",
+  "before": "images/madhya_pradesh_071_r2c2_before.png",
+  "after": "images/madhya_pradesh_071_r2c2_after.png",
+  "lat": 25.67899,
+  "lon": 77.46414
+ },
+ {
+  "idx": 15,
+  "patch_id": "goa_004_r2c0",
+  "state": "Goa",
+  "before_date": "2020-02-04",
+  "after_date": "2026-02-02",
+  "before": "images/goa_004_r2c0_before.png",
+  "after": "images/goa_004_r2c0_after.png",
+  "lat": 15.38665,
+  "lon": 73.81623
+ },
+ {
+  "idx": 16,
+  "patch_id": "tamil_nadu_012_r0c1",
+  "state": "Tamil Nadu",
+  "before_date": "2020-01-24",
+  "after_date": "2026-01-22",
+  "before": "images/tamil_nadu_012_r0c1_before.png",
+  "after": "images/tamil_nadu_012_r0c1_after.png",
+  "lat": 12.6409,
+  "lon": 77.53601
+ },
+ {
+  "idx": 17,
+  "patch_id": "telangana_020_r0c2",
+  "state": "Telangana",
+  "before_date": "2020-02-13",
+  "after_date": "2026-02-11",
+  "before": "images/telangana_020_r0c2_before.png",
+  "after": "images/telangana_020_r0c2_after.png",
+  "lat": 18.11834,
+  "lon": 78.37845
+ },
+ {
+  "idx": 18,
+  "patch_id": "odisha_t1_002_r0c2",
+  "state": "Odisha",
+  "before_date": "2019-12-22",
+  "after_date": "2025-12-20",
+  "before": "images/odisha_t1_002_r0c2_before.png",
+  "after": "images/odisha_t1_002_r0c2_after.png",
+  "lat": 20.12878,
+  "lon": 83.07199
+ },
+ {
+  "idx": 19,
+  "patch_id": "rajasthan_t1_039_r0c2",
+  "state": "Rajasthan",
+  "before_date": "2020-02-17",
+  "after_date": "2026-02-15",
+  "before": "images/rajasthan_t1_039_r0c2_before.png",
+  "after": "images/rajasthan_t1_039_r0c2_after.png",
+  "lat": 25.91404,
+  "lon": 72.78428
+ }
+]

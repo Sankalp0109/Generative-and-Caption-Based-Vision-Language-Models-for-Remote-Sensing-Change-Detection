@@ -1,0 +1,29 @@
+32b: 962 to do, $0.040 spent so far
+/home/rinkeshverma/Desktop/Projects/Plan B/pipeline/patches.py:121: RankWarning: Polyfit may be poorly conditioned
+  gain, offset = np.polyfit(x[keep], y[keep], 1)
+  32b 100/962  $0.070
+  32b 200/962  $0.099
+  32b 300/962  $0.129
+  32b 400/962  $0.158
+/home/rinkeshverma/Desktop/Projects/Plan B/pipeline/patches.py:121: RankWarning: Polyfit may be poorly conditioned
+  gain, offset = np.polyfit(x[keep], y[keep], 1)
+  32b 500/962  $0.188
+  32b 600/962  $0.217
+  32b 700/962  $0.247
+  32b 800/962  $0.276
+  32b 900/962  $0.305
+235b: 962 to do, $0.323 spent so far
+/home/rinkeshverma/Desktop/Projects/Plan B/pipeline/patches.py:121: RankWarning: Polyfit may be poorly conditioned
+  gain, offset = np.polyfit(x[keep], y[keep], 1)
+  235b 100/962  $0.392
+  235b 200/962  $0.463
+  235b 300/962  $0.533
+  235b 400/962  $0.606
+/home/rinkeshverma/Desktop/Projects/Plan B/pipeline/patches.py:121: RankWarning: Polyfit may be poorly conditioned
+  gain, offset = np.polyfit(x[keep], y[keep], 1)
+  235b 500/962  $0.676
+32b: 0 to do, $0.739 spent so far
+235b: 372 to do, $0.739 spent so far
+  235b 100/372  $0.809
+  235b 200/372  $0.879
+  235b 300/372  $0.948

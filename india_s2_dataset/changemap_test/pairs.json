@@ -1,0 +1,252 @@
+[
+ {
+  "patch_id": "statue_of_unity_gujarat_r1c3",
+  "label": "land_use",
+  "folder": "accepted/statue_of_unity_gujarat_r1c3"
+ },
+ {
+  "patch_id": "madhya_pradesh_071_r3c3",
+  "label": "land_use",
+  "folder": "accepted/madhya_pradesh_071_r3c3"
+ },
+ {
+  "patch_id": "maharashtra_t1_053_r1c3",
+  "label": "land_use",
+  "folder": "accepted/maharashtra_t1_053_r1c3"
+ },
+ {
+  "patch_id": "madhya_pradesh_056_r3c0",
+  "label": "land_use",
+  "folder": "accepted/madhya_pradesh_056_r3c0"
+ },
+ {
+  "patch_id": "rajasthan_t1_018_r3c1",
+  "label": "land_use",
+  "folder": "accepted/rajasthan_t1_018_r3c1"
+ },
+ {
+  "patch_id": "maharashtra_t1_022_r0c1",
+  "label": "land_use",
+  "folder": "accepted/maharashtra_t1_022_r0c1"
+ },
+ {
+  "patch_id": "delhi_002_r0c2",
+  "label": "land_use",
+  "folder": "accepted/delhi_002_r0c2"
+ },
+ {
+  "patch_id": "uttar_pradesh_068_r0c3",
+  "label": "land_use",
+  "folder": "accepted/uttar_pradesh_068_r0c3"
+ },
+ {
+  "patch_id": "maharashtra_080_r0c2",
+  "label": "land_use",
+  "folder": "accepted/maharashtra_080_r0c2"
+ },
+ {
+  "patch_id": "madhya_pradesh_034_r1c3",
+  "label": "land_use",
+  "folder": "accepted/madhya_pradesh_034_r1c3"
+ },
+ {
+  "patch_id": "uttar_pradesh_t1_024_r1c2",
+  "label": "land_use",
+  "folder": "accepted/uttar_pradesh_t1_024_r1c2"
+ },
+ {
+  "patch_id": "haryana_015_r1c1",
+  "label": "land_use",
+  "folder": "accepted/haryana_015_r1c1"
+ },
+ {
+  "patch_id": "maharashtra_t1_032_r0c2",
+  "label": "land_use",
+  "folder": "accepted/maharashtra_t1_032_r0c2"
+ },
+ {
+  "patch_id": "goa_004_r2c0",
+  "label": "land_use",
+  "folder": "accepted/goa_004_r2c0"
+ },
+ {
+  "patch_id": "uttar_pradesh_t1_024_r1c1",
+  "label": "land_use",
+  "folder": "accepted/uttar_pradesh_t1_024_r1c1"
+ },
+ {
+  "patch_id": "uttar_pradesh_t1_013_r2c2",
+  "label": "land_use",
+  "folder": "accepted/uttar_pradesh_t1_013_r2c2"
+ },
+ {
+  "patch_id": "madhya_pradesh_034_r0c2",
+  "label": "land_use",
+  "folder": "accepted/madhya_pradesh_034_r0c2"
+ },
+ {
+  "patch_id": "karnataka_032_r0c2",
+  "label": "land_use",
+  "folder": "accepted/karnataka_032_r0c2"
+ },
+ {
+  "patch_id": "bihar_004_r2c2",
+  "label": "land_use",
+  "folder": "accepted/bihar_004_r2c2"
+ },
+ {
+  "patch_id": "uttar_pradesh_t1_042_r2c3",
+  "label": "land_use",
+  "folder": "accepted/uttar_pradesh_t1_042_r2c3"
+ },
+ {
+  "patch_id": "odisha_t1_031_r1c1",
+  "label": "land_use",
+  "folder": "accepted/odisha_t1_031_r1c1"
+ },
+ {
+  "patch_id": "delhi_002_r1c2",
+  "label": "land_use",
+  "folder": "accepted/delhi_002_r1c2"
+ },
+ {
+  "patch_id": "bihar_004_r2c1",
+  "label": "land_use",
+  "folder": "accepted/bihar_004_r2c1"
+ },
+ {
+  "patch_id": "uttar_pradesh_042_r1c0",
+  "label": "land_use",
+  "folder": "accepted/uttar_pradesh_042_r1c0"
+ },
+ {
+  "patch_id": "maharashtra_061_r2c0",
+  "label": "land_use",
+  "folder": "accepted/maharashtra_061_r2c0"
+ },
+ {
+  "patch_id": "telangana_t1_007_r1c0",
+  "label": "seasonal",
+  "folder": "accepted/telangana_t1_007_r1c0"
+ },
+ {
+  "patch_id": "karnataka_t1_004_r1c2",
+  "label": "seasonal",
+  "folder": "accepted/karnataka_t1_004_r1c2"
+ },
+ {
+  "patch_id": "tamil_nadu_024_r3c0",
+  "label": "seasonal",
+  "folder": "accepted/tamil_nadu_024_r3c0"
+ },
+ {
+  "patch_id": "rajasthan_006_r1c3",
+  "label": "seasonal",
+  "folder": "accepted/rajasthan_006_r1c3"
+ },
+ {
+  "patch_id": "punjab_018_r1c2",
+  "label": "seasonal",
+  "folder": "accepted/punjab_018_r1c2"
+ },
+ {
+  "patch_id": "uttar_pradesh_055_r0c1",
+  "label": "seasonal",
+  "folder": "accepted/uttar_pradesh_055_r0c1"
+ },
+ {
+  "patch_id": "madhya_pradesh_075_r3c3",
+  "label": "seasonal",
+  "folder": "accepted/madhya_pradesh_075_r3c3"
+ },
+ {
+  "patch_id": "andhra_pradesh_001_r1c0",
+  "label": "seasonal",
+  "folder": "accepted/andhra_pradesh_001_r1c0"
+ },
+ {
+  "patch_id": "jammu_and_kashmir_011_r0c1",
+  "label": "seasonal",
+  "folder": "accepted/jammu_and_kashmir_011_r0c1"
+ },
+ {
+  "patch_id": "karnataka_t1_004_r1c3",
+  "label": "seasonal",
+  "folder": "accepted/karnataka_t1_004_r1c3"
+ },
+ {
+  "patch_id": "karnataka_014_r0c2",
+  "label": "seasonal",
+  "folder": "accepted/karnataka_014_r0c2"
+ },
+ {
+  "patch_id": "tamil_nadu_t1_015_r2c0",
+  "label": "seasonal",
+  "folder": "accepted/tamil_nadu_t1_015_r2c0"
+ },
+ {
+  "patch_id": "west_bengal_t1_018_r0c0",
+  "label": "seasonal",
+  "folder": "accepted/west_bengal_t1_018_r0c0"
+ },
+ {
+  "patch_id": "rajasthan_050_r3c2",
+  "label": "none",
+  "folder": "accepted/rajasthan_050_r3c2"
+ },
+ {
+  "patch_id": "chhattisgarh_t1_015_r1c2",
+  "label": "none",
+  "folder": "accepted/chhattisgarh_t1_015_r1c2"
+ },
+ {
+  "patch_id": "kerala_t1_002_r1c2",
+  "label": "none",
+  "folder": "accepted/kerala_t1_002_r1c2"
+ },
+ {
+  "patch_id": "rajasthan_t1_018_r3c2",
+  "label": "none",
+  "folder": "accepted/rajasthan_t1_018_r3c2"
+ },
+ {
+  "patch_id": "ladakh_t1_036_r3c3",
+  "label": "none",
+  "folder": "accepted/ladakh_t1_036_r3c3"
+ },
+ {
+  "patch_id": "rajasthan_t1_065_r0c2",
+  "label": "none",
+  "folder": "accepted/rajasthan_t1_065_r0c2"
+ },
+ {
+  "patch_id": "gujarat_t1_012_r2c2",
+  "label": "none",
+  "folder": "accepted/gujarat_t1_012_r2c2"
+ },
+ {
+  "patch_id": "kerala_t1_008_r3c3",
+  "label": "none",
+  "folder": "accepted/kerala_t1_008_r3c3"
+ },
+ {
+  "patch_id": "uttarakhand_010_r3c1",
+  "label": "none",
+  "folder": "accepted/uttarakhand_010_r3c1"
+ },
+ {
+  "patch_id": "gujarat_t1_001_r0c2",
+  "label": "none",
+  "folder": "accepted/gujarat_t1_001_r0c2"
+ },
+ {
+  "patch_id": "rajasthan_006_r3c2",
+  "label": "none",
+  "folder": "accepted/rajasthan_006_r3c2"
+ },
+ {
+  "patch_id": "gujarat_012_r1c1",
+  "label": "none",
+  "folder": "accepted/gujarat_012_r1c1"
+ }
+]
