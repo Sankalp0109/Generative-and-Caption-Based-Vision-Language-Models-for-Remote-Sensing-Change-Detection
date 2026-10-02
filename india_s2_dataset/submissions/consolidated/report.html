@@ -1,0 +1,300 @@
+<!doctype html><html><head><meta charset='utf-8'><title>RSICC Consolidated Report</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+body { font-family: "Georgia", "Times New Roman", serif; font-size: 10.5pt; line-height: 1.45; color: #111; max-width: 180mm; margin: auto; }
+h1 { font-size: 20pt; margin: 0 0 4pt; } h2 { font-size: 13.5pt; margin-top: 18pt; border-bottom: 1px solid #ccc; padding-bottom: 2pt; }
+h3 { font-size: 11.5pt; margin-top: 12pt; }
+table { border-collapse: collapse; margin: 8pt 0; font-size: 9.5pt; } th, td { border: 1px solid #bbb; padding: 3pt 7pt; text-align: left; }
+th { background: #f1f1f1; } img { max-width: 100%; max-height: 205mm; display: block; margin: 8pt auto 2pt; }
+p.caption { text-align: center; font-size: 9pt; color: #444; margin-top: 0; }
+hr { border: 0; border-top: 1px solid #ccc; } h2, h3 { page-break-after: avoid; } img, table { page-break-inside: avoid; }
+</style></head><body><h1>Remote Sensing Image Change Caption Generation — Consolidated Report</h1>
+<p><em>Project overview, experiment timeline and findings, July – October 2026</em></p>
+<p><strong>[Author names]</strong> · <strong>[Affiliation]</strong> · October 2026</p>
+<hr />
+<h2>Abstract</h2>
+<p>This report consolidates the full project on remote sensing image change captioning (RSICC) for Indian imagery. It covers three parts:</p>
+<ul>
+<li><strong>Part A (July–August):</strong> we built a modular captioning pipeline on the LEVIR-CC benchmark and developed it through four architectures, improving BLEU-4 from 30.3 to 33.7. Attempts to extend it beyond LEVIR-CC failed. Sequential fine-tuning on SECOND-CC caused catastrophic forgetting, and designs with large language-model decoders could not be trained to completion.</li>
+<li><strong>Part B (September):</strong> a pilot Indian Sentinel-2 collection was captioned with off-the-shelf vision-language models, which produced unusable output.</li>
+<li><strong>Part C (September–October):</strong> we built an India-wide dataset of 15,610 quality-screened Sentinel-2 patch pairs and evaluated whether open-weight vision-language models could label land-use change automatically. Across prompting strategies, visual assistance, model sizes and a 1,000-pair validation against human labels, the best rule was correct on at most about half of its change calls.</li>
+</ul>
+<p><strong>We conclude that neither transfer from LEVIR-CC nor automatic labelling with current vision-language models yields reliable change captions for Indian 10 m imagery, and that scaling either approach would produce a dataset of unacceptably poor quality.</strong></p>
+<hr />
+<h2>1. Introduction</h2>
+<p>Remote sensing image change captioning describes, in natural language, what changed between two satellite images of the same place. Public RSICC datasets such as LEVIR-CC use sub-metre imagery of a few foreign regions. India's freely available imagery is medium-resolution (Sentinel-2, 10 m), and its landscapes are dominated by smallholder farmland, monsoon-driven seasonal cycles, haze and dense organic settlements.</p>
+<p>The project aimed at a change captioning system for Indian imagery. It moved through three parts, each motivated by the failure of the previous one:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Question</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Can a model trained on LEVIR-CC be improved and adapted to new data?</td>
+<td>Improves on LEVIR-CC, but does not transfer</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Can existing vision-language captioners caption Indian imagery directly?</td>
+<td>No: empty, garbled or "nothing changed" output</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Can we build an Indian dataset and label it automatically with vision-language models?</td>
+<td>Dataset built; automatic labels too inaccurate to use</td>
+</tr>
+</tbody>
+</table>
+<h2>2. Project timeline</h2>
+<table>
+<thead>
+<tr>
+<th>Date (2026)</th>
+<th>Part</th>
+<th>Work</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 Jul</td>
+<td>A</td>
+<td>Phase 1: modular pipeline and CNN baseline on LEVIR-CC</td>
+<td>BLEU-4 30.3, ROUGE-L 62.1</td>
+</tr>
+<tr>
+<td>7–9 Jul</td>
+<td>A</td>
+<td>Phase 2: frozen RemoteCLIP encoder with difference fusion</td>
+<td>BLEU-4 32.8; largest single gain</td>
+</tr>
+<tr>
+<td>9–10 Jul</td>
+<td>A</td>
+<td>Final model: RemoteCLIP cross-attention + contrastive alignment</td>
+<td>BLEU-4 33.7</td>
+</tr>
+<tr>
+<td>12–28 Jul</td>
+<td>A</td>
+<td>Phase 6: hierarchical tile-based model</td>
+<td>BLEU-4 33.6</td>
+</tr>
+<tr>
+<td>Jul</td>
+<td>A</td>
+<td>Sequential fine-tuning on SECOND-CC (Phase 6 and Final models)</td>
+<td>Catastrophic forgetting: LEVIR-CC BLEU-4 fell to 12–15</td>
+</tr>
+<tr>
+<td>30 Jul – 1 Aug</td>
+<td>A</td>
+<td>Phases 7–8: tile-difference variants and hyperparameter changes</td>
+<td>Marked failed; degraded</td>
+</tr>
+<tr>
+<td>2–20 Aug</td>
+<td>A</td>
+<td>CodeAug / Phase 8: RemoteCLIP + Q-Former / bridge + Qwen language-model decoder</td>
+<td>Stage-2 loss diverged to NaN; no evaluation completed</td>
+</tr>
+<tr>
+<td>9–10 Sep</td>
+<td>B</td>
+<td>Pilot Indian Sentinel-2 collection; TeoChat and Qwen2.5-VL captioning</td>
+<td>1,072 pairs kept; captions unusable</td>
+</tr>
+<tr>
+<td>mid-Sep</td>
+<td>C</td>
+<td>Prototype: change heatmaps and a two-stage VLM captioner on a few sites</td>
+<td>Captioner dismissed a real localized change; selection problems found</td>
+</tr>
+<tr>
+<td>27 Sep</td>
+<td>C</td>
+<td>All-India downloader, 1,200-site registry, pilot</td>
+<td>Resumable downloader; quality checks added</td>
+</tr>
+<tr>
+<td>28 Sep</td>
+<td>C</td>
+<td>Haze screen trial on the GPU cluster</td>
+<td>4-bit 8B model chosen for speed</td>
+</tr>
+<tr>
+<td>28–29 Sep</td>
+<td>C</td>
+<td>Full dataset: download, patching, screening</td>
+<td>15,610 accepted patch pairs</td>
+</tr>
+<tr>
+<td>29 Sep</td>
+<td>C</td>
+<td>Diagnosis of failed captions; perception test of four models</td>
+<td>Seasonal change mistaken for land-use change</td>
+</tr>
+<tr>
+<td>30 Sep</td>
+<td>C</td>
+<td>Change gate (pixel and CNN features) and two-model triage trial</td>
+<td>Strict triage found only 7 of 15 changes</td>
+</tr>
+<tr>
+<td>1 Oct</td>
+<td>C</td>
+<td>Prompting with and without assistance; teammate's change-map method</td>
+<td>Boxes halve detection; forcing prompts and maps invent change</td>
+</tr>
+<tr>
+<td>1–2 Oct</td>
+<td>C</td>
+<td>1,000-pair validation; blind human review of 535 pairs</td>
+<td>Best rule correct on at most about half of its change calls</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Part A — LEVIR-CC models (July–August)</h2>
+<p><strong>3.1 Pipeline.</strong> All models shared one codebase, so their results are comparable:</p>
+<ul>
+<li>the official LEVIR-CC splits</li>
+<li>a single vocabulary</li>
+<li>caption cross-entropy loss</li>
+<li>Adam with learning rate 1×10⁻⁴ and a cosine schedule</li>
+<li>evaluation on all 1,929 test pairs</li>
+</ul>
+<p><strong>3.2 Architectures and results (LEVIR-CC test set):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Description</th>
+<th>BLEU-4</th>
+<th>METEOR</th>
+<th>ROUGE-L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1</td>
+<td>Two-stream CNN encoder + Transformer decoder</td>
+<td>30.3</td>
+<td>59.7</td>
+<td>62.1</td>
+</tr>
+<tr>
+<td>Phase 2</td>
+<td>Frozen RemoteCLIP ViT-B/32, difference fusion</td>
+<td>32.8</td>
+<td>63.0</td>
+<td>65.5</td>
+</tr>
+<tr>
+<td>Phase 6</td>
+<td>Tile-based RemoteCLIP with tile fusion</td>
+<td>33.6</td>
+<td>63.6</td>
+<td>66.2</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>RemoteCLIP cross-attention + contrastive alignment</td>
+<td>33.7</td>
+<td>63.9</td>
+<td>66.0</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Figure 1" src="figures/fig1_levircc_phases.png" />
+<em>Figure 1. LEVIR-CC test scores per architecture.</em></p>
+<p>A remote-sensing-pretrained encoder gave the largest single gain, and further complexity added little.</p>
+<p><strong>3.3 Cross-dataset extension.</strong> Sequential fine-tuning on SECOND-CC erased most of the LEVIR-CC performance (Figure 2), while SECOND-CC scores stayed low (BLEU-4 12–13). Language-model decoders (Qwen2-VL-2B, Qwen2-0.5B) were implemented, but training diverged to NaN in half precision, and no evaluation was completed.</p>
+<p><img alt="Figure 2" src="figures/fig2_secondcc_forgetting.png" />
+<em>Figure 2. LEVIR-CC test scores before and after sequential fine-tuning on SECOND-CC.</em></p>
+<h2>4. Part B — Off-the-shelf captioners on Indian imagery (September)</h2>
+<p>A pilot Sentinel-2 collection over hand-picked Indian areas kept 1,072 of 2,126 tiles. Two pretrained captioners were run on a 30-pair sample:</p>
+<ul>
+<li><strong>TeoChat</strong> answered "Nothing meaningful changed" for 27 of 30 pairs.</li>
+<li><strong>Qwen2.5-VL</strong> produced empty or garbled output for many pairs. When it did answer, it described generic urban development (Figure 3).</li>
+</ul>
+<p><img alt="Figure 3" src="figures/fig4_offtheshelf_example.png" />
+<em>Figure 3. One Indian pair with both captioners' answers. Neither describes the specific change visible on the right.</em></p>
+<h2>5. Part C — India-wide dataset and automatic labelling (September–October)</h2>
+<p><strong>5.1 Dataset.</strong>
+- <strong>Sites:</strong> 1,200 sites spread evenly over all 36 states and union territories (Figure 4).
+- <strong>Imagery:</strong> Sentinel-2 Collection-1 true colour at 10 m, with before (2019–20) and after (2025–26) images taken in matching dry-season windows.
+- <strong>Quality control:</strong> block-level cloud, snow and water limits, haze and whiteout checks, alignment checks, patch-level screening, and a haze screen run on the GPU cluster.
+- <strong>Result:</strong> 27,888 patch pairs, of which <strong>15,610 were accepted</strong>.</p>
+<p><img alt="Figure 4" src="figures/fig1_coverage_map.png" />
+<em>Figure 4. Site coverage across India.</em></p>
+<p><strong>5.2 Reference labels.</strong> A web-based review tool shows the before and after images with a blink view. A human annotator labelled 535 pairs blind, choosing change, seasonal, no change or can't tell. The pairs were those where the automatic labels disagreed, plus a random sample where they agreed.</p>
+<p><strong>5.3 Prompting experiments.</strong>
+- <strong>Without assistance:</strong> constrained, neutral and free-form prompts all shifted the balance between missed and false changes, but none removed the confusion between seasonal and lasting change.
+- <strong>With assistance:</strong> neutral region boxes, whether from pixel differences or CNN features, roughly halved detection (Figure 5). A forcing prompt invented change on 12 of 15 identical-image pairs. A rule-based change map marked a median 82% of each image as changed and led the model to report change on every pair (Figure 6).</p>
+<p><img alt="Figure 5" src="figures/fig3_region_boxes.png" />
+<em>Figure 5. A human-confirmed change, found with the plain prompt but missed once region boxes are added.</em></p>
+<p><img alt="Figure 6" src="figures/fig4_change_map.png" />
+<em>Figure 6. Rule-based change map on a pair the human labelled seasonal.</em></p>
+<p><strong>5.4 1,000-pair validation.</strong> The free-form question was put to Qwen3-VL-32B and Qwen3-VL-235B on 1,002 pairs (API cost USD 1.00).</p>
+<table>
+<thead>
+<tr>
+<th>Decision rule</th>
+<th>Human-labelled pairs (n = 495): found / precision</th>
+<th>All pairs (n = 962): found / precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32B</td>
+<td>89% / 11%</td>
+<td>96% / 26%</td>
+</tr>
+<tr>
+<td>235B</td>
+<td>45% / 17%</td>
+<td>79% / 48%</td>
+</tr>
+<tr>
+<td>32B and 235B agree</td>
+<td>42% / 18%</td>
+<td>78% / 51%</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Figure 7" src="figures/fig6_recall_precision.png" />
+<em>Figure 7. Changes found and precision of "change" calls for each rule, against the 90% precision needed for automatic labelling.</em></p>
+<p><img alt="Figure 8" src="figures/fig5_validation_examples.png" />
+<em>Figure 8. Validation examples with the human label as ground truth: (a) correct, (b) false alarm, (c) missed change.</em></p>
+<p>Real change appears in only about one pair in seven, so even a low false-change rate produces as many false "change" labels as true ones. Automatic labelling was therefore rejected as a source for the dataset.</p>
+<h2>6. Cross-cutting findings</h2>
+<ol>
+<li><strong>Data is the bottleneck, not architecture.</strong> On LEVIR-CC, architectural changes beyond a pretrained encoder brought diminishing returns. For India, no suitable labelled data existed, and none of the attempts to create it automatically produced reliable labels.</li>
+<li><strong>Seasonal change is the central failure.</strong> Every model, from LEVIR-CC-trained captioners to Qwen3-VL-235B, confused crop cycles, greenness, water level and haze with lasting land-use change.</li>
+<li><strong>Hints and forced prompts are harmful.</strong> Telling a model where or that something changed either narrows its attention or makes it invent change. This held in the early two-stage captioner, in the region-box tests and in the change-map method.</li>
+<li><strong>Adaptation by fine-tuning is fragile.</strong> Sequential fine-tuning destroyed source-domain performance without delivering target-domain quality.</li>
+<li><strong>Compute shaped the project.</strong> The institute cluster provided one older GPU at a time without bfloat16 support. It limited model size, forced aggressive quantisation, caused numerical failures and was unreachable during the final experiments.</li>
+</ol>
+<h2>7. Limitations</h2>
+<ul>
+<li>LEVIR-CC scores use one reference caption per image, so they are comparable across our models but not with published results.</li>
+<li>The language-model decoder designs never completed an evaluation run.</li>
+<li>Off-the-shelf captioners were checked on only 30 Indian pairs, without reference captions.</li>
+<li>At 10 m resolution, much land-use change is at or below the limit of what can be seen.</li>
+<li>The human-labelled evaluation set comes from a single annotator and is weighted toward difficult pairs. The remaining reference labels carry an estimated error of about 20%.</li>
+<li>The prompting experiments used 40–135 pairs each, so their numbers carry wider uncertainty than the 1,000-pair validation.</li>
+</ul>
+<h2>8. Conclusion</h2>
+<p>Over four months we built a reproducible RSICC pipeline on LEVIR-CC and an India-wide, quality-screened Sentinel-2 dataset of 15,610 patch pairs. We tested three routes to Indian change captioning:</p>
+<ul>
+<li>transferring LEVIR-CC models</li>
+<li>applying off-the-shelf vision-language captioners</li>
+<li>labelling the new dataset automatically with open-weight vision-language models</li>
+</ul>
+<p>All three failed for the same underlying reason: no available model reliably tells lasting land-use change from seasonal variation in medium-resolution Indian imagery. Scaling any of these pipelines would produce a large dataset of poor quality. Reliable change labels for this setting still require human annotation, and the dataset, tooling and evaluation protocol built here provide the base for that work.</p>
+<hr />
+<p><em>Detailed reports: Phase 1 (LEVIR-CC and adaptation) and the Indian dataset report, provided separately.</em></p></body></html>

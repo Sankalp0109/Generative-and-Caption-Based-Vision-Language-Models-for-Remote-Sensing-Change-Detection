@@ -13,7 +13,9 @@
 | | Rinkesh Verma (2025201070) |
 | **Mentor** | Rama Chandra Prasad |
 
-*A companion Evidence Report contains the predictions, training curves, maps and plots that support every observation here (cross-referenced as E-figures).*
+*A companion [Evidence Report](https://github.com/Sankalp0109/Generative-and-Caption-Based-Vision-Language-Models-for-Remote-Sensing-Change-Detection/blob/ds-creation/india_s2_dataset/submissions/final/EVIDENCE_REPORT.pdf) contains the predictions, training curves, maps and plots that support every observation here (cross-referenced as E-figures).*
+
+**Code:** [github.com/Sankalp0109/Generative-and-Caption-Based-Vision-Language-Models-for-Remote-Sensing-Change-Detection](https://github.com/Sankalp0109/Generative-and-Caption-Based-Vision-Language-Models-for-Remote-Sensing-Change-Detection)
 
 </div>
 
@@ -276,8 +278,8 @@ All code, data, model checkpoints and prediction sheets produced in this study a
 | India Sentinel-2 Change Pairs — Labelled (Kaggle dataset) | 1,002 labelled pairs (535 human-labelled), with baseline model answers (Sections 4.2–4.3) | [kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-labelled](https://www.kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-labelled) |
 | RSICC Model Run Reports (Kaggle dataset) | Prediction sheets of the LEVIR-CC and SECOND-CC runs (Section 2; Evidence E-A5–E-A8) | [kaggle.com/datasets/kspsvlnsiddardha/rsicc-model-run-reports](https://www.kaggle.com/datasets/kspsvlnsiddardha/rsicc-model-run-reports) |
 | RSICC change-captioning models (Kaggle Models) | Phase 1 baseline and Phase 2 RemoteCLIP-difference checkpoints + vocabulary (Section 2.2) | [kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning](https://www.kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning) |
-| Model checkpoints (Hugging Face) | Same Phase 1 / Phase 2 checkpoints, public mirror | [huggingface.co/Kspsvln/IS](https://huggingface.co/Kspsvln/IS) |
-| Evidence Report | Predictions, curves, maps and plots behind every observation | Companion document |
+| Model checkpoints (Hugging Face) | Phase 1 / Phase 2 checkpoints, public mirror; second-phase model repository | [huggingface.co/Kspsvln/IS](https://huggingface.co/Kspsvln/IS) · [huggingface.co/Kspsvln/IS_phase2](https://huggingface.co/Kspsvln/IS_phase2) |
+| Evidence Report (PDF) | Predictions, curves, maps and plots behind every observation | [EVIDENCE_REPORT.pdf](https://github.com/Sankalp0109/Generative-and-Caption-Based-Vision-Language-Models-for-Remote-Sensing-Change-Detection/blob/ds-creation/india_s2_dataset/submissions/final/EVIDENCE_REPORT.pdf) |
 
 ## References
 

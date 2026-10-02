@@ -244,6 +244,6 @@ The 235B's conclusions in its own words:
 | India Sentinel-2 Change Pairs (15,610 pairs) | [kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-pairs](https://www.kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-pairs) |
 | Labelled subset (1,002 pairs) | [kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-labelled](https://www.kaggle.com/datasets/kspsvlnsiddardha/india-sentinel2-change-labelled) |
 | Model run reports (prediction sheets) | [kaggle.com/datasets/kspsvlnsiddardha/rsicc-model-run-reports](https://www.kaggle.com/datasets/kspsvlnsiddardha/rsicc-model-run-reports) |
-| Model checkpoints | [kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning](https://www.kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning) · [huggingface.co/Kspsvln/IS](https://huggingface.co/Kspsvln/IS) |
+| Model checkpoints | [kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning](https://www.kaggle.com/models/kspsvlnsiddardha/rsicc-change-captioning) · [huggingface.co/Kspsvln/IS](https://huggingface.co/Kspsvln/IS) · [huggingface.co/Kspsvln/IS_phase2](https://huggingface.co/Kspsvln/IS_phase2) |
 
 Datasets, models and metrics are cited in the References of the Main Report. Contains modified Copernicus Sentinel data (2019–2026).

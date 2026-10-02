@@ -1,0 +1,76 @@
+[
+ {
+  "file": "predictions_phase7.pdf",
+  "n": 300,
+  "distinct_preds": 21,
+  "top_pred": "there is no difference",
+  "top_share": 0.47,
+  "change_refs": 164,
+  "nochange_refs": 136,
+  "nochange_correct": 98,
+  "change_called_nochange": 43,
+  "distinct_refs": 163
+ },
+ {
+  "file": "predictions_phase8.pdf",
+  "n": 300,
+  "distinct_preds": 32,
+  "top_pred": "there is no difference",
+  "top_share": 0.42,
+  "change_refs": 164,
+  "nochange_refs": 136,
+  "nochange_correct": 96,
+  "change_called_nochange": 31,
+  "distinct_refs": 163
+ },
+ {
+  "file": "predictions_phase_final_finetuneS.pdf",
+  "n": 300,
+  "distinct_preds": 1,
+  "top_pred": "there is no difference",
+  "top_share": 1.0,
+  "change_refs": 164,
+  "nochange_refs": 136,
+  "nochange_correct": 136,
+  "change_called_nochange": 164,
+  "distinct_refs": 163
+ },
+ {
+  "file": "predictions_phase7_second.pdf",
+  "n": 300,
+  "distinct_preds": 97,
+  "top_pred": "there is no difference",
+  "top_share": 0.16,
+  "change_refs": 255,
+  "nochange_refs": 45,
+  "nochange_correct": 33,
+  "change_called_nochange": 16,
+  "distinct_refs": 246
+ },
+ {
+  "file": "predictions_phase8_second.pdf",
+  "n": 300,
+  "distinct_preds": 82,
+  "top_pred": "there is no difference",
+  "top_share": 0.16,
+  "change_refs": 255,
+  "nochange_refs": 45,
+  "nochange_correct": 30,
+  "change_called_nochange": 19,
+  "distinct_refs": 246
+ },
+ {
+  "file": "SECOND_CC_Test_Predictions_1.pdf",
+  "n": 44,
+  "distinct_preds": 23,
+  "top_pred": "the vegetation quantity is decreased in many parts of the sc",
+  "top_share": 0.18
+ },
+ {
+  "file": "SECOND_CC_Test_Predictions_patch_wise.pdf",
+  "n": 44,
+  "distinct_preds": 9,
+  "top_pred": "the green region is replaced by a huge house at the bottom r",
+  "top_share": 0.75
+ }
+]
