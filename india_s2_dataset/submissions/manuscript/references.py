@@ -1,0 +1,38 @@
+"""Verified references (each checked against arXiv, Crossref or the publisher page on 2026-10-01/04).
+Keys are cited in the manuscript as [@key]; build.py numbers them in order of first citation and
+lists only the cited ones."""
+
+REFS = {
+    "levircc": "Liu, C., Zhao, R., Chen, H., Zou, Z., Shi, Z. (2022). Remote sensing image change captioning with dual-branch transformers: A new method and a large scale dataset. IEEE Transactions on Geoscience and Remote Sensing, 60. https://doi.org/10.1109/TGRS.2022.3218921",
+    "hoxha": "Hoxha, G., Chouaf, S., Melgani, F., Smara, Y. (2022). Change captioning: A new paradigm for multitemporal remote sensing image analysis. IEEE Transactions on Geoscience and Remote Sensing, 60. https://doi.org/10.1109/TGRS.2022.3195692",
+    "lu2004": "Lu, D., Mausel, P., Brondízio, E., Moran, E. (2004). Change detection techniques. International Journal of Remote Sensing, 25(12), 2365–2401. https://doi.org/10.1080/0143116031000139863",
+    "levircd": "Chen, H., Shi, Z. (2020). A spatial-temporal attention-based method and a new dataset for remote sensing image change detection. Remote Sensing, 12(10), 1662. https://doi.org/10.3390/rs12101662",
+    "oscd": "Daudt, R. C., Le Saux, B., Boulch, A., Gousseau, Y. (2018). Urban change detection for multispectral earth observation using convolutional neural networks. IGARSS 2018 – IEEE International Geoscience and Remote Sensing Symposium. https://doi.org/10.1109/IGARSS.2018.8518015",
+    "secondcc": "Karaca, A. C., Ozelbas, M. E., Berber, S., Karimli, O., Yildirim, T., Amasyali, M. F. (2025). Robust change captioning in remote sensing: SECOND-CC dataset and MModalCC framework. arXiv:2501.10075. https://arxiv.org/abs/2501.10075",
+    "sentinel2": "Drusch, M., Del Bello, U., Carlier, S., et al. (2012). Sentinel-2: ESA's optical high-resolution mission for GMES operational services. Remote Sensing of Environment, 120, 25–36. https://doi.org/10.1016/j.rse.2011.11.026",
+    "sen2cor": "Main-Knorn, M., Pflug, B., Louis, J., Debaecker, V., Müller-Wilm, U., Gascon, F. (2017). Sen2Cor for Sentinel-2. Proc. SPIE 10427, Image and Signal Processing for Remote Sensing XXIII. https://doi.org/10.1117/12.2278218",
+    "earthsearch": "Element 84. Earth Search STAC API (Sentinel-2 Level-2A, Collection 1). https://earth-search.aws.element84.com/v1",
+    "geoboundaries": "Runfola, D., Anderson, A., Baier, H., et al. (2020). geoBoundaries: A global database of political administrative boundaries. PLOS ONE, 15(4), e0231866. https://doi.org/10.1371/journal.pone.0231866",
+    "clip": "Radford, A., Kim, J. W., Hallacy, C., et al. (2021). Learning transferable visual models from natural language supervision. ICML. https://arxiv.org/abs/2103.00020",
+    "remoteclip": "Liu, F., Chen, D., Guan, Z., et al. (2024). RemoteCLIP: A vision language foundation model for remote sensing. IEEE Transactions on Geoscience and Remote Sensing, 62. https://arxiv.org/abs/2306.11029",
+    "transformer": "Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). Attention is all you need. NeurIPS. https://arxiv.org/abs/1706.03762",
+    "adam": "Kingma, D. P., Ba, J. (2015). Adam: A method for stochastic optimization. ICLR. https://arxiv.org/abs/1412.6980",
+    "resnet": "He, K., Zhang, X., Ren, S., Sun, J. (2016). Deep residual learning for image recognition. CVPR. https://arxiv.org/abs/1512.03385",
+    "qwen2": "Yang, A., et al. (2024). Qwen2 technical report. arXiv:2407.10671. https://arxiv.org/abs/2407.10671",
+    "qwen2vl": "Wang, P., Bai, S., Tan, S., et al. (2024). Qwen2-VL: Enhancing vision-language model's perception of the world at any resolution. arXiv:2409.12191. https://arxiv.org/abs/2409.12191",
+    "qwen25vl": "Bai, S., Chen, K., Liu, X., et al. (2025). Qwen2.5-VL technical report. arXiv:2502.13923. https://arxiv.org/abs/2502.13923",
+    "qwen3vl": "Bai, S., Cai, Y., Chen, R., Chen, K., et al. (2025). Qwen3-VL technical report. arXiv:2511.21631. https://arxiv.org/abs/2511.21631",
+    "gemma3": "Gemma Team (2025). Gemma 3 technical report. arXiv:2503.19786. https://arxiv.org/abs/2503.19786",
+    "teochat": "Irvin, J. A., Liu, E. R., Chen, J. C., et al. (2025). TEOChat: A large vision-language assistant for temporal earth observation data. ICLR. https://arxiv.org/abs/2410.06234",
+    "lora": "Hu, E. J., Shen, Y., Wallis, P., et al. (2022). LoRA: Low-rank adaptation of large language models. ICLR. https://arxiv.org/abs/2106.09685",
+    "blip2": "Li, J., Li, D., Savarese, S., Hoi, S. (2023). BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models. ICML. https://arxiv.org/abs/2301.12597",
+    "qlora": "Dettmers, T., Pagnoni, A., Holtzman, A., Zettlemoyer, L. (2023). QLoRA: Efficient finetuning of quantized LLMs. NeurIPS. https://arxiv.org/abs/2305.14314",
+    "bleu": "Papineni, K., Roukos, S., Ward, T., Zhu, W.-J. (2002). BLEU: a method for automatic evaluation of machine translation. ACL. https://aclanthology.org/P02-1040/",
+    "meteor": "Banerjee, S., Lavie, A. (2005). METEOR: An automatic metric for MT evaluation with improved correlation with human judgments. ACL Workshop on Intrinsic and Extrinsic Evaluation Measures. https://aclanthology.org/W05-0909/",
+    "rouge": "Lin, C.-Y. (2004). ROUGE: A package for automatic evaluation of summaries. ACL Workshop on Text Summarization Branches Out. https://aclanthology.org/W04-1013/",
+    "cider": "Vedantam, R., Zitnick, C. L., Parikh, D. (2015). CIDEr: Consensus-based image description evaluation. CVPR. https://arxiv.org/abs/1411.5726",
+    "sbert": "Reimers, N., Gurevych, I. (2019). Sentence-BERT: Sentence embeddings using Siamese BERT-networks. EMNLP. https://arxiv.org/abs/1908.10084",
+    "wilson": "Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. Journal of the American Statistical Association, 22(158), 209–212. https://doi.org/10.1080/01621459.1927.10502953",
+    "kirkpatrick": "Kirkpatrick, J., Pascanu, R., Rabinowitz, N., et al. (2017). Overcoming catastrophic forgetting in neural networks. PNAS, 114(13), 3521–3526. https://arxiv.org/abs/1612.00796",
+    "changeagent": "Liu, C., Chen, K., Zhang, H., et al. (2024). Change-Agent: Towards interactive comprehensive remote sensing change interpretation and analysis. IEEE Transactions on Geoscience and Remote Sensing, 62. https://arxiv.org/abs/2403.19646",
+}
