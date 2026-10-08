@@ -1,0 +1,100 @@
+{"patch_id": "punjab_t1_005_r0c1", "folder": "accepted/punjab_t1_005_r0c1", "state": "Punjab", "region": "north_plains", "changed": true, "changed_fraction": 0.0526}
+{"patch_id": "tamil_nadu_t1_025_r2c0", "folder": "accepted/tamil_nadu_t1_025_r2c0", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.0961}
+{"patch_id": "assam_005_r1c0", "folder": "accepted/assam_005_r1c0", "state": "Assam", "region": "northeast", "changed": true, "changed_fraction": 0.0589}
+{"patch_id": "odisha_t1_026_r2c3", "folder": "accepted/odisha_t1_026_r2c3", "state": "Odisha", "region": "central_east", "changed": true, "changed_fraction": 0.1547}
+{"patch_id": "tamil_nadu_t1_014_r0c0", "folder": "accepted/tamil_nadu_t1_014_r0c0", "state": "Tamil Nadu", "region": "south_islands", "changed": false, "changed_fraction": 0.0105}
+{"patch_id": "haryana_019_r3c2", "folder": "accepted/haryana_019_r3c2", "state": "Haryana", "region": "north_plains", "changed": false, "changed_fraction": 0.0102}
+{"patch_id": "chhattisgarh_033_r1c3", "folder": "accepted/chhattisgarh_033_r1c3", "state": "Chhattisgarh", "region": "central_east", "changed": false, "changed_fraction": 0.0099}
+{"patch_id": "west_bengal_015_r1c3", "folder": "accepted/west_bengal_015_r1c3", "state": "West Bengal", "region": "north_plains", "changed": true, "changed_fraction": 0.067}
+{"patch_id": "andhra_pradesh_002_r2c1", "folder": "accepted/andhra_pradesh_002_r2c1", "state": "Andhra Pradesh", "region": "deccan", "changed": true, "changed_fraction": 0.1623}
+{"patch_id": "andaman_and_nicobar_islands_007_r2c2", "folder": "accepted/andaman_and_nicobar_islands_007_r2c2", "state": "Andaman and Nicobar Islands", "region": "south_islands", "changed": false, "changed_fraction": 0.0006}
+{"patch_id": "uttar_pradesh_t1_042_r2c0", "folder": "accepted/uttar_pradesh_t1_042_r2c0", "state": "Uttar Pradesh", "region": "north_plains", "changed": true, "changed_fraction": 0.0848}
+{"patch_id": "gujarat_017_r1c2", "folder": "accepted/gujarat_017_r1c2", "state": "Gujarat", "region": "west_desert", "changed": true, "changed_fraction": 0.1024}
+{"patch_id": "rajasthan_t1_065_r0c2", "folder": "accepted/rajasthan_t1_065_r0c2", "state": "Rajasthan", "region": "west_desert", "changed": false, "changed_fraction": 0.0002}
+{"patch_id": "rajasthan_097_r3c2", "folder": "accepted/rajasthan_097_r3c2", "state": "Rajasthan", "region": "west_desert", "changed": false, "changed_fraction": 0.0093}
+{"patch_id": "ladakh_023_r2c0", "folder": "accepted/ladakh_023_r2c0", "state": "Ladakh", "region": "himalaya", "changed": true, "changed_fraction": 0.0742}
+{"patch_id": "gujarat_012_r1c1", "folder": "accepted/gujarat_012_r1c1", "state": "Gujarat", "region": "west_desert", "changed": true, "changed_fraction": 0.1062}
+{"patch_id": "telangana_017_r1c2", "folder": "accepted/telangana_017_r1c2", "state": "Telangana", "region": "deccan", "changed": true, "changed_fraction": 0.1438}
+{"patch_id": "tripura_001_r3c1", "folder": "accepted/tripura_001_r3c1", "state": "Tripura", "region": "northeast", "changed": false, "changed_fraction": 0.0167}
+{"patch_id": "tamil_nadu_005_r2c0", "folder": "accepted/tamil_nadu_005_r2c0", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.1683}
+{"patch_id": "jammu_and_kashmir_011_r1c0", "folder": "accepted/jammu_and_kashmir_011_r1c0", "state": "Jammu and Kashmir", "region": "himalaya", "changed": true, "changed_fraction": 0.1009}
+{"patch_id": "gujarat_048_r1c3", "folder": "accepted/gujarat_048_r1c3", "state": "Gujarat", "region": "west_desert", "changed": false, "changed_fraction": 0.0338}
+{"patch_id": "andhra_pradesh_t1_024_r1c1", "folder": "accepted/andhra_pradesh_t1_024_r1c1", "state": "Andhra Pradesh", "region": "deccan", "changed": true, "changed_fraction": 0.066}
+{"patch_id": "gujarat_t1_001_r3c2", "folder": "accepted/gujarat_t1_001_r3c2", "state": "Gujarat", "region": "west_desert", "changed": true, "changed_fraction": 0.1177}
+{"patch_id": "tamil_nadu_t1_021_r0c2", "folder": "accepted/tamil_nadu_t1_021_r0c2", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.0543}
+{"patch_id": "madhya_pradesh_034_r2c3", "folder": "accepted/madhya_pradesh_034_r2c3", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.0799}
+{"patch_id": "karnataka_041_r3c1", "folder": "accepted/karnataka_041_r3c1", "state": "Karnataka", "region": "deccan", "changed": false, "changed_fraction": 0.0356}
+{"patch_id": "assam_005_r3c1", "folder": "accepted/assam_005_r3c1", "state": "Assam", "region": "northeast", "changed": true, "changed_fraction": 0.0553}
+{"patch_id": "kerala_t1_002_r0c0", "folder": "accepted/kerala_t1_002_r0c0", "state": "Kerala", "region": "south_islands", "changed": false, "changed_fraction": 0.0002}
+{"patch_id": "gujarat_t1_009_r3c1", "folder": "accepted/gujarat_t1_009_r3c1", "state": "Gujarat", "region": "west_desert", "changed": false, "changed_fraction": 0.0094}
+{"patch_id": "rajasthan_006_r1c2", "folder": "accepted/rajasthan_006_r1c2", "state": "Rajasthan", "region": "west_desert", "changed": true, "changed_fraction": 0.0544}
+{"patch_id": "karnataka_t1_004_r1c2", "folder": "accepted/karnataka_t1_004_r1c2", "state": "Karnataka", "region": "deccan", "changed": true, "changed_fraction": 0.1452}
+{"patch_id": "rajasthan_t1_045_r0c2", "folder": "accepted/rajasthan_t1_045_r0c2", "state": "Rajasthan", "region": "west_desert", "changed": true, "changed_fraction": 0.2281}
+{"patch_id": "gujarat_t1_020_r2c1", "folder": "accepted/gujarat_t1_020_r2c1", "state": "Gujarat", "region": "west_desert", "changed": false, "changed_fraction": 0.0076}
+{"patch_id": "maharashtra_061_r1c1", "folder": "accepted/maharashtra_061_r1c1", "state": "Maharashtra", "region": "deccan", "changed": false, "changed_fraction": 0.0235}
+{"patch_id": "assam_005_r2c2", "folder": "accepted/assam_005_r2c2", "state": "Assam", "region": "northeast", "changed": true, "changed_fraction": 0.217}
+{"patch_id": "telangana_t1_006_r0c3", "folder": "accepted/telangana_t1_006_r0c3", "state": "Telangana", "region": "deccan", "changed": false, "changed_fraction": 0.0101}
+{"patch_id": "madhya_pradesh_056_r3c2", "folder": "accepted/madhya_pradesh_056_r3c2", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.1572}
+{"patch_id": "assam_005_r3c0", "folder": "accepted/assam_005_r3c0", "state": "Assam", "region": "northeast", "changed": true, "changed_fraction": 0.1003}
+{"patch_id": "ladakh_t1_036_r3c3", "folder": "accepted/ladakh_t1_036_r3c3", "state": "Ladakh", "region": "himalaya", "changed": true, "changed_fraction": 0.1419}
+{"patch_id": "himachal_pradesh_t1_009_r3c3", "folder": "accepted/himachal_pradesh_t1_009_r3c3", "state": "Himachal Pradesh", "region": "himalaya", "changed": true, "changed_fraction": 0.072}
+{"patch_id": "madhya_pradesh_082_r3c2", "folder": "accepted/madhya_pradesh_082_r3c2", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.0671}
+{"patch_id": "jammu_and_kashmir_011_r0c0", "folder": "accepted/jammu_and_kashmir_011_r0c0", "state": "Jammu and Kashmir", "region": "himalaya", "changed": true, "changed_fraction": 0.0945}
+{"patch_id": "rajasthan_t1_031_r2c0", "folder": "accepted/rajasthan_t1_031_r2c0", "state": "Rajasthan", "region": "west_desert", "changed": true, "changed_fraction": 0.1003}
+{"patch_id": "gujarat_017_r2c1", "folder": "accepted/gujarat_017_r2c1", "state": "Gujarat", "region": "west_desert", "changed": true, "changed_fraction": 0.1214}
+{"patch_id": "jammu_and_kashmir_011_r2c1", "folder": "accepted/jammu_and_kashmir_011_r2c1", "state": "Jammu and Kashmir", "region": "himalaya", "changed": true, "changed_fraction": 0.0834}
+{"patch_id": "gujarat_t1_001_r3c3", "folder": "accepted/gujarat_t1_001_r3c3", "state": "Gujarat", "region": "west_desert", "changed": true, "changed_fraction": 0.2006}
+{"patch_id": "madhya_pradesh_t1_012_r3c0", "folder": "accepted/madhya_pradesh_t1_012_r3c0", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.0745}
+{"patch_id": "mizoram_005_r1c2", "folder": "accepted/mizoram_005_r1c2", "state": "Mizoram", "region": "northeast", "changed": false, "changed_fraction": 0.0042}
+{"patch_id": "bihar_003_r2c0", "folder": "accepted/bihar_003_r2c0", "state": "Bihar", "region": "north_plains", "changed": false, "changed_fraction": 0.0284}
+{"patch_id": "meghalaya_002_r2c0", "folder": "accepted/meghalaya_002_r2c0", "state": "Meghalaya", "region": "northeast", "changed": false, "changed_fraction": 0.0039}
+{"patch_id": "madhya_pradesh_006_r0c0", "folder": "accepted/madhya_pradesh_006_r0c0", "state": "Madhya Pradesh", "region": "central_east", "changed": false, "changed_fraction": 0.0001}
+{"patch_id": "assam_t1_012_r0c2", "folder": "accepted/assam_t1_012_r0c2", "state": "Assam", "region": "northeast", "changed": false, "changed_fraction": 0.0231}
+{"patch_id": "maharashtra_073_r2c2", "folder": "accepted/maharashtra_073_r2c2", "state": "Maharashtra", "region": "deccan", "changed": true, "changed_fraction": 0.0543}
+{"patch_id": "uttar_pradesh_t1_042_r0c2", "folder": "accepted/uttar_pradesh_t1_042_r0c2", "state": "Uttar Pradesh", "region": "north_plains", "changed": true, "changed_fraction": 0.0844}
+{"patch_id": "tamil_nadu_t1_014_r1c3", "folder": "accepted/tamil_nadu_t1_014_r1c3", "state": "Tamil Nadu", "region": "south_islands", "changed": false, "changed_fraction": 0.0038}
+{"patch_id": "arunachal_pradesh_025_r0c1", "folder": "accepted/arunachal_pradesh_025_r0c1", "state": "Arunachal Pradesh", "region": "himalaya", "changed": true, "changed_fraction": 0.0665}
+{"patch_id": "haryana_t1_003_r3c1", "folder": "accepted/haryana_t1_003_r3c1", "state": "Haryana", "region": "north_plains", "changed": true, "changed_fraction": 0.2492}
+{"patch_id": "tamil_nadu_t1_025_r1c0", "folder": "accepted/tamil_nadu_t1_025_r1c0", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.1153}
+{"patch_id": "rajasthan_096_r1c0", "folder": "accepted/rajasthan_096_r1c0", "state": "Rajasthan", "region": "west_desert", "changed": true, "changed_fraction": 0.2001}
+{"patch_id": "uttar_pradesh_055_r0c3", "folder": "accepted/uttar_pradesh_055_r0c3", "state": "Uttar Pradesh", "region": "north_plains", "changed": true, "changed_fraction": 0.41}
+{"patch_id": "tamil_nadu_005_r0c1", "folder": "accepted/tamil_nadu_005_r0c1", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.2206}
+{"patch_id": "maharashtra_t1_022_r2c0", "folder": "accepted/maharashtra_t1_022_r2c0", "state": "Maharashtra", "region": "deccan", "changed": true, "changed_fraction": 0.0821}
+{"patch_id": "chhattisgarh_t1_012_r1c3", "folder": "accepted/chhattisgarh_t1_012_r1c3", "state": "Chhattisgarh", "region": "central_east", "changed": false, "changed_fraction": 0.0001}
+{"patch_id": "telangana_t1_006_r3c1", "folder": "accepted/telangana_t1_006_r3c1", "state": "Telangana", "region": "deccan", "changed": false, "changed_fraction": 0.024}
+{"patch_id": "jammu_and_kashmir_011_r1c2", "folder": "accepted/jammu_and_kashmir_011_r1c2", "state": "Jammu and Kashmir", "region": "himalaya", "changed": true, "changed_fraction": 0.1314}
+{"patch_id": "madhya_pradesh_t1_055_r2c1", "folder": "accepted/madhya_pradesh_t1_055_r2c1", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.1167}
+{"patch_id": "uttar_pradesh_t1_025_r2c0", "folder": "accepted/uttar_pradesh_t1_025_r2c0", "state": "Uttar Pradesh", "region": "north_plains", "changed": true, "changed_fraction": 0.0621}
+{"patch_id": "kerala_t1_008_r2c3", "folder": "accepted/kerala_t1_008_r2c3", "state": "Kerala", "region": "south_islands", "changed": true, "changed_fraction": 0.0536}
+{"patch_id": "madhya_pradesh_062_r3c0", "folder": "accepted/madhya_pradesh_062_r3c0", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.0536}
+{"patch_id": "tamil_nadu_t1_015_r0c3", "folder": "accepted/tamil_nadu_t1_015_r0c3", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.21}
+{"patch_id": "himachal_pradesh_019_r3c1", "folder": "accepted/himachal_pradesh_019_r3c1", "state": "Himachal Pradesh", "region": "himalaya", "changed": false, "changed_fraction": 0.0079}
+{"patch_id": "west_bengal_024_r2c0", "folder": "accepted/west_bengal_024_r2c0", "state": "West Bengal", "region": "north_plains", "changed": false, "changed_fraction": 0.0143}
+{"patch_id": "karnataka_032_r3c0", "folder": "accepted/karnataka_032_r3c0", "state": "Karnataka", "region": "deccan", "changed": true, "changed_fraction": 0.0826}
+{"patch_id": "west_bengal_t1_018_r0c2", "folder": "accepted/west_bengal_t1_018_r0c2", "state": "West Bengal", "region": "north_plains", "changed": false, "changed_fraction": 0.0227}
+{"patch_id": "madhya_pradesh_056_r3c1", "folder": "accepted/madhya_pradesh_056_r3c1", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.1047}
+{"patch_id": "tamil_nadu_t1_025_r1c1", "folder": "accepted/tamil_nadu_t1_025_r1c1", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.1122}
+{"patch_id": "andhra_pradesh_021_r1c3", "folder": "accepted/andhra_pradesh_021_r1c3", "state": "Andhra Pradesh", "region": "deccan", "changed": true, "changed_fraction": 0.0516}
+{"patch_id": "uttar_pradesh_t1_025_r1c0", "folder": "accepted/uttar_pradesh_t1_025_r1c0", "state": "Uttar Pradesh", "region": "north_plains", "changed": true, "changed_fraction": 0.0986}
+{"patch_id": "arunachal_pradesh_025_r1c2", "folder": "accepted/arunachal_pradesh_025_r1c2", "state": "Arunachal Pradesh", "region": "himalaya", "changed": false, "changed_fraction": 0.0038}
+{"patch_id": "odisha_t1_012_r1c1", "folder": "accepted/odisha_t1_012_r1c1", "state": "Odisha", "region": "central_east", "changed": false, "changed_fraction": 0.0007}
+{"patch_id": "manipur_t1_003_r0c2", "folder": "accepted/manipur_t1_003_r0c2", "state": "Manipur", "region": "northeast", "changed": false, "changed_fraction": 0.002}
+{"patch_id": "jammu_and_kashmir_011_r3c2", "folder": "accepted/jammu_and_kashmir_011_r3c2", "state": "Jammu and Kashmir", "region": "himalaya", "changed": true, "changed_fraction": 0.3434}
+{"patch_id": "tamil_nadu_t1_015_r2c0", "folder": "accepted/tamil_nadu_t1_015_r2c0", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.1271}
+{"patch_id": "madhya_pradesh_066_r2c1", "folder": "accepted/madhya_pradesh_066_r2c1", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.0974}
+{"patch_id": "karnataka_t1_002_r3c0", "folder": "accepted/karnataka_t1_002_r3c0", "state": "Karnataka", "region": "deccan", "changed": true, "changed_fraction": 0.0508}
+{"patch_id": "ladakh_023_r2c3", "folder": "accepted/ladakh_023_r2c3", "state": "Ladakh", "region": "himalaya", "changed": false, "changed_fraction": 0.0395}
+{"patch_id": "ladakh_t1_021_r1c1", "folder": "accepted/ladakh_t1_021_r1c1", "state": "Ladakh", "region": "himalaya", "changed": false, "changed_fraction": 0.036}
+{"patch_id": "assam_005_r2c0", "folder": "accepted/assam_005_r2c0", "state": "Assam", "region": "northeast", "changed": true, "changed_fraction": 0.1225}
+{"patch_id": "andhra_pradesh_023_r2c0", "folder": "accepted/andhra_pradesh_023_r2c0", "state": "Andhra Pradesh", "region": "deccan", "changed": false, "changed_fraction": 0.0493}
+{"patch_id": "arunachal_pradesh_025_r3c3", "folder": "accepted/arunachal_pradesh_025_r3c3", "state": "Arunachal Pradesh", "region": "himalaya", "changed": false, "changed_fraction": 0.0}
+{"patch_id": "uttar_pradesh_t1_024_r0c2", "folder": "accepted/uttar_pradesh_t1_024_r0c2", "state": "Uttar Pradesh", "region": "north_plains", "changed": true, "changed_fraction": 0.1274}
+{"patch_id": "west_bengal_t1_018_r0c0", "folder": "accepted/west_bengal_t1_018_r0c0", "state": "West Bengal", "region": "north_plains", "changed": false, "changed_fraction": 0.0377}
+{"patch_id": "assam_005_r3c2", "folder": "accepted/assam_005_r3c2", "state": "Assam", "region": "northeast", "changed": true, "changed_fraction": 0.1916}
+{"patch_id": "odisha_010_r3c0", "folder": "accepted/odisha_010_r3c0", "state": "Odisha", "region": "central_east", "changed": false, "changed_fraction": 0.0112}
+{"patch_id": "andhra_pradesh_001_r3c1", "folder": "accepted/andhra_pradesh_001_r3c1", "state": "Andhra Pradesh", "region": "deccan", "changed": true, "changed_fraction": 0.0724}
+{"patch_id": "ladakh_t1_030_r0c1", "folder": "accepted/ladakh_t1_030_r0c1", "state": "Ladakh", "region": "himalaya", "changed": true, "changed_fraction": 0.0974}
+{"patch_id": "madhya_pradesh_t1_055_r1c3", "folder": "accepted/madhya_pradesh_t1_055_r1c3", "state": "Madhya Pradesh", "region": "central_east", "changed": true, "changed_fraction": 0.1167}
+{"patch_id": "tamil_nadu_005_r3c1", "folder": "accepted/tamil_nadu_005_r3c1", "state": "Tamil Nadu", "region": "south_islands", "changed": true, "changed_fraction": 0.2086}
+{"patch_id": "andaman_and_nicobar_islands_007_r3c2", "folder": "accepted/andaman_and_nicobar_islands_007_r3c2", "state": "Andaman and Nicobar Islands", "region": "south_islands", "changed": false, "changed_fraction": 0.0026}
+{"patch_id": "uttar_pradesh_067_r3c0", "folder": "accepted/uttar_pradesh_067_r3c0", "state": "Uttar Pradesh", "region": "north_plains", "changed": true, "changed_fraction": 0.0717}

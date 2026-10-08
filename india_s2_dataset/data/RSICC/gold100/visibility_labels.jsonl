@@ -1,0 +1,60 @@
+{"idx": 0, "patch_id": "punjab_t1_005_r0c1", "folder": "accepted/punjab_t1_005_r0c1", "state": "Punjab", "label": "seasonal"}
+{"idx": 1, "patch_id": "tamil_nadu_t1_025_r2c0", "folder": "accepted/tamil_nadu_t1_025_r2c0", "state": "Tamil Nadu", "label": "atmospheric"}
+{"idx": 2, "patch_id": "assam_005_r1c0", "folder": "accepted/assam_005_r1c0", "state": "Assam", "label": "none"}
+{"idx": 3, "patch_id": "odisha_t1_026_r2c3", "folder": "accepted/odisha_t1_026_r2c3", "state": "Odisha", "label": "seasonal"}
+{"idx": 4, "patch_id": "tamil_nadu_t1_014_r0c0", "folder": "accepted/tamil_nadu_t1_014_r0c0", "state": "Tamil Nadu", "label": "atmospheric"}
+{"idx": 5, "patch_id": "haryana_019_r3c2", "folder": "accepted/haryana_019_r3c2", "state": "Haryana", "label": "none"}
+{"idx": 6, "patch_id": "chhattisgarh_033_r1c3", "folder": "accepted/chhattisgarh_033_r1c3", "state": "Chhattisgarh", "label": "seasonal"}
+{"idx": 7, "patch_id": "west_bengal_015_r1c3", "folder": "accepted/west_bengal_015_r1c3", "state": "West Bengal", "label": "seasonal"}
+{"idx": 8, "patch_id": "andhra_pradesh_002_r2c1", "folder": "accepted/andhra_pradesh_002_r2c1", "state": "Andhra Pradesh", "label": "land_use"}
+{"idx": 9, "patch_id": "andaman_and_nicobar_islands_007_r2c2", "folder": "accepted/andaman_and_nicobar_islands_007_r2c2", "state": "Andaman and Nicobar Islands", "label": "none"}
+{"idx": 10, "patch_id": "uttar_pradesh_t1_042_r2c0", "folder": "accepted/uttar_pradesh_t1_042_r2c0", "state": "Uttar Pradesh", "label": "atmospheric"}
+{"idx": 11, "patch_id": "gujarat_017_r1c2", "folder": "accepted/gujarat_017_r1c2", "state": "Gujarat", "label": "seasonal"}
+{"idx": 12, "patch_id": "rajasthan_t1_065_r0c2", "folder": "accepted/rajasthan_t1_065_r0c2", "state": "Rajasthan", "label": "none"}
+{"idx": 13, "patch_id": "rajasthan_097_r3c2", "folder": "accepted/rajasthan_097_r3c2", "state": "Rajasthan", "label": "seasonal"}
+{"idx": 14, "patch_id": "ladakh_023_r2c0", "folder": "accepted/ladakh_023_r2c0", "state": "Ladakh", "label": "none"}
+{"idx": 15, "patch_id": "gujarat_012_r1c1", "folder": "accepted/gujarat_012_r1c1", "state": "Gujarat", "label": "none"}
+{"idx": 16, "patch_id": "telangana_017_r1c2", "folder": "accepted/telangana_017_r1c2", "state": "Telangana", "label": "seasonal"}
+{"idx": 17, "patch_id": "tripura_001_r3c1", "folder": "accepted/tripura_001_r3c1", "state": "Tripura", "label": "none"}
+{"idx": 18, "patch_id": "tamil_nadu_005_r2c0", "folder": "accepted/tamil_nadu_005_r2c0", "state": "Tamil Nadu", "label": "seasonal"}
+{"idx": 19, "patch_id": "jammu_and_kashmir_011_r1c0", "folder": "accepted/jammu_and_kashmir_011_r1c0", "state": "Jammu and Kashmir", "label": "seasonal"}
+{"idx": 20, "patch_id": "gujarat_048_r1c3", "folder": "accepted/gujarat_048_r1c3", "state": "Gujarat", "label": "seasonal"}
+{"idx": 21, "patch_id": "andhra_pradesh_t1_024_r1c1", "folder": "accepted/andhra_pradesh_t1_024_r1c1", "state": "Andhra Pradesh", "label": "seasonal"}
+{"idx": 22, "patch_id": "gujarat_t1_001_r3c2", "folder": "accepted/gujarat_t1_001_r3c2", "state": "Gujarat", "label": "seasonal"}
+{"idx": 23, "patch_id": "tamil_nadu_t1_021_r0c2", "folder": "accepted/tamil_nadu_t1_021_r0c2", "state": "Tamil Nadu", "label": "none"}
+{"idx": 24, "patch_id": "madhya_pradesh_034_r2c3", "folder": "accepted/madhya_pradesh_034_r2c3", "state": "Madhya Pradesh", "label": "land_use"}
+{"idx": 25, "patch_id": "karnataka_041_r3c1", "folder": "accepted/karnataka_041_r3c1", "state": "Karnataka", "label": "land_use"}
+{"idx": 26, "patch_id": "assam_005_r3c1", "folder": "accepted/assam_005_r3c1", "state": "Assam", "label": "seasonal"}
+{"idx": 27, "patch_id": "kerala_t1_002_r0c0", "folder": "accepted/kerala_t1_002_r0c0", "state": "Kerala", "label": "none"}
+{"idx": 28, "patch_id": "gujarat_t1_009_r3c1", "folder": "accepted/gujarat_t1_009_r3c1", "state": "Gujarat", "label": "seasonal"}
+{"idx": 29, "patch_id": "rajasthan_006_r1c2", "folder": "accepted/rajasthan_006_r1c2", "state": "Rajasthan", "label": "none"}
+{"idx": 30, "patch_id": "karnataka_t1_004_r1c2", "folder": "accepted/karnataka_t1_004_r1c2", "state": "Karnataka", "label": "seasonal"}
+{"idx": 31, "patch_id": "rajasthan_t1_045_r0c2", "folder": "accepted/rajasthan_t1_045_r0c2", "state": "Rajasthan", "label": "none"}
+{"idx": 32, "patch_id": "gujarat_t1_020_r2c1", "folder": "accepted/gujarat_t1_020_r2c1", "state": "Gujarat", "label": "seasonal"}
+{"idx": 33, "patch_id": "maharashtra_061_r1c1", "folder": "accepted/maharashtra_061_r1c1", "state": "Maharashtra", "label": "atmospheric"}
+{"idx": 34, "patch_id": "assam_005_r2c2", "folder": "accepted/assam_005_r2c2", "state": "Assam", "label": "seasonal"}
+{"idx": 35, "patch_id": "telangana_t1_006_r0c3", "folder": "accepted/telangana_t1_006_r0c3", "state": "Telangana", "label": "none"}
+{"idx": 36, "patch_id": "madhya_pradesh_056_r3c2", "folder": "accepted/madhya_pradesh_056_r3c2", "state": "Madhya Pradesh", "label": "land_use"}
+{"idx": 37, "patch_id": "assam_005_r3c0", "folder": "accepted/assam_005_r3c0", "state": "Assam", "label": "none"}
+{"idx": 38, "patch_id": "ladakh_t1_036_r3c3", "folder": "accepted/ladakh_t1_036_r3c3", "state": "Ladakh", "label": "none"}
+{"idx": 39, "patch_id": "himachal_pradesh_t1_009_r3c3", "folder": "accepted/himachal_pradesh_t1_009_r3c3", "state": "Himachal Pradesh", "label": "none"}
+{"idx": 40, "patch_id": "statue_of_unity_gujarat_r0c1", "folder": "accepted/statue_of_unity_gujarat_r0c1", "state": "Gujarat", "label": "land_use"}
+{"idx": 41, "patch_id": "statue_of_unity_gujarat_r1c3", "folder": "accepted/statue_of_unity_gujarat_r1c3", "state": "Gujarat", "label": "land_use"}
+{"idx": 42, "patch_id": "statue_of_unity_gujarat_r0c2", "folder": "accepted/statue_of_unity_gujarat_r0c2", "state": "Gujarat", "label": "land_use"}
+{"idx": 43, "patch_id": "statue_of_unity_gujarat_r1c2", "folder": "accepted/statue_of_unity_gujarat_r1c2", "state": "Gujarat", "label": "seasonal"}
+{"idx": 44, "patch_id": "navi_mumbai_airport_maharashtra_r3c1", "folder": "accepted/navi_mumbai_airport_maharashtra_r3c1", "state": "Maharashtra", "label": "land_use"}
+{"idx": 45, "patch_id": "navi_mumbai_airport_maharashtra_r0c1", "folder": "accepted/navi_mumbai_airport_maharashtra_r0c1", "state": "Maharashtra", "label": "land_use"}
+{"idx": 46, "patch_id": "statue_of_unity_gujarat_r0c0", "folder": "accepted/statue_of_unity_gujarat_r0c0", "state": "Gujarat", "label": "seasonal"}
+{"idx": 47, "patch_id": "navi_mumbai_airport_maharashtra_r0c2", "folder": "accepted/navi_mumbai_airport_maharashtra_r0c2", "state": "Maharashtra", "label": "land_use"}
+{"idx": 48, "patch_id": "navi_mumbai_airport_maharashtra_r3c0", "folder": "accepted/navi_mumbai_airport_maharashtra_r3c0", "state": "Maharashtra", "label": "atmospheric"}
+{"idx": 49, "patch_id": "navi_mumbai_airport_maharashtra_r1c3", "folder": "accepted/navi_mumbai_airport_maharashtra_r1c3", "state": "Maharashtra", "label": "atmospheric"}
+{"idx": 50, "patch_id": "statue_of_unity_gujarat_r2c3", "folder": "accepted/statue_of_unity_gujarat_r2c3", "state": "Gujarat", "label": "none"}
+{"idx": 51, "patch_id": "statue_of_unity_gujarat_r1c0", "folder": "accepted/statue_of_unity_gujarat_r1c0", "state": "Gujarat", "label": "none"}
+{"idx": 52, "patch_id": "rajasthan_052_r3c3", "folder": "accepted/rajasthan_052_r3c3", "state": "Rajasthan", "label": "seasonal"}
+{"idx": 53, "patch_id": "karnataka_t1_039_r0c3", "folder": "accepted/karnataka_t1_039_r0c3", "state": "Karnataka", "label": "land_use"}
+{"idx": 54, "patch_id": "tamil_nadu_024_r3c0", "folder": "accepted/tamil_nadu_024_r3c0", "state": "Tamil Nadu", "label": "seasonal"}
+{"idx": 55, "patch_id": "uttar_pradesh_t1_015_r0c0", "folder": "accepted/uttar_pradesh_t1_015_r0c0", "state": "Uttar Pradesh", "label": "atmospheric"}
+{"idx": 56, "patch_id": "gujarat_007_r3c1", "folder": "accepted/gujarat_007_r3c1", "state": "Gujarat", "label": "seasonal"}
+{"idx": 57, "patch_id": "andhra_pradesh_t1_024_r3c3", "folder": "accepted/andhra_pradesh_t1_024_r3c3", "state": "Andhra Pradesh", "label": "land_use"}
+{"idx": 58, "patch_id": "uttar_pradesh_t1_011_r3c3", "folder": "accepted/uttar_pradesh_t1_011_r3c3", "state": "Uttar Pradesh", "label": "seasonal"}
+{"idx": 59, "patch_id": "rajasthan_076_r2c2", "folder": "accepted/rajasthan_076_r2c2", "state": "Rajasthan", "label": "seasonal"}
