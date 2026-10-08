@@ -1,0 +1,182 @@
+[
+  {
+    "pair_num": 13,
+    "score": 1,
+    "caption": "",
+    "notes": "Completely empty caption (recorded as blank, not even garbage tokens). Before/after show a sparse rural area with no obvious major change. Fails the basic task entirely."
+  },
+  {
+    "pair_num": 58,
+    "score": 2,
+    "caption": "The most significant change is the increased urban density and expansion of buildings, particularly along the central axis, indicating rapid development. There's also visible growth in road infrastructure, suggesting improved connectivity. The overall area appears more densely populated and developed compared to the earlier image, reflecting substantial change over time.",
+    "notes": "Before/after imagery of this dense city block looks nearly pixel-identical; no corroborating evidence of new density, buildings, or roads is visible. Reads as a confident, generic urbanization story asserted on largely unchanged input -- same failure mode as the Qwen2-VL baseline."
+  },
+  {
+    "pair_num": 115,
+    "score": 3,
+    "caption": "The most noticeable change between the two images is an increase in the density and size of buildings, particularly around the central area. This suggests ongoing urban development. There seems to be a decrease in agricultural land, indicating urban expansion. The road network also appears denser, reflecting more construction activity.",
+    "notes": "Some plausible densification is visible near the built-up core, so the general direction is credible, though the specific claims (agricultural land decrease, denser roads) are hard to independently confirm at this resolution."
+  },
+  {
+    "pair_num": 126,
+    "score": 2,
+    "caption": "The most significant change between the two images is the expansion of urban development, particularly in the lower right quadrant, where new buildings and infrastructure have been constructed. The surrounding areas show increased green spaces and agricultural fields being converted to built-up areas. There appears to be no major construction or demolition in the central region, indicating steady but gradual growth.",
+    "notes": "Very specific locational claims (lower-right quadrant construction, green-space increase) that are not clearly corroborated by the imagery, which looks largely similar between before/after. Reads as an invented, overly specific narrative."
+  },
+  {
+    "pair_num": 141,
+    "score": 2,
+    "caption": "The most significant change is the expansion of urban development, notably around the central area and along the roads. New construction and denser building patterns are evident, suggesting permanent growth. There's also noticeable deforestation in some areas, indicating potential habitat loss. The overall intensity suggests ongoing development rather than seasonal variations.",
+    "notes": "Before/after (green field with ponds) look essentially static. Claims of urban expansion and deforestation are not visible in the imagery -- looks like a hallucinated construction narrative on a near-unchanged rural/vegetated scene."
+  },
+  {
+    "pair_num": 328,
+    "score": 2,
+    "caption": "The most significant change is the increased urban development on the left side, with more buildings and infrastructure becoming visible in the later image. The agricultural fields appear largely unchanged. There's no notable construction or demolition activity detected. The scale of change suggests gradual expansion rather than a major event.",
+    "notes": "Self-contradictory (claims urban development, then says 'no notable construction or demolition detected'). Also misses the actual salient feature in the after image: a visible white smoke/steam plume near the industrial site, which goes entirely undescribed."
+  },
+  {
+    "pair_num": 378,
+    "score": 2,
+    "caption": "The most significant change between the two images is the increased urban development, particularly in the lower left area, where new buildings and infrastructure have appeared. The agricultural fields in the center have diminished, suggesting reduced farming activity or conversion to other uses. The greenery in the lower right seems denser, indicating possible reforestation or improved vegetation management. These changes are primarily indicative of permanent developments rather than seasonal ones.",
+    "notes": "Before/after are nearly identical (dry terrain, forest patch, small settlement). Multiple specific claims (new buildings lower-left, diminished fields, denser greenery lower-right) are not visibly supported -- reads as invented detail."
+  },
+  {
+    "pair_num": 379,
+    "score": 2,
+    "caption": "The area shows signs of increased urbanization, with new buildings and infrastructure expanding into previously undeveloped regions in the later image. The density of structures appears higher, indicating more construction activity. Some vegetation seems to have decreased, possibly due to urban expansion. No significant seasonal changes are apparent.",
+    "notes": "Dense urban grid looks essentially unchanged between before/after. Confident urbanization claim not corroborated by the imagery."
+  },
+  {
+    "pair_num": 393,
+    "score": 2,
+    "caption": "The most significant change between the two images is the expansion and densification of urban areas, particularly noticeable around the central cluster of buildings. The green areas have been reduced, indicating increased development and urban sprawl. There's also a noticeable addition of new construction sites in the lower-left quadrant.",
+    "notes": "Before/after (town + agricultural fields + sparse settlement) look nearly identical. Specific claims of reduced green area and new lower-left construction sites are not visible."
+  },
+  {
+    "pair_num": 397,
+    "score": 3,
+    "caption": "addCriterion\nThe most significant change between the two images appears to be the expansion of urban areas, particularly noticeable in the construction of new buildings and infrastructure in the central region of both images. The surrounding agricultural fields have also shown some reduction in extent, suggesting possible urban sprawl or agricultural development. The overall landscape remains similar, with no major seasonal variations observed.",
+    "notes": "Corruption defect: leading 'addCriterion' garbage token. Content after it recovers into a coherent, appropriately hedged description ('landscape remains similar') that roughly matches the near-static imagery, so scored on the real content rather than failed outright."
+  },
+  {
+    "pair_num": 406,
+    "score": 1,
+    "caption": "addCriterion to the image",
+    "notes": "Pure garbage/corrupted output with no real descriptive content whatsoever. Before/after (rural village, minimal visible change) not described at all."
+  },
+  {
+    "pair_num": 479,
+    "score": 1,
+    "caption": "addCriterion",
+    "notes": "Pure garbage token, no content. Imagery shows a clear seasonal color shift (brown/reddish to greener forest terrain, same structure/layout) that a working caption should have flagged as seasonal, not real change -- entirely missed because there is no caption."
+  },
+  {
+    "pair_num": 512,
+    "score": 2,
+    "caption": "The most significant change between the two images is the expansion of urban areas and nearby infrastructure. New buildings and roads have been constructed, indicating ongoing development. The green areas appear less extensive, suggesting reduced agricultural activity, possibly due to urban sprawl. There's no clear evidence of major construction or demolition events, but the overall pattern shows a shift towards urbanization and densification.",
+    "notes": "Self-contradictory (says roads/buildings constructed, then 'no clear evidence of major construction'). Imagery (mixed village/agricultural mosaic) shows minimal visible change between before/after."
+  },
+  {
+    "pair_num": 529,
+    "score": 1,
+    "caption": "addCriterion",
+    "notes": "Pure garbage, no content. Before/after farmland shows minor color variation only."
+  },
+  {
+    "pair_num": 561,
+    "score": 1,
+    "caption": "addCriterion",
+    "notes": "Pure garbage, no content. Imagery shows an unmistakable seasonal crop-cycle color shift (brown fields to deep green fields, identical field boundaries/road network) -- a textbook case the detailed prompt was meant to handle correctly, but there is no caption to evaluate."
+  },
+  {
+    "pair_num": 565,
+    "score": 1,
+    "caption": "addCriterion",
+    "notes": "Pure garbage, no content. Similar terrain/layout to p561 with a comparable seasonal vegetation color shift, again undescribed."
+  },
+  {
+    "pair_num": 635,
+    "score": 2,
+    "caption": "The most significant change between the two images is the expansion of urban areas, particularly in the lower right quadrant, where new buildings and infrastructure have been constructed. This indicates ongoing development and construction, likely a result of increased population or economic growth over time.",
+    "notes": "Before image has bright white cloud-like/haze patches over part of the scene that are absent in after; this looks like it could be cloud cover or atmospheric artifact rather than real construction, and the caption doesn't address it, instead asserting a generic urbanization story."
+  },
+  {
+    "pair_num": 660,
+    "score": 1,
+    "caption": "addCriterion for the second image",
+    "notes": "Pure garbage, no content. Imagery shows a clear seasonal crop-color shift (reddish/brown fields to green fields, water body present in both) that goes entirely undescribed."
+  },
+  {
+    "pair_num": 769,
+    "score": 3,
+    "caption": "<tool_call>\n\n\n\n\n 自动生成的描述如下：\n\n在比较两张卫星图像时，最显著的变化是沿海区域建筑物的数量增加。从第一张图像到第二张图像，沿海地区的建筑密度明显提高，表明在此期间进行了大量建设活动。此外，内陆地区的土地利用模式也有所变化，部分区域的土地被重新开发为建筑用地。",
+    "notes": "Corruption defects: leaked '<tool_call>' token and an unrequested switch to Chinese. However, this scene genuinely IS a coastal river-mouth/industrial-port location, so the 'coastal building density increase' language is not the reflexive/wrong 'coastal' hallucination flagged in the Qwen2-VL baseline -- it's actually describing the right kind of location, and a modest density increase near the settlement is plausible in the imagery. Scored on the real content; language-switch and leaked token noted as usability defects."
+  },
+  {
+    "pair_num": 813,
+    "score": 3,
+    "caption": "The most noticeable change between Image 1 and Image 2 is the expansion of the industrial complex on the right side, with additional buildings and infrastructure suggesting growth over time. There's also an increase in vegetation around the central area, indicating possible reforestation efforts. The overall landscape remains largely unchanged, with the existing roads and water bodies remaining consistent, though there might be slight variations in the intensity of seasonal changes.",
+    "notes": "Industrial complex is genuinely present in both images and plausibly expanded; the vegetation/reforestation claim is harder to confirm at this resolution but not clearly wrong. Reasonably grounded, hedged appropriately in places."
+  },
+  {
+    "pair_num": 815,
+    "score": 3,
+    "caption": "The most significant change is an expansion of developed areas, particularly along the highway and towards the center of the image, indicating increased urbanization and construction activities. The green spaces appear reduced, suggesting deforestation or land conversion for development. The intensity of these changes can be classified as moderate to high over the observed time period.",
+    "notes": "Scene is genuinely coastal (real water body present) so is not a reflexive-coastal error. Generic but plausible urbanization description; specific magnitude ('moderate to high') is not independently verifiable from the imagery, which looks fairly similar between before/after."
+  },
+  {
+    "pair_num": 827,
+    "score": 2,
+    "caption": "The most significant change between the two images appears to be the increased urban sprawl, with more buildings and infrastructure visible in the later image. There are no noticeable seasonal changes; however, the intensity of construction activity seems higher in the second image, suggesting recent development. The overall land use has shifted from agricultural areas to more urbanized zones.",
+    "notes": "The 'shifted from agricultural areas to more urbanized zones' claim doesn't match the imagery -- the before image is already a dense, fully built-up coastal city, not agricultural land. Before/after otherwise look very similar."
+  },
+  {
+    "pair_num": 833,
+    "score": 1,
+    "caption": "addCriterion",
+    "notes": "Pure garbage, no content. Before/after show natural savanna/forest terrain with ponds, largely unchanged."
+  },
+  {
+    "pair_num": 835,
+    "score": 2,
+    "caption": "The area shows significant urban expansion, with new buildings and infrastructure appearing throughout. There's a notable increase in construction activity, particularly along major roads and in the central region. Some areas have undergone substantial development, while others remain largely unchanged. The intensity of change suggests it is primarily due to ongoing urbanization.",
+    "notes": "Imagery is overwhelmingly natural terrain (forest/ponds) with only sparse built structures; 'significant urban expansion... throughout' substantially overstates what's visible. Same overstated-urbanization pattern seen elsewhere in this batch."
+  },
+  {
+    "pair_num": 898,
+    "score": 1,
+    "caption": "addCriterion",
+    "notes": "Pure garbage, no content. Source images are a normal, clearly readable dense-city pair (not corrupted) that looks essentially unchanged before/after -- a working caption should have been easy here, but none was produced."
+  },
+  {
+    "pair_num": 913,
+    "score": 2,
+    "caption": "自动生成的图像显示了一个显著的变化：植被覆盖从早上的绿色变成了黄昏时的金色。建筑物的位置和数量似乎没有变化，也没有迹象表明有建筑活动或拆除。土地使用没有显示任何重大变化，如农业用地、裸露土壤或水体的变化。这个变化可能是季节性的，而不是永久性的。",
+    "notes": "IMPORTANT: this pair's before/after images are themselves corrupted -- garbled vertical-stripe sensor/rendering artifacts with no legible ground content (the same kind of corrupted-input case flagged in both prior model reviews). The caption nonetheless confidently invents a specific, coherent-sounding story (vegetation color shift from morning-green to dusk-gold, no building change) that cannot actually be read off this image. It is more restrained than Qwen2-VL's or TEOChat's hallucinations on corrupted input (no disaster/urbanization narrative), and it is in Chinese rather than English (a further defect), but it is still fabricated detail presented with unwarranted confidence on unreadable input, so it is scored low rather than high."
+  },
+  {
+    "pair_num": 949,
+    "score": 2,
+    "caption": "addCriterion\nThe most significant change between the two images is the increase in vegetation coverage across the landscape, suggesting a shift towards more established plant growth over time. There are no notable construction or demolition activities visible, and the overall land use appears consistent. The changes seem to be gradual and seasonal rather than permanent.",
+    "notes": "Corruption defect: leading 'addCriterion' token. Correctly avoids inventing construction, but appears to get the direction of change wrong -- the after image looks browner/more exposed rock and less green than the before image, the opposite of the claimed 'increase in vegetation coverage'."
+  },
+  {
+    "pair_num": 956,
+    "score": 3,
+    "caption": "The most significant change between the two images is the expansion of a large industrial complex with additional buildings and infrastructure in the center of the frame, indicating substantial construction activity. There are also increased areas of greenery, possibly new parks or landscaped spaces, around the industrial site. The overall density of urban development appears higher in the later image, suggesting ongoing urbanization.",
+    "notes": "Plausible but fairly generic; industrial/urban area is present in both images but specific claims (new parks, higher density) are hard to independently verify at this resolution."
+  },
+  {
+    "pair_num": 992,
+    "score": 2,
+    "caption": "The most notable change between the two images is the expansion of agricultural fields in the central and southern areas, indicating increased land use for farming. The northern region shows a decrease in bare soil, suggesting possible reforestation or urban development. There's a slight increase in the density of buildings towards the bottom left corner, hinting at urban sprawl. While some seasonal differences may be observed, the changes appear to be primarily due to human activities rather than natural ones.",
+    "notes": "Vague and internally inconsistent (offers 'reforestation OR urban development' as alternatives without committing). Before/after do show some color/field pattern differences consistent with agricultural cycling, but the caption hedges too much to be a confident, useful assessment."
+  },
+  {
+    "pair_num": 1049,
+    "score": 2,
+    "caption": "The most significant change between the two images is the expansion of agricultural fields and the construction of new buildings, particularly along the riverbanks. The area appears to have undergone development, with increased urbanization along the river and more green spaces being cultivated. No major seasonal differences are observed; the changes appear to be permanent.",
+    "notes": "Does correctly notice that a real land-cover change occurred (green forest converted to tan/brown agricultural-looking terrain in the after image), but the description of the direction is confused/contradictory ('more green spaces being cultivated' does not match the visible browning), so the underlying real change is not clearly or correctly communicated."
+  }
+]

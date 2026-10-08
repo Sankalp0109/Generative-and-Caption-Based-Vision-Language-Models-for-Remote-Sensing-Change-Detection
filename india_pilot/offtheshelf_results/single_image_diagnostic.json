@@ -1,0 +1,62 @@
+[
+  {
+    "pair_num": 13,
+    "tag": "before",
+    "description": ""
+  },
+  {
+    "pair_num": 13,
+    "tag": "after",
+    "description": ""
+  },
+  {
+    "pair_num": 58,
+    "tag": "before",
+    "description": "addCriterion\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion"
+  },
+  {
+    "pair_num": 58,
+    "tag": "after",
+    "description": "\u81ea\u52a8\u751f\u6210\u7684\u63cf\u8ff0\u5982\u4e0b\uff1a\n\n\u8fd9\u5f20\u536b\u661f\u56fe\u50cf\u663e\u793a\u4e86\u4e00\u4e2a\u57ce\u5e02\u533a\u57df\uff0c\u5176\u4e2d\u5305\u542b\u5927\u91cf\u7684\u5efa\u7b51\u7269\u548c\u9053\u8def\u3002\u4ee5\u4e0b\u662f\u5bf9\u56fe\u50cf\u4e2d\u53ef\u89c1\u5143\u7d20\u7684\u5177\u4f53\u63cf\u8ff0\uff1a\n\n1. **\u571f\u5730\u8986\u76d6\u7c7b\u578b**\uff1a\n   - **\u57ce\u5e02\u533a\u57df**\uff1a\u5360\u636e\u4e86\u56fe\u50cf\u7684\u4e3b\u8981\u90e8\u5206\uff0c\u53ef\u4ee5\u770b\u5230\u5bc6\u96c6\u7684\u5efa\u7b51\u7fa4\uff0c\u5305\u62ec\u4f4f\u5b85\u533a\u3001\u5546\u4e1a\u533a\u548c\u5de5\u4e1a\u533a\u3002\n   - **\u9053\u8def**\uff1a\u8d2f\u7a7f\u6574\u4e2a\u57ce\u5e02\u533a\u57df\uff0c\u5f62\u6210\u4e86\u4e00\u4e2a\u590d\u6742\u7684\u4ea4\u901a\u7f51\u7edc\u3002\u9053\u8def\u901a\u5e38\u662f\u7070\u8272\u6216\u6d45\u8272\u7684\uff0c\u4e0e\u5468\u56f4\u7684\u5efa\u7b51\u7269\u5f62\u6210\u5bf9\u6bd4\u3002\n\n2. **\u5efa\u7b51\u7269**\uff1a\n   - **\u5bc6\u5ea6**\uff1a\u5efa\u7b51\u7269\u975e\u5e38\u5bc6\u96c6\uff0c\u51e0\u4e4e\u8986\u76d6\u4e86\u6574\u4e2a\u57ce\u5e02\u533a\u57df\u3002\u5efa\u7b51\u7269\u7684\u9ad8\u5ea6\u4e0d\u4e00\uff0c\u6709\u4e9b\u662f\u4f4e\u77ee\u7684\u4f4f\u5b85\u697c\uff0c\u6709\u4e9b\u662f\u9ad8\u5927\u7684\u529e\u516c\u697c\u6216\u5de5\u5382\u3002\n   - **\u6392\u5217\u65b9\u5f0f**\uff1a\u5efa\u7b51\u7269\u901a\u5e38\u6cbf\u7740\u9053\u8def\u6392\u5217\uff0c\u5f62\u6210\u6574\u9f50\u7684\u8857\u9053\u5e03\u5c40\u3002\u5728\u67d0\u4e9b\u5730\u65b9\uff0c\u5efa\u7b51\u7269\u4e4b\u95f4\u7684\u7a7a\u5730\u8f83\u5c11\uff0c\u800c\u5728\u5176\u4ed6\u5730\u65b9\uff0c\u5efa\u7b51\u7269\u4e4b\u95f4\u6709\u8f83\u5927\u7684\u7a7a\u5730\uff0c\u53ef\u80fd\u662f\u516c\u56ed\u6216\u7eff\u5730\u3002\n\n3. **\u9053\u8def**\uff1a\n   - **\u5bc6\u5ea6**\uff1a\u9053\u8def\u975e\u5e38\u5bc6\u96c6"
+  },
+  {
+    "pair_num": 561,
+    "tag": "before",
+    "description": "The provided image appears to be an aerial or satellite view of a region in India. Based on the visual details, here's a breakdown:\n\n### Land Cover Type:\n1. **Agricultural Fields**: A significant portion of the image shows agricultural fields, characterized by various shades of green and brown. These fields are likely used for crops such as rice, wheat, or other staple foods.\n2. **Urban Areas**: There are patches that appear to be urban areas, with a higher concentration of built structures and less vegetation. These areas are typically denser and more structured compared to the surrounding agricultural fields.\n3. **Forested Areas**: Some areas show darker green patches, which could indicate forested regions. However, the extent and density of these areas are not clearly defined from this image.\n\n### Structures and Roads:\n- **Buildings**: There are visible clusters of buildings, particularly in the urban areas. The density of these structures varies, but they are generally more concentrated in certain areas, suggesting"
+  },
+  {
+    "pair_num": 561,
+    "tag": "after",
+    "description": "The provided satellite image depicts a region with a mix of urban, agricultural, and forested areas. Here's a detailed breakdown:\n\n1. **Urban Areas**:\n   - There are clusters of buildings that appear to be residential or commercial structures.\n   - These clusters are relatively small and scattered, suggesting a low-density urban area.\n   - The buildings are interspersed among the agricultural fields.\n\n2. **Agricultural Fields**:\n   - A significant portion of the image shows agricultural fields, characterized by different shades of green and brown.\n   - The fields are organized in a grid-like pattern, which is typical for agricultural planning.\n   - Some fields appear to have been recently harvested, as they show lighter colors compared to others.\n\n3. **Forest Areas**:\n   - There are patches of darker green areas that indicate forested regions.\n   - These forested areas are smaller and fragmented, possibly due to human activities such as agriculture or urban expansion.\n\n4. **Roads and Rail"
+  },
+  {
+    "pair_num": 913,
+    "tag": "before",
+    "description": "addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion"
+  },
+  {
+    "pair_num": 913,
+    "tag": "after",
+    "description": "addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion"
+  },
+  {
+    "pair_num": 635,
+    "tag": "before",
+    "description": "addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n\n addCriterion\n\n addCriterion\n\n\n addCriterion\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion"
+  },
+  {
+    "pair_num": 635,
+    "tag": "after",
+    "description": "\u81ea\u52a8\u751f\u6210\u7684\u63cf\u8ff0\u5982\u4e0b\uff1a\n\n\u8fd9\u5f20\u536b\u661f\u56fe\u50cf\u663e\u793a\u4e86\u4e00\u4e2a\u4f4d\u4e8e\u5370\u5ea6\u7684\u533a\u57df\u3002\u4ece\u56fe\u50cf\u4e2d\u53ef\u4ee5\u770b\u5230\uff0c\u8be5\u5730\u533a\u4e3b\u8981\u7531\u5bc6\u96c6\u7684\u57ce\u5e02\u5efa\u7b51\u7ec4\u6210\uff0c\u5efa\u7b51\u7269\u6392\u5217\u7d27\u51d1\uff0c\u5f62\u6210\u4e86\u4e00\u4e2a\u5178\u578b\u7684\u90fd\u5e02\u666f\u89c2\u3002\u5efa\u7b51\u7269\u7684\u989c\u8272\u591a\u6837\uff0c\u6709\u767d\u8272\u3001\u7070\u8272\u548c\u68d5\u8272\u7b49\uff0c\u663e\u793a\u51fa\u4e0d\u540c\u7684\u5efa\u7b51\u7c7b\u578b\u548c\u7528\u9014\u3002\n\n\u5728\u57ce\u5e02\u533a\u57df\u7684\u5468\u56f4\uff0c\u53ef\u4ee5\u770b\u5230\u4e00\u4e9b\u7eff\u8272\u7684\u690d\u88ab\u533a\u57df\uff0c\u53ef\u80fd\u662f\u519c\u7530\u6216\u516c\u56ed\u3002\u8fd9\u4e9b\u7eff\u8272\u533a\u57df\u4e0e\u57ce\u5e02\u7684\u5bc6\u96c6\u5efa\u7b51\u5f62\u6210\u9c9c\u660e\u5bf9\u6bd4\uff0c\u663e\u793a\u51fa\u57ce\u5e02\u4e0e\u81ea\u7136\u73af\u5883\u4e4b\u95f4\u7684\u8fc7\u6e21\u5730\u5e26\u3002\n\n\u6b64\u5916\uff0c\u5728\u56fe\u50cf\u7684\u53f3\u4e0a\u89d2\uff0c\u6709\u4e00\u7247\u8f83\u5927\u7684\u7eff\u8272\u533a\u57df\uff0c\u770b\u8d77\u6765\u50cf\u662f\u68ee\u6797\u6216\u5927\u9762\u79ef\u7684\u519c\u4e1a\u7528\u5730\u3002\u8fd9\u7247\u7eff\u8272\u533a\u57df\u5360\u636e\u4e86\u6574\u4e2a\u56fe\u50cf\u7684\u4e00\u5c0f\u90e8\u5206\uff0c\u8868\u660e\u8be5\u5730\u533a\u53ef\u80fd\u6709\u4e00\u4e9b\u672a\u88ab\u57ce\u5e02\u5316\u7684\u5730\u65b9\u3002\n\n\u603b\u4f53\u6765\u770b\uff0c\u8fd9\u5f20\u536b\u661f\u56fe\u50cf\u5c55\u793a\u4e86\u4e00\u4e2a\u5178\u578b\u7684\u5370\u5ea6\u57ce\u5e02\u666f\u89c2\uff0c\u5176\u4e2d\u5305\u542b\u4e86\u5bc6\u96c6\u7684\u57ce\u5e02\u5efa\u7b51\u3001\u7eff\u8272\u7684\u519c\u7530\u6216\u516c\u56ed\u4ee5\u53ca\u68ee\u6797\u6216\u519c\u4e1a\u7528\u5730\u3002\u8fd9\u79cd\u5e03\u5c40\u53cd\u6620\u4e86\u5370\u5ea6\u57ce\u5e02\u5316\u8fdb\u7a0b\u4e2d\u7684\u7279\u70b9\uff0c\u5373\u57ce\u5e02\u6269\u5f20\u4e0e\u81ea\u7136\u73af\u5883\u7684\u4fdd\u7559\u5e76\u5b58\u3002"
+  },
+  {
+    "pair_num": 1049,
+    "tag": "before",
+    "description": "addCriterion\n\n addCriterion\n\n\n addCriterion"
+  },
+  {
+    "pair_num": 1049,
+    "tag": "after",
+    "description": "The satellite image depicts a landscape primarily characterized by agricultural fields. The fields appear to be organized into rectangular plots, which is typical for agricultural land use in many regions. The color variations within the fields suggest different crops or stages of cultivation.\n\nThere are no visible buildings, roads, or other structures that would indicate urban development. The absence of such features suggests this area is predominantly rural.\n\nThe image also shows some water bodies, likely rivers or canals, which are visible as darker, linear features cutting through the landscape. These water bodies are interspersed among the agricultural fields.\n\nBare soil patches are also visible, particularly in areas where the vegetation appears sparse or absent. These could be fallow fields or areas undergoing land preparation.\n\nOverall, the image portrays a rural agricultural landscape with a mix of cultivated fields, water bodies, and some bare soil areas. The density of the fields is relatively high, indicating intensive farming practices. There are no visible buildings or roads, suggesting a low population density in this"
+  }
+]
