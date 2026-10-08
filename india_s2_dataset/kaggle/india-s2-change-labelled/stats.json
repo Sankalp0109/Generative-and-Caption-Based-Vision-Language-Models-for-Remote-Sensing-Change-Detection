@@ -1,0 +1,26 @@
+{
+ "pairs": 1002,
+ "by_label": {
+  "change": 143,
+  "no_change": 383,
+  "seasonal": 400,
+  "cant_tell": 76
+ },
+ "by_source": {
+  "automatic": 467,
+  "human": 535
+ },
+ "by_split": {
+  "test": 152,
+  "train": 664,
+  "val": 186
+ },
+ "sites": 172,
+ "human_by_label": {
+  "no_change": 226,
+  "seasonal": 214,
+  "change": 55,
+  "cant_tell": 40
+ },
+ "states": 32
+}
