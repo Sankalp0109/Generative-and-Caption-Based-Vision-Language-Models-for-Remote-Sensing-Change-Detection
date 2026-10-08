@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# secrets
+.env
+
+# large data (released on Kaggle, not stored in git)
+levir_cc_models/Levir-CC-dataset/
+levir_cc_models/SECOND-CC-AUG/
+levir_cc_models/checkpoints*/
+india_s2_dataset/data/FINAL/
+india_s2_dataset/data/sentinel2*/
+india_s2_dataset/data/samples/
+india_s2_dataset/data/review/
+india_s2_dataset/data/trial*/
+india_s2_dataset/data/*.sqlite*
+india_s2_dataset/labeler/images/
+india_s2_dataset/validation_1k/check/images/
+india_s2_dataset/changemap_test/maps/
+india_s2_dataset/kaggle/*/*.zip
+india_s2_dataset/kaggle/*/*.csv
+*.log
